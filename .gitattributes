@@ -1,0 +1,28 @@
+*.rc -crlf -diff -merge
+*.exe -crlf -diff -merge
+
+*.ico -crlf -diff -merge
+*.png -crlf -diff -merge
+*.bmp -crlf -diff -merge
+*.jpg -crlf -diff -merge
+*.jpeg -crlf -diff -merge
+*.gif -crlf -diff -merge
+
+*.PNG -crlf -diff -merge
+*.BMP -crlf -diff -merge
+*.JPG -crlf -diff -merge
+*.JPEG -crlf -diff -merge
+*.GIF -crlf -diff -merge
+
+*.max -crlf -diff -merge
+*.3ds -crlf -diff -merge
+*.mesh -crlf -diff -merge
+
+*.chm -crlf -diff -merge
+*.hhp -crlf -diff -merge
+*.hhc -crlf -diff -merge
+*.hhk -crlf -diff -merge
+
+*.tmp -crlf -diff -merge
+
+*.psp -crlf -diff -merge

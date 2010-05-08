@@ -1,0 +1,9 @@
+*.suo
+*.ncb
+*.aps
+*.obj
+*.res
+*.pdb
+*.exe
+Debug/
+Release/
