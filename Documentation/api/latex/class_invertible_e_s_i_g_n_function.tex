@@ -1,0 +1,132 @@
+\hypertarget{class_invertible_e_s_i_g_n_function}{
+\section{InvertibleESIGNFunction Class Reference}
+\label{class_invertible_e_s_i_g_n_function}\index{InvertibleESIGNFunction@{InvertibleESIGNFunction}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$esign.h$>$}Inheritance diagram for InvertibleESIGNFunction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.63636cm]{class_invertible_e_s_i_g_n_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_a43215778d1630a0037a794d815dac5d6}{
+void {\bfseries Initialize} (const \hyperlink{class_integer}{Integer} \&n, const \hyperlink{class_integer}{Integer} \&e, const \hyperlink{class_integer}{Integer} \&p, const \hyperlink{class_integer}{Integer} \&q)}
+\label{class_invertible_e_s_i_g_n_function_a43215778d1630a0037a794d815dac5d6}
+
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_a4ebace71d71f1e3d49bbb506105789e7}{
+void {\bfseries Initialize} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int modulusBits)}
+\label{class_invertible_e_s_i_g_n_function_a4ebace71d71f1e3d49bbb506105789e7}
+
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_a7e63d8fe66a25af6611f37bdaac982c4}{
+void \hyperlink{class_invertible_e_s_i_g_n_function_a7e63d8fe66a25af6611f37bdaac982c4}{BERDecode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_invertible_e_s_i_g_n_function_a7e63d8fe66a25af6611f37bdaac982c4}
+
+\begin{DoxyCompactList}\small\item\em decode this object from a \hyperlink{class_buffered_transformation}{BufferedTransformation}, using BER (Basic Encoding Rules) \item\end{DoxyCompactList}\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_a7c12cab3cb37c52da87672ef1bc33f13}{
+void \hyperlink{class_invertible_e_s_i_g_n_function_a7c12cab3cb37c52da87672ef1bc33f13}{DEREncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_invertible_e_s_i_g_n_function_a7c12cab3cb37c52da87672ef1bc33f13}
+
+\begin{DoxyCompactList}\small\item\em encode this object into a \hyperlink{class_buffered_transformation}{BufferedTransformation}, using DER (Distinguished Encoding Rules) \item\end{DoxyCompactList}\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_a905be1ca12abad6fd3d8e862d713b7c7}{
+\hyperlink{class_integer}{Integer} {\bfseries CalculateRandomizedInverse} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_integer}{Integer} \&x) const }
+\label{class_invertible_e_s_i_g_n_function_a905be1ca12abad6fd3d8e862d713b7c7}
+
+\item 
+bool \hyperlink{class_invertible_e_s_i_g_n_function_a7ff23978311f9f86024f8287d3fd02a8}{Validate} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int level) const 
+\begin{DoxyCompactList}\small\item\em check this object for errors \item\end{DoxyCompactList}\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_a6532958ce2c456eef8b84c33f69e944d}{
+bool \hyperlink{class_invertible_e_s_i_g_n_function_a6532958ce2c456eef8b84c33f69e944d}{GetVoidValue} (const char $\ast$name, const std::type\_\-info \&valueType, void $\ast$pValue) const }
+\label{class_invertible_e_s_i_g_n_function_a6532958ce2c456eef8b84c33f69e944d}
+
+\begin{DoxyCompactList}\small\item\em to be implemented by derived classes, users should use one of the above functions instead \item\end{DoxyCompactList}\item 
+void \hyperlink{class_invertible_e_s_i_g_n_function_aca870e350b30d04a47d452f21e903278}{AssignFrom} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&source)
+\begin{DoxyCompactList}\small\item\em assign values from source to this object \item\end{DoxyCompactList}\item 
+void \hyperlink{class_invertible_e_s_i_g_n_function_a241b733193f9f420f188ca6f57d49c27}{GenerateRandom} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&alg)
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_a32781785640ec331c3837ffce43c2026}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetPrime1} () const }
+\label{class_invertible_e_s_i_g_n_function_a32781785640ec331c3837ffce43c2026}
+
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_a379f19970546a3fe0038a05ea5434db3}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetPrime2} () const }
+\label{class_invertible_e_s_i_g_n_function_a379f19970546a3fe0038a05ea5434db3}
+
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_afa61426f08249432a67744162aaa90a7}{
+void {\bfseries SetPrime1} (const \hyperlink{class_integer}{Integer} \&p)}
+\label{class_invertible_e_s_i_g_n_function_afa61426f08249432a67744162aaa90a7}
+
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_acf24009df2af2877cf2255ac996ef983}{
+void {\bfseries SetPrime2} (const \hyperlink{class_integer}{Integer} \&q)}
+\label{class_invertible_e_s_i_g_n_function_acf24009df2af2877cf2255ac996ef983}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_ad743ae7fe10fbff6c9dddd88e76fc7fd}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-p}}
+\label{class_invertible_e_s_i_g_n_function_ad743ae7fe10fbff6c9dddd88e76fc7fd}
+
+\item 
+\hypertarget{class_invertible_e_s_i_g_n_function_adc2b3dc52e2421e408f0e1bb607da135}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-q}}
+\label{class_invertible_e_s_i_g_n_function_adc2b3dc52e2421e408f0e1bb607da135}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\_\- 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_invertible_e_s_i_g_n_function_aca870e350b30d04a47d452f21e903278}{
+\index{InvertibleESIGNFunction@{InvertibleESIGNFunction}!AssignFrom@{AssignFrom}}
+\index{AssignFrom@{AssignFrom}!InvertibleESIGNFunction@{InvertibleESIGNFunction}}
+\subsubsection[{AssignFrom}]{\setlength{\rightskip}{0pt plus 5cm}void InvertibleESIGNFunction::AssignFrom (const {\bf NameValuePairs} \& {\em source})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_invertible_e_s_i_g_n_function_aca870e350b30d04a47d452f21e903278}
+
+
+assign values from source to this object \begin{DoxyNote}{Note}
+This function can be used to create a public key from a private key. 
+\end{DoxyNote}
+
+
+Reimplemented from \hyperlink{class_e_s_i_g_n_function_a1ff8229ed7786a13a69d15e5a64e4d21}{ESIGNFunction}.\hypertarget{class_invertible_e_s_i_g_n_function_a241b733193f9f420f188ca6f57d49c27}{
+\index{InvertibleESIGNFunction@{InvertibleESIGNFunction}!GenerateRandom@{GenerateRandom}}
+\index{GenerateRandom@{GenerateRandom}!InvertibleESIGNFunction@{InvertibleESIGNFunction}}
+\subsubsection[{GenerateRandom}]{\setlength{\rightskip}{0pt plus 5cm}void InvertibleESIGNFunction::GenerateRandom ({\bf RandomNumberGenerator} \& {\em rng}, \/  const {\bf NameValuePairs} \& {\em alg})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_invertible_e_s_i_g_n_function_a241b733193f9f420f188ca6f57d49c27}
+parameters: (ModulusSize) 
+
+Reimplemented from \hyperlink{class_generatable_crypto_material_abe368b52db1ca7079b690f2d6e605f7a}{GeneratableCryptoMaterial}.\hypertarget{class_invertible_e_s_i_g_n_function_a7ff23978311f9f86024f8287d3fd02a8}{
+\index{InvertibleESIGNFunction@{InvertibleESIGNFunction}!Validate@{Validate}}
+\index{Validate@{Validate}!InvertibleESIGNFunction@{InvertibleESIGNFunction}}
+\subsubsection[{Validate}]{\setlength{\rightskip}{0pt plus 5cm}bool InvertibleESIGNFunction::Validate ({\bf RandomNumberGenerator} \& {\em rng}, \/  unsigned int {\em level}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_invertible_e_s_i_g_n_function_a7ff23978311f9f86024f8287d3fd02a8}
+
+
+check this object for errors 
+\begin{DoxyParams}{Parameters}
+\item[{\em level}]denotes the level of thoroughness: 0 -\/ using this object won't cause a crash or exception (rng is ignored) 1 -\/ this object will probably function (encrypt, sign, etc.) correctly (but may not check for weak keys and such) 2 -\/ make sure this object will function correctly, and do reasonable security checks 3 -\/ do checks that may take a long time \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the tests pass 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_e_s_i_g_n_function_ad9696d3e060bd7acb702b5bfa650eeb7}{ESIGNFunction}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{esign_8h}{esign.h}\end{DoxyCompactItemize}

@@ -1,0 +1,23 @@
+\hypertarget{struct_cipher_mode_documentation}{
+\section{CipherModeDocumentation Struct Reference}
+\label{struct_cipher_mode_documentation}\index{CipherModeDocumentation@{CipherModeDocumentation}}
+}
+
+
+Cipher modes documentation. See NIST SP 800-\/38A for definitions of these modes. See \hyperlink{struct_authenticated_symmetric_cipher_documentation}{AuthenticatedSymmetricCipherDocumentation} for authenticated encryption modes.  
+
+
+{\ttfamily \#include $<$modes.h$>$}Inheritance diagram for CipherModeDocumentation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{struct_cipher_mode_documentation}
+\end{center}
+\end{figure}
+
+
+\subsection{Detailed Description}
+Cipher modes documentation. See NIST SP 800-\/38A for definitions of these modes. See \hyperlink{struct_authenticated_symmetric_cipher_documentation}{AuthenticatedSymmetricCipherDocumentation} for authenticated encryption modes. Each class derived from this one defines two types, Encryption and Decryption, both of which implement the \hyperlink{class_symmetric_cipher}{SymmetricCipher} interface. For each mode there are two classes, one of which is a template class, and the other one has a name that ends in \char`\"{}\_\-ExternalCipher\char`\"{}. The \char`\"{}external cipher\char`\"{} mode objects hold a reference to the underlying block cipher, instead of holding an instance of it. The reference must be passed in to the constructor. For the \char`\"{}cipher holder\char`\"{} classes, the CIPHER template parameter should be a class derived from \hyperlink{struct_block_cipher_documentation}{BlockCipherDocumentation}, for example \hyperlink{class_d_e_s}{DES} or AES. 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{modes_8h}{modes.h}\end{DoxyCompactItemize}

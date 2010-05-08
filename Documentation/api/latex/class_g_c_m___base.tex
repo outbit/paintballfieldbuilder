@@ -1,0 +1,207 @@
+\hypertarget{class_g_c_m___base}{
+\section{GCM\_\-Base Class Reference}
+\label{class_g_c_m___base}\index{GCM\_\-Base@{GCM\_\-Base}}
+}
+
+
+ 
+
+
+{\ttfamily \#include $<$gcm.h$>$}Inheritance diagram for GCM\_\-Base::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.91951cm]{class_g_c_m___base}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_g_c_m___base_1_1_g_c_t_r}{GCTR}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_c_m___base_a2acd0b340c8af99e910c228f94d44872}{
+std::string \hyperlink{class_g_c_m___base_a2acd0b340c8af99e910c228f94d44872}{AlgorithmName} () const }
+\label{class_g_c_m___base_a2acd0b340c8af99e910c228f94d44872}
+
+\begin{DoxyCompactList}\small\item\em returns name of this algorithm, not universally implemented yet \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a1b39f5c59ba7f89c81a35075c8debc5a}{
+size\_\-t \hyperlink{class_g_c_m___base_a1b39f5c59ba7f89c81a35075c8debc5a}{MinKeyLength} () const }
+\label{class_g_c_m___base_a1b39f5c59ba7f89c81a35075c8debc5a}
+
+\begin{DoxyCompactList}\small\item\em returns smallest valid key length in bytes $\ast$/ \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_abb237430709aa434a6942e1b85551bc4}{
+size\_\-t \hyperlink{class_g_c_m___base_abb237430709aa434a6942e1b85551bc4}{MaxKeyLength} () const }
+\label{class_g_c_m___base_abb237430709aa434a6942e1b85551bc4}
+
+\begin{DoxyCompactList}\small\item\em returns largest valid key length in bytes $\ast$/ \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_acea985e00dd1fd97ab8fe138791e0632}{
+size\_\-t \hyperlink{class_g_c_m___base_acea985e00dd1fd97ab8fe138791e0632}{DefaultKeyLength} () const }
+\label{class_g_c_m___base_acea985e00dd1fd97ab8fe138791e0632}
+
+\begin{DoxyCompactList}\small\item\em returns default (recommended) key length in bytes $\ast$/ \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a727a2c9b734441ba1f72b093a9e5d349}{
+size\_\-t \hyperlink{class_g_c_m___base_a727a2c9b734441ba1f72b093a9e5d349}{GetValidKeyLength} (size\_\-t n) const }
+\label{class_g_c_m___base_a727a2c9b734441ba1f72b093a9e5d349}
+
+\begin{DoxyCompactList}\small\item\em returns the smallest valid key length in bytes that is $>$= min(n, GetMaxKeyLength()) \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a18c79a7cdeba38b372d90946014a2502}{
+bool \hyperlink{class_g_c_m___base_a18c79a7cdeba38b372d90946014a2502}{IsValidKeyLength} (size\_\-t n) const }
+\label{class_g_c_m___base_a18c79a7cdeba38b372d90946014a2502}
+
+\begin{DoxyCompactList}\small\item\em returns whether n is a valid key length \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_ae40ff641118ee1473a2044652f8d5147}{
+unsigned int \hyperlink{class_g_c_m___base_ae40ff641118ee1473a2044652f8d5147}{OptimalDataAlignment} () const }
+\label{class_g_c_m___base_ae40ff641118ee1473a2044652f8d5147}
+
+\begin{DoxyCompactList}\small\item\em returns how input should be aligned for optimal performance \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a8411f293ab08d9a4e87b0c94471d1295}{
+IV\_\-Requirement \hyperlink{class_g_c_m___base_a8411f293ab08d9a4e87b0c94471d1295}{IVRequirement} () const }
+\label{class_g_c_m___base_a8411f293ab08d9a4e87b0c94471d1295}
+
+\begin{DoxyCompactList}\small\item\em returns the minimal requirement for secure IVs \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a21bb841807688639259eb294aee9137f}{
+unsigned int {\bfseries IVSize} () const }
+\label{class_g_c_m___base_a21bb841807688639259eb294aee9137f}
+
+\item 
+\hypertarget{class_g_c_m___base_a9ede99de8a8db596c757b64163b9a1d8}{
+unsigned int \hyperlink{class_g_c_m___base_a9ede99de8a8db596c757b64163b9a1d8}{MinIVLength} () const }
+\label{class_g_c_m___base_a9ede99de8a8db596c757b64163b9a1d8}
+
+\begin{DoxyCompactList}\small\item\em returns minimal length of IVs accepted by this object \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a7b188a38b51a537a43b326f3427732bf}{
+unsigned int \hyperlink{class_g_c_m___base_a7b188a38b51a537a43b326f3427732bf}{MaxIVLength} () const }
+\label{class_g_c_m___base_a7b188a38b51a537a43b326f3427732bf}
+
+\begin{DoxyCompactList}\small\item\em returns maximal length of IVs accepted by this object \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a615b62ef38032b9a748f97d3d3f29e05}{
+unsigned int \hyperlink{class_g_c_m___base_a615b62ef38032b9a748f97d3d3f29e05}{DigestSize} () const }
+\label{class_g_c_m___base_a615b62ef38032b9a748f97d3d3f29e05}
+
+\begin{DoxyCompactList}\small\item\em size of the hash/digest/MAC returned by \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()} \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a7a2d40ae24883abdd573296d15d8aa28}{
+lword \hyperlink{class_g_c_m___base_a7a2d40ae24883abdd573296d15d8aa28}{MaxHeaderLength} () const }
+\label{class_g_c_m___base_a7a2d40ae24883abdd573296d15d8aa28}
+
+\begin{DoxyCompactList}\small\item\em the maximum length of AAD that can be input before the encrypted data \item\end{DoxyCompactList}\item 
+\hypertarget{class_g_c_m___base_a076b895cf8bf283d04abbe6077584e18}{
+lword \hyperlink{class_g_c_m___base_a076b895cf8bf283d04abbe6077584e18}{MaxMessageLength} () const }
+\label{class_g_c_m___base_a076b895cf8bf283d04abbe6077584e18}
+
+\begin{DoxyCompactList}\small\item\em the maximum length of encrypted data \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries REQUIRED\_\-BLOCKSIZE} =  16, 
+{\bfseries HASH\_\-BLOCKSIZE} =  16
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_c_m___base_ac5890df6512735c99a41642019dfd945}{
+bool {\bfseries AuthenticationIsOnPlaintext} () const }
+\label{class_g_c_m___base_ac5890df6512735c99a41642019dfd945}
+
+\item 
+\hypertarget{class_g_c_m___base_a201e0ae6e7f9ca4f2efa9dc313c3935a}{
+unsigned int {\bfseries AuthenticationBlockSize} () const }
+\label{class_g_c_m___base_a201e0ae6e7f9ca4f2efa9dc313c3935a}
+
+\item 
+\hypertarget{class_g_c_m___base_aeadf6b303db5ab3f298360add6461308}{
+void {\bfseries SetKeyWithoutResync} (const byte $\ast$userKey, size\_\-t keylength, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&params)}
+\label{class_g_c_m___base_aeadf6b303db5ab3f298360add6461308}
+
+\item 
+\hypertarget{class_g_c_m___base_a1143f0296f0ff595dd775e53f823e179}{
+void {\bfseries Resync} (const byte $\ast$iv, size\_\-t len)}
+\label{class_g_c_m___base_a1143f0296f0ff595dd775e53f823e179}
+
+\item 
+\hypertarget{class_g_c_m___base_ae14b00984b6e0dad02fced40c237d536}{
+size\_\-t {\bfseries AuthenticateBlocks} (const byte $\ast$data, size\_\-t len)}
+\label{class_g_c_m___base_ae14b00984b6e0dad02fced40c237d536}
+
+\item 
+\hypertarget{class_g_c_m___base_a5b26945db024d81e115d57729b214f7b}{
+void {\bfseries AuthenticateLastHeaderBlock} ()}
+\label{class_g_c_m___base_a5b26945db024d81e115d57729b214f7b}
+
+\item 
+\hypertarget{class_g_c_m___base_ac5175d69b9b376641626f3f7fa6f0d3e}{
+void {\bfseries AuthenticateLastConfidentialBlock} ()}
+\label{class_g_c_m___base_ac5175d69b9b376641626f3f7fa6f0d3e}
+
+\item 
+\hypertarget{class_g_c_m___base_a4903084cdee26d3ec90a37c331312689}{
+void {\bfseries AuthenticateLastFooterBlock} (byte $\ast$mac, size\_\-t macSize)}
+\label{class_g_c_m___base_a4903084cdee26d3ec90a37c331312689}
+
+\item 
+\hypertarget{class_g_c_m___base_a96625c0758ba8cbbf97abc99a876ef58}{
+\hyperlink{class_symmetric_cipher}{SymmetricCipher} \& {\bfseries AccessSymmetricCipher} ()}
+\label{class_g_c_m___base_a96625c0758ba8cbbf97abc99a876ef58}
+
+\item 
+\hypertarget{class_g_c_m___base_aa9e4fe7216966ccb7f20bdb37789dca5}{
+virtual \hyperlink{class_block_cipher}{BlockCipher} \& {\bfseries AccessBlockCipher} ()=0}
+\label{class_g_c_m___base_aa9e4fe7216966ccb7f20bdb37789dca5}
+
+\item 
+\hypertarget{class_g_c_m___base_aa15e3d1549b3530ff4d7122c90d3f64b}{
+virtual GCM\_\-TablesOption {\bfseries GetTablesOption} () const =0}
+\label{class_g_c_m___base_aa15e3d1549b3530ff4d7122c90d3f64b}
+
+\item 
+\hypertarget{class_g_c_m___base_a3f14fb6a65206cdbd60ca792e864d38c}{
+const \hyperlink{class_block_cipher}{BlockCipher} \& {\bfseries GetBlockCipher} () const }
+\label{class_g_c_m___base_a3f14fb6a65206cdbd60ca792e864d38c}
+
+\item 
+\hypertarget{class_g_c_m___base_aecf32d0f937449ce7b7ebaad5e31ca0c}{
+byte $\ast$ {\bfseries HashBuffer} ()}
+\label{class_g_c_m___base_aecf32d0f937449ce7b7ebaad5e31ca0c}
+
+\item 
+\hypertarget{class_g_c_m___base_aa4f42f8afb10aab08e8bfd5eeeb1ac91}{
+byte $\ast$ {\bfseries HashKey} ()}
+\label{class_g_c_m___base_aa4f42f8afb10aab08e8bfd5eeeb1ac91}
+
+\item 
+\hypertarget{class_g_c_m___base_aeb142a90a1f0701b6af76783e6a19ed4}{
+byte $\ast$ {\bfseries MulTable} ()}
+\label{class_g_c_m___base_aeb142a90a1f0701b6af76783e6a19ed4}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_c_m___base_a993cba8e4664f53667a0b7e69e14450a}{
+\hyperlink{class_g_c_m___base_1_1_g_c_t_r}{GCTR} {\bfseries m\_\-ctr}}
+\label{class_g_c_m___base_a993cba8e4664f53667a0b7e69e14450a}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_c_m___base_a81d3a23f651486b5d0d3ff8eb36c30ed}{
+static word16 {\bfseries s\_\-reductionTable} \mbox{[}256\mbox{]}}
+\label{class_g_c_m___base_a81d3a23f651486b5d0d3ff8eb36c30ed}
+
+\item 
+\hypertarget{class_g_c_m___base_ab7d77c3ea888fd9de365581c6bb97d20}{
+static bool {\bfseries s\_\-reductionTableInitialized}}
+\label{class_g_c_m___base_ab7d77c3ea888fd9de365581c6bb97d20}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/gcm.h\end{DoxyCompactItemize}

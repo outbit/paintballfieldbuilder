@@ -1,0 +1,6 @@
+version:1:
+generatedby:NULL:
+credit:Hyperformance Paintball LLC:
+copyright:2006:
+
+bunker<fieldmisc_deadbox1,fieldmisc_gui_deadbox1.bmp,fieldmisc_mesh_deadbox1.mesh,fieldmisc_mesh_deadbox1.material>

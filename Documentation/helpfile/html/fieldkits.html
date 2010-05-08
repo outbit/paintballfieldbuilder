@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<TITLE></TITLE>
+		<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+		<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+		<META NAME="CREATED" CONTENT="20060201;8003273">
+		<META NAME="CHANGED" CONTENT="20060201;11100406">
+	</HEAD>
+	<BODY LANG="en-US" DIR="ltr">
+		<CENTER>
+			<TABLE WIDTH="583" BORDER="1" CELLPADDING="4" CELLSPACING="3" STYLE="PAGE-BREAK-BEFORE: always">
+				<COLGROUP>
+					<COL WIDTH="567">
+						<THEAD>
+							<TR>
+								<TH WIDTH="567" VALIGN="top" BGCOLOR="#000080">
+									<P ALIGN="center" STYLE="BACKGROUND: none transparent scroll repeat 0% 0%"><BR>
+									</P>
+								</TH>
+							</TR>
+						</THEAD>
+						<TBODY>
+							<TR>
+								<TD WIDTH="567" HEIGHT="63" VALIGN="top">
+									<P ALIGN="center"><FONT COLOR="#000000"><FONT SIZE="6"><B>Paintball Field Builder Help</B></FONT></FONT></P>
+								</TD>
+							</TR>
+							<TR>
+								<TD WIDTH="567" VALIGN="top" BGCOLOR="#000080">
+									<P ALIGN="center" STYLE="BACKGROUND: none transparent scroll repeat 0% 0%"><FONT SIZE="4" STYLE="FONT-SIZE: 15pt">
+											Field Kits</FONT></P>
+								</TD>
+							</TR>
+							<TR>
+								<TD WIDTH="567" HEIGHT="1" VALIGN="top" BGCOLOR="#e6e6e6">
+									<P ALIGN="center" STYLE="BACKGROUND: none transparent scroll repeat 0% 0%"><BR>
+										<BR>
+									</P>
+									<P ALIGN="center" STYLE="BACKGROUND: none transparent scroll repeat 0% 0%"><FONT COLOR="#000000"><B>-How 
+												Get Started Makeing Your Own Field Kits-</B></FONT></P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">First of 
+										all a *.PFK file is just a *.ZIP file that was renamed to *.PFK. All of the 
+										formats used are from <A href="http://www.ogre3d.org">www.ogre3d.org</A>, so 
+										you will need to download the export untilities to export the *.mesh 
+										and&nbsp;*.material files. For a good example go to <A href="http://www.paintballfieldbuilder.com/downloads">
+											www.paintballfieldbuilder.com/downloads</A>&nbsp;and download some of the 
+										field kits, rename them from *.pfk to *.zip then just unzip them and look at 
+										how they were created. To start making field kits you will need winzip, 3d 
+										model editor, *.bmp editor, and an&nbsp;*.mesh exporter. There are also tools 
+										that can convert *.3ds files to *.mesh, again go to <A href="http://www.ogre3d.org">
+											www.ogre3d.org</A> to download these development tools.</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">winzip - <A href="http://www.winzip.com">
+											www.winzip.com</A>&nbsp;</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">3d model 
+										editors - <A href="http://www.discreet.com">www.discreet.com</A>, <A href="http://www.maya.com">
+											www.maya.com</A>, <A href="http://www.anim8or.com">www.anim8or.com</A>, <A href="http://www.milkshape3d.com">
+											www.milkshape3d.com</A></P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">*.bmp 
+										editors&nbsp;- paint, paint shop pro, photoshop</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">*.mesh 
+										exporters - <A href="http://www.ogre3d.org">www.ogre3d.org</A></P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">&nbsp;</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">Here are 
+										a few rules you MUST FOLLOW:</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="left">1. Use 
+										only *.bmp files for images.<BR>
+										2. Before every file include the name of your&nbsp;field kit&nbsp;then a _. 
+										Example: default_bunker1.mesh. This will prevent naming collisions in bunker 
+										packages.<BR>
+										3. Use unique names for your bunker packages so that naming collision will not 
+										accur.<BR>
+										4. Open up the *.material scripts and make sure that they have the name of your 
+										field kit and then a _. Also check the values because alot of the exports do 
+										not export materials accurately.<BR>
+										5. info.txt MUST be in the *.pfk file for it to load correctly. Make sure that 
+										you include&nbsp;the info.txt file!<BR>
+										6. THE&nbsp;*.MATERIAL FILE MUST HAVE THE SAME NAME AS THE *.MESH FILE</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="left">&nbsp;</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center"><FONT color="#000000"><B>-How 
+												Do&nbsp;I Create&nbsp;An info.txt File-</B></FONT></P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">------------------------------------------------------------------------------</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center"><STRONG>example:</STRONG></P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="left">version:1:<BR>
+										generatedby:NULL:<BR>
+										credit:Hyperformance Paintball LLC:<BR>
+										copywrite:2003:<BR>
+										<BR>
+										bunker&lt;modelname,gui_image_file,mesh_file,material_file&gt;</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">------------------------------------------------------------------------------</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">&nbsp;modelname 
+										= The name of the mode.</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">gui_image_file 
+										= The name of the&nbsp;*.bmp file that will be displayed to represent the 3d 
+										bunker.</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">mesh_file 
+										= The name of the *.mesh file that holds the 3d data of the bunker.</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">material_file 
+										= The name of the *.material file that holds the material information.</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">&nbsp;</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center">&nbsp;</P>
+									<P style="BACKGROUND: none transparent scroll repeat 0% 0%" align="center"><BR>
+										&nbsp;</P>
+								</TD>
+							</TR>
+							<TR>
+								<TD WIDTH="567" HEIGHT="67" VALIGN="top" BGCOLOR="#000080">
+									<P ALIGN="center" STYLE="BACKGROUND: none transparent scroll repeat 0% 0%"><IMG SRC="images/ogre_logo.JPG" NAME="graphics2" ALIGN="left"
+											BORDER="0" width="206" height="81"><BR CLEAR="left">
+										<IMG SRC="images/hpb_logo.JPG" NAME="graphics1" ALIGN="right"
+											BORDER="0" width="221" height="76"><BR CLEAR="right">
+										<BR>
+									</P>
+								</TD>
+							</TR>
+						</TBODY>
+			</TABLE>
+		</CENTER>
+		<P ALIGN="center"><BR>
+			<BR>
+		</P>
+		<P ALIGN="center"><BR>
+			<BR>
+		</P>
+	</BODY>
+</HTML>

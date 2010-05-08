@@ -1,0 +1,143 @@
+\hypertarget{class_d_l___private_key_impl}{
+\section{DL\_\-PrivateKeyImpl$<$ GP $>$ Class Template Reference}
+\label{class_d_l___private_key_impl}\index{DL\_\-PrivateKeyImpl@{DL\_\-PrivateKeyImpl}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$pubkey.h$>$}Inheritance diagram for DL\_\-PrivateKeyImpl$<$ GP $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.56291cm]{class_d_l___private_key_impl}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___private_key_impl_a002d0346b867474c9d7a80356f6c7888}{
+typedef GP::Element {\bfseries Element}}
+\label{class_d_l___private_key_impl_a002d0346b867474c9d7a80356f6c7888}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_d_l___private_key_impl_aa4ad7f55ea46d222c5e7e37f67bd20fe}{Validate} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int level) const 
+\begin{DoxyCompactList}\small\item\em check this object for errors \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___private_key_impl_a88475a3bb1dc0c478d0f0775eec41a26}{
+bool {\bfseries GetVoidValue} (const char $\ast$name, const std::type\_\-info \&valueType, void $\ast$pValue) const }
+\label{class_d_l___private_key_impl_a88475a3bb1dc0c478d0f0775eec41a26}
+
+\item 
+\hypertarget{class_d_l___private_key_impl_a1f477156648ec8d3cfe18d503f47a92f}{
+void {\bfseries AssignFrom} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&source)}
+\label{class_d_l___private_key_impl_a1f477156648ec8d3cfe18d503f47a92f}
+
+\item 
+void \hyperlink{class_d_l___private_key_impl_ab80a3771a5ef623677775f7c5dddb1e0}{GenerateRandom} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&params)
+\begin{DoxyCompactList}\small\item\em generate a random key or crypto parameters \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_d_l___private_key_impl_ae8e4b6e0d700c92852a0c3edbb9afaee}{SupportsPrecomputation} () const 
+\item 
+void \hyperlink{class_d_l___private_key_impl_ac1876a3d292e192186070869be896ded}{Precompute} (unsigned int precomputationStorage=16)
+\begin{DoxyCompactList}\small\item\em do precomputation \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___private_key_impl_ae8acefe0a54ff6153d4ca5231ccac951}{
+void \hyperlink{class_d_l___private_key_impl_ae8acefe0a54ff6153d4ca5231ccac951}{LoadPrecomputation} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&storedPrecomputation)}
+\label{class_d_l___private_key_impl_ae8acefe0a54ff6153d4ca5231ccac951}
+
+\begin{DoxyCompactList}\small\item\em retrieve previously saved precomputation \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___private_key_impl_ad2599d9c720966f22e0cae5dfdaaed41}{
+void \hyperlink{class_d_l___private_key_impl_ad2599d9c720966f22e0cae5dfdaaed41}{SavePrecomputation} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&storedPrecomputation) const }
+\label{class_d_l___private_key_impl_ad2599d9c720966f22e0cae5dfdaaed41}
+
+\begin{DoxyCompactList}\small\item\em save precomputation for later use \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___private_key_impl_a4c8227e732ca255f5633ca1d4682dd9a}{
+const \hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ Element $>$ \& {\bfseries GetAbstractGroupParameters} () const }
+\label{class_d_l___private_key_impl_a4c8227e732ca255f5633ca1d4682dd9a}
+
+\item 
+\hypertarget{class_d_l___private_key_impl_a9410559fee36df445fe3743634f87950}{
+\hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ Element $>$ \& {\bfseries AccessAbstractGroupParameters} ()}
+\label{class_d_l___private_key_impl_a9410559fee36df445fe3743634f87950}
+
+\item 
+\hypertarget{class_d_l___private_key_impl_a996b891350fc796ce56a32d984a91aee}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetPrivateExponent} () const }
+\label{class_d_l___private_key_impl_a996b891350fc796ce56a32d984a91aee}
+
+\item 
+\hypertarget{class_d_l___private_key_impl_ad2756b046f9ee7f3c254c9fc2bb8be5d}{
+void {\bfseries SetPrivateExponent} (const \hyperlink{class_integer}{Integer} \&x)}
+\label{class_d_l___private_key_impl_ad2756b046f9ee7f3c254c9fc2bb8be5d}
+
+\item 
+\hypertarget{class_d_l___private_key_impl_a0d0c5c926211c5b35002dd3b8d22664c}{
+void \hyperlink{class_d_l___private_key_impl_a0d0c5c926211c5b35002dd3b8d22664c}{BERDecodePrivateKey} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, bool, size\_\-t)}
+\label{class_d_l___private_key_impl_a0d0c5c926211c5b35002dd3b8d22664c}
+
+\begin{DoxyCompactList}\small\item\em decode privateKey part of privateKeyInfo, without the OCTET STRING header \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___private_key_impl_aad8607ecf772a7b7faa9960152261009}{
+void \hyperlink{class_d_l___private_key_impl_aad8607ecf772a7b7faa9960152261009}{DEREncodePrivateKey} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_d_l___private_key_impl_aad8607ecf772a7b7faa9960152261009}
+
+\begin{DoxyCompactList}\small\item\em encode privateKey part of privateKeyInfo, without the OCTET STRING header \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class GP$>$ class DL\_\-PrivateKeyImpl$<$ GP $>$}
+
+\_\- 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_l___private_key_impl_ab80a3771a5ef623677775f7c5dddb1e0}{
+\index{DL\_\-PrivateKeyImpl@{DL\_\-PrivateKeyImpl}!GenerateRandom@{GenerateRandom}}
+\index{GenerateRandom@{GenerateRandom}!DL_PrivateKeyImpl@{DL\_\-PrivateKeyImpl}}
+\subsubsection[{GenerateRandom}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GP$>$ void {\bf DL\_\-PrivateKeyImpl}$<$ GP $>$::GenerateRandom ({\bf RandomNumberGenerator} \& {\em rng}, \/  const {\bf NameValuePairs} \& {\em params})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_l___private_key_impl_ab80a3771a5ef623677775f7c5dddb1e0}
+
+
+generate a random key or crypto parameters 
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em KeyingErr}]if algorithm parameters are invalid, or if a key can't be generated (e.g., if this is a public key object) \end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{class_generatable_crypto_material_abe368b52db1ca7079b690f2d6e605f7a}{GeneratableCryptoMaterial}.\hypertarget{class_d_l___private_key_impl_ac1876a3d292e192186070869be896ded}{
+\index{DL\_\-PrivateKeyImpl@{DL\_\-PrivateKeyImpl}!Precompute@{Precompute}}
+\index{Precompute@{Precompute}!DL_PrivateKeyImpl@{DL\_\-PrivateKeyImpl}}
+\subsubsection[{Precompute}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GP$>$ void {\bf DL\_\-PrivateKeyImpl}$<$ GP $>$::Precompute (unsigned int {\em n} = {\ttfamily 16})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_l___private_key_impl_ac1876a3d292e192186070869be896ded}
+
+
+do precomputation The exact semantics of \hyperlink{class_d_l___private_key_impl_ac1876a3d292e192186070869be896ded}{Precompute()} is varies, but typically it means calculate a table of n objects that can be used later to speed up computation. 
+
+Reimplemented from \hyperlink{class_crypto_material_a39e512d2ea70d0e967db98c19994a7fd}{CryptoMaterial}.\hypertarget{class_d_l___private_key_impl_ae8e4b6e0d700c92852a0c3edbb9afaee}{
+\index{DL\_\-PrivateKeyImpl@{DL\_\-PrivateKeyImpl}!SupportsPrecomputation@{SupportsPrecomputation}}
+\index{SupportsPrecomputation@{SupportsPrecomputation}!DL_PrivateKeyImpl@{DL\_\-PrivateKeyImpl}}
+\subsubsection[{SupportsPrecomputation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GP$>$ bool {\bf DL\_\-PrivateKeyImpl}$<$ GP $>$::SupportsPrecomputation () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_l___private_key_impl_ae8e4b6e0d700c92852a0c3edbb9afaee}
+\begin{DoxyReturn}{Returns}
+whether this object supports precomputation 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_crypto_material_a64ab4ff4adfcfc2da59706ac32895b50}{CryptoMaterial}.\hypertarget{class_d_l___private_key_impl_aa4ad7f55ea46d222c5e7e37f67bd20fe}{
+\index{DL\_\-PrivateKeyImpl@{DL\_\-PrivateKeyImpl}!Validate@{Validate}}
+\index{Validate@{Validate}!DL_PrivateKeyImpl@{DL\_\-PrivateKeyImpl}}
+\subsubsection[{Validate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class GP$>$ bool {\bf DL\_\-PrivateKeyImpl}$<$ GP $>$::Validate ({\bf RandomNumberGenerator} \& {\em rng}, \/  unsigned int {\em level}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_l___private_key_impl_aa4ad7f55ea46d222c5e7e37f67bd20fe}
+
+
+check this object for errors 
+\begin{DoxyParams}{Parameters}
+\item[{\em level}]denotes the level of thoroughness: 0 -\/ using this object won't cause a crash or exception (rng is ignored) 1 -\/ this object will probably function (encrypt, sign, etc.) correctly (but may not check for weak keys and such) 2 -\/ make sure this object will function correctly, and do reasonable security checks 3 -\/ do checks that may take a long time \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the tests pass 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_crypto_material_aaa7d67d0c12712de0e33713c73f5b718}{CryptoMaterial}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{pubkey_8h}{pubkey.h}\end{DoxyCompactItemize}

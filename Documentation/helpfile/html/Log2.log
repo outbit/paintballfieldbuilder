@@ -1,0 +1,9 @@
+Microsoft HTML Help Compiler 4.74.8702
+
+Compiling c:\Program Files\Microsoft Visual Studio .NET 2003\MyProjects\MyC++Projects\Commercial Projects\Paintball Field Builder\Documentation\paintball field builder help\paintballfieldbuilder.chm
+
+HHC5003: Error: Compilation failed while compiling html\index.htm.
+
+
+The following files were not compiled:
+html\index.htm

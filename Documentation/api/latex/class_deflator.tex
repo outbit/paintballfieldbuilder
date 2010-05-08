@@ -1,0 +1,357 @@
+\hypertarget{class_deflator}{
+\section{Deflator Class Reference}
+\label{class_deflator}\index{Deflator@{Deflator}}
+}
+
+
+DEFLATE (RFC 1951) compressor.  
+
+
+{\ttfamily \#include $<$zdeflate.h$>$}Inheritance diagram for Deflator::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7cm]{class_deflator}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_deflator_1_1_encoded_match}{EncodedMatch}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries MIN\_\-DEFLATE\_\-LEVEL} =  0, 
+{\bfseries DEFAULT\_\-DEFLATE\_\-LEVEL} =  6, 
+{\bfseries MAX\_\-DEFLATE\_\-LEVEL} =  9
+ \}
+\item 
+enum \{ {\bfseries MIN\_\-LOG2\_\-WINDOW\_\-SIZE} =  9, 
+{\bfseries DEFAULT\_\-LOG2\_\-WINDOW\_\-SIZE} =  15, 
+{\bfseries MAX\_\-LOG2\_\-WINDOW\_\-SIZE} =  15
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_deflator_aee81a8ccc99647834b079bbcb70e4027}{Deflator} (\hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL, int deflateLevel=DEFAULT\_\-DEFLATE\_\-LEVEL, int log2WindowSize=DEFAULT\_\-LOG2\_\-WINDOW\_\-SIZE, bool detectUncompressible=true)
+\item 
+\hypertarget{class_deflator_ac8cc60904628ddbd604458c2fbf15632}{
+\hyperlink{class_deflator_ac8cc60904628ddbd604458c2fbf15632}{Deflator} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters, \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL)}
+\label{class_deflator_ac8cc60904628ddbd604458c2fbf15632}
+
+\begin{DoxyCompactList}\small\item\em possible parameter names: Log2WindowSize, DeflateLevel, DetectUncompressible \item\end{DoxyCompactList}\item 
+\hypertarget{class_deflator_a5b19de812080b7b12d0a6cc974f60b33}{
+void \hyperlink{class_deflator_a5b19de812080b7b12d0a6cc974f60b33}{SetDeflateLevel} (int deflateLevel)}
+\label{class_deflator_a5b19de812080b7b12d0a6cc974f60b33}
+
+\begin{DoxyCompactList}\small\item\em this function can be used to set the deflate level in the middle of compression \item\end{DoxyCompactList}\item 
+\hypertarget{class_deflator_a729515d987b90f5306cf624769b8711f}{
+int {\bfseries GetDeflateLevel} () const }
+\label{class_deflator_a729515d987b90f5306cf624769b8711f}
+
+\item 
+\hypertarget{class_deflator_ac502e068d669e9a15ed1358f7b9075e0}{
+int {\bfseries GetLog2WindowSize} () const }
+\label{class_deflator_ac502e068d669e9a15ed1358f7b9075e0}
+
+\item 
+\hypertarget{class_deflator_ac9f545b8062a7e822e537364ef422111}{
+void {\bfseries IsolatedInitialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters)}
+\label{class_deflator_ac9f545b8062a7e822e537364ef422111}
+
+\item 
+size\_\-t \hyperlink{class_deflator_ab3ba26f52807a9b5d4af6948d56cd4a9}{Put2} (const byte $\ast$inString, size\_\-t length, int messageEnd, bool blocking)
+\begin{DoxyCompactList}\small\item\em input multiple bytes for blocking or non-\/blocking processing \item\end{DoxyCompactList}\item 
+\hypertarget{class_deflator_a4337716743ff155dc5321843eda29d00}{
+bool {\bfseries IsolatedFlush} (bool hardFlush, bool blocking)}
+\label{class_deflator_a4337716743ff155dc5321843eda29d00}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries STORED} =  0, 
+{\bfseries STATIC} =  1, 
+{\bfseries DYNAMIC} =  2
+ \}
+\item 
+enum \{ {\bfseries MIN\_\-MATCH} =  3, 
+{\bfseries MAX\_\-MATCH} =  258
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_deflator_a4d36fef18ebdbd5827fcb41ab4d8203a}{
+virtual void {\bfseries WritePrestreamHeader} ()}
+\label{class_deflator_a4d36fef18ebdbd5827fcb41ab4d8203a}
+
+\item 
+\hypertarget{class_deflator_af28ffbe1568d6b2b8d7f943eef0529e1}{
+virtual void {\bfseries ProcessUncompressedData} (const byte $\ast$string, size\_\-t length)}
+\label{class_deflator_af28ffbe1568d6b2b8d7f943eef0529e1}
+
+\item 
+\hypertarget{class_deflator_aba9b58b31fac7828e98d4e4d15972f17}{
+virtual void {\bfseries WritePoststreamTail} ()}
+\label{class_deflator_aba9b58b31fac7828e98d4e4d15972f17}
+
+\item 
+\hypertarget{class_deflator_af443cc93b1d40e7226d7b4002e2f3f5a}{
+void {\bfseries InitializeStaticEncoders} ()}
+\label{class_deflator_af443cc93b1d40e7226d7b4002e2f3f5a}
+
+\item 
+\hypertarget{class_deflator_a7976eb754f823f093846a3ba3c0733d7}{
+void {\bfseries Reset} (bool forceReset=false)}
+\label{class_deflator_a7976eb754f823f093846a3ba3c0733d7}
+
+\item 
+\hypertarget{class_deflator_aa041fc5f5426862e45b164fdceba84db}{
+unsigned int {\bfseries FillWindow} (const byte $\ast$str, size\_\-t length)}
+\label{class_deflator_aa041fc5f5426862e45b164fdceba84db}
+
+\item 
+\hypertarget{class_deflator_a44c260b1a4ac0fa54e5e80c4df0ff121}{
+unsigned int {\bfseries ComputeHash} (const byte $\ast$str) const }
+\label{class_deflator_a44c260b1a4ac0fa54e5e80c4df0ff121}
+
+\item 
+\hypertarget{class_deflator_af39e464efb6676829a3b9f3ea0c5f19c}{
+unsigned int {\bfseries LongestMatch} (unsigned int \&bestMatch) const }
+\label{class_deflator_af39e464efb6676829a3b9f3ea0c5f19c}
+
+\item 
+\hypertarget{class_deflator_aded37de66827ee6def1d3bb5a7c19315}{
+void {\bfseries InsertString} (unsigned int start)}
+\label{class_deflator_aded37de66827ee6def1d3bb5a7c19315}
+
+\item 
+\hypertarget{class_deflator_a3002c3031d2432fa3d201caeec1a7f4b}{
+void {\bfseries ProcessBuffer} ()}
+\label{class_deflator_a3002c3031d2432fa3d201caeec1a7f4b}
+
+\item 
+\hypertarget{class_deflator_a0eb8a43b8797d2f21c48f666017924c3}{
+void {\bfseries LiteralByte} (byte b)}
+\label{class_deflator_a0eb8a43b8797d2f21c48f666017924c3}
+
+\item 
+\hypertarget{class_deflator_a5a5cb6258e2cfa731e47dfe33e2f9e4d}{
+void {\bfseries MatchFound} (unsigned int distance, unsigned int length)}
+\label{class_deflator_a5a5cb6258e2cfa731e47dfe33e2f9e4d}
+
+\item 
+\hypertarget{class_deflator_aa4ff23fce8e43dfb33f8e3660ce2a654}{
+void {\bfseries EncodeBlock} (bool eof, unsigned int blockType)}
+\label{class_deflator_aa4ff23fce8e43dfb33f8e3660ce2a654}
+
+\item 
+\hypertarget{class_deflator_af5ef6c8383d58a61e383ddd03b29e8ce}{
+void {\bfseries EndBlock} (bool eof)}
+\label{class_deflator_af5ef6c8383d58a61e383ddd03b29e8ce}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_deflator_a028cf53ff50d3bdd7ce3b8823fb01036}{
+int {\bfseries m\_\-deflateLevel}}
+\label{class_deflator_a028cf53ff50d3bdd7ce3b8823fb01036}
+
+\item 
+\hypertarget{class_deflator_a844bd3068fb0eab4d8248a09dea9cbec}{
+int {\bfseries m\_\-log2WindowSize}}
+\label{class_deflator_a844bd3068fb0eab4d8248a09dea9cbec}
+
+\item 
+\hypertarget{class_deflator_ae1a3ffe221fd4460b6d8f477fb386029}{
+int {\bfseries m\_\-compressibleDeflateLevel}}
+\label{class_deflator_ae1a3ffe221fd4460b6d8f477fb386029}
+
+\item 
+\hypertarget{class_deflator_ac03ff39f709115c8e8919da96ef7ac6f}{
+unsigned int {\bfseries m\_\-detectSkip}}
+\label{class_deflator_ac03ff39f709115c8e8919da96ef7ac6f}
+
+\item 
+\hypertarget{class_deflator_adacfebd48fd53d01b9961b3e05e27b0e}{
+unsigned int {\bfseries m\_\-detectCount}}
+\label{class_deflator_adacfebd48fd53d01b9961b3e05e27b0e}
+
+\item 
+\hypertarget{class_deflator_acbb3318729a2a96a2d957c36c7dcd158}{
+unsigned int {\bfseries DSIZE}}
+\label{class_deflator_acbb3318729a2a96a2d957c36c7dcd158}
+
+\item 
+\hypertarget{class_deflator_abc8dd3d3c28d9b188dd1c19510294a0b}{
+unsigned int {\bfseries DMASK}}
+\label{class_deflator_abc8dd3d3c28d9b188dd1c19510294a0b}
+
+\item 
+\hypertarget{class_deflator_ac94920fbb6c4b08bafa4ec541b9f0239}{
+unsigned int {\bfseries HSIZE}}
+\label{class_deflator_ac94920fbb6c4b08bafa4ec541b9f0239}
+
+\item 
+\hypertarget{class_deflator_adc06bdafc7a354d1665bf141e3ddc9cc}{
+unsigned int {\bfseries HMASK}}
+\label{class_deflator_adc06bdafc7a354d1665bf141e3ddc9cc}
+
+\item 
+\hypertarget{class_deflator_ad5abb84cfaeaa82079f4c98930ba69ce}{
+unsigned int {\bfseries GOOD\_\-MATCH}}
+\label{class_deflator_ad5abb84cfaeaa82079f4c98930ba69ce}
+
+\item 
+\hypertarget{class_deflator_a821630c70545472963ac78bda4b46ac1}{
+unsigned int {\bfseries MAX\_\-LAZYLENGTH}}
+\label{class_deflator_a821630c70545472963ac78bda4b46ac1}
+
+\item 
+\hypertarget{class_deflator_a29f0111d74dfdcf365f84ff070714504}{
+unsigned int {\bfseries MAX\_\-CHAIN\_\-LENGTH}}
+\label{class_deflator_a29f0111d74dfdcf365f84ff070714504}
+
+\item 
+\hypertarget{class_deflator_a061a05e91d67cdf0d326ccf870cf7ef1}{
+bool {\bfseries m\_\-headerWritten}}
+\label{class_deflator_a061a05e91d67cdf0d326ccf870cf7ef1}
+
+\item 
+\hypertarget{class_deflator_a5241d030b8b368014b1c04281bf87fc3}{
+bool {\bfseries m\_\-matchAvailable}}
+\label{class_deflator_a5241d030b8b368014b1c04281bf87fc3}
+
+\item 
+\hypertarget{class_deflator_a8e20cb9e5a29755b016386778221c825}{
+unsigned int {\bfseries m\_\-dictionaryEnd}}
+\label{class_deflator_a8e20cb9e5a29755b016386778221c825}
+
+\item 
+\hypertarget{class_deflator_a42a99f00a21bdf38d9daa15dd2ec8a5d}{
+unsigned int {\bfseries m\_\-stringStart}}
+\label{class_deflator_a42a99f00a21bdf38d9daa15dd2ec8a5d}
+
+\item 
+\hypertarget{class_deflator_ae7b072afd802843284402d648e64412d}{
+unsigned int {\bfseries m\_\-lookahead}}
+\label{class_deflator_ae7b072afd802843284402d648e64412d}
+
+\item 
+\hypertarget{class_deflator_a3646115b10f173efb62402985657bb05}{
+unsigned int {\bfseries m\_\-minLookahead}}
+\label{class_deflator_a3646115b10f173efb62402985657bb05}
+
+\item 
+\hypertarget{class_deflator_af7bedc29fcbbdf6b8bf3aa8e06a3945a}{
+unsigned int {\bfseries m\_\-previousMatch}}
+\label{class_deflator_af7bedc29fcbbdf6b8bf3aa8e06a3945a}
+
+\item 
+\hypertarget{class_deflator_a2767a520eafdf665867a5e7d1de058d7}{
+unsigned int {\bfseries m\_\-previousLength}}
+\label{class_deflator_a2767a520eafdf665867a5e7d1de058d7}
+
+\item 
+\hypertarget{class_deflator_af98457df799bd1bfabcbff9a64ee313b}{
+\hyperlink{class_huffman_encoder}{HuffmanEncoder} {\bfseries m\_\-staticLiteralEncoder}}
+\label{class_deflator_af98457df799bd1bfabcbff9a64ee313b}
+
+\item 
+\hypertarget{class_deflator_a3ca3308982b779fb60d9d3b6b10f0d02}{
+\hyperlink{class_huffman_encoder}{HuffmanEncoder} {\bfseries m\_\-staticDistanceEncoder}}
+\label{class_deflator_a3ca3308982b779fb60d9d3b6b10f0d02}
+
+\item 
+\hypertarget{class_deflator_a7234c528fbdceb1172e2036b9403e1eb}{
+\hyperlink{class_huffman_encoder}{HuffmanEncoder} {\bfseries m\_\-dynamicLiteralEncoder}}
+\label{class_deflator_a7234c528fbdceb1172e2036b9403e1eb}
+
+\item 
+\hypertarget{class_deflator_adea006b691879556c2e95d29743a57e3}{
+\hyperlink{class_huffman_encoder}{HuffmanEncoder} {\bfseries m\_\-dynamicDistanceEncoder}}
+\label{class_deflator_adea006b691879556c2e95d29743a57e3}
+
+\item 
+\hypertarget{class_deflator_a3d899c14cdac6972d8128c32befe3c1a}{
+\hyperlink{class_sec_block}{SecByteBlock} {\bfseries m\_\-byteBuffer}}
+\label{class_deflator_a3d899c14cdac6972d8128c32befe3c1a}
+
+\item 
+\hypertarget{class_deflator_ae72ff240bd264f77f2099c71966fdbf5}{
+\hyperlink{class_sec_block}{SecBlock}$<$ word16 $>$ {\bfseries m\_\-head}}
+\label{class_deflator_ae72ff240bd264f77f2099c71966fdbf5}
+
+\item 
+\hypertarget{class_deflator_aad7bfe8bebc06108c48f08d96e1f88f2}{
+\hyperlink{class_sec_block}{SecBlock}$<$ word16 $>$ {\bfseries m\_\-prev}}
+\label{class_deflator_aad7bfe8bebc06108c48f08d96e1f88f2}
+
+\item 
+\hypertarget{class_deflator_a9cb0dcdc269ae9336134c259882db3bb}{
+\hyperlink{class_fixed_size_sec_block}{FixedSizeSecBlock}$<$ unsigned int, 286 $>$ {\bfseries m\_\-literalCounts}}
+\label{class_deflator_a9cb0dcdc269ae9336134c259882db3bb}
+
+\item 
+\hypertarget{class_deflator_acf02ffb8290a1512da88d94d5e46369c}{
+\hyperlink{class_fixed_size_sec_block}{FixedSizeSecBlock}$<$ unsigned int, 30 $>$ {\bfseries m\_\-distanceCounts}}
+\label{class_deflator_acf02ffb8290a1512da88d94d5e46369c}
+
+\item 
+\hypertarget{class_deflator_a6e0546190e94863417f0ad86bf91834e}{
+\hyperlink{class_sec_block}{SecBlock}$<$ \hyperlink{struct_deflator_1_1_encoded_match}{EncodedMatch} $>$ {\bfseries m\_\-matchBuffer}}
+\label{class_deflator_a6e0546190e94863417f0ad86bf91834e}
+
+\item 
+\hypertarget{class_deflator_ab42368c1d6f17579f3b5651fbf9ace6f}{
+unsigned int {\bfseries m\_\-matchBufferEnd}}
+\label{class_deflator_ab42368c1d6f17579f3b5651fbf9ace6f}
+
+\item 
+\hypertarget{class_deflator_af664ac5ab288e3099324ef2ad051719e}{
+unsigned int {\bfseries m\_\-blockStart}}
+\label{class_deflator_af664ac5ab288e3099324ef2ad051719e}
+
+\item 
+\hypertarget{class_deflator_a7bbef1e0fe539c42509a7bebefc7cb1e}{
+unsigned int {\bfseries m\_\-blockLength}}
+\label{class_deflator_a7bbef1e0fe539c42509a7bebefc7cb1e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+DEFLATE (RFC 1951) compressor. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_deflator_aee81a8ccc99647834b079bbcb70e4027}{
+\index{Deflator@{Deflator}!Deflator@{Deflator}}
+\index{Deflator@{Deflator}!Deflator@{Deflator}}
+\subsubsection[{Deflator}]{\setlength{\rightskip}{0pt plus 5cm}Deflator::Deflator ({\bf BufferedTransformation} $\ast$ {\em attachment} = {\ttfamily NULL}, \/  int {\em deflateLevel} = {\ttfamily DEFAULT\_\-DEFLATE\_\-LEVEL}, \/  int {\em log2WindowSize} = {\ttfamily DEFAULT\_\-LOG2\_\-WINDOW\_\-SIZE}, \/  bool {\em detectUncompressible} = {\ttfamily true})}}
+\label{class_deflator_aee81a8ccc99647834b079bbcb70e4027}
+\begin{DoxyNote}{Note}
+detectUncompressible makes it faster to process uncompressible files, but if a file has both compressible and uncompressible parts, it may fail to compress some of the compressible parts. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_deflator_ab3ba26f52807a9b5d4af6948d56cd4a9}{
+\index{Deflator@{Deflator}!Put2@{Put2}}
+\index{Put2@{Put2}!Deflator@{Deflator}}
+\subsubsection[{Put2}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t Deflator::Put2 (const byte $\ast$ {\em inString}, \/  size\_\-t {\em length}, \/  int {\em messageEnd}, \/  bool {\em blocking})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_deflator_ab3ba26f52807a9b5d4af6948d56cd4a9}
+
+
+input multiple bytes for blocking or non-\/blocking processing 
+\begin{DoxyParams}{Parameters}
+\item[{\em messageEnd}]means how many filters to signal MessageEnd to, including this one \end{DoxyParams}
+
+
+Implements \hyperlink{class_buffered_transformation_ad396dcb42260f23125a35ec0e5d17d55}{BufferedTransformation}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/zdeflate.h\end{DoxyCompactItemize}

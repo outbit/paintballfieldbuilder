@@ -1,0 +1,91 @@
+\hypertarget{class_d_l___signature_scheme_base}{
+\section{DL\_\-SignatureSchemeBase$<$ INTERFACE, KEY\_\-INTERFACE $>$ Class Template Reference}
+\label{class_d_l___signature_scheme_base}\index{DL\_\-SignatureSchemeBase@{DL\_\-SignatureSchemeBase}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$pubkey.h$>$}Inheritance diagram for DL\_\-SignatureSchemeBase$<$ INTERFACE, KEY\_\-INTERFACE $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.50134cm]{class_d_l___signature_scheme_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___signature_scheme_base_ad6ae2e613adb912c3860182a9cb027af}{
+size\_\-t {\bfseries SignatureLength} () const }
+\label{class_d_l___signature_scheme_base_ad6ae2e613adb912c3860182a9cb027af}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_a248fb009c6bc306e3cf88b048e90a948}{
+size\_\-t {\bfseries MaxRecoverableLength} () const }
+\label{class_d_l___signature_scheme_base_a248fb009c6bc306e3cf88b048e90a948}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_a0783f3f292fb2c1d66949cee5361ddcc}{
+size\_\-t {\bfseries MaxRecoverableLengthFromSignatureLength} (size\_\-t signatureLength) const }
+\label{class_d_l___signature_scheme_base_a0783f3f292fb2c1d66949cee5361ddcc}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_ae87d7260e0768b1142cd7c9e8752296c}{
+bool {\bfseries IsProbabilistic} () const }
+\label{class_d_l___signature_scheme_base_ae87d7260e0768b1142cd7c9e8752296c}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_a42afaadc73dcd76d0c0d1c11ae2c3619}{
+bool {\bfseries AllowNonrecoverablePart} () const }
+\label{class_d_l___signature_scheme_base_a42afaadc73dcd76d0c0d1c11ae2c3619}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_a5ee403e1fa8a48911cb97abf5e584504}{
+bool {\bfseries RecoverablePartFirst} () const }
+\label{class_d_l___signature_scheme_base_a5ee403e1fa8a48911cb97abf5e584504}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___signature_scheme_base_ad92fc441759cc162b0c3fe387cac1464}{
+size\_\-t {\bfseries MessageRepresentativeLength} () const }
+\label{class_d_l___signature_scheme_base_ad92fc441759cc162b0c3fe387cac1464}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_ade26acb20ca816bd219bff7dd8bab715}{
+size\_\-t {\bfseries MessageRepresentativeBitLength} () const }
+\label{class_d_l___signature_scheme_base_ade26acb20ca816bd219bff7dd8bab715}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_a33b25375473e1d6a043ecd8c1f9c76d9}{
+virtual const \hyperlink{class_d_l___elgamal_like_signature_algorithm}{DL\_\-ElgamalLikeSignatureAlgorithm}$<$ CPP\_\-TYPENAME KEY\_\-INTERFACE::Element $>$ \& {\bfseries GetSignatureAlgorithm} () const =0}
+\label{class_d_l___signature_scheme_base_a33b25375473e1d6a043ecd8c1f9c76d9}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_aa8176c12c649b9d22701a9645a3f0700}{
+virtual const \hyperlink{class_p_k___signature_message_encoding_method}{PK\_\-SignatureMessageEncodingMethod} \& {\bfseries GetMessageEncodingInterface} () const =0}
+\label{class_d_l___signature_scheme_base_aa8176c12c649b9d22701a9645a3f0700}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_a968748c50e0e91d2730cc4a95f5ff9e1}{
+virtual HashIdentifier {\bfseries GetHashIdentifier} () const =0}
+\label{class_d_l___signature_scheme_base_a968748c50e0e91d2730cc4a95f5ff9e1}
+
+\item 
+\hypertarget{class_d_l___signature_scheme_base_a5a19bab3aeb3cb671de243d2627db4e3}{
+virtual size\_\-t {\bfseries GetDigestSize} () const =0}
+\label{class_d_l___signature_scheme_base_a5a19bab3aeb3cb671de243d2627db4e3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class INTERFACE, class KEY\_\-INTERFACE$>$ class DL\_\-SignatureSchemeBase$<$ INTERFACE, KEY\_\-INTERFACE $>$}
+
+\_\- 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{pubkey_8h}{pubkey.h}\end{DoxyCompactItemize}

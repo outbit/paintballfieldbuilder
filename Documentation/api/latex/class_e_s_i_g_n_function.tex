@@ -1,0 +1,140 @@
+\hypertarget{class_e_s_i_g_n_function}{
+\section{ESIGNFunction Class Reference}
+\label{class_e_s_i_g_n_function}\index{ESIGNFunction@{ESIGNFunction}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$esign.h$>$}Inheritance diagram for ESIGNFunction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.13761cm]{class_e_s_i_g_n_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_s_i_g_n_function_a8517acbd8209e7eeb56138d0ab616265}{
+void {\bfseries Initialize} (const \hyperlink{class_integer}{Integer} \&n, const \hyperlink{class_integer}{Integer} \&e)}
+\label{class_e_s_i_g_n_function_a8517acbd8209e7eeb56138d0ab616265}
+
+\item 
+\hypertarget{class_e_s_i_g_n_function_a6517cb00d59eb584c9ecf86d3dce6742}{
+void \hyperlink{class_e_s_i_g_n_function_a6517cb00d59eb584c9ecf86d3dce6742}{BERDecode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_e_s_i_g_n_function_a6517cb00d59eb584c9ecf86d3dce6742}
+
+\begin{DoxyCompactList}\small\item\em decode this object from a \hyperlink{class_buffered_transformation}{BufferedTransformation}, using BER (Basic Encoding Rules) \item\end{DoxyCompactList}\item 
+\hypertarget{class_e_s_i_g_n_function_a524f9708759975ed9a9481ee94b9eb08}{
+void \hyperlink{class_e_s_i_g_n_function_a524f9708759975ed9a9481ee94b9eb08}{DEREncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_e_s_i_g_n_function_a524f9708759975ed9a9481ee94b9eb08}
+
+\begin{DoxyCompactList}\small\item\em encode this object into a \hyperlink{class_buffered_transformation}{BufferedTransformation}, using DER (Distinguished Encoding Rules) \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_e_s_i_g_n_function_ad9696d3e060bd7acb702b5bfa650eeb7}{Validate} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int level) const 
+\begin{DoxyCompactList}\small\item\em check this object for errors \item\end{DoxyCompactList}\item 
+\hypertarget{class_e_s_i_g_n_function_a53def4f94e81acd0e02a3e50fb9b15ee}{
+bool \hyperlink{class_e_s_i_g_n_function_a53def4f94e81acd0e02a3e50fb9b15ee}{GetVoidValue} (const char $\ast$name, const std::type\_\-info \&valueType, void $\ast$pValue) const }
+\label{class_e_s_i_g_n_function_a53def4f94e81acd0e02a3e50fb9b15ee}
+
+\begin{DoxyCompactList}\small\item\em to be implemented by derived classes, users should use one of the above functions instead \item\end{DoxyCompactList}\item 
+void \hyperlink{class_e_s_i_g_n_function_a1ff8229ed7786a13a69d15e5a64e4d21}{AssignFrom} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&source)
+\begin{DoxyCompactList}\small\item\em assign values from source to this object \item\end{DoxyCompactList}\item 
+\hypertarget{class_e_s_i_g_n_function_a4f97965d2ec6ac022f4d801d1a049905}{
+\hyperlink{class_integer}{Integer} {\bfseries ApplyFunction} (const \hyperlink{class_integer}{Integer} \&x) const }
+\label{class_e_s_i_g_n_function_a4f97965d2ec6ac022f4d801d1a049905}
+
+\item 
+\hypertarget{class_e_s_i_g_n_function_ae007f1b7749980215b32f1643721aa41}{
+\hyperlink{class_integer}{Integer} {\bfseries PreimageBound} () const }
+\label{class_e_s_i_g_n_function_ae007f1b7749980215b32f1643721aa41}
+
+\item 
+\hypertarget{class_e_s_i_g_n_function_aa895825ae14531b6f662437d1a4387c3}{
+\hyperlink{class_integer}{Integer} {\bfseries ImageBound} () const }
+\label{class_e_s_i_g_n_function_aa895825ae14531b6f662437d1a4387c3}
+
+\item 
+\hypertarget{class_e_s_i_g_n_function_ab8c2a9f7f5a90fdfb1ebf4693d956b89}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetModulus} () const }
+\label{class_e_s_i_g_n_function_ab8c2a9f7f5a90fdfb1ebf4693d956b89}
+
+\item 
+\hypertarget{class_e_s_i_g_n_function_a0cc92de71e49e8a331a30015f047f553}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetPublicExponent} () const }
+\label{class_e_s_i_g_n_function_a0cc92de71e49e8a331a30015f047f553}
+
+\item 
+\hypertarget{class_e_s_i_g_n_function_a5bf2c387bd0724b15af1b0eba8429875}{
+void {\bfseries SetModulus} (const \hyperlink{class_integer}{Integer} \&n)}
+\label{class_e_s_i_g_n_function_a5bf2c387bd0724b15af1b0eba8429875}
+
+\item 
+\hypertarget{class_e_s_i_g_n_function_a5c3a6be0267445a7b6eee4655b67568d}{
+void {\bfseries SetPublicExponent} (const \hyperlink{class_integer}{Integer} \&e)}
+\label{class_e_s_i_g_n_function_a5c3a6be0267445a7b6eee4655b67568d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_s_i_g_n_function_af9d44a6d961c90108431d959511e89dc}{
+unsigned int {\bfseries GetK} () const }
+\label{class_e_s_i_g_n_function_af9d44a6d961c90108431d959511e89dc}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_s_i_g_n_function_a74695389e40c412ff0a1e34ebb797678}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-n}}
+\label{class_e_s_i_g_n_function_a74695389e40c412ff0a1e34ebb797678}
+
+\item 
+\hypertarget{class_e_s_i_g_n_function_a086e17e8047753768b22c6b59faebf60}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-e}}
+\label{class_e_s_i_g_n_function_a086e17e8047753768b22c6b59faebf60}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\_\- 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_e_s_i_g_n_function_a1ff8229ed7786a13a69d15e5a64e4d21}{
+\index{ESIGNFunction@{ESIGNFunction}!AssignFrom@{AssignFrom}}
+\index{AssignFrom@{AssignFrom}!ESIGNFunction@{ESIGNFunction}}
+\subsubsection[{AssignFrom}]{\setlength{\rightskip}{0pt plus 5cm}void ESIGNFunction::AssignFrom (const {\bf NameValuePairs} \& {\em source})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_e_s_i_g_n_function_a1ff8229ed7786a13a69d15e5a64e4d21}
+
+
+assign values from source to this object \begin{DoxyNote}{Note}
+This function can be used to create a public key from a private key. 
+\end{DoxyNote}
+
+
+Implements \hyperlink{class_crypto_material_a20181c1b39a74a9fe91385b025b773c6}{CryptoMaterial}.
+
+Reimplemented in \hyperlink{class_invertible_e_s_i_g_n_function_aca870e350b30d04a47d452f21e903278}{InvertibleESIGNFunction}.\hypertarget{class_e_s_i_g_n_function_ad9696d3e060bd7acb702b5bfa650eeb7}{
+\index{ESIGNFunction@{ESIGNFunction}!Validate@{Validate}}
+\index{Validate@{Validate}!ESIGNFunction@{ESIGNFunction}}
+\subsubsection[{Validate}]{\setlength{\rightskip}{0pt plus 5cm}bool ESIGNFunction::Validate ({\bf RandomNumberGenerator} \& {\em rng}, \/  unsigned int {\em level}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_e_s_i_g_n_function_ad9696d3e060bd7acb702b5bfa650eeb7}
+
+
+check this object for errors 
+\begin{DoxyParams}{Parameters}
+\item[{\em level}]denotes the level of thoroughness: 0 -\/ using this object won't cause a crash or exception (rng is ignored) 1 -\/ this object will probably function (encrypt, sign, etc.) correctly (but may not check for weak keys and such) 2 -\/ make sure this object will function correctly, and do reasonable security checks 3 -\/ do checks that may take a long time \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the tests pass 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_crypto_material_aaa7d67d0c12712de0e33713c73f5b718}{CryptoMaterial}.
+
+Reimplemented in \hyperlink{class_invertible_e_s_i_g_n_function_a7ff23978311f9f86024f8287d3fd02a8}{InvertibleESIGNFunction}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{esign_8h}{esign.h}\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\hypertarget{class_authenticated_encryption_filter}{
+\section{AuthenticatedEncryptionFilter Class Reference}
+\label{class_authenticated_encryption_filter}\index{AuthenticatedEncryptionFilter@{AuthenticatedEncryptionFilter}}
+}
+
+
+\hyperlink{class_filter}{Filter} wrapper for encrypting with \hyperlink{class_authenticated_symmetric_cipher}{AuthenticatedSymmetricCipher}, optionally handling padding/unpadding when needed.  
+
+
+{\ttfamily \#include $<$filters.h$>$}Inheritance diagram for AuthenticatedEncryptionFilter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.24064cm]{class_authenticated_encryption_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_authenticated_encryption_filter_ab50017b68574475d37fc726717fde546}{AuthenticatedEncryptionFilter} (\hyperlink{class_authenticated_symmetric_cipher}{AuthenticatedSymmetricCipher} \&c, \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL, bool putAAD=false, int truncatedDigestSize=-\/1, const std::string \&macChannel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL}, BlockPaddingScheme padding=DEFAULT\_\-PADDING)
+\item 
+\hypertarget{class_authenticated_encryption_filter_aad275712b531d24e3ac4d332d46f1dd4}{
+void {\bfseries IsolatedInitialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters)}
+\label{class_authenticated_encryption_filter_aad275712b531d24e3ac4d332d46f1dd4}
+
+\item 
+\hypertarget{class_authenticated_encryption_filter_ac7f154223d3f1661d5aa5623d2f50739}{
+byte $\ast$ {\bfseries ChannelCreatePutSpace} (const std::string \&channel, size\_\-t \&size)}
+\label{class_authenticated_encryption_filter_ac7f154223d3f1661d5aa5623d2f50739}
+
+\item 
+\hypertarget{class_authenticated_encryption_filter_a061422f8897f1a9545ba47f7ff0d8d5b}{
+size\_\-t {\bfseries ChannelPut2} (const std::string \&channel, const byte $\ast$begin, size\_\-t length, int messageEnd, bool blocking)}
+\label{class_authenticated_encryption_filter_a061422f8897f1a9545ba47f7ff0d8d5b}
+
+\item 
+\hypertarget{class_authenticated_encryption_filter_a372eb12964b7974cf58154589ede32ad}{
+void {\bfseries LastPut} (const byte $\ast$inString, size\_\-t length)}
+\label{class_authenticated_encryption_filter_a372eb12964b7974cf58154589ede32ad}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_authenticated_encryption_filter_a34bcc55ffe051b1ee589a39d41cf4812}{
+\hyperlink{class_hash_filter}{HashFilter} {\bfseries m\_\-hf}}
+\label{class_authenticated_encryption_filter_a34bcc55ffe051b1ee589a39d41cf4812}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_filter}{Filter} wrapper for encrypting with \hyperlink{class_authenticated_symmetric_cipher}{AuthenticatedSymmetricCipher}, optionally handling padding/unpadding when needed. Additional authenticated data should be given in channel \char`\"{}AAD\char`\"{}. If putAAD is true, AAD will be \hyperlink{class_buffered_transformation_ae70658b0d271f8e114ac6c3cc9774ede}{Put()} to the attached \hyperlink{class_buffered_transformation}{BufferedTransformation} in channel \char`\"{}AAD\char`\"{}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_authenticated_encryption_filter_ab50017b68574475d37fc726717fde546}{
+\index{AuthenticatedEncryptionFilter@{AuthenticatedEncryptionFilter}!AuthenticatedEncryptionFilter@{AuthenticatedEncryptionFilter}}
+\index{AuthenticatedEncryptionFilter@{AuthenticatedEncryptionFilter}!AuthenticatedEncryptionFilter@{AuthenticatedEncryptionFilter}}
+\subsubsection[{AuthenticatedEncryptionFilter}]{\setlength{\rightskip}{0pt plus 5cm}AuthenticatedEncryptionFilter::AuthenticatedEncryptionFilter ({\bf AuthenticatedSymmetricCipher} \& {\em c}, \/  {\bf BufferedTransformation} $\ast$ {\em attachment} = {\ttfamily NULL}, \/  bool {\em putAAD} = {\ttfamily false}, \/  int {\em truncatedDigestSize} = {\ttfamily -\/1}, \/  const std::string \& {\em macChannel} = {\ttfamily {\bf DEFAULT\_\-CHANNEL}}, \/  BlockPaddingScheme {\em padding} = {\ttfamily DEFAULT\_\-PADDING})}}
+\label{class_authenticated_encryption_filter_ab50017b68574475d37fc726717fde546}
+See \hyperlink{class_stream_transformation_filter}{StreamTransformationFilter} for documentation on BlockPaddingScheme 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/filters.h\end{DoxyCompactItemize}

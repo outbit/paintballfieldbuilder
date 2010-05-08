@@ -1,0 +1,50 @@
+\hypertarget{class_d_l___public_key___g_f_p}{
+\section{DL\_\-PublicKey\_\-GFP$<$ GP $>$ Class Template Reference}
+\label{class_d_l___public_key___g_f_p}\index{DL\_\-PublicKey\_\-GFP@{DL\_\-PublicKey\_\-GFP}}
+}
+
+
+{\ttfamily \#include $<$gfpcrypt.h$>$}Inheritance diagram for DL\_\-PublicKey\_\-GFP$<$ GP $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.66667cm]{class_d_l___public_key___g_f_p}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___public_key___g_f_p_a06b9c78e45b40b6a5bdf3f3bb5a9b806}{
+void {\bfseries Initialize} (const \hyperlink{class_d_l___group_parameters___integer_based}{DL\_\-GroupParameters\_\-IntegerBased} \&params, const \hyperlink{class_integer}{Integer} \&y)}
+\label{class_d_l___public_key___g_f_p_a06b9c78e45b40b6a5bdf3f3bb5a9b806}
+
+\item 
+\hypertarget{class_d_l___public_key___g_f_p_a3488c76b9b7aa9b78ef83bc30b546c6d}{
+void {\bfseries Initialize} (const \hyperlink{class_integer}{Integer} \&p, const \hyperlink{class_integer}{Integer} \&g, const \hyperlink{class_integer}{Integer} \&y)}
+\label{class_d_l___public_key___g_f_p_a3488c76b9b7aa9b78ef83bc30b546c6d}
+
+\item 
+\hypertarget{class_d_l___public_key___g_f_p_adf536d6b1f23579db94bf563b8af45eb}{
+void {\bfseries Initialize} (const \hyperlink{class_integer}{Integer} \&p, const \hyperlink{class_integer}{Integer} \&q, const \hyperlink{class_integer}{Integer} \&g, const \hyperlink{class_integer}{Integer} \&y)}
+\label{class_d_l___public_key___g_f_p_adf536d6b1f23579db94bf563b8af45eb}
+
+\item 
+\hypertarget{class_d_l___public_key___g_f_p_a9776ea4e0c4629e9e699145e0cf20d36}{
+void \hyperlink{class_d_l___public_key___g_f_p_a9776ea4e0c4629e9e699145e0cf20d36}{BERDecodePublicKey} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, bool, size\_\-t)}
+\label{class_d_l___public_key___g_f_p_a9776ea4e0c4629e9e699145e0cf20d36}
+
+\begin{DoxyCompactList}\small\item\em decode subjectPublicKey part of subjectPublicKeyInfo, without the BIT STRING header \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___public_key___g_f_p_a132a1c79c696cb4589e08e5f448df6d0}{
+void \hyperlink{class_d_l___public_key___g_f_p_a132a1c79c696cb4589e08e5f448df6d0}{DEREncodePublicKey} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_d_l___public_key___g_f_p_a132a1c79c696cb4589e08e5f448df6d0}
+
+\begin{DoxyCompactList}\small\item\em encode subjectPublicKey part of subjectPublicKeyInfo, without the BIT STRING header \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class GP$>$ class DL\_\-PublicKey\_\-GFP$<$ GP $>$}
+
+\hyperlink{struct_d_s_a}{DSA} public key format is defined in 7.3.3 of RFC 2459. The private key format is defined in 12.9 of PKCS \#11 v2.10. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{gfpcrypt_8h}{gfpcrypt.h}\end{DoxyCompactItemize}

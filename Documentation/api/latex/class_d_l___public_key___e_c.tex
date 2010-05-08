@@ -1,0 +1,56 @@
+\hypertarget{class_d_l___public_key___e_c}{
+\section{DL\_\-PublicKey\_\-EC$<$ EC $>$ Class Template Reference}
+\label{class_d_l___public_key___e_c}\index{DL\_\-PublicKey\_\-EC@{DL\_\-PublicKey\_\-EC}}
+}
+
+
+EC public key.  
+
+
+{\ttfamily \#include $<$eccrypto.h$>$}Inheritance diagram for DL\_\-PublicKey\_\-EC$<$ EC $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.79019cm]{class_d_l___public_key___e_c}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___public_key___e_c_a3477cdcee6c742ae06fa1a5b899bf13d}{
+typedef EC::Point {\bfseries Element}}
+\label{class_d_l___public_key___e_c_a3477cdcee6c742ae06fa1a5b899bf13d}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___public_key___e_c_ab4b56ecf99dd7e273ebe586ccc2a0b74}{
+void {\bfseries Initialize} (const \hyperlink{class_d_l___group_parameters___e_c}{DL\_\-GroupParameters\_\-EC}$<$ EC $>$ \&params, const Element \&Q)}
+\label{class_d_l___public_key___e_c_ab4b56ecf99dd7e273ebe586ccc2a0b74}
+
+\item 
+\hypertarget{class_d_l___public_key___e_c_a8d03b8c7cba896822f5410f6ccc8a71f}{
+void {\bfseries Initialize} (const EC \&ec, const Element \&G, const \hyperlink{class_integer}{Integer} \&n, const Element \&Q)}
+\label{class_d_l___public_key___e_c_a8d03b8c7cba896822f5410f6ccc8a71f}
+
+\item 
+\hypertarget{class_d_l___public_key___e_c_ab436957725e2d94340f3de56b1260109}{
+void \hyperlink{class_d_l___public_key___e_c_ab436957725e2d94340f3de56b1260109}{BERDecodePublicKey} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, bool parametersPresent, size\_\-t size)}
+\label{class_d_l___public_key___e_c_ab436957725e2d94340f3de56b1260109}
+
+\begin{DoxyCompactList}\small\item\em decode subjectPublicKey part of subjectPublicKeyInfo, without the BIT STRING header \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___public_key___e_c_a8ab4bc2bb34c0572cbba3e5830bd64a7}{
+void \hyperlink{class_d_l___public_key___e_c_a8ab4bc2bb34c0572cbba3e5830bd64a7}{DEREncodePublicKey} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_d_l___public_key___e_c_a8ab4bc2bb34c0572cbba3e5830bd64a7}
+
+\begin{DoxyCompactList}\small\item\em encode subjectPublicKey part of subjectPublicKeyInfo, without the BIT STRING header \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class EC$>$ class DL\_\-PublicKey\_\-EC$<$ EC $>$}
+
+EC public key. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{eccrypto_8h}{eccrypto.h}\end{DoxyCompactItemize}

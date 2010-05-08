@@ -1,0 +1,113 @@
+\hypertarget{class_g_f256}{
+\section{GF256 Class Reference}
+\label{class_g_f256}\index{GF256@{GF256}}
+}
+
+
+GF(256) with polynomial basis.  
+
+
+{\ttfamily \#include $<$gf256.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_f256_a61d30f3ae84c0b9f99906f34492842f0}{
+typedef byte {\bfseries Element}}
+\label{class_g_f256_a61d30f3ae84c0b9f99906f34492842f0}
+
+\item 
+\hypertarget{class_g_f256_a074b1b9381b9c60ecf4754453b739beb}{
+typedef int {\bfseries RandomizationParameter}}
+\label{class_g_f256_a074b1b9381b9c60ecf4754453b739beb}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_f256_a05c5c0fe21f384cf01e8e256a7bf77ff}{
+{\bfseries GF256} (byte modulus)}
+\label{class_g_f256_a05c5c0fe21f384cf01e8e256a7bf77ff}
+
+\item 
+\hypertarget{class_g_f256_a2881cb3770c02bb409f501b7a3a9fa42}{
+Element {\bfseries RandomElement} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, int ignored=0) const }
+\label{class_g_f256_a2881cb3770c02bb409f501b7a3a9fa42}
+
+\item 
+\hypertarget{class_g_f256_a6812749905cd3ac86fd569623a05a743}{
+bool {\bfseries Equal} (Element a, Element b) const }
+\label{class_g_f256_a6812749905cd3ac86fd569623a05a743}
+
+\item 
+\hypertarget{class_g_f256_a4f1d329dbd7b129fbee4939e466dff67}{
+Element {\bfseries Zero} () const }
+\label{class_g_f256_a4f1d329dbd7b129fbee4939e466dff67}
+
+\item 
+\hypertarget{class_g_f256_a284190fc82aac6d40f9a061d06f797ac}{
+Element {\bfseries Add} (Element a, Element b) const }
+\label{class_g_f256_a284190fc82aac6d40f9a061d06f797ac}
+
+\item 
+\hypertarget{class_g_f256_a0e88cddbf2ebe56de9ce9f0fb8df34fd}{
+Element \& {\bfseries Accumulate} (Element \&a, Element b) const }
+\label{class_g_f256_a0e88cddbf2ebe56de9ce9f0fb8df34fd}
+
+\item 
+\hypertarget{class_g_f256_a8a7d82595f3601d04df3693e3783f511}{
+Element {\bfseries Inverse} (Element a) const }
+\label{class_g_f256_a8a7d82595f3601d04df3693e3783f511}
+
+\item 
+\hypertarget{class_g_f256_abc7d41a6cb489c2739f457793a6a7e90}{
+Element {\bfseries Subtract} (Element a, Element b) const }
+\label{class_g_f256_abc7d41a6cb489c2739f457793a6a7e90}
+
+\item 
+\hypertarget{class_g_f256_a7d2ead8ad5ba70a71d0fe75bae4b31f9}{
+Element \& {\bfseries Reduce} (Element \&a, Element b) const }
+\label{class_g_f256_a7d2ead8ad5ba70a71d0fe75bae4b31f9}
+
+\item 
+\hypertarget{class_g_f256_a85ff20cd9ef71d6eaa8b7b0bea55f87b}{
+Element {\bfseries Double} (Element a) const }
+\label{class_g_f256_a85ff20cd9ef71d6eaa8b7b0bea55f87b}
+
+\item 
+\hypertarget{class_g_f256_aaca95e2897c87bd6c575736d57c83b5f}{
+Element {\bfseries One} () const }
+\label{class_g_f256_aaca95e2897c87bd6c575736d57c83b5f}
+
+\item 
+\hypertarget{class_g_f256_ae5260abaafa24f8444e24e1b8f2230ab}{
+Element {\bfseries Multiply} (Element a, Element b) const }
+\label{class_g_f256_ae5260abaafa24f8444e24e1b8f2230ab}
+
+\item 
+\hypertarget{class_g_f256_a54682a194eedba5a69d27cf9ee2447d2}{
+Element {\bfseries Square} (Element a) const }
+\label{class_g_f256_a54682a194eedba5a69d27cf9ee2447d2}
+
+\item 
+\hypertarget{class_g_f256_a9f043fbb799fdd492067177e408c0d2c}{
+bool {\bfseries IsUnit} (Element a) const }
+\label{class_g_f256_a9f043fbb799fdd492067177e408c0d2c}
+
+\item 
+\hypertarget{class_g_f256_a3b56acf8a545ac6a14fea8350a99f927}{
+Element {\bfseries MultiplicativeInverse} (Element a) const }
+\label{class_g_f256_a3b56acf8a545ac6a14fea8350a99f927}
+
+\item 
+\hypertarget{class_g_f256_abcf3ca1848f3434791298e35fbef0dd6}{
+Element {\bfseries Divide} (Element a, Element b) const }
+\label{class_g_f256_abcf3ca1848f3434791298e35fbef0dd6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GF(256) with polynomial basis. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/gf256.h\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+material fieldmisc_material_netting
+{
+    technique
+    {
+        pass
+        {
+            ambient 1.0 1.0 1.0 1.0
+            diffuse 1.0 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 0.0
+            emissive 1.0 1.0 1.0 1.0
+
+            shading gouraud 
+                   // All alpha areas opaque without "alpha_rejection". 
+	    alpha_rejection greater_equal 128
+                  // Turn off backface culling to "see through" your object. 
+            cull_hardware none 
+            cull_software none 
+
+            texture_unit
+            {
+                texture fieldmisc_skin_netting.gif 
+            }
+        }
+    }
+}

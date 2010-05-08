@@ -1,0 +1,96 @@
+\hypertarget{class_abstract_group}{
+\section{AbstractGroup$<$ T $>$ Class Template Reference}
+\label{class_abstract_group}\index{AbstractGroup@{AbstractGroup}}
+}
+
+
+Abstract Group.  
+
+
+{\ttfamily \#include $<$algebra.h$>$}Inheritance diagram for AbstractGroup$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.32388cm]{class_abstract_group}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_abstract_group_a4a2b3308fb5c13f70fcc5746be52ba7b}{
+typedef T {\bfseries Element}}
+\label{class_abstract_group_a4a2b3308fb5c13f70fcc5746be52ba7b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_abstract_group_a0d72cb663566b7c056f846a561547bec}{
+virtual bool {\bfseries Equal} (const Element \&a, const Element \&b) const =0}
+\label{class_abstract_group_a0d72cb663566b7c056f846a561547bec}
+
+\item 
+\hypertarget{class_abstract_group_a929ba4e6a7d7d80344946efad0456d5b}{
+virtual const Element \& {\bfseries Identity} () const =0}
+\label{class_abstract_group_a929ba4e6a7d7d80344946efad0456d5b}
+
+\item 
+\hypertarget{class_abstract_group_aa813430d9e4244de24c487d090eb5797}{
+virtual const Element \& {\bfseries Add} (const Element \&a, const Element \&b) const =0}
+\label{class_abstract_group_aa813430d9e4244de24c487d090eb5797}
+
+\item 
+\hypertarget{class_abstract_group_ab22563bc0dcb544399d7e22b3589e165}{
+virtual const Element \& {\bfseries Inverse} (const Element \&a) const =0}
+\label{class_abstract_group_ab22563bc0dcb544399d7e22b3589e165}
+
+\item 
+\hypertarget{class_abstract_group_ac571ac9b67ad9b7ef893c715b1ec2f43}{
+virtual bool {\bfseries InversionIsFast} () const }
+\label{class_abstract_group_ac571ac9b67ad9b7ef893c715b1ec2f43}
+
+\item 
+\hypertarget{class_abstract_group_afe7761c37cf87e16ee9cb981faf5d6e7}{
+virtual const Element \& {\bfseries Double} (const Element \&a) const }
+\label{class_abstract_group_afe7761c37cf87e16ee9cb981faf5d6e7}
+
+\item 
+\hypertarget{class_abstract_group_af9d3065d91b4e567397cbe83adb48cf6}{
+virtual const Element \& {\bfseries Subtract} (const Element \&a, const Element \&b) const }
+\label{class_abstract_group_af9d3065d91b4e567397cbe83adb48cf6}
+
+\item 
+\hypertarget{class_abstract_group_aa5113d3e1a7d669d2cd48a9b2fb5a725}{
+virtual Element \& {\bfseries Accumulate} (Element \&a, const Element \&b) const }
+\label{class_abstract_group_aa5113d3e1a7d669d2cd48a9b2fb5a725}
+
+\item 
+\hypertarget{class_abstract_group_a33ab0d605c764d443b5bed2ea5495ea8}{
+virtual Element \& {\bfseries Reduce} (Element \&a, const Element \&b) const }
+\label{class_abstract_group_a33ab0d605c764d443b5bed2ea5495ea8}
+
+\item 
+\hypertarget{class_abstract_group_af744ac568eb42500a914125b1addb5f5}{
+virtual Element {\bfseries ScalarMultiply} (const Element \&a, const \hyperlink{class_integer}{Integer} \&e) const }
+\label{class_abstract_group_af744ac568eb42500a914125b1addb5f5}
+
+\item 
+\hypertarget{class_abstract_group_a33d7face914b65e380246a18882f230c}{
+virtual Element {\bfseries CascadeScalarMultiply} (const Element \&x, const \hyperlink{class_integer}{Integer} \&e1, const Element \&y, const \hyperlink{class_integer}{Integer} \&e2) const }
+\label{class_abstract_group_a33d7face914b65e380246a18882f230c}
+
+\item 
+\hypertarget{class_abstract_group_a5813633097333ef81e9b652f66718001}{
+virtual void {\bfseries SimultaneousMultiply} (Element $\ast$results, const Element \&base, const \hyperlink{class_integer}{Integer} $\ast$exponents, unsigned int exponentsCount) const }
+\label{class_abstract_group_a5813633097333ef81e9b652f66718001}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class AbstractGroup$<$ T $>$}
+
+Abstract Group. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/algebra.h\end{DoxyCompactItemize}

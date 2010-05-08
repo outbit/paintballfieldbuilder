@@ -1,0 +1,12 @@
+version:1:
+generatedby:NULL:
+credit:Hyperformance Paintball LLC:
+copyright:2006:
+
+bunker<default_dorito,default_gui_dorito.bmp,default_mesh_dorito.mesh,default_mesh_dorito.material>
+bunker<default_can,default_gui_can.bmp,default_mesh_can.mesh,default_mesh_can.material>
+bunker<default_rocket,default_gui_rocket.bmp,default_mesh_rocket.mesh,default_mesh_rocket.material>
+bunker<default_cone,default_gui_cone.bmp,default_mesh_cone.mesh,default_mesh_cone.material>
+bunker<default_tallcan,default_gui_tallcan.bmp,default_mesh_tallcan.mesh,default_mesh_tallcan.material>
+bunker<default_ldcan,default_gui_ldcan.bmp,default_mesh_ldcan.mesh,default_mesh_ldcan.material>
+bunker<default_ldcone,default_gui_ldcone.bmp,default_mesh_ldcone.mesh,default_mesh_ldcone.material>

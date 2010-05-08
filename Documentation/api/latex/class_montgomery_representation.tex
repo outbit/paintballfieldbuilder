@@ -1,0 +1,84 @@
+\hypertarget{class_montgomery_representation}{
+\section{MontgomeryRepresentation Class Reference}
+\label{class_montgomery_representation}\index{MontgomeryRepresentation@{MontgomeryRepresentation}}
+}
+
+
+do modular arithmetics in Montgomery representation for increased speed  
+
+
+{\ttfamily \#include $<$modarith.h$>$}Inheritance diagram for MontgomeryRepresentation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{class_montgomery_representation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_montgomery_representation_ac65a390ac18c44b685a189047a4d3292}{
+{\bfseries MontgomeryRepresentation} (const \hyperlink{class_integer}{Integer} \&modulus)}
+\label{class_montgomery_representation_ac65a390ac18c44b685a189047a4d3292}
+
+\item 
+\hypertarget{class_montgomery_representation_a7a051242207625c219a03029365c4936}{
+virtual \hyperlink{class_modular_arithmetic}{ModularArithmetic} $\ast$ {\bfseries Clone} () const }
+\label{class_montgomery_representation_a7a051242207625c219a03029365c4936}
+
+\item 
+\hypertarget{class_montgomery_representation_a47ca2277410a94e93ab6aea778269047}{
+bool {\bfseries IsMontgomeryRepresentation} () const }
+\label{class_montgomery_representation_a47ca2277410a94e93ab6aea778269047}
+
+\item 
+\hypertarget{class_montgomery_representation_ac0a6608ef5bac036beb44d8cbd5eac52}{
+\hyperlink{class_integer}{Integer} {\bfseries ConvertIn} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_montgomery_representation_ac0a6608ef5bac036beb44d8cbd5eac52}
+
+\item 
+\hypertarget{class_montgomery_representation_ad0037be677cdac1fa22375a8619abc77}{
+\hyperlink{class_integer}{Integer} {\bfseries ConvertOut} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_montgomery_representation_ad0037be677cdac1fa22375a8619abc77}
+
+\item 
+\hypertarget{class_montgomery_representation_ac861eacde0adebc393da560f8b00fcf0}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries MultiplicativeIdentity} () const }
+\label{class_montgomery_representation_ac861eacde0adebc393da560f8b00fcf0}
+
+\item 
+\hypertarget{class_montgomery_representation_a5414146384e2ce1aaad99edb3ef2947d}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Multiply} (const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_montgomery_representation_a5414146384e2ce1aaad99edb3ef2947d}
+
+\item 
+\hypertarget{class_montgomery_representation_a1ec518d88d30ea5adad49ae6d52ed0b7}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Square} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_montgomery_representation_a1ec518d88d30ea5adad49ae6d52ed0b7}
+
+\item 
+\hypertarget{class_montgomery_representation_af244449d02e097520520e2c7255ec526}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries MultiplicativeInverse} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_montgomery_representation_af244449d02e097520520e2c7255ec526}
+
+\item 
+\hypertarget{class_montgomery_representation_acd3a38b45b2e1c3d1dd9e1bb43d500fe}{
+\hyperlink{class_integer}{Integer} {\bfseries CascadeExponentiate} (const \hyperlink{class_integer}{Integer} \&x, const \hyperlink{class_integer}{Integer} \&e1, const \hyperlink{class_integer}{Integer} \&y, const \hyperlink{class_integer}{Integer} \&e2) const }
+\label{class_montgomery_representation_acd3a38b45b2e1c3d1dd9e1bb43d500fe}
+
+\item 
+\hypertarget{class_montgomery_representation_a031b2e547e3c748947e295e6e44b404c}{
+void {\bfseries SimultaneousExponentiate} (Element $\ast$results, const Element \&base, const \hyperlink{class_integer}{Integer} $\ast$exponents, unsigned int exponentsCount) const }
+\label{class_montgomery_representation_a031b2e547e3c748947e295e6e44b404c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+do modular arithmetics in Montgomery representation for increased speed \begin{DoxyNote}{Note}
+the Montgomery representation represents each congruence class \mbox{[}a\mbox{]} as a$\ast$rn, where r is a convenient power of 2 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/modarith.h\end{DoxyCompactItemize}

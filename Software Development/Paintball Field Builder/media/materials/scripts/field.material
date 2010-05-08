@@ -1,0 +1,17 @@
+material Field
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.0 0.858824 0.0588235
+            diffuse 0.0 0.858824 0.0588235
+            specular 0.0 0.262745 0.0627451 0.0
+            emissive 0.0 0.0 0.0
+            texture_unit
+            {
+                texture grass_1024.jpg 
+            }
+        }
+    }
+}

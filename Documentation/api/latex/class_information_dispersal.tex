@@ -1,0 +1,88 @@
+\hypertarget{class_information_dispersal}{
+\section{InformationDispersal Class Reference}
+\label{class_information_dispersal}\index{InformationDispersal@{InformationDispersal}}
+}
+
+
+a variant of Rabin's Information Dispersal \hyperlink{class_algorithm}{Algorithm}  
+
+
+{\ttfamily \#include $<$ida.h$>$}Inheritance diagram for InformationDispersal::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.25822cm]{class_information_dispersal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_information_dispersal_a40e812ee9251c018efe7bff39e812efe}{
+{\bfseries InformationDispersal} (int threshold, int nShares, \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL, bool addPadding=true)}
+\label{class_information_dispersal_a40e812ee9251c018efe7bff39e812efe}
+
+\item 
+\hypertarget{class_information_dispersal_a3901bdfb5959c2ee901bd3a5fe1c161a}{
+void {\bfseries IsolatedInitialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters=\hyperlink{cryptlib_8h_ab1b0f7d11a21c6163be8ca2662ce2ac6}{g\_\-nullNameValuePairs})}
+\label{class_information_dispersal_a3901bdfb5959c2ee901bd3a5fe1c161a}
+
+\item 
+size\_\-t \hyperlink{class_information_dispersal_a0dd51a1bdc83cea84cd72218730f4744}{Put2} (const byte $\ast$begin, size\_\-t length, int messageEnd, bool blocking)
+\begin{DoxyCompactList}\small\item\em input multiple bytes for blocking or non-\/blocking processing \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_information_dispersal_aa348e2dd4609c563196f89e1cf2ad35c}{Flush} (bool hardFlush, int propagation=-\/1, bool blocking=true)
+\begin{DoxyCompactList}\small\item\em flush buffered input and/or output \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_information_dispersal_afd962aac086ce5c3fbf16157d59e4e63}{
+\hyperlink{class_raw_i_d_a}{RawIDA} {\bfseries m\_\-ida}}
+\label{class_information_dispersal_afd962aac086ce5c3fbf16157d59e4e63}
+
+\item 
+\hypertarget{class_information_dispersal_afc464de54c9d574c9bff3d674907fd42}{
+bool {\bfseries m\_\-pad}}
+\label{class_information_dispersal_afc464de54c9d574c9bff3d674907fd42}
+
+\item 
+\hypertarget{class_information_dispersal_a4bd5ab80c6221a3274033470cbc83620}{
+unsigned int {\bfseries m\_\-nextChannel}}
+\label{class_information_dispersal_a4bd5ab80c6221a3274033470cbc83620}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a variant of Rabin's Information Dispersal \hyperlink{class_algorithm}{Algorithm} 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_information_dispersal_aa348e2dd4609c563196f89e1cf2ad35c}{
+\index{InformationDispersal@{InformationDispersal}!Flush@{Flush}}
+\index{Flush@{Flush}!InformationDispersal@{InformationDispersal}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}bool InformationDispersal::Flush (bool {\em hardFlush}, \/  int {\em propagation} = {\ttfamily -\/1}, \/  bool {\em blocking} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_information_dispersal_aa348e2dd4609c563196f89e1cf2ad35c}
+
+
+flush buffered input and/or output 
+\begin{DoxyParams}{Parameters}
+\item[{\em hardFlush}]is used to indicate whether all data should be flushed \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Hard flushes must be used with care. It means try to process and output everything, even if there may not be enough data to complete the action. For example, hard flushing a \hyperlink{class_hex_decoder}{HexDecoder} would cause an error if you do it after inputing an odd number of hex encoded characters. For some types of filters, for example \hyperlink{class_zlib_decompressor}{ZlibDecompressor}, hard flushes can only be done at \char`\"{}synchronization points\char`\"{}. These synchronization points are positions in the data stream that are created by hard flushes on the corresponding reverse filters, in this example \hyperlink{class_zlib_compressor}{ZlibCompressor}. This is useful when zlib compressed data is moved across a network in packets and compression state is preserved across packets, as in the ssh2 protocol. 
+\end{DoxyNote}
+
+
+Implements \hyperlink{class_custom_flush_propagation}{CustomFlushPropagation$<$ Filter $>$}.\hypertarget{class_information_dispersal_a0dd51a1bdc83cea84cd72218730f4744}{
+\index{InformationDispersal@{InformationDispersal}!Put2@{Put2}}
+\index{Put2@{Put2}!InformationDispersal@{InformationDispersal}}
+\subsubsection[{Put2}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t InformationDispersal::Put2 (const byte $\ast$ {\em inString}, \/  size\_\-t {\em length}, \/  int {\em messageEnd}, \/  bool {\em blocking})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_information_dispersal_a0dd51a1bdc83cea84cd72218730f4744}
+
+
+input multiple bytes for blocking or non-\/blocking processing 
+\begin{DoxyParams}{Parameters}
+\item[{\em messageEnd}]means how many filters to signal MessageEnd to, including this one \end{DoxyParams}
+
+
+Implements \hyperlink{class_buffered_transformation_ad396dcb42260f23125a35ec0e5d17d55}{BufferedTransformation}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/ida.h\end{DoxyCompactItemize}

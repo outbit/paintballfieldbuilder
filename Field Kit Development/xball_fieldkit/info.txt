@@ -1,0 +1,23 @@
+version:1:
+generatedby:NULL:
+credit:Hyperformance Paintball LLC:
+copyright:2006:
+
+bunker<xball_x,xball_gui_x.bmp,xball_mesh_x.mesh,xball_mesh_x.material>
+bunker<xball_mx,xball_gui_mx.bmp,xball_mesh_mx.mesh,xball_mesh_x.material>
+bunker<xball_temple,xball_gui_temple.bmp,xball_mesh_temple.mesh,xball_mesh_temple.material>
+bunker<xball_wing,xball_gui_wing.bmp,xball_mesh_wing.mesh,xball_mesh_wing.material>
+bunker<xball_brick,xball_gui_brick.bmp,xball_mesh_brick.mesh,xball_mesh_brick.material>
+bunker<xball_bbrick,xball_gui_bbrick.bmp,xball_mesh_bbrick.mesh,xball_mesh_bbrick.material>
+bunker<xball_ldbrick,xball_gui_ldbrick.bmp,xball_mesh_ldbrick.mesh,xball_mesh_ldbrick.material>
+bunker<xball_mbeam,xball_gui_mbeam.bmp,xball_mesh_mbeam.mesh,xball_mesh_brick.material>
+bunker<xball_beam,xball_gui_beam.bmp,xball_mesh_beam.mesh,xball_mesh_brick.material>
+bunker<xball_gbeam,xball_gui_gbeam.bmp,xball_mesh_gbeam.mesh,xball_mesh_brick.material>
+bunker<xball_dorito,xball_gui_dorito.bmp,xball_mesh_dorito.mesh,xball_mesh_dorito.material>
+bunker<xball_bdorito,xball_gui_bdorito.bmp,xball_mesh_bdorito.mesh,xball_mesh_bdorito.material>
+bunker<xball_rocket,xball_gui_rocket.bmp,xball_mesh_rocket.mesh,xball_mesh_rocket.material>
+bunker<xball_can,xball_gui_can.bmp,xball_mesh_can.mesh,xball_mesh_can.material>
+bunker<xball_tallcan,xball_gui_tallcan.bmp,xball_mesh_tallcan.mesh,xball_mesh_tallcan.material>
+bunker<xball_ldcan,xball_gui_ldcan.bmp,xball_mesh_ldcan.mesh,xball_mesh_ldcan.material>
+bunker<xball_cone,xball_gui_cone.bmp,xball_mesh_cone.mesh,xball_mesh_cone.material>
+bunker<xball_ldcone,xball_gui_ldcone.bmp,xball_mesh_ldcone.mesh,xball_mesh_ldcone.material>

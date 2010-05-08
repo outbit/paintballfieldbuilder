@@ -1,0 +1,91 @@
+\hypertarget{class_hash_verification_filter}{
+\section{HashVerificationFilter Class Reference}
+\label{class_hash_verification_filter}\index{HashVerificationFilter@{HashVerificationFilter}}
+}
+
+
+\hyperlink{class_filter}{Filter} Wrapper for \hyperlink{class_hash_transformation}{HashTransformation}.  
+
+
+{\ttfamily \#include $<$filters.h$>$}Inheritance diagram for HashVerificationFilter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6cm]{class_hash_verification_filter}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_hash_verification_filter_1_1_hash_verification_failed}{HashVerificationFailed}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Flags} \{ \par
+{\bfseries HASH\_\-AT\_\-END} = 0, 
+{\bfseries HASH\_\-AT\_\-BEGIN} = 1, 
+{\bfseries PUT\_\-MESSAGE} = 2, 
+{\bfseries PUT\_\-HASH} = 4, 
+\par
+{\bfseries PUT\_\-RESULT} = 8, 
+{\bfseries THROW\_\-EXCEPTION} = 16, 
+{\bfseries DEFAULT\_\-FLAGS} =  HASH\_\-AT\_\-BEGIN $|$ PUT\_\-RESULT
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_hash_verification_filter_a27983e6af704b2f42ec10c76cc70efe0}{
+{\bfseries HashVerificationFilter} (\hyperlink{class_hash_transformation}{HashTransformation} \&hm, \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL, word32 flags=DEFAULT\_\-FLAGS, int truncatedDigestSize=-\/1)}
+\label{class_hash_verification_filter_a27983e6af704b2f42ec10c76cc70efe0}
+
+\item 
+\hypertarget{class_hash_verification_filter_ae306d012c4a01bd48cc77a2b739a037f}{
+std::string \hyperlink{class_hash_verification_filter_ae306d012c4a01bd48cc77a2b739a037f}{AlgorithmName} () const }
+\label{class_hash_verification_filter_ae306d012c4a01bd48cc77a2b739a037f}
+
+\begin{DoxyCompactList}\small\item\em returns name of this algorithm, not universally implemented yet \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_verification_filter_af292c3d2625a283accedee1f45e84b97}{
+bool {\bfseries GetLastResult} () const }
+\label{class_hash_verification_filter_af292c3d2625a283accedee1f45e84b97}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_hash_verification_filter_a576bff69d1916d93006b36c8f08b34fc}{
+void {\bfseries InitializeDerivedAndReturnNewSizes} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters, size\_\-t \&firstSize, size\_\-t \&blockSize, size\_\-t \&lastSize)}
+\label{class_hash_verification_filter_a576bff69d1916d93006b36c8f08b34fc}
+
+\item 
+\hypertarget{class_hash_verification_filter_ad9a36a03b47bab184ad1249f5c1cdcdb}{
+void {\bfseries FirstPut} (const byte $\ast$inString)}
+\label{class_hash_verification_filter_ad9a36a03b47bab184ad1249f5c1cdcdb}
+
+\item 
+\hypertarget{class_hash_verification_filter_a28f02b077e729c44d98c90fad796be3a}{
+void {\bfseries NextPutMultiple} (const byte $\ast$inString, size\_\-t length)}
+\label{class_hash_verification_filter_a28f02b077e729c44d98c90fad796be3a}
+
+\item 
+\hypertarget{class_hash_verification_filter_a340b6ef7bfde4862af4f1ebec217e269}{
+void {\bfseries LastPut} (const byte $\ast$inString, size\_\-t length)}
+\label{class_hash_verification_filter_a340b6ef7bfde4862af4f1ebec217e269}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_hash_verification_filter_a8ee49fc7dbd09e4c04ce8f0b2e874c9d}{
+class \hyperlink{class_hash_verification_filter_a8ee49fc7dbd09e4c04ce8f0b2e874c9d}{AuthenticatedDecryptionFilter}}
+\label{class_hash_verification_filter_a8ee49fc7dbd09e4c04ce8f0b2e874c9d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_filter}{Filter} Wrapper for \hyperlink{class_hash_transformation}{HashTransformation}. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/filters.h\end{DoxyCompactItemize}

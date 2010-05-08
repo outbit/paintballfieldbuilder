@@ -1,0 +1,189 @@
+\hypertarget{class_e_c_p}{
+\section{ECP Class Reference}
+\label{class_e_c_p}\index{ECP@{ECP}}
+}
+
+
+Elliptic Curve over GF(p), where p is prime.  
+
+
+{\ttfamily \#include $<$ecp.h$>$}Inheritance diagram for ECP::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_e_c_p}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_c_p_a746aebbc43b99972e5a647ebabbbc931}{
+typedef \hyperlink{class_modular_arithmetic}{ModularArithmetic} {\bfseries Field}}
+\label{class_e_c_p_a746aebbc43b99972e5a647ebabbbc931}
+
+\item 
+\hypertarget{class_e_c_p_a337e68ddf10edab098c55474d52c4d04}{
+typedef \hyperlink{class_integer}{Integer} {\bfseries FieldElement}}
+\label{class_e_c_p_a337e68ddf10edab098c55474d52c4d04}
+
+\item 
+\hypertarget{class_e_c_p_a99c34a437007f32af4e6c4ae275358ea}{
+typedef \hyperlink{struct_e_c_p_point}{ECPPoint} {\bfseries Point}}
+\label{class_e_c_p_a99c34a437007f32af4e6c4ae275358ea}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_c_p_a75052eac63ed5622c1e558852cd2d1a4}{
+{\bfseries ECP} (const \hyperlink{class_e_c_p}{ECP} \&ecp, bool convertToMontgomeryRepresentation=false)}
+\label{class_e_c_p_a75052eac63ed5622c1e558852cd2d1a4}
+
+\item 
+\hypertarget{class_e_c_p_a7dbe4a90840d3b7cb23412a65414f4f5}{
+{\bfseries ECP} (const \hyperlink{class_integer}{Integer} \&modulus, const \hyperlink{class_integer}{FieldElement} \&a, const \hyperlink{class_integer}{FieldElement} \&b)}
+\label{class_e_c_p_a7dbe4a90840d3b7cb23412a65414f4f5}
+
+\item 
+\hypertarget{class_e_c_p_aa7f09fe942958b0b0933fa9a9a55fa6d}{
+{\bfseries ECP} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_e_c_p_aa7f09fe942958b0b0933fa9a9a55fa6d}
+
+\item 
+\hypertarget{class_e_c_p_abd3375eb0b264264e22b624dc127f8c4}{
+void {\bfseries DEREncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_e_c_p_abd3375eb0b264264e22b624dc127f8c4}
+
+\item 
+\hypertarget{class_e_c_p_ab7ccece5f3c8ae31dd0a82bf92ba5ec5}{
+bool {\bfseries Equal} (const \hyperlink{struct_e_c_p_point}{Point} \&P, const \hyperlink{struct_e_c_p_point}{Point} \&Q) const }
+\label{class_e_c_p_ab7ccece5f3c8ae31dd0a82bf92ba5ec5}
+
+\item 
+\hypertarget{class_e_c_p_a2cc4cc2d904bcd16a00bcb140411b7e5}{
+const \hyperlink{struct_e_c_p_point}{Point} \& {\bfseries Identity} () const }
+\label{class_e_c_p_a2cc4cc2d904bcd16a00bcb140411b7e5}
+
+\item 
+\hypertarget{class_e_c_p_a92c774cedd39179daabc3373a9282465}{
+const \hyperlink{struct_e_c_p_point}{Point} \& {\bfseries Inverse} (const \hyperlink{struct_e_c_p_point}{Point} \&P) const }
+\label{class_e_c_p_a92c774cedd39179daabc3373a9282465}
+
+\item 
+\hypertarget{class_e_c_p_a1081a3e2d1056cae1b643925fb4cd146}{
+bool {\bfseries InversionIsFast} () const }
+\label{class_e_c_p_a1081a3e2d1056cae1b643925fb4cd146}
+
+\item 
+\hypertarget{class_e_c_p_a61e8beae4530bbdd60cd9160a7eee42d}{
+const \hyperlink{struct_e_c_p_point}{Point} \& {\bfseries Add} (const \hyperlink{struct_e_c_p_point}{Point} \&P, const \hyperlink{struct_e_c_p_point}{Point} \&Q) const }
+\label{class_e_c_p_a61e8beae4530bbdd60cd9160a7eee42d}
+
+\item 
+\hypertarget{class_e_c_p_a33bddedc946ed3e889ad06d71af173d1}{
+const \hyperlink{struct_e_c_p_point}{Point} \& {\bfseries Double} (const \hyperlink{struct_e_c_p_point}{Point} \&P) const }
+\label{class_e_c_p_a33bddedc946ed3e889ad06d71af173d1}
+
+\item 
+\hypertarget{class_e_c_p_adfa8feab79acd8d68cb2428336ed2ba2}{
+\hyperlink{struct_e_c_p_point}{Point} {\bfseries ScalarMultiply} (const \hyperlink{struct_e_c_p_point}{Point} \&P, const \hyperlink{class_integer}{Integer} \&k) const }
+\label{class_e_c_p_adfa8feab79acd8d68cb2428336ed2ba2}
+
+\item 
+\hypertarget{class_e_c_p_ae21a76592bdc53167276598872264390}{
+\hyperlink{struct_e_c_p_point}{Point} {\bfseries CascadeScalarMultiply} (const \hyperlink{struct_e_c_p_point}{Point} \&P, const \hyperlink{class_integer}{Integer} \&k1, const \hyperlink{struct_e_c_p_point}{Point} \&Q, const \hyperlink{class_integer}{Integer} \&k2) const }
+\label{class_e_c_p_ae21a76592bdc53167276598872264390}
+
+\item 
+\hypertarget{class_e_c_p_ae03e8be5050fb0f67a6b63420512f8c2}{
+void {\bfseries SimultaneousMultiply} (\hyperlink{struct_e_c_p_point}{Point} $\ast$results, const \hyperlink{struct_e_c_p_point}{Point} \&base, const \hyperlink{class_integer}{Integer} $\ast$exponents, unsigned int exponentsCount) const }
+\label{class_e_c_p_ae03e8be5050fb0f67a6b63420512f8c2}
+
+\item 
+\hypertarget{class_e_c_p_a81862b8619979835884f0239012e2ce9}{
+\hyperlink{struct_e_c_p_point}{Point} {\bfseries Multiply} (const \hyperlink{class_integer}{Integer} \&k, const \hyperlink{struct_e_c_p_point}{Point} \&P) const }
+\label{class_e_c_p_a81862b8619979835884f0239012e2ce9}
+
+\item 
+\hypertarget{class_e_c_p_ade7d41c2b0ce5941c69b071081c2cb06}{
+\hyperlink{struct_e_c_p_point}{Point} {\bfseries CascadeMultiply} (const \hyperlink{class_integer}{Integer} \&k1, const \hyperlink{struct_e_c_p_point}{Point} \&P, const \hyperlink{class_integer}{Integer} \&k2, const \hyperlink{struct_e_c_p_point}{Point} \&Q) const }
+\label{class_e_c_p_ade7d41c2b0ce5941c69b071081c2cb06}
+
+\item 
+\hypertarget{class_e_c_p_a7d4efd7263293e409f736224393bb037}{
+bool {\bfseries ValidateParameters} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int level=3) const }
+\label{class_e_c_p_a7d4efd7263293e409f736224393bb037}
+
+\item 
+\hypertarget{class_e_c_p_a5f7163f70d5bbc22394948019b84046f}{
+bool {\bfseries VerifyPoint} (const \hyperlink{struct_e_c_p_point}{Point} \&P) const }
+\label{class_e_c_p_a5f7163f70d5bbc22394948019b84046f}
+
+\item 
+\hypertarget{class_e_c_p_a4273ed51110725435ddeefcac166c29d}{
+unsigned int {\bfseries EncodedPointSize} (bool compressed=false) const }
+\label{class_e_c_p_a4273ed51110725435ddeefcac166c29d}
+
+\item 
+\hypertarget{class_e_c_p_af76cfd310eb62de1eca144cb3a8564e1}{
+bool {\bfseries DecodePoint} (\hyperlink{struct_e_c_p_point}{Point} \&P, \hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, size\_\-t len) const }
+\label{class_e_c_p_af76cfd310eb62de1eca144cb3a8564e1}
+
+\item 
+\hypertarget{class_e_c_p_ac650cc966abf53f8bdd961a227e1bab9}{
+bool {\bfseries DecodePoint} (\hyperlink{struct_e_c_p_point}{Point} \&P, const byte $\ast$encodedPoint, size\_\-t len) const }
+\label{class_e_c_p_ac650cc966abf53f8bdd961a227e1bab9}
+
+\item 
+\hypertarget{class_e_c_p_a48d48d6d0925e464f019173c96c81599}{
+void {\bfseries EncodePoint} (byte $\ast$encodedPoint, const \hyperlink{struct_e_c_p_point}{Point} \&P, bool compressed) const }
+\label{class_e_c_p_a48d48d6d0925e464f019173c96c81599}
+
+\item 
+\hypertarget{class_e_c_p_aad826193a57fe5b7e5cd2c9f6e6347fc}{
+void {\bfseries EncodePoint} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, const \hyperlink{struct_e_c_p_point}{Point} \&P, bool compressed) const }
+\label{class_e_c_p_aad826193a57fe5b7e5cd2c9f6e6347fc}
+
+\item 
+\hypertarget{class_e_c_p_aee1197672609ce2b1faba9107f4cc34d}{
+\hyperlink{struct_e_c_p_point}{Point} {\bfseries BERDecodePoint} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_e_c_p_aee1197672609ce2b1faba9107f4cc34d}
+
+\item 
+\hypertarget{class_e_c_p_a0b81bbff3bb7c1b8e0606155a5f61370}{
+void {\bfseries DEREncodePoint} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, const \hyperlink{struct_e_c_p_point}{Point} \&P, bool compressed) const }
+\label{class_e_c_p_a0b81bbff3bb7c1b8e0606155a5f61370}
+
+\item 
+\hypertarget{class_e_c_p_abca5b0e2a23be9c6c4fb41052680ea50}{
+\hyperlink{class_integer}{Integer} {\bfseries FieldSize} () const }
+\label{class_e_c_p_abca5b0e2a23be9c6c4fb41052680ea50}
+
+\item 
+\hypertarget{class_e_c_p_a83c5a9f0cf8b82771d5aa01402863738}{
+const \hyperlink{class_modular_arithmetic}{Field} \& {\bfseries GetField} () const }
+\label{class_e_c_p_a83c5a9f0cf8b82771d5aa01402863738}
+
+\item 
+\hypertarget{class_e_c_p_a82177287f9bb1ade023fc6735dbf5922}{
+const \hyperlink{class_integer}{FieldElement} \& {\bfseries GetA} () const }
+\label{class_e_c_p_a82177287f9bb1ade023fc6735dbf5922}
+
+\item 
+\hypertarget{class_e_c_p_aa8610d58c3dd14ce206cb3d79cd79706}{
+const \hyperlink{class_integer}{FieldElement} \& {\bfseries GetB} () const }
+\label{class_e_c_p_aa8610d58c3dd14ce206cb3d79cd79706}
+
+\item 
+\hypertarget{class_e_c_p_af65e0e7074c9127a7dddc120ee1baa10}{
+bool {\bfseries operator==} (const \hyperlink{class_e_c_p}{ECP} \&rhs) const }
+\label{class_e_c_p_af65e0e7074c9127a7dddc120ee1baa10}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Elliptic Curve over GF(p), where p is prime. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/ecp.h\end{DoxyCompactItemize}

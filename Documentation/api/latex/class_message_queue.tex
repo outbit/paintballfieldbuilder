@@ -1,0 +1,135 @@
+\hypertarget{class_message_queue}{
+\section{MessageQueue Class Reference}
+\label{class_message_queue}\index{MessageQueue@{MessageQueue}}
+}
+
+
+Message Queue.  
+
+
+{\ttfamily \#include $<$mqueue.h$>$}Inheritance diagram for MessageQueue::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5cm]{class_message_queue}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_message_queue_a99e63c7e22a03a87374a74880f75a586}{
+{\bfseries MessageQueue} (unsigned int nodeSize=256)}
+\label{class_message_queue_a99e63c7e22a03a87374a74880f75a586}
+
+\item 
+\hypertarget{class_message_queue_a26b8baf32ac98064caf0696fc37dcacf}{
+void {\bfseries IsolatedInitialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters)}
+\label{class_message_queue_a26b8baf32ac98064caf0696fc37dcacf}
+
+\item 
+size\_\-t \hyperlink{class_message_queue_a3ca42e60e7de1cfada145609cb3eb5e9}{Put2} (const byte $\ast$begin, size\_\-t length, int messageEnd, bool blocking)
+\begin{DoxyCompactList}\small\item\em input multiple bytes for blocking or non-\/blocking processing \item\end{DoxyCompactList}\item 
+\hypertarget{class_message_queue_adf7c0e8cc64279572e4bfc282bcdba78}{
+bool {\bfseries IsolatedFlush} (bool hardFlush, bool blocking)}
+\label{class_message_queue_adf7c0e8cc64279572e4bfc282bcdba78}
+
+\item 
+\hypertarget{class_message_queue_a574f29031f2d8ae02e7ff4a03e5db8bf}{
+bool {\bfseries IsolatedMessageSeriesEnd} (bool blocking)}
+\label{class_message_queue_a574f29031f2d8ae02e7ff4a03e5db8bf}
+
+\item 
+lword \hyperlink{class_message_queue_a636d1842ab46a50cdb8517aec0df6c5d}{MaxRetrievable} () const 
+\begin{DoxyCompactList}\small\item\em returns number of bytes that is currently ready for retrieval \item\end{DoxyCompactList}\item 
+\hypertarget{class_message_queue_a8d1efa74c89f571b3bc9f00a947fbaa9}{
+bool \hyperlink{class_message_queue_a8d1efa74c89f571b3bc9f00a947fbaa9}{AnyRetrievable} () const }
+\label{class_message_queue_a8d1efa74c89f571b3bc9f00a947fbaa9}
+
+\begin{DoxyCompactList}\small\item\em returns whether any bytes are currently ready for retrieval \item\end{DoxyCompactList}\item 
+\hypertarget{class_message_queue_a7c20284d4b7c1c6bccc1e1cc8f275797}{
+size\_\-t {\bfseries TransferTo2} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&target, lword \&transferBytes, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL}, bool blocking=true)}
+\label{class_message_queue_a7c20284d4b7c1c6bccc1e1cc8f275797}
+
+\item 
+\hypertarget{class_message_queue_a9627ad2234f41c59a3e5e8afedf569b5}{
+size\_\-t {\bfseries CopyRangeTo2} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&target, lword \&begin, lword end=LWORD\_\-MAX, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL}, bool blocking=true) const }
+\label{class_message_queue_a9627ad2234f41c59a3e5e8afedf569b5}
+
+\item 
+\hypertarget{class_message_queue_a02288478f4582e38b46a0235c096dd12}{
+lword {\bfseries TotalBytesRetrievable} () const }
+\label{class_message_queue_a02288478f4582e38b46a0235c096dd12}
+
+\item 
+\hypertarget{class_message_queue_a00b443a9dd55d2b8c6e38b544dee189b}{
+unsigned int \hyperlink{class_message_queue_a00b443a9dd55d2b8c6e38b544dee189b}{NumberOfMessages} () const }
+\label{class_message_queue_a00b443a9dd55d2b8c6e38b544dee189b}
+
+\begin{DoxyCompactList}\small\item\em number of times MessageEnd() has been received minus messages retrieved or skipped \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_message_queue_a540da279953a13541a65c271888e27b7}{GetNextMessage} ()
+\begin{DoxyCompactList}\small\item\em start retrieving the next message \item\end{DoxyCompactList}\item 
+\hypertarget{class_message_queue_a6705e6dc7fd0ca98d4d784e898d70c19}{
+unsigned int {\bfseries NumberOfMessagesInThisSeries} () const }
+\label{class_message_queue_a6705e6dc7fd0ca98d4d784e898d70c19}
+
+\item 
+\hypertarget{class_message_queue_ac7208eb1374fd4689d61947ffb161352}{
+unsigned int {\bfseries NumberOfMessageSeries} () const }
+\label{class_message_queue_ac7208eb1374fd4689d61947ffb161352}
+
+\item 
+\hypertarget{class_message_queue_a490911bea66c6b2872f0ab06f0fca255}{
+unsigned int {\bfseries CopyMessagesTo} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&target, unsigned int count=UINT\_\-MAX, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL}) const }
+\label{class_message_queue_a490911bea66c6b2872f0ab06f0fca255}
+
+\item 
+\hypertarget{class_message_queue_a14f7e2253bc1a2fde1f9ec77a93a213e}{
+const byte $\ast$ {\bfseries Spy} (size\_\-t \&contiguousSize) const }
+\label{class_message_queue_a14f7e2253bc1a2fde1f9ec77a93a213e}
+
+\item 
+\hypertarget{class_message_queue_a0cf7618db89d28cb81aa7ddfc29b3d85}{
+void {\bfseries swap} (\hyperlink{class_message_queue}{MessageQueue} \&rhs)}
+\label{class_message_queue_a0cf7618db89d28cb81aa7ddfc29b3d85}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Message Queue. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_message_queue_a540da279953a13541a65c271888e27b7}{
+\index{MessageQueue@{MessageQueue}!GetNextMessage@{GetNextMessage}}
+\index{GetNextMessage@{GetNextMessage}!MessageQueue@{MessageQueue}}
+\subsubsection[{GetNextMessage}]{\setlength{\rightskip}{0pt plus 5cm}bool MessageQueue::GetNextMessage ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_message_queue_a540da279953a13541a65c271888e27b7}
+
+
+start retrieving the next message Returns false if no more messages exist or this message is not completely retrieved. 
+
+Reimplemented from \hyperlink{class_buffered_transformation_aa7adffcae350fe528520a2427b21c0a9}{BufferedTransformation}.\hypertarget{class_message_queue_a636d1842ab46a50cdb8517aec0df6c5d}{
+\index{MessageQueue@{MessageQueue}!MaxRetrievable@{MaxRetrievable}}
+\index{MaxRetrievable@{MaxRetrievable}!MessageQueue@{MessageQueue}}
+\subsubsection[{MaxRetrievable}]{\setlength{\rightskip}{0pt plus 5cm}lword MessageQueue::MaxRetrievable () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_message_queue_a636d1842ab46a50cdb8517aec0df6c5d}
+
+
+returns number of bytes that is currently ready for retrieval All retrieval functions return the actual number of bytes retrieved, which is the lesser of the request number and \hyperlink{class_message_queue_a636d1842ab46a50cdb8517aec0df6c5d}{MaxRetrievable()}. 
+
+Reimplemented from \hyperlink{class_buffered_transformation_adf6654e3996270394552d67d2fda95d7}{BufferedTransformation}.\hypertarget{class_message_queue_a3ca42e60e7de1cfada145609cb3eb5e9}{
+\index{MessageQueue@{MessageQueue}!Put2@{Put2}}
+\index{Put2@{Put2}!MessageQueue@{MessageQueue}}
+\subsubsection[{Put2}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t MessageQueue::Put2 (const byte $\ast$ {\em inString}, \/  size\_\-t {\em length}, \/  int {\em messageEnd}, \/  bool {\em blocking})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_message_queue_a3ca42e60e7de1cfada145609cb3eb5e9}
+
+
+input multiple bytes for blocking or non-\/blocking processing 
+\begin{DoxyParams}{Parameters}
+\item[{\em messageEnd}]means how many filters to signal MessageEnd to, including this one \end{DoxyParams}
+
+
+Implements \hyperlink{class_buffered_transformation_ad396dcb42260f23125a35ec0e5d17d55}{BufferedTransformation}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/mqueue.h\end{DoxyCompactItemize}

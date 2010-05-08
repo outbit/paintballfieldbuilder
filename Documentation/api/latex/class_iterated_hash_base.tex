@@ -1,0 +1,119 @@
+\hypertarget{class_iterated_hash_base}{
+\section{IteratedHashBase$<$ T, BASE $>$ Class Template Reference}
+\label{class_iterated_hash_base}\index{IteratedHashBase@{IteratedHashBase}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$iterhash.h$>$}Inheritance diagram for IteratedHashBase$<$ T, BASE $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.59794cm]{class_iterated_hash_base}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_iterated_hash_base_a4316d6e7e38a407d5a71f95de2b112e1}{
+typedef T {\bfseries HashWordType}}
+\label{class_iterated_hash_base_a4316d6e7e38a407d5a71f95de2b112e1}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_iterated_hash_base_ad8ba3e6b25afbdf84f177b965229c0d9}{
+unsigned int {\bfseries OptimalBlockSize} () const }
+\label{class_iterated_hash_base_ad8ba3e6b25afbdf84f177b965229c0d9}
+
+\item 
+\hypertarget{class_iterated_hash_base_a9ee30253981d13564bf0d2ffa33dfc25}{
+unsigned int {\bfseries OptimalDataAlignment} () const }
+\label{class_iterated_hash_base_a9ee30253981d13564bf0d2ffa33dfc25}
+
+\item 
+\hypertarget{class_iterated_hash_base_a3202914349a18f79facb605d75f0d10c}{
+void {\bfseries Update} (const byte $\ast$input, size\_\-t length)}
+\label{class_iterated_hash_base_a3202914349a18f79facb605d75f0d10c}
+
+\item 
+\hypertarget{class_iterated_hash_base_a4c4d9bf5947311668d11f2b8d17a57e7}{
+byte $\ast$ {\bfseries CreateUpdateSpace} (size\_\-t \&size)}
+\label{class_iterated_hash_base_a4c4d9bf5947311668d11f2b8d17a57e7}
+
+\item 
+\hypertarget{class_iterated_hash_base_ad53da712634ea213ad047b2a68b0fe70}{
+void {\bfseries Restart} ()}
+\label{class_iterated_hash_base_ad53da712634ea213ad047b2a68b0fe70}
+
+\item 
+\hypertarget{class_iterated_hash_base_a2fb87191e0a4359fb9e81c71f99db600}{
+void {\bfseries TruncatedFinal} (byte $\ast$digest, size\_\-t size)}
+\label{class_iterated_hash_base_a2fb87191e0a4359fb9e81c71f99db600}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_iterated_hash_base_a33a8299a01976e215362f093589b9f6e}{
+T {\bfseries GetBitCountHi} () const }
+\label{class_iterated_hash_base_a33a8299a01976e215362f093589b9f6e}
+
+\item 
+\hypertarget{class_iterated_hash_base_a5fe17f6b8a18b047349b31931baa5965}{
+T {\bfseries GetBitCountLo} () const }
+\label{class_iterated_hash_base_a5fe17f6b8a18b047349b31931baa5965}
+
+\item 
+\hypertarget{class_iterated_hash_base_a01f39339fa69510303ad401245df1037}{
+void {\bfseries PadLastBlock} (unsigned int lastBlockSize, byte padFirst=0x80)}
+\label{class_iterated_hash_base_a01f39339fa69510303ad401245df1037}
+
+\item 
+\hypertarget{class_iterated_hash_base_a9f130072d067513f9d6489e19fccdf09}{
+virtual void {\bfseries Init} ()=0}
+\label{class_iterated_hash_base_a9f130072d067513f9d6489e19fccdf09}
+
+\item 
+\hypertarget{class_iterated_hash_base_a3a5f3b5d86cc186034dc5ff767c8e877}{
+virtual ByteOrder {\bfseries GetByteOrder} () const =0}
+\label{class_iterated_hash_base_a3a5f3b5d86cc186034dc5ff767c8e877}
+
+\item 
+\hypertarget{class_iterated_hash_base_a2a788752a18c19299603bc9e36440fd8}{
+virtual void {\bfseries HashEndianCorrectedBlock} (const HashWordType $\ast$data)=0}
+\label{class_iterated_hash_base_a2a788752a18c19299603bc9e36440fd8}
+
+\item 
+\hypertarget{class_iterated_hash_base_a05702693a33624457fba126f7768cf2a}{
+virtual size\_\-t {\bfseries HashMultipleBlocks} (const T $\ast$input, size\_\-t length)}
+\label{class_iterated_hash_base_a05702693a33624457fba126f7768cf2a}
+
+\item 
+\hypertarget{class_iterated_hash_base_af4f5349f8ebacfde64bb24f2ce758775}{
+void {\bfseries HashBlock} (const HashWordType $\ast$input)}
+\label{class_iterated_hash_base_af4f5349f8ebacfde64bb24f2ce758775}
+
+\item 
+\hypertarget{class_iterated_hash_base_a77829087074c0aea59296f06645e4eb9}{
+virtual T $\ast$ {\bfseries DataBuf} ()=0}
+\label{class_iterated_hash_base_a77829087074c0aea59296f06645e4eb9}
+
+\item 
+\hypertarget{class_iterated_hash_base_af809ac08c9c47bfe2e9a80b0d90dbe8e}{
+virtual T $\ast$ {\bfseries StateBuf} ()=0}
+\label{class_iterated_hash_base_af809ac08c9c47bfe2e9a80b0d90dbe8e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class BASE$>$ class IteratedHashBase$<$ T, BASE $>$}
+
+\_\- 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/iterhash.h\end{DoxyCompactItemize}

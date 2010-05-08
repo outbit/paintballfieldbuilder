@@ -1,0 +1,107 @@
+\hypertarget{fips140_8h}{
+\section{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/fips140.h File Reference}
+\label{fips140_8h}\index{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/fips140.h@{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/fips140.h}}
+}
+{\ttfamily \#include \char`\"{}cryptlib.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}secblock.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_self_test_failure}{SelfTestFailure}
+\begin{DoxyCompactList}\small\item\em exception thrown when a crypto algorithm is used after a self test fails \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{fips140_8h_afa5d25ce1be2e8d1beda9340260a4d77}{
+\#define {\bfseries CRYPTOPP\_\-DUMMY\_\-DLL\_\-MAC}~\char`\"{}MAC\_\-51f34b8db820ae8\char`\"{}}
+\label{fips140_8h_afa5d25ce1be2e8d1beda9340260a4d77}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{fips140_8h_aaf208deb1f3050043cf8ec294d017e5a}{
+typedef \hyperlink{fips140_8h_a8ccac50ac3bfc5abaa6cb457f0ded35d}{PowerUpSelfTestStatus}(CRYPTOPP\_\-API $\ast$ {\bfseries PGetPowerUpSelfTestStatus} )()}
+\label{fips140_8h_aaf208deb1f3050043cf8ec294d017e5a}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{fips140_8h_a8ccac50ac3bfc5abaa6cb457f0ded35d}{PowerUpSelfTestStatus} \{ {\bfseries POWER\_\-UP\_\-SELF\_\-TEST\_\-NOT\_\-DONE}, 
+{\bfseries POWER\_\-UP\_\-SELF\_\-TEST\_\-FAILED}, 
+{\bfseries POWER\_\-UP\_\-SELF\_\-TEST\_\-PASSED}
+ \}
+\begin{DoxyCompactList}\small\item\em enum values representing status of the power-\/up self test \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{fips140_8h_a85d1c3718e3a56a9f24a8a3af682b57e}{
+CRYPTOPP\_\-DLL bool CRYPTOPP\_\-API \hyperlink{fips140_8h_a85d1c3718e3a56a9f24a8a3af682b57e}{FIPS\_\-140\_\-2\_\-ComplianceEnabled} ()}
+\label{fips140_8h_a85d1c3718e3a56a9f24a8a3af682b57e}
+
+\begin{DoxyCompactList}\small\item\em returns whether FIPS 140-\/2 compliance features were enabled at compile time \item\end{DoxyCompactList}\item 
+\hypertarget{fips140_8h_aee4e67037e0cad37aff28bbf9e5329a5}{
+CRYPTOPP\_\-DLL void CRYPTOPP\_\-API \hyperlink{fips140_8h_aee4e67037e0cad37aff28bbf9e5329a5}{DoPowerUpSelfTest} (const char $\ast$moduleFilename, const byte $\ast$expectedModuleMac)}
+\label{fips140_8h_aee4e67037e0cad37aff28bbf9e5329a5}
+
+\begin{DoxyCompactList}\small\item\em perform the power-\/up self test, and set the self test status \item\end{DoxyCompactList}\item 
+\hypertarget{fips140_8h_a77bf5b6caf6ac800c4e78743ab05e56a}{
+CRYPTOPP\_\-DLL void CRYPTOPP\_\-API \hyperlink{fips140_8h_a77bf5b6caf6ac800c4e78743ab05e56a}{DoDllPowerUpSelfTest} ()}
+\label{fips140_8h_a77bf5b6caf6ac800c4e78743ab05e56a}
+
+\begin{DoxyCompactList}\small\item\em perform the power-\/up self test using the filename of this DLL and the embedded module MAC \item\end{DoxyCompactList}\item 
+\hypertarget{fips140_8h_aaf6f403061c11234fd4db5475c18f520}{
+CRYPTOPP\_\-DLL void CRYPTOPP\_\-API \hyperlink{fips140_8h_aaf6f403061c11234fd4db5475c18f520}{SimulatePowerUpSelfTestFailure} ()}
+\label{fips140_8h_aaf6f403061c11234fd4db5475c18f520}
+
+\begin{DoxyCompactList}\small\item\em set the power-\/up self test status to POWER\_\-UP\_\-SELF\_\-TEST\_\-FAILED \item\end{DoxyCompactList}\item 
+\hypertarget{fips140_8h_ac57a1f8e6c170342becc953a6daee3fd}{
+CRYPTOPP\_\-DLL \hyperlink{fips140_8h_a8ccac50ac3bfc5abaa6cb457f0ded35d}{PowerUpSelfTestStatus} CRYPTOPP\_\-API \hyperlink{fips140_8h_ac57a1f8e6c170342becc953a6daee3fd}{GetPowerUpSelfTestStatus} ()}
+\label{fips140_8h_ac57a1f8e6c170342becc953a6daee3fd}
+
+\begin{DoxyCompactList}\small\item\em return the current power-\/up self test status \item\end{DoxyCompactList}\item 
+\hypertarget{fips140_8h_a91563b36b267350e14d0c55c6a4ccb4d}{
+CRYPTOPP\_\-DLL \hyperlink{class_message_authentication_code}{MessageAuthenticationCode} $\ast$CRYPTOPP\_\-API {\bfseries NewIntegrityCheckingMAC} ()}
+\label{fips140_8h_a91563b36b267350e14d0c55c6a4ccb4d}
+
+\item 
+\hypertarget{fips140_8h_a7dd96e4a360114c3d1a205f6c52f83a4}{
+CRYPTOPP\_\-DLL bool CRYPTOPP\_\-API {\bfseries IntegrityCheckModule} (const char $\ast$moduleFilename, const byte $\ast$expectedModuleMac, \hyperlink{class_sec_block}{SecByteBlock} $\ast$pActualMac=NULL, unsigned long $\ast$pMacFileLocation=NULL)}
+\label{fips140_8h_a7dd96e4a360114c3d1a205f6c52f83a4}
+
+\item 
+\hypertarget{fips140_8h_a132df8551bd9afe0a02f48826d389777}{
+bool {\bfseries PowerUpSelfTestInProgressOnThisThread} ()}
+\label{fips140_8h_a132df8551bd9afe0a02f48826d389777}
+
+\item 
+\hypertarget{fips140_8h_a5631fb1f075ea6c7645064faac39f748}{
+void {\bfseries SetPowerUpSelfTestInProgressOnThisThread} (bool inProgress)}
+\label{fips140_8h_a5631fb1f075ea6c7645064faac39f748}
+
+\item 
+\hypertarget{fips140_8h_a4324298bf57523064d0866f7fb6d8eef}{
+void {\bfseries SignaturePairwiseConsistencyTest} (const \hyperlink{class_p_k___signer}{PK\_\-Signer} \&signer, const \hyperlink{class_p_k___verifier}{PK\_\-Verifier} \&verifier)}
+\label{fips140_8h_a4324298bf57523064d0866f7fb6d8eef}
+
+\item 
+\hypertarget{fips140_8h_a5508585427d867fafa5eba22fde6ba7d}{
+void {\bfseries EncryptionPairwiseConsistencyTest} (const \hyperlink{class_p_k___encryptor}{PK\_\-Encryptor} \&encryptor, const \hyperlink{class_p_k___decryptor}{PK\_\-Decryptor} \&decryptor)}
+\label{fips140_8h_a5508585427d867fafa5eba22fde6ba7d}
+
+\item 
+\hypertarget{fips140_8h_af071091de2c1ffaedf72a854bc957e62}{
+void {\bfseries SignaturePairwiseConsistencyTest\_\-FIPS\_\-140\_\-Only} (const \hyperlink{class_p_k___signer}{PK\_\-Signer} \&signer, const \hyperlink{class_p_k___verifier}{PK\_\-Verifier} \&verifier)}
+\label{fips140_8h_af071091de2c1ffaedf72a854bc957e62}
+
+\item 
+\hypertarget{fips140_8h_ae3da40dd5fac183297b5f4753027f579}{
+void {\bfseries EncryptionPairwiseConsistencyTest\_\-FIPS\_\-140\_\-Only} (const \hyperlink{class_p_k___encryptor}{PK\_\-Encryptor} \&encryptor, const \hyperlink{class_p_k___decryptor}{PK\_\-Decryptor} \&decryptor)}
+\label{fips140_8h_ae3da40dd5fac183297b5f4753027f579}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+FIPS 140 related functions and classes. 

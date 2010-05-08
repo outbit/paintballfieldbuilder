@@ -1,0 +1,132 @@
+\hypertarget{class_example_application}{
+\section{ExampleApplication Class Reference}
+\label{class_example_application}\index{ExampleApplication@{ExampleApplication}}
+}
+
+
+{\ttfamily \#include $<$ExampleApplication.h$>$}\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_example_application_a3fb3b3b1dd4820cc3290944879ecb6d2}{
+\hyperlink{class_example_application_a3fb3b3b1dd4820cc3290944879ecb6d2}{ExampleApplication} ()}
+\label{class_example_application_a3fb3b3b1dd4820cc3290944879ecb6d2}
+
+\begin{DoxyCompactList}\small\item\em Standard constructor. \item\end{DoxyCompactList}\item 
+\hypertarget{class_example_application_a2a3cf22fe76dd76425f16d6e5074a76a}{
+virtual \hyperlink{class_example_application_a2a3cf22fe76dd76425f16d6e5074a76a}{$\sim$ExampleApplication} ()}
+\label{class_example_application_a2a3cf22fe76dd76425f16d6e5074a76a}
+
+\begin{DoxyCompactList}\small\item\em Standard destructor. \item\end{DoxyCompactList}\item 
+\hypertarget{class_example_application_a9fea57d467f9f60e76651f638a3470da}{
+virtual void \hyperlink{class_example_application_a9fea57d467f9f60e76651f638a3470da}{go} (void)}
+\label{class_example_application_a9fea57d467f9f60e76651f638a3470da}
+
+\begin{DoxyCompactList}\small\item\em Start the example. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_example_application_aa3432ea3ead8830abe277fa7bb2fed50}{setup} (void)
+\item 
+virtual bool \hyperlink{class_example_application_a89afa78709beb837b1c8f0d6b81f9e30}{configure} (void)
+\item 
+\hypertarget{class_example_application_ae4e076ed0b6f3dc621d06ee0a216c924}{
+virtual void {\bfseries chooseSceneManager} (void)}
+\label{class_example_application_ae4e076ed0b6f3dc621d06ee0a216c924}
+
+\item 
+\hypertarget{class_example_application_a6e2ddbfb3a13350f437f8e6e75ce8b0a}{
+virtual void {\bfseries createCamera} (void)}
+\label{class_example_application_a6e2ddbfb3a13350f437f8e6e75ce8b0a}
+
+\item 
+\hypertarget{class_example_application_a87b90269fa2dcbcbc5ba947c0ce640f7}{
+virtual void {\bfseries createFrameListener} (void)}
+\label{class_example_application_a87b90269fa2dcbcbc5ba947c0ce640f7}
+
+\item 
+\hypertarget{class_example_application_a909894ea3c9e5a72bbcbee0a9f0a6b5b}{
+virtual void {\bfseries createScene} (void)=0}
+\label{class_example_application_a909894ea3c9e5a72bbcbee0a9f0a6b5b}
+
+\item 
+\hypertarget{class_example_application_abe637b51003ae6cfaf6eaf3b1adef04d}{
+virtual void {\bfseries destroyScene} (void)}
+\label{class_example_application_abe637b51003ae6cfaf6eaf3b1adef04d}
+
+\item 
+\hypertarget{class_example_application_af6db60976b4919acebe7c6672bbbe826}{
+virtual void {\bfseries createViewports} (void)}
+\label{class_example_application_af6db60976b4919acebe7c6672bbbe826}
+
+\item 
+\hypertarget{class_example_application_ac28835f9844520f0d096d102d27e0325}{
+virtual void \hyperlink{class_example_application_ac28835f9844520f0d096d102d27e0325}{setupResources} (void)}
+\label{class_example_application_ac28835f9844520f0d096d102d27e0325}
+
+\begin{DoxyCompactList}\small\item\em Method which will define the source of resources (other than current folder). \item\end{DoxyCompactList}\item 
+\hypertarget{class_example_application_a76e70aeb628407bcc63a575c286f937b}{
+virtual void \hyperlink{class_example_application_a76e70aeb628407bcc63a575c286f937b}{createResourceListener} (void)}
+\label{class_example_application_a76e70aeb628407bcc63a575c286f937b}
+
+\begin{DoxyCompactList}\small\item\em Optional override method where you can create resource listeners (e.g. for loading screens). \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_example_application_a3c5a3d3f81680b6ea0654dc561be2498}{loadResources} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_example_application_a0701a08b03ecdc5da37f74d1f55797f4}{
+Root $\ast$ {\bfseries mRoot}}
+\label{class_example_application_a0701a08b03ecdc5da37f74d1f55797f4}
+
+\item 
+\hypertarget{class_example_application_a6341ffca7ae43cc6fb832b6ccdb9e59c}{
+Camera $\ast$ {\bfseries mCamera}}
+\label{class_example_application_a6341ffca7ae43cc6fb832b6ccdb9e59c}
+
+\item 
+\hypertarget{class_example_application_abcc2ea5b956dd7feeb2e57ec214ca730}{
+SceneManager $\ast$ {\bfseries mSceneMgr}}
+\label{class_example_application_abcc2ea5b956dd7feeb2e57ec214ca730}
+
+\item 
+\hypertarget{class_example_application_a1b926342408a09b8083a5fda1440df24}{
+\hyperlink{class_example_frame_listener}{ExampleFrameListener} $\ast$ {\bfseries mFrameListener}}
+\label{class_example_application_a1b926342408a09b8083a5fda1440df24}
+
+\item 
+\hypertarget{class_example_application_a8a228665f0a23d272635443747595e97}{
+RenderWindow $\ast$ {\bfseries mWindow}}
+\label{class_example_application_a8a228665f0a23d272635443747595e97}
+
+\item 
+\hypertarget{class_example_application_aec2ff6dbae5d0359dc9b5170bfcec99a}{
+Ogre::String {\bfseries mResourcePath}}
+\label{class_example_application_aec2ff6dbae5d0359dc9b5170bfcec99a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class which manages the standard startup of an Ogre application. Designed to be subclassed for specific examples if required. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_example_application_a89afa78709beb837b1c8f0d6b81f9e30}{
+\index{ExampleApplication@{ExampleApplication}!configure@{configure}}
+\index{configure@{configure}!ExampleApplication@{ExampleApplication}}
+\subsubsection[{configure}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ExampleApplication::configure (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_example_application_a89afa78709beb837b1c8f0d6b81f9e30}
+Configures the application -\/ returns false if the user chooses to abandon configuration. \hypertarget{class_example_application_a3c5a3d3f81680b6ea0654dc561be2498}{
+\index{ExampleApplication@{ExampleApplication}!loadResources@{loadResources}}
+\index{loadResources@{loadResources}!ExampleApplication@{ExampleApplication}}
+\subsubsection[{loadResources}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ExampleApplication::loadResources (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_example_application_a3c5a3d3f81680b6ea0654dc561be2498}
+Optional override method where you can perform resource group loading Must at least do ResourceGroupManager::getSingleton().initialiseAllResourceGroups(); \hypertarget{class_example_application_aa3432ea3ead8830abe277fa7bb2fed50}{
+\index{ExampleApplication@{ExampleApplication}!setup@{setup}}
+\index{setup@{setup}!ExampleApplication@{ExampleApplication}}
+\subsubsection[{setup}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ExampleApplication::setup (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{class_example_application_aa3432ea3ead8830abe277fa7bb2fed50}
+Sets up the application -\/ returns false if the user chooses to abandon configuration. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/ExampleApplication.h\end{DoxyCompactItemize}

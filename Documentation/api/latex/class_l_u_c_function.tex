@@ -1,0 +1,132 @@
+\hypertarget{class_l_u_c_function}{
+\section{LUCFunction Class Reference}
+\label{class_l_u_c_function}\index{LUCFunction@{LUCFunction}}
+}
+
+
+The \hyperlink{struct_l_u_c}{LUC} function.  
+
+
+{\ttfamily \#include $<$luc.h$>$}Inheritance diagram for LUCFunction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5cm]{class_l_u_c_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_l_u_c_function_a5d8eb9d2acd130a768326200e3c6ac40}{
+void {\bfseries Initialize} (const \hyperlink{class_integer}{Integer} \&n, const \hyperlink{class_integer}{Integer} \&e)}
+\label{class_l_u_c_function_a5d8eb9d2acd130a768326200e3c6ac40}
+
+\item 
+\hypertarget{class_l_u_c_function_a4250f047087d8c74ac2a2faf887b6155}{
+void {\bfseries BERDecode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_l_u_c_function_a4250f047087d8c74ac2a2faf887b6155}
+
+\item 
+\hypertarget{class_l_u_c_function_afa7df489909cf058186606b2ac515e31}{
+void {\bfseries DEREncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_l_u_c_function_afa7df489909cf058186606b2ac515e31}
+
+\item 
+\hypertarget{class_l_u_c_function_a375548f2d3cadcc98bc09559feb0c637}{
+\hyperlink{class_integer}{Integer} {\bfseries ApplyFunction} (const \hyperlink{class_integer}{Integer} \&x) const }
+\label{class_l_u_c_function_a375548f2d3cadcc98bc09559feb0c637}
+
+\item 
+\hypertarget{class_l_u_c_function_a7ad28477309c67d2ad11bb8ee8eff309}{
+\hyperlink{class_integer}{Integer} {\bfseries PreimageBound} () const }
+\label{class_l_u_c_function_a7ad28477309c67d2ad11bb8ee8eff309}
+
+\item 
+\hypertarget{class_l_u_c_function_aa1209f0c0fc371266b6aae3bd43e279c}{
+\hyperlink{class_integer}{Integer} {\bfseries ImageBound} () const }
+\label{class_l_u_c_function_aa1209f0c0fc371266b6aae3bd43e279c}
+
+\item 
+bool \hyperlink{class_l_u_c_function_a9bc1b75db5e2b09dd2d7cbf0e9801bf8}{Validate} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int level) const 
+\begin{DoxyCompactList}\small\item\em check this object for errors \item\end{DoxyCompactList}\item 
+\hypertarget{class_l_u_c_function_abe3726e7baf96b7cc5ba488a06f29316}{
+bool \hyperlink{class_l_u_c_function_abe3726e7baf96b7cc5ba488a06f29316}{GetVoidValue} (const char $\ast$name, const std::type\_\-info \&valueType, void $\ast$pValue) const }
+\label{class_l_u_c_function_abe3726e7baf96b7cc5ba488a06f29316}
+
+\begin{DoxyCompactList}\small\item\em to be implemented by derived classes, users should use one of the above functions instead \item\end{DoxyCompactList}\item 
+void \hyperlink{class_l_u_c_function_af6a95ed660e53a5fa07841f139d43ccf}{AssignFrom} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&source)
+\begin{DoxyCompactList}\small\item\em assign values from source to this object \item\end{DoxyCompactList}\item 
+\hypertarget{class_l_u_c_function_a0a0c4bd6c0abbed477a51a626b0592a4}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetModulus} () const }
+\label{class_l_u_c_function_a0a0c4bd6c0abbed477a51a626b0592a4}
+
+\item 
+\hypertarget{class_l_u_c_function_ab06863c8f440355c37f614781c1af352}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetPublicExponent} () const }
+\label{class_l_u_c_function_ab06863c8f440355c37f614781c1af352}
+
+\item 
+\hypertarget{class_l_u_c_function_a835af704304ce8f7fca4c522a5493dfd}{
+void {\bfseries SetModulus} (const \hyperlink{class_integer}{Integer} \&n)}
+\label{class_l_u_c_function_a835af704304ce8f7fca4c522a5493dfd}
+
+\item 
+\hypertarget{class_l_u_c_function_aede72346e848ed00fd5f772e849b1655}{
+void {\bfseries SetPublicExponent} (const \hyperlink{class_integer}{Integer} \&e)}
+\label{class_l_u_c_function_aede72346e848ed00fd5f772e849b1655}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_l_u_c_function_a41b10646a07c3aacb8a444f83d39019a}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-n}}
+\label{class_l_u_c_function_a41b10646a07c3aacb8a444f83d39019a}
+
+\item 
+\hypertarget{class_l_u_c_function_aaa3b521dfa4f330a1334e1ba6673a178}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-e}}
+\label{class_l_u_c_function_aaa3b521dfa4f330a1334e1ba6673a178}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{struct_l_u_c}{LUC} function. This class is here for historical and pedagogical interest. It has no practical advantages over other trapdoor functions and probably shouldn't be used in production software. The discrete log based \hyperlink{struct_l_u_c}{LUC} schemes defined later in this .h file may be of more practical interest. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_l_u_c_function_af6a95ed660e53a5fa07841f139d43ccf}{
+\index{LUCFunction@{LUCFunction}!AssignFrom@{AssignFrom}}
+\index{AssignFrom@{AssignFrom}!LUCFunction@{LUCFunction}}
+\subsubsection[{AssignFrom}]{\setlength{\rightskip}{0pt plus 5cm}void LUCFunction::AssignFrom (const {\bf NameValuePairs} \& {\em source})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_l_u_c_function_af6a95ed660e53a5fa07841f139d43ccf}
+
+
+assign values from source to this object \begin{DoxyNote}{Note}
+This function can be used to create a public key from a private key. 
+\end{DoxyNote}
+
+
+Implements \hyperlink{class_crypto_material_a20181c1b39a74a9fe91385b025b773c6}{CryptoMaterial}.
+
+Reimplemented in \hyperlink{class_invertible_l_u_c_function_aaaef1b335de1f76ec61079d1dfd78744}{InvertibleLUCFunction}.\hypertarget{class_l_u_c_function_a9bc1b75db5e2b09dd2d7cbf0e9801bf8}{
+\index{LUCFunction@{LUCFunction}!Validate@{Validate}}
+\index{Validate@{Validate}!LUCFunction@{LUCFunction}}
+\subsubsection[{Validate}]{\setlength{\rightskip}{0pt plus 5cm}bool LUCFunction::Validate ({\bf RandomNumberGenerator} \& {\em rng}, \/  unsigned int {\em level}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_l_u_c_function_a9bc1b75db5e2b09dd2d7cbf0e9801bf8}
+
+
+check this object for errors 
+\begin{DoxyParams}{Parameters}
+\item[{\em level}]denotes the level of thoroughness: 0 -\/ using this object won't cause a crash or exception (rng is ignored) 1 -\/ this object will probably function (encrypt, sign, etc.) correctly (but may not check for weak keys and such) 2 -\/ make sure this object will function correctly, and do reasonable security checks 3 -\/ do checks that may take a long time \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the tests pass 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_crypto_material_aaa7d67d0c12712de0e33713c73f5b718}{CryptoMaterial}.
+
+Reimplemented in \hyperlink{class_invertible_l_u_c_function_ad6390a95a003eceef45cc238f538c4d8}{InvertibleLUCFunction}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{luc_8h}{luc.h}\end{DoxyCompactItemize}

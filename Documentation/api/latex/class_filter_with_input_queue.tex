@@ -1,0 +1,69 @@
+\hypertarget{class_filter_with_input_queue}{
+\section{FilterWithInputQueue Class Reference}
+\label{class_filter_with_input_queue}\index{FilterWithInputQueue@{FilterWithInputQueue}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$filters.h$>$}Inheritance diagram for FilterWithInputQueue::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5cm]{class_filter_with_input_queue}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_filter_with_input_queue_a4cbafb997e9f2a310ed490eea49fb1ab}{
+{\bfseries FilterWithInputQueue} (\hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL)}
+\label{class_filter_with_input_queue_a4cbafb997e9f2a310ed490eea49fb1ab}
+
+\item 
+size\_\-t \hyperlink{class_filter_with_input_queue_a91c11ca74a8ba2350da6ad6ca8d721a0}{Put2} (const byte $\ast$inString, size\_\-t length, int messageEnd, bool blocking)
+\begin{DoxyCompactList}\small\item\em input multiple bytes for blocking or non-\/blocking processing \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_filter_with_input_queue_a57f7ff32bf82bf74e67b355b90a8f25e}{
+virtual bool {\bfseries IsolatedMessageEnd} (bool blocking)=0}
+\label{class_filter_with_input_queue_a57f7ff32bf82bf74e67b355b90a8f25e}
+
+\item 
+\hypertarget{class_filter_with_input_queue_a94b46e509ab5cb9dbd676c41ea346107}{
+void {\bfseries IsolatedInitialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters)}
+\label{class_filter_with_input_queue_a94b46e509ab5cb9dbd676c41ea346107}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_filter_with_input_queue_ab55f3464c5a802e5504dd39569f5bd7c}{
+\hyperlink{class_byte_queue}{ByteQueue} {\bfseries m\_\-inQueue}}
+\label{class_filter_with_input_queue_ab55f3464c5a802e5504dd39569f5bd7c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\_\- 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_filter_with_input_queue_a91c11ca74a8ba2350da6ad6ca8d721a0}{
+\index{FilterWithInputQueue@{FilterWithInputQueue}!Put2@{Put2}}
+\index{Put2@{Put2}!FilterWithInputQueue@{FilterWithInputQueue}}
+\subsubsection[{Put2}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t FilterWithInputQueue::Put2 (const byte $\ast$ {\em inString}, \/  size\_\-t {\em length}, \/  int {\em messageEnd}, \/  bool {\em blocking})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_filter_with_input_queue_a91c11ca74a8ba2350da6ad6ca8d721a0}
+
+
+input multiple bytes for blocking or non-\/blocking processing 
+\begin{DoxyParams}{Parameters}
+\item[{\em messageEnd}]means how many filters to signal MessageEnd to, including this one \end{DoxyParams}
+
+
+Implements \hyperlink{class_buffered_transformation_ad396dcb42260f23125a35ec0e5d17d55}{BufferedTransformation}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/filters.h\end{DoxyCompactItemize}

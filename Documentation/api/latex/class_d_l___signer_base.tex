@@ -1,0 +1,66 @@
+\hypertarget{class_d_l___signer_base}{
+\section{DL\_\-SignerBase$<$ T $>$ Class Template Reference}
+\label{class_d_l___signer_base}\index{DL\_\-SignerBase@{DL\_\-SignerBase}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$pubkey.h$>$}Inheritance diagram for DL\_\-SignerBase$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.44767cm]{class_d_l___signer_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___signer_base_afb883276d98b4b2086c016c68d4aa22c}{
+void {\bfseries RawSign} (const \hyperlink{class_integer}{Integer} \&k, const \hyperlink{class_integer}{Integer} \&e, \hyperlink{class_integer}{Integer} \&r, \hyperlink{class_integer}{Integer} \&s) const }
+\label{class_d_l___signer_base_afb883276d98b4b2086c016c68d4aa22c}
+
+\item 
+\hypertarget{class_d_l___signer_base_affc7daf6e470600046a2741ad5098f74}{
+void {\bfseries InputRecoverableMessage} (\hyperlink{class_p_k___message_accumulator}{PK\_\-MessageAccumulator} \&messageAccumulator, const byte $\ast$recoverableMessage, size\_\-t recoverableMessageLength) const }
+\label{class_d_l___signer_base_affc7daf6e470600046a2741ad5098f74}
+
+\item 
+size\_\-t \hyperlink{class_d_l___signer_base_a1c0d9588fc5a340a14342c474b2a52e2}{SignAndRestart} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, \hyperlink{class_p_k___message_accumulator}{PK\_\-MessageAccumulator} \&messageAccumulator, byte $\ast$signature, bool restart) const 
+\begin{DoxyCompactList}\small\item\em sign and restart messageAccumulator \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___signer_base_ada3201914424fef2e0e9ed697cc160e5}{
+void {\bfseries RestartMessageAccumulator} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, \hyperlink{class_p_k___message_accumulator_base}{PK\_\-MessageAccumulatorBase} \&ma) const }
+\label{class_d_l___signer_base_ada3201914424fef2e0e9ed697cc160e5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class DL\_\-SignerBase$<$ T $>$}
+
+\_\- 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_l___signer_base_a1c0d9588fc5a340a14342c474b2a52e2}{
+\index{DL\_\-SignerBase@{DL\_\-SignerBase}!SignAndRestart@{SignAndRestart}}
+\index{SignAndRestart@{SignAndRestart}!DL_SignerBase@{DL\_\-SignerBase}}
+\subsubsection[{SignAndRestart}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ size\_\-t {\bf DL\_\-SignerBase}$<$ T $>$::SignAndRestart ({\bf RandomNumberGenerator} \& {\em rng}, \/  {\bf PK\_\-MessageAccumulator} \& {\em messageAccumulator}, \/  byte $\ast$ {\em signature}, \/  bool {\em restart}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_l___signer_base_a1c0d9588fc5a340a14342c474b2a52e2}
+
+
+sign and restart messageAccumulator \begin{DoxyPrecond}{Precondition}
+size of signature == \hyperlink{class_p_k___signature_scheme_af04668d211a923ba03f2721c220272e9}{MaxSignatureLength()} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+actual signature length 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_p_k___signer_afbcf3f00d761f681839ae6264743dd34}{PK\_\-Signer}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{pubkey_8h}{pubkey.h}\end{DoxyCompactItemize}

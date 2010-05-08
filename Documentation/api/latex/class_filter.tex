@@ -1,0 +1,171 @@
+\hypertarget{class_filter}{
+\section{Filter Class Reference}
+\label{class_filter}\index{Filter@{Filter}}
+}
+
+
+provides an implementation of BufferedTransformation's attachment interface  
+
+
+{\ttfamily \#include $<$filters.h$>$}Inheritance diagram for Filter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.3928cm]{class_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_filter_a3c1c355eb02ae048020785d335bad6b3}{
+{\bfseries Filter} (\hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL)}
+\label{class_filter_a3c1c355eb02ae048020785d335bad6b3}
+
+\item 
+bool \hyperlink{class_filter_a6e7251247b5c2cc3b0c15e861cc88e16}{Attachable} ()
+\begin{DoxyCompactList}\small\item\em returns whether this object allows attachment \item\end{DoxyCompactList}\item 
+\hypertarget{class_filter_a4932e29c22a4f7bc3173d0e1a389e0d1}{
+\hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$ \hyperlink{class_filter_a4932e29c22a4f7bc3173d0e1a389e0d1}{AttachedTransformation} ()}
+\label{class_filter_a4932e29c22a4f7bc3173d0e1a389e0d1}
+
+\begin{DoxyCompactList}\small\item\em returns the object immediately attached to this object or NULL for no attachment \item\end{DoxyCompactList}\item 
+\hypertarget{class_filter_a03584542c5bb966cdb33df80f447916a}{
+const \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$ {\bfseries AttachedTransformation} () const }
+\label{class_filter_a03584542c5bb966cdb33df80f447916a}
+
+\item 
+\hypertarget{class_filter_a93817876b45172108fe0342de6442f75}{
+void {\bfseries Detach} (\hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$newAttachment=NULL)}
+\label{class_filter_a93817876b45172108fe0342de6442f75}
+
+\item 
+\hypertarget{class_filter_ab24c6c52bb6185c25ee6efcced36dbd0}{
+size\_\-t {\bfseries TransferTo2} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&target, lword \&transferBytes, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL}, bool blocking=true)}
+\label{class_filter_ab24c6c52bb6185c25ee6efcced36dbd0}
+
+\item 
+\hypertarget{class_filter_ac0bbd9fb0969f6f48b8462d8529889aa}{
+size\_\-t {\bfseries CopyRangeTo2} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&target, lword \&begin, lword end=LWORD\_\-MAX, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL}, bool blocking=true) const }
+\label{class_filter_ac0bbd9fb0969f6f48b8462d8529889aa}
+
+\item 
+\hypertarget{class_filter_a0c011bdc71755b373292e7a722e9e332}{
+void \hyperlink{class_filter_a0c011bdc71755b373292e7a722e9e332}{Initialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters=\hyperlink{cryptlib_8h_ab1b0f7d11a21c6163be8ca2662ce2ac6}{g\_\-nullNameValuePairs}, int propagation=-\/1)}
+\label{class_filter_a0c011bdc71755b373292e7a722e9e332}
+
+\begin{DoxyCompactList}\small\item\em initialize or reinitialize this object \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_filter_ad845deb5113d2bd04d109c05abfd3098}{Flush} (bool hardFlush, int propagation=-\/1, bool blocking=true)
+\begin{DoxyCompactList}\small\item\em flush buffered input and/or output \item\end{DoxyCompactList}\item 
+bool \hyperlink{class_filter_aa42c62587dda61266ac8195d9c9edb47}{MessageSeriesEnd} (int propagation=-\/1, bool blocking=true)
+\begin{DoxyCompactList}\small\item\em mark end of a series of messages \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_filter_acb73a3c33a3b589bd85b972729c1604c}{
+virtual \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$ {\bfseries NewDefaultAttachment} () const }
+\label{class_filter_acb73a3c33a3b589bd85b972729c1604c}
+
+\item 
+\hypertarget{class_filter_a3aff43294dee9f9b853c7ff96e694a2f}{
+void {\bfseries Insert} (\hyperlink{class_filter}{Filter} $\ast$nextFilter)}
+\label{class_filter_a3aff43294dee9f9b853c7ff96e694a2f}
+
+\item 
+\hypertarget{class_filter_a64df4f582f762b1df2840dbaad89a9e0}{
+virtual bool {\bfseries ShouldPropagateMessageEnd} () const }
+\label{class_filter_a64df4f582f762b1df2840dbaad89a9e0}
+
+\item 
+\hypertarget{class_filter_a3d0af81768490661297d21d7ce202e8d}{
+virtual bool {\bfseries ShouldPropagateMessageSeriesEnd} () const }
+\label{class_filter_a3d0af81768490661297d21d7ce202e8d}
+
+\item 
+\hypertarget{class_filter_a3a24170e0e22a725ea7f0f706d9637a1}{
+void {\bfseries PropagateInitialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters, int propagation)}
+\label{class_filter_a3a24170e0e22a725ea7f0f706d9637a1}
+
+\item 
+\hypertarget{class_filter_aa8fed9b80edd46078be24b92b91baf38}{
+size\_\-t {\bfseries Output} (int outputSite, const byte $\ast$inString, size\_\-t length, int messageEnd, bool blocking, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL})}
+\label{class_filter_aa8fed9b80edd46078be24b92b91baf38}
+
+\item 
+\hypertarget{class_filter_ae0b9da65954a553090b52de282ba2130}{
+size\_\-t {\bfseries OutputModifiable} (int outputSite, byte $\ast$inString, size\_\-t length, int messageEnd, bool blocking, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL})}
+\label{class_filter_ae0b9da65954a553090b52de282ba2130}
+
+\item 
+\hypertarget{class_filter_a39f3b7cf5ef1e3f2348f6901bf5dc563}{
+bool {\bfseries OutputMessageEnd} (int outputSite, int propagation, bool blocking, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL})}
+\label{class_filter_a39f3b7cf5ef1e3f2348f6901bf5dc563}
+
+\item 
+\hypertarget{class_filter_aaeca75213acea1eefa3f1b716f404994}{
+bool {\bfseries OutputFlush} (int outputSite, bool hardFlush, int propagation, bool blocking, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL})}
+\label{class_filter_aaeca75213acea1eefa3f1b716f404994}
+
+\item 
+\hypertarget{class_filter_afe0a55175966d99209dbf0e2c64ca556}{
+bool {\bfseries OutputMessageSeriesEnd} (int outputSite, int propagation, bool blocking, const std::string \&channel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL})}
+\label{class_filter_afe0a55175966d99209dbf0e2c64ca556}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_filter_a5efea4f6caff4dca805c831a911eb1db}{
+size\_\-t {\bfseries m\_\-inputPosition}}
+\label{class_filter_a5efea4f6caff4dca805c831a911eb1db}
+
+\item 
+\hypertarget{class_filter_ab57fb6112bb2cb7c018941bdcd7b4570}{
+int {\bfseries m\_\-continueAt}}
+\label{class_filter_ab57fb6112bb2cb7c018941bdcd7b4570}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provides an implementation of BufferedTransformation's attachment interface 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_filter_a6e7251247b5c2cc3b0c15e861cc88e16}{
+\index{Filter@{Filter}!Attachable@{Attachable}}
+\index{Attachable@{Attachable}!Filter@{Filter}}
+\subsubsection[{Attachable}]{\setlength{\rightskip}{0pt plus 5cm}bool Filter::Attachable ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_filter_a6e7251247b5c2cc3b0c15e861cc88e16}
+
+
+returns whether this object allows attachment Some \hyperlink{class_buffered_transformation}{BufferedTransformation} objects (e.g. \hyperlink{class_filter}{Filter} objects) allow other \hyperlink{class_buffered_transformation}{BufferedTransformation} objects to be attached. When this is done, the first object instead of buffering its output, sents that output to the attached object as input. The entire attachment chain is deleted when the anchor object is destructed. 
+
+Reimplemented from \hyperlink{class_buffered_transformation_a20112606fc006c56f1561653cabd9542}{BufferedTransformation}.\hypertarget{class_filter_ad845deb5113d2bd04d109c05abfd3098}{
+\index{Filter@{Filter}!Flush@{Flush}}
+\index{Flush@{Flush}!Filter@{Filter}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}bool Filter::Flush (bool {\em hardFlush}, \/  int {\em propagation} = {\ttfamily -\/1}, \/  bool {\em blocking} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_filter_ad845deb5113d2bd04d109c05abfd3098}
+
+
+flush buffered input and/or output 
+\begin{DoxyParams}{Parameters}
+\item[{\em hardFlush}]is used to indicate whether all data should be flushed \end{DoxyParams}
+\begin{DoxyNote}{Note}
+Hard flushes must be used with care. It means try to process and output everything, even if there may not be enough data to complete the action. For example, hard flushing a \hyperlink{class_hex_decoder}{HexDecoder} would cause an error if you do it after inputing an odd number of hex encoded characters. For some types of filters, for example \hyperlink{class_zlib_decompressor}{ZlibDecompressor}, hard flushes can only be done at \char`\"{}synchronization points\char`\"{}. These synchronization points are positions in the data stream that are created by hard flushes on the corresponding reverse filters, in this example \hyperlink{class_zlib_compressor}{ZlibCompressor}. This is useful when zlib compressed data is moved across a network in packets and compression state is preserved across packets, as in the ssh2 protocol. 
+\end{DoxyNote}
+
+
+Reimplemented from \hyperlink{class_buffered_transformation_ac6c7f9508d50155d9e75c295b8bc5743}{BufferedTransformation}.
+
+Reimplemented in \hyperlink{class_secret_sharing_a670b6f5ba7ee9e1f029cd199f6722bb6}{SecretSharing}, and \hyperlink{class_information_dispersal_aa348e2dd4609c563196f89e1cf2ad35c}{InformationDispersal}.\hypertarget{class_filter_aa42c62587dda61266ac8195d9c9edb47}{
+\index{Filter@{Filter}!MessageSeriesEnd@{MessageSeriesEnd}}
+\index{MessageSeriesEnd@{MessageSeriesEnd}!Filter@{Filter}}
+\subsubsection[{MessageSeriesEnd}]{\setlength{\rightskip}{0pt plus 5cm}bool Filter::MessageSeriesEnd (int {\em propagation} = {\ttfamily -\/1}, \/  bool {\em blocking} = {\ttfamily true})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_filter_aa42c62587dda61266ac8195d9c9edb47}
+
+
+mark end of a series of messages There should be a MessageEnd immediately before MessageSeriesEnd. 
+
+Reimplemented from \hyperlink{class_buffered_transformation_a9c9abc61e1cc6c8541a5657e68df1f36}{BufferedTransformation}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/filters.h\end{DoxyCompactItemize}

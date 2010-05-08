@@ -1,0 +1,233 @@
+\hypertarget{class_modular_arithmetic}{
+\section{ModularArithmetic Class Reference}
+\label{class_modular_arithmetic}\index{ModularArithmetic@{ModularArithmetic}}
+}
+
+
+ring of congruence classes modulo n  
+
+
+{\ttfamily \#include $<$modarith.h$>$}Inheritance diagram for ModularArithmetic::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{class_modular_arithmetic}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_modular_arithmetic_a872afa5efebf43e4744156dcdfac3ca3}{
+typedef int {\bfseries RandomizationParameter}}
+\label{class_modular_arithmetic_a872afa5efebf43e4744156dcdfac3ca3}
+
+\item 
+\hypertarget{class_modular_arithmetic_a17f2266382639dde45d028e630e07296}{
+typedef \hyperlink{class_integer}{Integer} {\bfseries Element}}
+\label{class_modular_arithmetic_a17f2266382639dde45d028e630e07296}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_modular_arithmetic_a1cdfc924e8d11f9620bd826535aabb62}{
+{\bfseries ModularArithmetic} (const \hyperlink{class_integer}{Integer} \&modulus=Integer::One())}
+\label{class_modular_arithmetic_a1cdfc924e8d11f9620bd826535aabb62}
+
+\item 
+\hypertarget{class_modular_arithmetic_a7a7bf808b07baa755ed9ce9f300ce743}{
+{\bfseries ModularArithmetic} (const \hyperlink{class_modular_arithmetic}{ModularArithmetic} \&ma)}
+\label{class_modular_arithmetic_a7a7bf808b07baa755ed9ce9f300ce743}
+
+\item 
+\hypertarget{class_modular_arithmetic_aa13202d33f899282fa10019f6ac31427}{
+{\bfseries ModularArithmetic} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_modular_arithmetic_aa13202d33f899282fa10019f6ac31427}
+
+\item 
+\hypertarget{class_modular_arithmetic_a78b01c25c168c43fba14726dc919574c}{
+virtual \hyperlink{class_modular_arithmetic}{ModularArithmetic} $\ast$ {\bfseries Clone} () const }
+\label{class_modular_arithmetic_a78b01c25c168c43fba14726dc919574c}
+
+\item 
+\hypertarget{class_modular_arithmetic_aba88499eea9ee645c04cab392bbbd977}{
+void {\bfseries DEREncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_modular_arithmetic_aba88499eea9ee645c04cab392bbbd977}
+
+\item 
+\hypertarget{class_modular_arithmetic_a27dc1aa752d09041ed66391dff7086cc}{
+void {\bfseries DEREncodeElement} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&out, const Element \&a) const }
+\label{class_modular_arithmetic_a27dc1aa752d09041ed66391dff7086cc}
+
+\item 
+\hypertarget{class_modular_arithmetic_a795cefe1d831bd60defc31ccce945fe7}{
+void {\bfseries BERDecodeElement} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&in, Element \&a) const }
+\label{class_modular_arithmetic_a795cefe1d831bd60defc31ccce945fe7}
+
+\item 
+\hypertarget{class_modular_arithmetic_a9f3d39f146c18589038c1373a62adf34}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetModulus} () const }
+\label{class_modular_arithmetic_a9f3d39f146c18589038c1373a62adf34}
+
+\item 
+\hypertarget{class_modular_arithmetic_a2d7a07fd3831386eb9315c4e1f5fcf25}{
+void {\bfseries SetModulus} (const \hyperlink{class_integer}{Integer} \&newModulus)}
+\label{class_modular_arithmetic_a2d7a07fd3831386eb9315c4e1f5fcf25}
+
+\item 
+\hypertarget{class_modular_arithmetic_a37df8733ead60f1037d41ce9078067b5}{
+virtual bool {\bfseries IsMontgomeryRepresentation} () const }
+\label{class_modular_arithmetic_a37df8733ead60f1037d41ce9078067b5}
+
+\item 
+\hypertarget{class_modular_arithmetic_a6d504c7166a5eab47a74b86ce8cc782b}{
+virtual \hyperlink{class_integer}{Integer} {\bfseries ConvertIn} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_modular_arithmetic_a6d504c7166a5eab47a74b86ce8cc782b}
+
+\item 
+\hypertarget{class_modular_arithmetic_abbd97fd2abfb869063f51cfdeb769c71}{
+virtual \hyperlink{class_integer}{Integer} {\bfseries ConvertOut} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_modular_arithmetic_abbd97fd2abfb869063f51cfdeb769c71}
+
+\item 
+\hypertarget{class_modular_arithmetic_ab39885c27adeee1e0b09c91667a427b6}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Half} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_modular_arithmetic_ab39885c27adeee1e0b09c91667a427b6}
+
+\item 
+\hypertarget{class_modular_arithmetic_aaffad53421b276602f8219c5e21ba052}{
+bool {\bfseries Equal} (const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_modular_arithmetic_aaffad53421b276602f8219c5e21ba052}
+
+\item 
+\hypertarget{class_modular_arithmetic_a1fdc1decac3957e7e8231f95e6621804}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Identity} () const }
+\label{class_modular_arithmetic_a1fdc1decac3957e7e8231f95e6621804}
+
+\item 
+\hypertarget{class_modular_arithmetic_a1adc764c4542934761bd5fa8a300a1cc}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Add} (const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_modular_arithmetic_a1adc764c4542934761bd5fa8a300a1cc}
+
+\item 
+\hypertarget{class_modular_arithmetic_a423acea55882dbc3cf29f5f3321d7eaf}{
+\hyperlink{class_integer}{Integer} \& {\bfseries Accumulate} (\hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_modular_arithmetic_a423acea55882dbc3cf29f5f3321d7eaf}
+
+\item 
+\hypertarget{class_modular_arithmetic_a0eef4ed8254453725c38f19ddca16240}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Inverse} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_modular_arithmetic_a0eef4ed8254453725c38f19ddca16240}
+
+\item 
+\hypertarget{class_modular_arithmetic_a3c3ca18ad6e1da2ecca2b0ce7a7c8505}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Subtract} (const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_modular_arithmetic_a3c3ca18ad6e1da2ecca2b0ce7a7c8505}
+
+\item 
+\hypertarget{class_modular_arithmetic_a23c03922ded5aa4781dd17f68d817af7}{
+\hyperlink{class_integer}{Integer} \& {\bfseries Reduce} (\hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_modular_arithmetic_a23c03922ded5aa4781dd17f68d817af7}
+
+\item 
+\hypertarget{class_modular_arithmetic_a2704ef13b1d9109569613196de4a4915}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Double} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_modular_arithmetic_a2704ef13b1d9109569613196de4a4915}
+
+\item 
+\hypertarget{class_modular_arithmetic_a5284c7c57ed71408c09f85f195df9025}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries MultiplicativeIdentity} () const }
+\label{class_modular_arithmetic_a5284c7c57ed71408c09f85f195df9025}
+
+\item 
+\hypertarget{class_modular_arithmetic_a3f41c5971bea03e3701b0e5378a6f9fa}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Multiply} (const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_modular_arithmetic_a3f41c5971bea03e3701b0e5378a6f9fa}
+
+\item 
+\hypertarget{class_modular_arithmetic_ac378a2527fe2107d3379bc35d7cd0487}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Square} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_modular_arithmetic_ac378a2527fe2107d3379bc35d7cd0487}
+
+\item 
+\hypertarget{class_modular_arithmetic_a90ca6f6591e3e5553dc7b9e94dad100d}{
+bool {\bfseries IsUnit} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_modular_arithmetic_a90ca6f6591e3e5553dc7b9e94dad100d}
+
+\item 
+\hypertarget{class_modular_arithmetic_ae2246ad602514e19f1291cd46b351ed9}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries MultiplicativeInverse} (const \hyperlink{class_integer}{Integer} \&a) const }
+\label{class_modular_arithmetic_ae2246ad602514e19f1291cd46b351ed9}
+
+\item 
+\hypertarget{class_modular_arithmetic_af9c4550655ec60ea34480060f56061b0}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries Divide} (const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_modular_arithmetic_af9c4550655ec60ea34480060f56061b0}
+
+\item 
+\hypertarget{class_modular_arithmetic_a39c4f7a3fb501adc8d96145aecfb63f0}{
+\hyperlink{class_integer}{Integer} {\bfseries CascadeExponentiate} (const \hyperlink{class_integer}{Integer} \&x, const \hyperlink{class_integer}{Integer} \&e1, const \hyperlink{class_integer}{Integer} \&y, const \hyperlink{class_integer}{Integer} \&e2) const }
+\label{class_modular_arithmetic_a39c4f7a3fb501adc8d96145aecfb63f0}
+
+\item 
+\hypertarget{class_modular_arithmetic_ae37f29d8031840d185935819318f90dd}{
+void {\bfseries SimultaneousExponentiate} (Element $\ast$results, const Element \&base, const \hyperlink{class_integer}{Integer} $\ast$exponents, unsigned int exponentsCount) const }
+\label{class_modular_arithmetic_ae37f29d8031840d185935819318f90dd}
+
+\item 
+\hypertarget{class_modular_arithmetic_a9d60d15f789a4f3ebd3329fefc77500e}{
+unsigned int {\bfseries MaxElementBitLength} () const }
+\label{class_modular_arithmetic_a9d60d15f789a4f3ebd3329fefc77500e}
+
+\item 
+\hypertarget{class_modular_arithmetic_a36b7eb53ab95d5ecafc3039fdcfa9077}{
+unsigned int {\bfseries MaxElementByteLength} () const }
+\label{class_modular_arithmetic_a36b7eb53ab95d5ecafc3039fdcfa9077}
+
+\item 
+\hypertarget{class_modular_arithmetic_a28cca24d8c6c897dfbe60e8cde880b5c}{
+Element {\bfseries RandomElement} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const RandomizationParameter \&ignore\_\-for\_\-now=0) const }
+\label{class_modular_arithmetic_a28cca24d8c6c897dfbe60e8cde880b5c}
+
+\item 
+\hypertarget{class_modular_arithmetic_a5a84667a0345e770fd189fcaa0e33865}{
+bool {\bfseries operator==} (const \hyperlink{class_modular_arithmetic}{ModularArithmetic} \&rhs) const }
+\label{class_modular_arithmetic_a5a84667a0345e770fd189fcaa0e33865}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_modular_arithmetic_a0bc237302baf05d7a7dcf7469eb2d331}{
+static const RandomizationParameter {\bfseries DefaultRandomizationParameter}}
+\label{class_modular_arithmetic_a0bc237302baf05d7a7dcf7469eb2d331}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_modular_arithmetic_a4abc2cc7581f81095609dd78a1ac8a01}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-modulus}}
+\label{class_modular_arithmetic_a4abc2cc7581f81095609dd78a1ac8a01}
+
+\item 
+\hypertarget{class_modular_arithmetic_ab42adbb0d0c82611e3bcc2be2ac26f2f}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-result}}
+\label{class_modular_arithmetic_ab42adbb0d0c82611e3bcc2be2ac26f2f}
+
+\item 
+\hypertarget{class_modular_arithmetic_a38e0eb807c66bef02cb5e1e808e10da4}{
+\hyperlink{class_integer}{Integer} {\bfseries m\_\-result1}}
+\label{class_modular_arithmetic_a38e0eb807c66bef02cb5e1e808e10da4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+ring of congruence classes modulo n \begin{DoxyNote}{Note}
+this implementation represents each congruence class as the smallest non-\/negative integer in that class 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/modarith.h\end{DoxyCompactItemize}

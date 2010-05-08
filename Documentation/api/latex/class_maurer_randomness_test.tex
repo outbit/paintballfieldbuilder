@@ -1,0 +1,50 @@
+\hypertarget{class_maurer_randomness_test}{
+\section{MaurerRandomnessTest Class Reference}
+\label{class_maurer_randomness_test}\index{MaurerRandomnessTest@{MaurerRandomnessTest}}
+}
+
+
+{\ttfamily \#include $<$rng.h$>$}Inheritance diagram for MaurerRandomnessTest::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6cm]{class_maurer_randomness_test}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\_\-t \hyperlink{class_maurer_randomness_test_ae2629df58de48eafc8b8d9f0b060ff98}{Put2} (const byte $\ast$inString, size\_\-t length, int messageEnd, bool blocking)
+\begin{DoxyCompactList}\small\item\em input multiple bytes for blocking or non-\/blocking processing \item\end{DoxyCompactList}\item 
+\hypertarget{class_maurer_randomness_test_a7f7aa3d6c32f96b395cbd9a564b06575}{
+unsigned int {\bfseries BytesNeeded} () const }
+\label{class_maurer_randomness_test_a7f7aa3d6c32f96b395cbd9a564b06575}
+
+\item 
+\hypertarget{class_maurer_randomness_test_a2f9006fd5ee013eeee7b8a4d905e322b}{
+double {\bfseries GetTestValue} () const }
+\label{class_maurer_randomness_test_a2f9006fd5ee013eeee7b8a4d905e322b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class implements Maurer's Universal Statistical Test for Random Bit Generators it is intended for measuring the randomness of $\ast$PHYSICAL$\ast$ RNGs. For more details see his paper in Journal of Cryptology, 1992. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_maurer_randomness_test_ae2629df58de48eafc8b8d9f0b060ff98}{
+\index{MaurerRandomnessTest@{MaurerRandomnessTest}!Put2@{Put2}}
+\index{Put2@{Put2}!MaurerRandomnessTest@{MaurerRandomnessTest}}
+\subsubsection[{Put2}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t MaurerRandomnessTest::Put2 (const byte $\ast$ {\em inString}, \/  size\_\-t {\em length}, \/  int {\em messageEnd}, \/  bool {\em blocking})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_maurer_randomness_test_ae2629df58de48eafc8b8d9f0b060ff98}
+
+
+input multiple bytes for blocking or non-\/blocking processing 
+\begin{DoxyParams}{Parameters}
+\item[{\em messageEnd}]means how many filters to signal MessageEnd to, including this one \end{DoxyParams}
+
+
+Implements \hyperlink{class_buffered_transformation_ad396dcb42260f23125a35ec0e5d17d55}{BufferedTransformation}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/rng.h\end{DoxyCompactItemize}

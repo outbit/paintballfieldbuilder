@@ -1,0 +1,92 @@
+\hypertarget{gfpcrypt_8h}{
+\section{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/gfpcrypt.h File Reference}
+\label{gfpcrypt_8h}\index{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/gfpcrypt.h@{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/gfpcrypt.h}}
+}
+{\ttfamily \#include \char`\"{}pubkey.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}modexppc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}sha.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}algparam.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}asn.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}smartptr.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}hmac.h\char`\"{}}\par
+{\ttfamily \#include $<$limits.h$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_d_l___group_parameters___integer_based}{DL\_\-GroupParameters\_\-IntegerBased}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___group_parameters___integer_based_impl}{DL\_\-GroupParameters\_\-IntegerBasedImpl$<$ GROUP\_\-PRECOMP, BASE\_\-PRECOMP $>$}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___group_parameters___g_f_p}{DL\_\-GroupParameters\_\-GFP}
+\begin{DoxyCompactList}\small\item\em GF(p) group parameters. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___group_parameters___g_f_p___default_safe_prime}{DL\_\-GroupParameters\_\-GFP\_\-DefaultSafePrime}
+\begin{DoxyCompactList}\small\item\em GF(p) group parameters that default to same primes. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___algorithm___g_d_s_a}{DL\_\-Algorithm\_\-GDSA$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_g_d_s_a}{GDSA} algorithm. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___algorithm___n_r}{DL\_\-Algorithm\_\-NR$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_n_r}{NR} algorithm. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___public_key___g_f_p}{DL\_\-PublicKey\_\-GFP$<$ GP $>$}
+\item 
+class \hyperlink{class_d_l___private_key___g_f_p}{DL\_\-PrivateKey\_\-GFP$<$ GP $>$}
+\begin{DoxyCompactList}\small\item\em DL private key (in GF(p) groups). \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_l___signature_keys___g_f_p}{DL\_\-SignatureKeys\_\-GFP}
+\begin{DoxyCompactList}\small\item\em DL signing/verification keys (in GF(p) groups). \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_l___crypto_keys___g_f_p}{DL\_\-CryptoKeys\_\-GFP}
+\begin{DoxyCompactList}\small\item\em DL encryption/decryption keys (in GF(p) groups). \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___public_key___g_f_p___old_format}{DL\_\-PublicKey\_\-GFP\_\-OldFormat$<$ BASE $>$}
+\begin{DoxyCompactList}\small\item\em provided for backwards compatibility, this class uses the old non-\/standard Crypto++ key format \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___private_key___g_f_p___old_format}{DL\_\-PrivateKey\_\-GFP\_\-OldFormat$<$ BASE $>$}
+\begin{DoxyCompactList}\small\item\em provided for backwards compatibility, this class uses the old non-\/standard Crypto++ key format \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_g_d_s_a}{GDSA$<$ H $>$}
+\begin{DoxyCompactList}\small\item\em \href{http://www.weidai.com/scan-mirror/sig.html#DSA-1363}{\tt DSA-\/1363} \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_n_r}{NR$<$ H $>$}
+\begin{DoxyCompactList}\small\item\em \href{http://www.weidai.com/scan-mirror/sig.html#NR}{\tt NR} \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___group_parameters___d_s_a}{DL\_\-GroupParameters\_\-DSA}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_d_s_a}{DSA} group parameters, these are GF(p) group parameters that are allowed by the \hyperlink{struct_d_s_a}{DSA} standard. \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_l___keys___d_s_a}{DL\_\-Keys\_\-DSA}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_d_s_a}{DSA} keys. \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_s_a}{DSA}
+\begin{DoxyCompactList}\small\item\em \href{http://www.weidai.com/scan-mirror/sig.html#DSA}{\tt DSA} \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___encryption_algorithm___xor}{DL\_\-EncryptionAlgorithm\_\-Xor$<$ MAC, DHAES\_\-MODE $>$}
+\begin{DoxyCompactList}\small\item\em the XOR encryption method, for use with DL-\/based cryptosystems \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___key_derivation_algorithm___p1363}{DL\_\-KeyDerivationAlgorithm\_\-P1363$<$ T, DHAES\_\-MODE, KDF $>$}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_l_i_e_s}{DLIES$<$ COFACTOR\_\-OPTION, DHAES\_\-MODE $>$}
+\begin{DoxyCompactList}\small\item\em Discrete Log Integrated Encryption Scheme, AKA \href{http://www.weidai.com/scan-mirror/ca.html#DLIES}{\tt DLIES}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{gfpcrypt_8h_a124710346e9d5f539839085119635a3a}{
+CRYPTOPP\_\-DLL\_\-TEMPLATE\_\-CLASS {\bfseries DL\_\-GroupParameters$<$ Integer $>$}}
+\label{gfpcrypt_8h_a124710346e9d5f539839085119635a3a}
+
+\item 
+\hypertarget{gfpcrypt_8h_a0df4beea29469f361ab625a36d426bef}{
+CRYPTOPP\_\-DLL\_\-TEMPLATE\_\-CLASS {\bfseries DL\_\-GroupParameters\_\-IntegerBasedImpl$<$ ModExpPrecomputation $>$}}
+\label{gfpcrypt_8h_a0df4beea29469f361ab625a36d426bef}
+
+\item 
+\hypertarget{gfpcrypt_8h_af70fac73b3cd04bbd7002668f68a51e9}{
+CRYPTOPP\_\-DLL\_\-TEMPLATE\_\-CLASS {\bfseries DL\_\-Algorithm\_\-GDSA$<$ Integer $>$}}
+\label{gfpcrypt_8h_af70fac73b3cd04bbd7002668f68a51e9}
+
+\item 
+\hypertarget{gfpcrypt_8h_a7276f9122ecb151cc225dc7cc514ed50}{
+CRYPTOPP\_\-DLL\_\-TEMPLATE\_\-CLASS {\bfseries DL\_\-PublicKey\_\-GFP$<$ DL\_\-GroupParameters\_\-DSA $>$}}
+\label{gfpcrypt_8h_a7276f9122ecb151cc225dc7cc514ed50}
+
+\item 
+\hypertarget{gfpcrypt_8h_afbb8525fd49d3e2609a7870a0596a159}{
+CRYPTOPP\_\-DLL\_\-TEMPLATE\_\-CLASS {\bfseries DL\_\-PrivateKey\_\-GFP$<$ DL\_\-GroupParameters\_\-DSA $>$}}
+\label{gfpcrypt_8h_afbb8525fd49d3e2609a7870a0596a159}
+
+\item 
+\hypertarget{gfpcrypt_8h_a839694703e709aa7574749cfce652700}{
+CRYPTOPP\_\-DLL\_\-TEMPLATE\_\-CLASS {\bfseries DL\_\-PrivateKey\_\-WithSignaturePairwiseConsistencyTest$<$ DL\_\-PrivateKey\_\-GFP$<$ DL\_\-GroupParameters\_\-DSA $>$, DSA $>$}}
+\label{gfpcrypt_8h_a839694703e709aa7574749cfce652700}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of schemes based on DL over GF(p) 

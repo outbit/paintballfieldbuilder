@@ -1,0 +1,87 @@
+\hypertarget{rsa_8h}{
+\section{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/rsa.h File Reference}
+\label{rsa_8h}\index{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/rsa.h@{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/rsa.h}}
+}
+{\ttfamily \#include \char`\"{}pubkey.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}asn.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}pkcspad.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}oaep.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}emsa2.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_r_s_a_function}{RSAFunction}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+class \hyperlink{class_invertible_r_s_a_function}{InvertibleRSAFunction}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+class \hyperlink{class_r_s_a_function___i_s_o}{RSAFunction\_\-ISO}
+\item 
+class \hyperlink{class_invertible_r_s_a_function___i_s_o}{InvertibleRSAFunction\_\-ISO}
+\item 
+struct \hyperlink{struct_r_s_a}{RSA}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_r_s_a}{RSA}. \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_r_s_a_e_s}{RSAES$<$ STANDARD $>$}
+\begin{DoxyCompactList}\small\item\em \href{http://www.weidai.com/scan-mirror/ca.html#RSA}{\tt RSA cryptosystem} \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_r_s_a_s_s}{RSASS$<$ STANDARD, H $>$}
+\begin{DoxyCompactList}\small\item\em \href{http://www.weidai.com/scan-mirror/sig.html#RSA}{\tt RSA signature scheme with appendix} \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_r_s_a___i_s_o}{RSA\_\-ISO}
+\item 
+struct \hyperlink{struct_r_s_a_s_s___i_s_o}{RSASS\_\-ISO$<$ H $>$}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{rsa_8h_a68b286f74b37b1ff987a83d50832bbd3}{
+typedef \hyperlink{struct_r_s_a_e_s}{RSAES}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15} $>$::Decryptor {\bfseries RSAES\_\-PKCS1v15\_\-Decryptor}}
+\label{rsa_8h_a68b286f74b37b1ff987a83d50832bbd3}
+
+\item 
+\hypertarget{rsa_8h_a0ba3bff3d219821a0f1a2aadd4181fa3}{
+typedef \hyperlink{struct_r_s_a_e_s}{RSAES}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15} $>$::Encryptor {\bfseries RSAES\_\-PKCS1v15\_\-Encryptor}}
+\label{rsa_8h_a0ba3bff3d219821a0f1a2aadd4181fa3}
+
+\item 
+\hypertarget{rsa_8h_ab77b596cf00c36271f9b1217699d7d62}{
+typedef \hyperlink{struct_r_s_a_e_s}{RSAES}$<$ \hyperlink{class_o_a_e_p}{OAEP}$<$ \hyperlink{class_s_h_a1}{SHA} $>$ $>$::Decryptor {\bfseries RSAES\_\-OAEP\_\-SHA\_\-Decryptor}}
+\label{rsa_8h_ab77b596cf00c36271f9b1217699d7d62}
+
+\item 
+\hypertarget{rsa_8h_aacce24cf198347525c9bbf6fb90863b8}{
+typedef \hyperlink{struct_r_s_a_e_s}{RSAES}$<$ \hyperlink{class_o_a_e_p}{OAEP}$<$ \hyperlink{class_s_h_a1}{SHA} $>$ $>$::Encryptor {\bfseries RSAES\_\-OAEP\_\-SHA\_\-Encryptor}}
+\label{rsa_8h_aacce24cf198347525c9bbf6fb90863b8}
+
+\item 
+\hypertarget{rsa_8h_a6772b3d51b4dc972ca1d23ea5231c7cf}{
+typedef \hyperlink{struct_r_s_a_s_s}{RSASS}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15}, \hyperlink{class_s_h_a1}{SHA} $>$::Signer {\bfseries RSASSA\_\-PKCS1v15\_\-SHA\_\-Signer}}
+\label{rsa_8h_a6772b3d51b4dc972ca1d23ea5231c7cf}
+
+\item 
+\hypertarget{rsa_8h_abac3ac56160c84a05a74c30a23a8ae47}{
+typedef \hyperlink{struct_r_s_a_s_s}{RSASS}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15}, \hyperlink{class_s_h_a1}{SHA} $>$::Verifier {\bfseries RSASSA\_\-PKCS1v15\_\-SHA\_\-Verifier}}
+\label{rsa_8h_abac3ac56160c84a05a74c30a23a8ae47}
+
+\item 
+\hypertarget{namespace_weak_aca3ff9214304b6b0d0b881cf5b780873}{
+typedef \hyperlink{struct_r_s_a_s_s}{RSASS}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15}, \hyperlink{class_weak1_1_1_m_d2}{Weak1::MD2} $>$::Signer {\bfseries Weak::RSASSA\_\-PKCS1v15\_\-MD2\_\-Signer}}
+\label{namespace_weak_aca3ff9214304b6b0d0b881cf5b780873}
+
+\item 
+\hypertarget{namespace_weak_a8b3dd6309001cfa33998a796dbe6d267}{
+typedef \hyperlink{struct_r_s_a_s_s}{RSASS}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15}, \hyperlink{class_weak1_1_1_m_d2}{Weak1::MD2} $>$::Verifier {\bfseries Weak::RSASSA\_\-PKCS1v15\_\-MD2\_\-Verifier}}
+\label{namespace_weak_a8b3dd6309001cfa33998a796dbe6d267}
+
+\item 
+\hypertarget{namespace_weak_a3b8f2af46d119d427340172db09fa0e3}{
+typedef \hyperlink{struct_r_s_a_s_s}{RSASS}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15}, \hyperlink{class_weak1_1_1_m_d5}{Weak1::MD5} $>$::Signer {\bfseries Weak::RSASSA\_\-PKCS1v15\_\-MD5\_\-Signer}}
+\label{namespace_weak_a3b8f2af46d119d427340172db09fa0e3}
+
+\item 
+\hypertarget{namespace_weak_a083703cac0616dbb034b1839094a4bd8}{
+typedef \hyperlink{struct_r_s_a_s_s}{RSASS}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15}, \hyperlink{class_weak1_1_1_m_d5}{Weak1::MD5} $>$::Verifier {\bfseries Weak::RSASSA\_\-PKCS1v15\_\-MD5\_\-Verifier}}
+\label{namespace_weak_a083703cac0616dbb034b1839094a4bd8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains classes that implement the \hyperlink{struct_r_s_a}{RSA} ciphers and signature schemes as defined in PKCS \#1 v2.0. 

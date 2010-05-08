@@ -1,0 +1,47 @@
+\hypertarget{class_encoded_object_filter}{
+\section{EncodedObjectFilter Class Reference}
+\label{class_encoded_object_filter}\index{EncodedObjectFilter@{EncodedObjectFilter}}
+}
+Inheritance diagram for EncodedObjectFilter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5cm]{class_encoded_object_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Flag} \{ {\bfseries PUT\_\-OBJECTS} = 1, 
+{\bfseries PUT\_\-MESSANGE\_\-END\_\-AFTER\_\-EACH\_\-OBJECT} = 2, 
+{\bfseries PUT\_\-MESSANGE\_\-END\_\-AFTER\_\-ALL\_\-OBJECTS} = 4, 
+{\bfseries PUT\_\-MESSANGE\_\-SERIES\_\-END\_\-AFTER\_\-ALL\_\-OBJECTS} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_encoded_object_filter_aa1c91e529a12a6f132ba4a9e513b81dd}{
+{\bfseries EncodedObjectFilter} (\hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL, unsigned int nObjects=1, word32 flags=0)}
+\label{class_encoded_object_filter_aa1c91e529a12a6f132ba4a9e513b81dd}
+
+\item 
+\hypertarget{class_encoded_object_filter_aecdfd9aa4a927b559472d80339bfb9c1}{
+void {\bfseries Put} (const byte $\ast$inString, size\_\-t length)}
+\label{class_encoded_object_filter_aecdfd9aa4a927b559472d80339bfb9c1}
+
+\item 
+\hypertarget{class_encoded_object_filter_a7f153e8d6eecf40270aecd311766aa3d}{
+unsigned int {\bfseries GetNumberOfCompletedObjects} () const }
+\label{class_encoded_object_filter_a7f153e8d6eecf40270aecd311766aa3d}
+
+\item 
+\hypertarget{class_encoded_object_filter_abf2e20b8b8f139594da8690b8866a2dc}{
+unsigned long {\bfseries GetPositionOfObject} (unsigned int i) const }
+\label{class_encoded_object_filter_abf2e20b8b8f139594da8690b8866a2dc}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/asn.h\end{DoxyCompactItemize}

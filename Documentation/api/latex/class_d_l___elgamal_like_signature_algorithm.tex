@@ -1,0 +1,53 @@
+\hypertarget{class_d_l___elgamal_like_signature_algorithm}{
+\section{DL\_\-ElgamalLikeSignatureAlgorithm$<$ T $>$ Class Template Reference}
+\label{class_d_l___elgamal_like_signature_algorithm}\index{DL\_\-ElgamalLikeSignatureAlgorithm@{DL\_\-ElgamalLikeSignatureAlgorithm}}
+}
+
+
+interface for Elgamal-\/like signature algorithms  
+
+
+{\ttfamily \#include $<$pubkey.h$>$}Inheritance diagram for DL\_\-ElgamalLikeSignatureAlgorithm$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_l___elgamal_like_signature_algorithm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___elgamal_like_signature_algorithm_a033808f79700a901d7fb183e6dab247a}{
+virtual void {\bfseries Sign} (const \hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ T $>$ \&params, const \hyperlink{class_integer}{Integer} \&privateKey, const \hyperlink{class_integer}{Integer} \&k, const \hyperlink{class_integer}{Integer} \&e, \hyperlink{class_integer}{Integer} \&r, \hyperlink{class_integer}{Integer} \&s) const =0}
+\label{class_d_l___elgamal_like_signature_algorithm_a033808f79700a901d7fb183e6dab247a}
+
+\item 
+\hypertarget{class_d_l___elgamal_like_signature_algorithm_af1f4e4ba20583c45514ece27cf97b8d2}{
+virtual bool {\bfseries Verify} (const \hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ T $>$ \&params, const \hyperlink{class_d_l___public_key}{DL\_\-PublicKey}$<$ T $>$ \&publicKey, const \hyperlink{class_integer}{Integer} \&e, const \hyperlink{class_integer}{Integer} \&r, const \hyperlink{class_integer}{Integer} \&s) const =0}
+\label{class_d_l___elgamal_like_signature_algorithm_af1f4e4ba20583c45514ece27cf97b8d2}
+
+\item 
+\hypertarget{class_d_l___elgamal_like_signature_algorithm_a282eefef119472f0c7c2c05c320af9f3}{
+virtual \hyperlink{class_integer}{Integer} {\bfseries RecoverPresignature} (const \hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ T $>$ \&params, const \hyperlink{class_d_l___public_key}{DL\_\-PublicKey}$<$ T $>$ \&publicKey, const \hyperlink{class_integer}{Integer} \&r, const \hyperlink{class_integer}{Integer} \&s) const }
+\label{class_d_l___elgamal_like_signature_algorithm_a282eefef119472f0c7c2c05c320af9f3}
+
+\item 
+\hypertarget{class_d_l___elgamal_like_signature_algorithm_a23ac5172e324bb94f835032b8f2cc175}{
+virtual size\_\-t {\bfseries RLen} (const \hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ T $>$ \&params) const }
+\label{class_d_l___elgamal_like_signature_algorithm_a23ac5172e324bb94f835032b8f2cc175}
+
+\item 
+\hypertarget{class_d_l___elgamal_like_signature_algorithm_ab213028630c877842aa40609ff842dcb}{
+virtual size\_\-t {\bfseries SLen} (const \hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ T $>$ \&params) const }
+\label{class_d_l___elgamal_like_signature_algorithm_ab213028630c877842aa40609ff842dcb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class DL\_\-ElgamalLikeSignatureAlgorithm$<$ T $>$}
+
+interface for Elgamal-\/like signature algorithms 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{pubkey_8h}{pubkey.h}\end{DoxyCompactItemize}

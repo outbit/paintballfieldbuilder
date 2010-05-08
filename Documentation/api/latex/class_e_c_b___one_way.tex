@@ -1,0 +1,76 @@
+\hypertarget{class_e_c_b___one_way}{
+\section{ECB\_\-OneWay Class Reference}
+\label{class_e_c_b___one_way}\index{ECB\_\-OneWay@{ECB\_\-OneWay}}
+}
+Inheritance diagram for ECB\_\-OneWay::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7cm]{class_e_c_b___one_way}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_e_c_b___one_way_aea389c964114b73390dd81d836124461}{SetKey} (const byte $\ast$key, size\_\-t length, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&params=\hyperlink{cryptlib_8h_ab1b0f7d11a21c6163be8ca2662ce2ac6}{g\_\-nullNameValuePairs})
+\begin{DoxyCompactList}\small\item\em set or reset the key of this object \item\end{DoxyCompactList}\item 
+\hypertarget{class_e_c_b___one_way_af8a68508189a975f873d27d9f070171d}{
+IV\_\-Requirement \hyperlink{class_e_c_b___one_way_af8a68508189a975f873d27d9f070171d}{IVRequirement} () const }
+\label{class_e_c_b___one_way_af8a68508189a975f873d27d9f070171d}
+
+\begin{DoxyCompactList}\small\item\em returns the minimal requirement for secure IVs \item\end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_e_c_b___one_way_ae525b1874f11cd0aa85f2d93c17f9d08}{OptimalBlockSize} () const 
+\begin{DoxyCompactList}\small\item\em returns the input block size that is most efficient for this cipher \item\end{DoxyCompactList}\item 
+void \hyperlink{class_e_c_b___one_way_a4d8c291d821d86f7f4caa3cf95d1834c}{ProcessData} (byte $\ast$outString, const byte $\ast$inString, size\_\-t length)
+\begin{DoxyCompactList}\small\item\em encrypt or decrypt an array of bytes of specified length \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_c_b___one_way_a954dccf1780d6a355b080e0652b9bb55}{
+static const char $\ast$CRYPTOPP\_\-API {\bfseries StaticAlgorithmName} ()}
+\label{class_e_c_b___one_way_a954dccf1780d6a355b080e0652b9bb55}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_e_c_b___one_way_ae525b1874f11cd0aa85f2d93c17f9d08}{
+\index{ECB\_\-OneWay@{ECB\_\-OneWay}!OptimalBlockSize@{OptimalBlockSize}}
+\index{OptimalBlockSize@{OptimalBlockSize}!ECB_OneWay@{ECB\_\-OneWay}}
+\subsubsection[{OptimalBlockSize}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ECB\_\-OneWay::OptimalBlockSize () const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_e_c_b___one_way_ae525b1874f11cd0aa85f2d93c17f9d08}
+
+
+returns the input block size that is most efficient for this cipher \begin{DoxyNote}{Note}
+optimal input length is n $\ast$ \hyperlink{class_e_c_b___one_way_ae525b1874f11cd0aa85f2d93c17f9d08}{OptimalBlockSize()} -\/ \hyperlink{class_stream_transformation_a94b4e1d14edde1fdde38361bce9ca4c6}{GetOptimalBlockSizeUsed()} for any n $>$ 0 
+\end{DoxyNote}
+
+
+Reimplemented from \hyperlink{class_stream_transformation_ae79457bcbafc980672d88ee54ed4ac66}{StreamTransformation}.\hypertarget{class_e_c_b___one_way_a4d8c291d821d86f7f4caa3cf95d1834c}{
+\index{ECB\_\-OneWay@{ECB\_\-OneWay}!ProcessData@{ProcessData}}
+\index{ProcessData@{ProcessData}!ECB_OneWay@{ECB\_\-OneWay}}
+\subsubsection[{ProcessData}]{\setlength{\rightskip}{0pt plus 5cm}void ECB\_\-OneWay::ProcessData (byte $\ast$ {\em outString}, \/  const byte $\ast$ {\em inString}, \/  size\_\-t {\em length})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_e_c_b___one_way_a4d8c291d821d86f7f4caa3cf95d1834c}
+
+
+encrypt or decrypt an array of bytes of specified length \begin{DoxyNote}{Note}
+either inString == outString, or they don't overlap 
+\end{DoxyNote}
+
+
+Implements \hyperlink{class_stream_transformation_a26feabde21bc4d1783195969733e3bb0}{StreamTransformation}.\hypertarget{class_e_c_b___one_way_aea389c964114b73390dd81d836124461}{
+\index{ECB\_\-OneWay@{ECB\_\-OneWay}!SetKey@{SetKey}}
+\index{SetKey@{SetKey}!ECB_OneWay@{ECB\_\-OneWay}}
+\subsubsection[{SetKey}]{\setlength{\rightskip}{0pt plus 5cm}void ECB\_\-OneWay::SetKey (const byte $\ast$ {\em key}, \/  size\_\-t {\em length}, \/  const {\bf NameValuePairs} \& {\em params} = {\ttfamily {\bf g\_\-nullNameValuePairs}})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_e_c_b___one_way_aea389c964114b73390dd81d836124461}
+
+
+set or reset the key of this object 
+\begin{DoxyParams}{Parameters}
+\item[{\em params}]is used to specify Rounds, BlockSize, etc. \end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_simple_keying_interface_a97a47c942b6ce983d9ea6b58f22d5209}{SimpleKeyingInterface}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{modes_8h}{modes.h}\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{class_huffman_decoder}{
+\section{HuffmanDecoder Class Reference}
+\label{class_huffman_decoder}\index{HuffmanDecoder@{HuffmanDecoder}}
+}
+
+
+Huffman Decoder.  
+
+
+{\ttfamily \#include $<$zinflate.h$>$}\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries CodeInfo}
+\item 
+class \hyperlink{class_huffman_decoder_1_1_err}{Err}
+\item 
+struct {\bfseries LookupEntry}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries MAX\_\-CODE\_\-BITS} =  sizeof(code\_\-t)$\ast$8
+ \}
+\item 
+\hypertarget{class_huffman_decoder_a550cd665357c320af58916f992eb8756}{
+typedef unsigned int {\bfseries code\_\-t}}
+\label{class_huffman_decoder_a550cd665357c320af58916f992eb8756}
+
+\item 
+\hypertarget{class_huffman_decoder_aae2c1dc3110a39ae9d74fc00aee8a1ec}{
+typedef unsigned int {\bfseries value\_\-t}}
+\label{class_huffman_decoder_aae2c1dc3110a39ae9d74fc00aee8a1ec}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_huffman_decoder_ae42277c30c16af4ee9f830bc92be8aa8}{
+{\bfseries HuffmanDecoder} (const unsigned int $\ast$codeBitLengths, unsigned int nCodes)}
+\label{class_huffman_decoder_ae42277c30c16af4ee9f830bc92be8aa8}
+
+\item 
+\hypertarget{class_huffman_decoder_a66275670f30366de75c3bcb506c657f5}{
+void {\bfseries Initialize} (const unsigned int $\ast$codeBitLengths, unsigned int nCodes)}
+\label{class_huffman_decoder_a66275670f30366de75c3bcb506c657f5}
+
+\item 
+\hypertarget{class_huffman_decoder_a32c424a894a24ea4d0aae95c3d30e806}{
+unsigned int {\bfseries Decode} (code\_\-t code, value\_\-t \&value) const }
+\label{class_huffman_decoder_a32c424a894a24ea4d0aae95c3d30e806}
+
+\item 
+\hypertarget{class_huffman_decoder_a0ba809a0515ad70df30c6965fa6919a7}{
+bool {\bfseries Decode} (\hyperlink{class_low_first_bit_reader}{LowFirstBitReader} \&reader, value\_\-t \&value) const }
+\label{class_huffman_decoder_a0ba809a0515ad70df30c6965fa6919a7}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_huffman_decoder_ac3bc64943c6ab90653d34b0eb5fc3985}{
+struct {\bfseries CodeLessThan}}
+\label{class_huffman_decoder_ac3bc64943c6ab90653d34b0eb5fc3985}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Huffman Decoder. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/zinflate.h\end{DoxyCompactItemize}

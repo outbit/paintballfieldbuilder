@@ -1,0 +1,10 @@
+version:1:
+generatedby:NULL:
+credit:Hyperformance Paintball LLC:
+copyright:2006:
+
+bunker<spool_st,spool_gui_st.bmp,spool_mesh_st.mesh,spool_mesh_st.material>
+bunker<spool_b1,spool_gui_b1.bmp,spool_mesh_b1.mesh,spool_mesh_b1.material>
+bunker<spool_b2,spool_gui_b2.bmp,spool_mesh_b2.mesh,spool_mesh_b2.material>
+bunker<spool_b4,spool_gui_b4.bmp,spool_mesh_b4.mesh,spool_mesh_b4.material>
+bunker<spool_b1l,spool_gui_b1l.bmp,spool_mesh_b1l.mesh,spool_mesh_b1l.material>

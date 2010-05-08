@@ -1,0 +1,114 @@
+\hypertarget{class_additive_cipher_template}{
+\section{AdditiveCipherTemplate$<$ BASE $>$ Class Template Reference}
+\label{class_additive_cipher_template}\index{AdditiveCipherTemplate@{AdditiveCipherTemplate}}
+}
+Inheritance diagram for AdditiveCipherTemplate$<$ BASE $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.86667cm]{class_additive_cipher_template}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_additive_cipher_template_a79b269d3b9def1c573eb8b73926bbfdf}{
+typedef BASE::PolicyInterface {\bfseries PolicyInterface}}
+\label{class_additive_cipher_template_a79b269d3b9def1c573eb8b73926bbfdf}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_additive_cipher_template_a3f473c11dcbad1364bc1886a43bf5e55}{
+void \hyperlink{class_additive_cipher_template_a3f473c11dcbad1364bc1886a43bf5e55}{GenerateBlock} (byte $\ast$output, size\_\-t size)}
+\label{class_additive_cipher_template_a3f473c11dcbad1364bc1886a43bf5e55}
+
+\begin{DoxyCompactList}\small\item\em generate random array of bytes \item\end{DoxyCompactList}\item 
+\hypertarget{class_additive_cipher_template_a134db9e708e4b52a8161a72adcfbe91c}{
+void {\bfseries ProcessData} (byte $\ast$outString, const byte $\ast$inString, size\_\-t length)}
+\label{class_additive_cipher_template_a134db9e708e4b52a8161a72adcfbe91c}
+
+\item 
+\hypertarget{class_additive_cipher_template_aa1d586475ed0e9fece85c1139522a994}{
+void {\bfseries Resynchronize} (const byte $\ast$iv, int length=-\/1)}
+\label{class_additive_cipher_template_aa1d586475ed0e9fece85c1139522a994}
+
+\item 
+\hypertarget{class_additive_cipher_template_a02181f39db019ca194822b8afcfaf559}{
+unsigned int {\bfseries OptimalBlockSize} () const }
+\label{class_additive_cipher_template_a02181f39db019ca194822b8afcfaf559}
+
+\item 
+\hypertarget{class_additive_cipher_template_a296c2eddb2ebdc88d2c52ea73a9fb8dd}{
+unsigned int {\bfseries GetOptimalNextBlockSize} () const }
+\label{class_additive_cipher_template_a296c2eddb2ebdc88d2c52ea73a9fb8dd}
+
+\item 
+\hypertarget{class_additive_cipher_template_a1c57acaee511a4fd54691ebf3392b422}{
+unsigned int {\bfseries OptimalDataAlignment} () const }
+\label{class_additive_cipher_template_a1c57acaee511a4fd54691ebf3392b422}
+
+\item 
+\hypertarget{class_additive_cipher_template_a04041a45748263f149a6eb76babc4a9b}{
+bool {\bfseries IsSelfInverting} () const }
+\label{class_additive_cipher_template_a04041a45748263f149a6eb76babc4a9b}
+
+\item 
+\hypertarget{class_additive_cipher_template_a50dfbc6747819dd334fd30be63d2d03c}{
+bool {\bfseries IsForwardTransformation} () const }
+\label{class_additive_cipher_template_a50dfbc6747819dd334fd30be63d2d03c}
+
+\item 
+\hypertarget{class_additive_cipher_template_a286650935516d27eaa8003dd9f6bf299}{
+bool {\bfseries IsRandomAccess} () const }
+\label{class_additive_cipher_template_a286650935516d27eaa8003dd9f6bf299}
+
+\item 
+\hypertarget{class_additive_cipher_template_a68d4dc2904da4df5a7ead785ad7bc67e}{
+void {\bfseries Seek} (lword position)}
+\label{class_additive_cipher_template_a68d4dc2904da4df5a7ead785ad7bc67e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_additive_cipher_template_a81cd8dec0920e628b3238820eed566ef}{
+void {\bfseries UncheckedSetKey} (const byte $\ast$key, unsigned int length, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&params)}
+\label{class_additive_cipher_template_a81cd8dec0920e628b3238820eed566ef}
+
+\item 
+\hypertarget{class_additive_cipher_template_a2b8c6e4e11ac35c6f267991d0b62f84c}{
+unsigned int {\bfseries GetBufferByteSize} (const PolicyInterface \&policy) const }
+\label{class_additive_cipher_template_a2b8c6e4e11ac35c6f267991d0b62f84c}
+
+\item 
+\hypertarget{class_additive_cipher_template_aa0b80a8012abd9061b9522102737069b}{
+byte $\ast$ {\bfseries KeystreamBufferBegin} ()}
+\label{class_additive_cipher_template_aa0b80a8012abd9061b9522102737069b}
+
+\item 
+\hypertarget{class_additive_cipher_template_a99f88c7364a00f78d4afe44f4c962e9e}{
+byte $\ast$ {\bfseries KeystreamBufferEnd} ()}
+\label{class_additive_cipher_template_a99f88c7364a00f78d4afe44f4c962e9e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_additive_cipher_template_adc071d835c1113d83a98ca62b09f0904}{
+\hyperlink{class_sec_block}{SecByteBlock} {\bfseries m\_\-buffer}}
+\label{class_additive_cipher_template_adc071d835c1113d83a98ca62b09f0904}
+
+\item 
+\hypertarget{class_additive_cipher_template_a0c2f1c9e2245bff40739170769ea39c4}{
+size\_\-t {\bfseries m\_\-leftOver}}
+\label{class_additive_cipher_template_a0c2f1c9e2245bff40739170769ea39c4}
+
+\end{DoxyCompactItemize}
+\subsubsection*{template$<$class BASE = AbstractPolicyHolder$<$AdditiveCipherAbstractPolicy, SymmetricCipher$>$$>$ class AdditiveCipherTemplate$<$ BASE $>$}
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{strciphr_8h}{strciphr.h}\end{DoxyCompactItemize}

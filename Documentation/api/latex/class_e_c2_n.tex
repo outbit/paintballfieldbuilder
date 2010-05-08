@@ -1,0 +1,169 @@
+\hypertarget{class_e_c2_n}{
+\section{EC2N Class Reference}
+\label{class_e_c2_n}\index{EC2N@{EC2N}}
+}
+
+
+Elliptic Curve over GF(2$^\wedge$n).  
+
+
+{\ttfamily \#include $<$ec2n.h$>$}Inheritance diagram for EC2N::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_e_c2_n}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_c2_n_a7088a58b07065cbfd20ee5df924ed99e}{
+typedef \hyperlink{class_g_f2_n_p}{GF2NP} {\bfseries Field}}
+\label{class_e_c2_n_a7088a58b07065cbfd20ee5df924ed99e}
+
+\item 
+\hypertarget{class_e_c2_n_ae03206f65d1a99b107de72c7d86704c2}{
+typedef Field::Element {\bfseries FieldElement}}
+\label{class_e_c2_n_ae03206f65d1a99b107de72c7d86704c2}
+
+\item 
+\hypertarget{class_e_c2_n_a084d1d7e824e989357c2ac9bf8b077c1}{
+typedef \hyperlink{struct_e_c2_n_point}{EC2NPoint} {\bfseries Point}}
+\label{class_e_c2_n_a084d1d7e824e989357c2ac9bf8b077c1}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_e_c2_n_a8f8084f4fa2f0658417b64b55b08543f}{
+{\bfseries EC2N} (const \hyperlink{class_g_f2_n_p}{Field} \&field, const Field::Element \&a, const Field::Element \&b)}
+\label{class_e_c2_n_a8f8084f4fa2f0658417b64b55b08543f}
+
+\item 
+\hypertarget{class_e_c2_n_a92b1fd124cd5babd51d0886668336b7e}{
+{\bfseries EC2N} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_e_c2_n_a92b1fd124cd5babd51d0886668336b7e}
+
+\item 
+\hypertarget{class_e_c2_n_ae90045af196aff7edc035a6051f1640f}{
+void {\bfseries DEREncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_e_c2_n_ae90045af196aff7edc035a6051f1640f}
+
+\item 
+\hypertarget{class_e_c2_n_aa57b5f87867b5acee8bf7f51d140c0d1}{
+bool {\bfseries Equal} (const \hyperlink{struct_e_c2_n_point}{Point} \&P, const \hyperlink{struct_e_c2_n_point}{Point} \&Q) const }
+\label{class_e_c2_n_aa57b5f87867b5acee8bf7f51d140c0d1}
+
+\item 
+\hypertarget{class_e_c2_n_ac1682582ed2d25b3609699158800430e}{
+const \hyperlink{struct_e_c2_n_point}{Point} \& {\bfseries Identity} () const }
+\label{class_e_c2_n_ac1682582ed2d25b3609699158800430e}
+
+\item 
+\hypertarget{class_e_c2_n_aa81b05e94a3e3e1856266f37686c3e96}{
+const \hyperlink{struct_e_c2_n_point}{Point} \& {\bfseries Inverse} (const \hyperlink{struct_e_c2_n_point}{Point} \&P) const }
+\label{class_e_c2_n_aa81b05e94a3e3e1856266f37686c3e96}
+
+\item 
+\hypertarget{class_e_c2_n_ab432b43f411b4bb3eafa64087fae1ff0}{
+bool {\bfseries InversionIsFast} () const }
+\label{class_e_c2_n_ab432b43f411b4bb3eafa64087fae1ff0}
+
+\item 
+\hypertarget{class_e_c2_n_a8e18435104858eb87e34029edd092ec0}{
+const \hyperlink{struct_e_c2_n_point}{Point} \& {\bfseries Add} (const \hyperlink{struct_e_c2_n_point}{Point} \&P, const \hyperlink{struct_e_c2_n_point}{Point} \&Q) const }
+\label{class_e_c2_n_a8e18435104858eb87e34029edd092ec0}
+
+\item 
+\hypertarget{class_e_c2_n_a89f64e58248c63039c737d753944efac}{
+const \hyperlink{struct_e_c2_n_point}{Point} \& {\bfseries Double} (const \hyperlink{struct_e_c2_n_point}{Point} \&P) const }
+\label{class_e_c2_n_a89f64e58248c63039c737d753944efac}
+
+\item 
+\hypertarget{class_e_c2_n_ad6cc24daebd5880eaabc551be521dc56}{
+\hyperlink{struct_e_c2_n_point}{Point} {\bfseries Multiply} (const \hyperlink{class_integer}{Integer} \&k, const \hyperlink{struct_e_c2_n_point}{Point} \&P) const }
+\label{class_e_c2_n_ad6cc24daebd5880eaabc551be521dc56}
+
+\item 
+\hypertarget{class_e_c2_n_aa95e067cc447d666ceb7060f302ad1d0}{
+\hyperlink{struct_e_c2_n_point}{Point} {\bfseries CascadeMultiply} (const \hyperlink{class_integer}{Integer} \&k1, const \hyperlink{struct_e_c2_n_point}{Point} \&P, const \hyperlink{class_integer}{Integer} \&k2, const \hyperlink{struct_e_c2_n_point}{Point} \&Q) const }
+\label{class_e_c2_n_aa95e067cc447d666ceb7060f302ad1d0}
+
+\item 
+\hypertarget{class_e_c2_n_aedae457b9e8db0d373b381c71fa862d5}{
+bool {\bfseries ValidateParameters} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int level=3) const }
+\label{class_e_c2_n_aedae457b9e8db0d373b381c71fa862d5}
+
+\item 
+\hypertarget{class_e_c2_n_ac7f4e62771770ea02251d2c327c53ba1}{
+bool {\bfseries VerifyPoint} (const \hyperlink{struct_e_c2_n_point}{Point} \&P) const }
+\label{class_e_c2_n_ac7f4e62771770ea02251d2c327c53ba1}
+
+\item 
+\hypertarget{class_e_c2_n_ac96cb02c86e4568d304cacc0b40783b3}{
+unsigned int {\bfseries EncodedPointSize} (bool compressed=false) const }
+\label{class_e_c2_n_ac96cb02c86e4568d304cacc0b40783b3}
+
+\item 
+\hypertarget{class_e_c2_n_ae9fead90e9048d454916868ef4e55cb6}{
+bool {\bfseries DecodePoint} (\hyperlink{struct_e_c2_n_point}{Point} \&P, \hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, size\_\-t len) const }
+\label{class_e_c2_n_ae9fead90e9048d454916868ef4e55cb6}
+
+\item 
+\hypertarget{class_e_c2_n_a6148bd875dce5a3d30ea4a2eb4b435e1}{
+bool {\bfseries DecodePoint} (\hyperlink{struct_e_c2_n_point}{Point} \&P, const byte $\ast$encodedPoint, size\_\-t len) const }
+\label{class_e_c2_n_a6148bd875dce5a3d30ea4a2eb4b435e1}
+
+\item 
+\hypertarget{class_e_c2_n_aeae4368863718ea9d0ee2d128d37c05f}{
+void {\bfseries EncodePoint} (byte $\ast$encodedPoint, const \hyperlink{struct_e_c2_n_point}{Point} \&P, bool compressed) const }
+\label{class_e_c2_n_aeae4368863718ea9d0ee2d128d37c05f}
+
+\item 
+\hypertarget{class_e_c2_n_a887bb90533cc8cb8728ee14d3b79a4b9}{
+void {\bfseries EncodePoint} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, const \hyperlink{struct_e_c2_n_point}{Point} \&P, bool compressed) const }
+\label{class_e_c2_n_a887bb90533cc8cb8728ee14d3b79a4b9}
+
+\item 
+\hypertarget{class_e_c2_n_aa07255396b7216920026266daed5f047}{
+\hyperlink{struct_e_c2_n_point}{Point} {\bfseries BERDecodePoint} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_e_c2_n_aa07255396b7216920026266daed5f047}
+
+\item 
+\hypertarget{class_e_c2_n_a0addec434825f66430a61952d82b928a}{
+void {\bfseries DEREncodePoint} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, const \hyperlink{struct_e_c2_n_point}{Point} \&P, bool compressed) const }
+\label{class_e_c2_n_a0addec434825f66430a61952d82b928a}
+
+\item 
+\hypertarget{class_e_c2_n_a397b3e883800018cb6e0b4242c2d2800}{
+\hyperlink{class_integer}{Integer} {\bfseries FieldSize} () const }
+\label{class_e_c2_n_a397b3e883800018cb6e0b4242c2d2800}
+
+\item 
+\hypertarget{class_e_c2_n_ac46188ed336adf52856d00b0a02a8390}{
+const \hyperlink{class_g_f2_n_p}{Field} \& {\bfseries GetField} () const }
+\label{class_e_c2_n_ac46188ed336adf52856d00b0a02a8390}
+
+\item 
+\hypertarget{class_e_c2_n_a7e9bf807b897c85796c401b6aab8da4f}{
+const FieldElement \& {\bfseries GetA} () const }
+\label{class_e_c2_n_a7e9bf807b897c85796c401b6aab8da4f}
+
+\item 
+\hypertarget{class_e_c2_n_a2e2c7196123b56112280254ffb310d29}{
+const FieldElement \& {\bfseries GetB} () const }
+\label{class_e_c2_n_a2e2c7196123b56112280254ffb310d29}
+
+\item 
+\hypertarget{class_e_c2_n_a069506321f5f7949d0613ad48d1454f6}{
+bool {\bfseries operator==} (const \hyperlink{class_e_c2_n}{EC2N} \&rhs) const }
+\label{class_e_c2_n_a069506321f5f7949d0613ad48d1454f6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Elliptic Curve over GF(2$^\wedge$n). 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/ec2n.h\end{DoxyCompactItemize}

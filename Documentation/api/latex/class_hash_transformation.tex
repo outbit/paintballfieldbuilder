@@ -1,0 +1,137 @@
+\hypertarget{class_hash_transformation}{
+\section{HashTransformation Class Reference}
+\label{class_hash_transformation}\index{HashTransformation@{HashTransformation}}
+}
+
+
+interface for hash functions and data processing part of MACs  
+
+
+{\ttfamily \#include $<$cryptlib.h$>$}Inheritance diagram for HashTransformation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.94536cm]{class_hash_transformation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hash_transformation}{HashTransformation} \& \hyperlink{class_hash_transformation_a39b0a4c4cdc11fda358f9975b5e4137e}{Ref} ()
+\begin{DoxyCompactList}\small\item\em return a reference to this object, \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_aafabefaf445b65d3ba0d8e1c0294afe5}{
+virtual void \hyperlink{class_hash_transformation_aafabefaf445b65d3ba0d8e1c0294afe5}{Update} (const byte $\ast$input, size\_\-t length)=0}
+\label{class_hash_transformation_aafabefaf445b65d3ba0d8e1c0294afe5}
+
+\begin{DoxyCompactList}\small\item\em process more input \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a9fc0b332ef36900ca6ea5d949e95aba1}{
+virtual byte $\ast$ \hyperlink{class_hash_transformation_a9fc0b332ef36900ca6ea5d949e95aba1}{CreateUpdateSpace} (size\_\-t \&size)}
+\label{class_hash_transformation_a9fc0b332ef36900ca6ea5d949e95aba1}
+
+\begin{DoxyCompactList}\small\item\em request space to write input into \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final} (byte $\ast$digest)
+\begin{DoxyCompactList}\small\item\em compute hash for current message, then restart for a new message \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a92752eebac10497211d7a065faba8725}{
+virtual void \hyperlink{class_hash_transformation_a92752eebac10497211d7a065faba8725}{Restart} ()}
+\label{class_hash_transformation_a92752eebac10497211d7a065faba8725}
+
+\begin{DoxyCompactList}\small\item\em discard the current state, and restart with a new message \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a9f42cc280bac76b884ad12615c0dabb5}{
+virtual unsigned int \hyperlink{class_hash_transformation_a9f42cc280bac76b884ad12615c0dabb5}{DigestSize} () const =0}
+\label{class_hash_transformation_a9f42cc280bac76b884ad12615c0dabb5}
+
+\begin{DoxyCompactList}\small\item\em size of the hash/digest/MAC returned by \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()} \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a5e847d65a38ec354de1b28cc4bc66a81}{
+unsigned int \hyperlink{class_hash_transformation_a5e847d65a38ec354de1b28cc4bc66a81}{TagSize} () const }
+\label{class_hash_transformation_a5e847d65a38ec354de1b28cc4bc66a81}
+
+\begin{DoxyCompactList}\small\item\em same as \hyperlink{class_hash_transformation_a9f42cc280bac76b884ad12615c0dabb5}{DigestSize()} \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_ab5507c62376f6bea41d53ae9544d0ff0}{
+virtual unsigned int \hyperlink{class_hash_transformation_ab5507c62376f6bea41d53ae9544d0ff0}{BlockSize} () const }
+\label{class_hash_transformation_ab5507c62376f6bea41d53ae9544d0ff0}
+
+\begin{DoxyCompactList}\small\item\em block size of underlying compression function, or 0 if not block based \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a981fce3f7d06c1f4ab2da853a1cf429d}{
+virtual unsigned int \hyperlink{class_hash_transformation_a981fce3f7d06c1f4ab2da853a1cf429d}{OptimalBlockSize} () const }
+\label{class_hash_transformation_a981fce3f7d06c1f4ab2da853a1cf429d}
+
+\begin{DoxyCompactList}\small\item\em input to \hyperlink{class_hash_transformation_aafabefaf445b65d3ba0d8e1c0294afe5}{Update()} should have length a multiple of this for optimal speed \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a81f46e4ca555b073d30f14a3b3f8ad79}{
+virtual unsigned int \hyperlink{class_hash_transformation_a81f46e4ca555b073d30f14a3b3f8ad79}{OptimalDataAlignment} () const }
+\label{class_hash_transformation_a81f46e4ca555b073d30f14a3b3f8ad79}
+
+\begin{DoxyCompactList}\small\item\em returns how input should be aligned for optimal performance \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_af8124c4fca23b74bbdc43660bdae692c}{
+virtual void \hyperlink{class_hash_transformation_af8124c4fca23b74bbdc43660bdae692c}{CalculateDigest} (byte $\ast$digest, const byte $\ast$input, size\_\-t length)}
+\label{class_hash_transformation_af8124c4fca23b74bbdc43660bdae692c}
+
+\begin{DoxyCompactList}\small\item\em use this if your input is in one piece and you don't want to call \hyperlink{class_hash_transformation_aafabefaf445b65d3ba0d8e1c0294afe5}{Update()} and \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()} separately \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_hash_transformation_a16c4aecd047015d513feef4ed5b929ba}{Verify} (const byte $\ast$digest)
+\begin{DoxyCompactList}\small\item\em verify that digest is a valid digest for the current message, then reinitialize the object \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_acad96df68e70d922683e5063057130b2}{
+virtual bool \hyperlink{class_hash_transformation_acad96df68e70d922683e5063057130b2}{VerifyDigest} (const byte $\ast$digest, const byte $\ast$input, size\_\-t length)}
+\label{class_hash_transformation_acad96df68e70d922683e5063057130b2}
+
+\begin{DoxyCompactList}\small\item\em use this if your input is in one piece and you don't want to call \hyperlink{class_hash_transformation_aafabefaf445b65d3ba0d8e1c0294afe5}{Update()} and \hyperlink{class_hash_transformation_a16c4aecd047015d513feef4ed5b929ba}{Verify()} separately \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a590ecda344aa0fb045abf42ec08823b2}{
+virtual void \hyperlink{class_hash_transformation_a590ecda344aa0fb045abf42ec08823b2}{TruncatedFinal} (byte $\ast$digest, size\_\-t digestSize)=0}
+\label{class_hash_transformation_a590ecda344aa0fb045abf42ec08823b2}
+
+\begin{DoxyCompactList}\small\item\em truncated version of \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()} \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a0b6917657eaec935750fd83e28270d76}{
+virtual void \hyperlink{class_hash_transformation_a0b6917657eaec935750fd83e28270d76}{CalculateTruncatedDigest} (byte $\ast$digest, size\_\-t digestSize, const byte $\ast$input, size\_\-t length)}
+\label{class_hash_transformation_a0b6917657eaec935750fd83e28270d76}
+
+\begin{DoxyCompactList}\small\item\em truncated version of \hyperlink{class_hash_transformation_af8124c4fca23b74bbdc43660bdae692c}{CalculateDigest()} \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_ad9ff5cb223a3771412b78b33242f3629}{
+virtual bool \hyperlink{class_hash_transformation_ad9ff5cb223a3771412b78b33242f3629}{TruncatedVerify} (const byte $\ast$digest, size\_\-t digestLength)}
+\label{class_hash_transformation_ad9ff5cb223a3771412b78b33242f3629}
+
+\begin{DoxyCompactList}\small\item\em truncated version of \hyperlink{class_hash_transformation_a16c4aecd047015d513feef4ed5b929ba}{Verify()} \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_transformation_a7958e99717019e8b9f91672bdfe9e086}{
+virtual bool \hyperlink{class_hash_transformation_a7958e99717019e8b9f91672bdfe9e086}{VerifyTruncatedDigest} (const byte $\ast$digest, size\_\-t digestLength, const byte $\ast$input, size\_\-t length)}
+\label{class_hash_transformation_a7958e99717019e8b9f91672bdfe9e086}
+
+\begin{DoxyCompactList}\small\item\em truncated version of \hyperlink{class_hash_transformation_acad96df68e70d922683e5063057130b2}{VerifyDigest()} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_hash_transformation_a584846215692150d99d63f8b7ccd58d8}{
+void {\bfseries ThrowIfInvalidTruncatedSize} (size\_\-t size) const }
+\label{class_hash_transformation_a584846215692150d99d63f8b7ccd58d8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+interface for hash functions and data processing part of MACs \hyperlink{class_hash_transformation}{HashTransformation} objects are stateful. They are created in an initial state, change state as \hyperlink{class_hash_transformation_aafabefaf445b65d3ba0d8e1c0294afe5}{Update()} is called, and return to the initial state when \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()} is called. This interface allows a large message to be hashed in pieces by calling \hyperlink{class_hash_transformation_aafabefaf445b65d3ba0d8e1c0294afe5}{Update()} on each piece followed by calling \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{
+\index{HashTransformation@{HashTransformation}!Final@{Final}}
+\index{Final@{Final}!HashTransformation@{HashTransformation}}
+\subsubsection[{Final}]{\setlength{\rightskip}{0pt plus 5cm}virtual void HashTransformation::Final (byte $\ast$ {\em digest})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}
+
+
+compute hash for current message, then restart for a new message \begin{DoxyPrecond}{Precondition}
+size of digest == \hyperlink{class_hash_transformation_a9f42cc280bac76b884ad12615c0dabb5}{DigestSize()}. 
+\end{DoxyPrecond}
+\hypertarget{class_hash_transformation_a39b0a4c4cdc11fda358f9975b5e4137e}{
+\index{HashTransformation@{HashTransformation}!Ref@{Ref}}
+\index{Ref@{Ref}!HashTransformation@{HashTransformation}}
+\subsubsection[{Ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HashTransformation}\& HashTransformation::Ref ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_hash_transformation_a39b0a4c4cdc11fda358f9975b5e4137e}
+
+
+return a reference to this object, This function is useful for passing a temporary \hyperlink{class_hash_transformation}{HashTransformation} object to a function that takes a non-\/const reference. \hypertarget{class_hash_transformation_a16c4aecd047015d513feef4ed5b929ba}{
+\index{HashTransformation@{HashTransformation}!Verify@{Verify}}
+\index{Verify@{Verify}!HashTransformation@{HashTransformation}}
+\subsubsection[{Verify}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool HashTransformation::Verify (const byte $\ast$ {\em digest})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_hash_transformation_a16c4aecd047015d513feef4ed5b929ba}
+
+
+verify that digest is a valid digest for the current message, then reinitialize the object Default implementation is to call \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()} and do a bitwise comparison between its output and digest. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{cryptlib_8h}{cryptlib.h}\end{DoxyCompactItemize}

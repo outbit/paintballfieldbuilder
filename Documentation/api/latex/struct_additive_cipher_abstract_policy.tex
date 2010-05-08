@@ -1,0 +1,73 @@
+\hypertarget{struct_additive_cipher_abstract_policy}{
+\section{AdditiveCipherAbstractPolicy Struct Reference}
+\label{struct_additive_cipher_abstract_policy}\index{AdditiveCipherAbstractPolicy@{AdditiveCipherAbstractPolicy}}
+}
+Inheritance diagram for AdditiveCipherAbstractPolicy::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.672269cm]{struct_additive_cipher_abstract_policy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_acda807cffcd607d0c676d70aa7e1c6a8}{
+virtual unsigned int {\bfseries GetAlignment} () const }
+\label{struct_additive_cipher_abstract_policy_acda807cffcd607d0c676d70aa7e1c6a8}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_a573f7abcf5929be546bddc32139bf370}{
+virtual unsigned int {\bfseries GetBytesPerIteration} () const =0}
+\label{struct_additive_cipher_abstract_policy_a573f7abcf5929be546bddc32139bf370}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_a79a5290262325372d5133797086afd28}{
+virtual unsigned int {\bfseries GetOptimalBlockSize} () const }
+\label{struct_additive_cipher_abstract_policy_a79a5290262325372d5133797086afd28}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_aa2267beddbc4140e92c78206a24ead0c}{
+virtual unsigned int {\bfseries GetIterationsToBuffer} () const =0}
+\label{struct_additive_cipher_abstract_policy_aa2267beddbc4140e92c78206a24ead0c}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_aea8268ee42cbc98cf9be638bf77aafef}{
+virtual void {\bfseries WriteKeystream} (byte $\ast$keystream, size\_\-t iterationCount)}
+\label{struct_additive_cipher_abstract_policy_aea8268ee42cbc98cf9be638bf77aafef}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_a04a2b0cebd5633dd4297d9a8000ac971}{
+virtual bool {\bfseries CanOperateKeystream} () const }
+\label{struct_additive_cipher_abstract_policy_a04a2b0cebd5633dd4297d9a8000ac971}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_ae948f2e69229ba39837e498a464606d4}{
+virtual void {\bfseries OperateKeystream} (KeystreamOperation operation, byte $\ast$output, const byte $\ast$input, size\_\-t iterationCount)}
+\label{struct_additive_cipher_abstract_policy_ae948f2e69229ba39837e498a464606d4}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_a906b4001cc8c457d1abb4bff4fb8157a}{
+virtual void {\bfseries CipherSetKey} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&params, const byte $\ast$key, size\_\-t length)=0}
+\label{struct_additive_cipher_abstract_policy_a906b4001cc8c457d1abb4bff4fb8157a}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_ae00639d9aeb20b7da3ac5e3a0f877fa0}{
+virtual void {\bfseries CipherResynchronize} (byte $\ast$keystreamBuffer, const byte $\ast$iv, size\_\-t length)}
+\label{struct_additive_cipher_abstract_policy_ae00639d9aeb20b7da3ac5e3a0f877fa0}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_abdac73ff69a1b36d32871c110f28413a}{
+virtual bool {\bfseries CipherIsRandomAccess} () const =0}
+\label{struct_additive_cipher_abstract_policy_abdac73ff69a1b36d32871c110f28413a}
+
+\item 
+\hypertarget{struct_additive_cipher_abstract_policy_a8fce38d2b7d84732fc3efea410b82d54}{
+virtual void {\bfseries SeekToIteration} (lword iterationCount)}
+\label{struct_additive_cipher_abstract_policy_a8fce38d2b7d84732fc3efea410b82d54}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{strciphr_8h}{strciphr.h}\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+\hypertarget{class_d_l___key_derivation_algorithm}{
+\section{DL\_\-KeyDerivationAlgorithm$<$ T $>$ Class Template Reference}
+\label{class_d_l___key_derivation_algorithm}\index{DL\_\-KeyDerivationAlgorithm@{DL\_\-KeyDerivationAlgorithm}}
+}
+
+
+interface for key derivation algorithms used in DL cryptosystems  
+
+
+{\ttfamily \#include $<$pubkey.h$>$}Inheritance diagram for DL\_\-KeyDerivationAlgorithm$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_l___key_derivation_algorithm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___key_derivation_algorithm_a4cc409b63f8d026d8671c631e354e672}{
+virtual bool {\bfseries ParameterSupported} (const char $\ast$name) const }
+\label{class_d_l___key_derivation_algorithm_a4cc409b63f8d026d8671c631e354e672}
+
+\item 
+\hypertarget{class_d_l___key_derivation_algorithm_a79ec03589390f116d0ced324255cd57f}{
+virtual void {\bfseries Derive} (const \hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ T $>$ \&groupParams, byte $\ast$derivedKey, size\_\-t derivedLength, const T \&agreedElement, const T \&ephemeralPublicKey, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&derivationParams) const =0}
+\label{class_d_l___key_derivation_algorithm_a79ec03589390f116d0ced324255cd57f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class DL\_\-KeyDerivationAlgorithm$<$ T $>$}
+
+interface for key derivation algorithms used in DL cryptosystems 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{pubkey_8h}{pubkey.h}\end{DoxyCompactItemize}

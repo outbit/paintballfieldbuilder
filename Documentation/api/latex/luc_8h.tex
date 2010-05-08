@@ -1,0 +1,71 @@
+\hypertarget{luc_8h}{
+\section{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/luc.h File Reference}
+\label{luc_8h}\index{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/luc.h@{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/luc.h}}
+}
+{\ttfamily \#include \char`\"{}pkcspad.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}oaep.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}integer.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}dh.h\char`\"{}}\par
+{\ttfamily \#include $<$limits.h$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_l_u_c_function}{LUCFunction}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{struct_l_u_c}{LUC} function. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_invertible_l_u_c_function}{InvertibleLUCFunction}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_l_u_c}{LUC}
+\item 
+struct \hyperlink{struct_l_u_c_e_s}{LUCES$<$ STANDARD $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_l_u_c}{LUC} cryptosystem. \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_l_u_c_s_s}{LUCSS$<$ STANDARD, H $>$}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_l_u_c}{LUC} signature scheme with appendix. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___group_precomputation___l_u_c}{DL\_\-GroupPrecomputation\_\-LUC}
+\item 
+class \hyperlink{class_d_l___base_precomputation___l_u_c}{DL\_\-BasePrecomputation\_\-LUC}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___group_parameters___l_u_c}{DL\_\-GroupParameters\_\-LUC}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___group_parameters___l_u_c___default_safe_prime}{DL\_\-GroupParameters\_\-LUC\_\-DefaultSafePrime}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+class \hyperlink{class_d_l___algorithm___l_u_c___h_m_p}{DL\_\-Algorithm\_\-LUC\_\-HMP}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_l___signature_keys___l_u_c}{DL\_\-SignatureKeys\_\-LUC}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_l_u_c___h_m_p}{LUC\_\-HMP$<$ H $>$}
+\begin{DoxyCompactList}\small\item\em LUC-\/HMP, based on \char`\"{}Digital signature schemes based on Lucas functions\char`\"{} by Patrick Horster, Markus Michels, Holger Petersen. \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_d_l___crypto_keys___l_u_c}{DL\_\-CryptoKeys\_\-LUC}
+\begin{DoxyCompactList}\small\item\em \_\- \item\end{DoxyCompactList}\item 
+struct \hyperlink{struct_l_u_c___i_e_s}{LUC\_\-IES$<$ COFACTOR\_\-OPTION, DHAES\_\-MODE $>$}
+\begin{DoxyCompactList}\small\item\em LUC-\/IES. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{luc_8h_a42df8fd94e8c1ce546b9f98bca62e285}{
+typedef \hyperlink{struct_l_u_c_e_s}{LUCES}$<$ \hyperlink{class_o_a_e_p}{OAEP}$<$ \hyperlink{class_s_h_a1}{SHA} $>$ $>$::Decryptor {\bfseries LUCES\_\-OAEP\_\-SHA\_\-Decryptor}}
+\label{luc_8h_a42df8fd94e8c1ce546b9f98bca62e285}
+
+\item 
+\hypertarget{luc_8h_a1e72cc190df2bc9fc836b48470aca2f3}{
+typedef \hyperlink{struct_l_u_c_e_s}{LUCES}$<$ \hyperlink{class_o_a_e_p}{OAEP}$<$ \hyperlink{class_s_h_a1}{SHA} $>$ $>$::Encryptor {\bfseries LUCES\_\-OAEP\_\-SHA\_\-Encryptor}}
+\label{luc_8h_a1e72cc190df2bc9fc836b48470aca2f3}
+
+\item 
+\hypertarget{luc_8h_ad72a50d14c2a3d491091a26cd79a5671}{
+typedef \hyperlink{struct_l_u_c_s_s}{LUCSS}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15}, \hyperlink{class_s_h_a1}{SHA} $>$::Signer {\bfseries LUCSSA\_\-PKCS1v15\_\-SHA\_\-Signer}}
+\label{luc_8h_ad72a50d14c2a3d491091a26cd79a5671}
+
+\item 
+\hypertarget{luc_8h_a10ad7c43303744917d62b1ca6e9bbb20}{
+typedef \hyperlink{struct_l_u_c_s_s}{LUCSS}$<$ \hyperlink{struct_p_k_c_s1v15}{PKCS1v15}, \hyperlink{class_s_h_a1}{SHA} $>$::Verifier {\bfseries LUCSSA\_\-PKCS1v15\_\-SHA\_\-Verifier}}
+\label{luc_8h_a10ad7c43303744917d62b1ca6e9bbb20}
+
+\item 
+\hypertarget{luc_8h_ab2c863cff24e8c956e82635d3f7c0ffb}{
+typedef \hyperlink{class_d_h___domain}{DH\_\-Domain}$<$ \hyperlink{class_d_l___group_parameters___l_u_c___default_safe_prime}{DL\_\-GroupParameters\_\-LUC\_\-DefaultSafePrime} $>$ \hyperlink{luc_8h_ab2c863cff24e8c956e82635d3f7c0ffb}{LUC\_\-DH}}
+\label{luc_8h_ab2c863cff24e8c956e82635d3f7c0ffb}
+
+\begin{DoxyCompactList}\small\item\em LUC-\/DH. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

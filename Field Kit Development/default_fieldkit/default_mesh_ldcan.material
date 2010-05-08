@@ -1,0 +1,17 @@
+material default_material_ldcan
+{
+    technique
+    {
+        pass
+        {
+            ambient 1.0 1.0 1.0
+            diffuse 1.0 1.0 1.0
+            specular 0.0 0.0 0.0 0.0
+            emissive 0.5 0.5 0.5
+            texture_unit
+            {
+                texture default_skin_can.bmp 
+            }
+        }
+    }
+}

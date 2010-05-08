@@ -1,0 +1,107 @@
+\hypertarget{class_block_transformation}{
+\section{BlockTransformation Class Reference}
+\label{class_block_transformation}\index{BlockTransformation@{BlockTransformation}}
+}
+
+
+interface for the data processing part of block ciphers  
+
+
+{\ttfamily \#include $<$cryptlib.h$>$}Inheritance diagram for BlockTransformation::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{class_block_transformation}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries BT\_\-InBlockIsCounter} = 1, 
+{\bfseries BT\_\-DontIncrementInOutPointers} = 2, 
+{\bfseries BT\_\-XorInput} = 4, 
+{\bfseries BT\_\-ReverseDirection} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_block_transformation_a1904cf145e4c5c650dd7aff32f54e153}{
+virtual void \hyperlink{class_block_transformation_a1904cf145e4c5c650dd7aff32f54e153}{ProcessAndXorBlock} (const byte $\ast$inBlock, const byte $\ast$xorBlock, byte $\ast$outBlock) const =0}
+\label{class_block_transformation_a1904cf145e4c5c650dd7aff32f54e153}
+
+\begin{DoxyCompactList}\small\item\em encrypt or decrypt inBlock, xor with xorBlock, and write to outBlock \item\end{DoxyCompactList}\item 
+void \hyperlink{class_block_transformation_a2fefb3f4c6c6297c0c91fcbba9e4f4f3}{ProcessBlock} (const byte $\ast$inBlock, byte $\ast$outBlock) const 
+\begin{DoxyCompactList}\small\item\em encrypt or decrypt one block \item\end{DoxyCompactList}\item 
+\hypertarget{class_block_transformation_a12cc1846de571557be0f82471e8904bf}{
+void \hyperlink{class_block_transformation_a12cc1846de571557be0f82471e8904bf}{ProcessBlock} (byte $\ast$inoutBlock) const }
+\label{class_block_transformation_a12cc1846de571557be0f82471e8904bf}
+
+\begin{DoxyCompactList}\small\item\em encrypt or decrypt one block in place \item\end{DoxyCompactList}\item 
+\hypertarget{class_block_transformation_adfdb78b033996020435c3dcffdca76ce}{
+virtual unsigned int \hyperlink{class_block_transformation_adfdb78b033996020435c3dcffdca76ce}{BlockSize} () const =0}
+\label{class_block_transformation_adfdb78b033996020435c3dcffdca76ce}
+
+\begin{DoxyCompactList}\small\item\em block size of the cipher in bytes \item\end{DoxyCompactList}\item 
+\hypertarget{class_block_transformation_a4f70aa5ace37f586cecda0a24f5455a6}{
+virtual unsigned int \hyperlink{class_block_transformation_a4f70aa5ace37f586cecda0a24f5455a6}{OptimalDataAlignment} () const }
+\label{class_block_transformation_a4f70aa5ace37f586cecda0a24f5455a6}
+
+\begin{DoxyCompactList}\small\item\em returns how inputs and outputs should be aligned for optimal performance \item\end{DoxyCompactList}\item 
+\hypertarget{class_block_transformation_a8d154fdac89307d9edbd2a5ab97fa080}{
+virtual bool \hyperlink{class_block_transformation_a8d154fdac89307d9edbd2a5ab97fa080}{IsPermutation} () const }
+\label{class_block_transformation_a8d154fdac89307d9edbd2a5ab97fa080}
+
+\begin{DoxyCompactList}\small\item\em returns true if this is a permutation (i.e. there is an inverse transformation) \item\end{DoxyCompactList}\item 
+\hypertarget{class_block_transformation_a50f2565057bc9ba7bb70a98d9c9b39cd}{
+virtual bool \hyperlink{class_block_transformation_a50f2565057bc9ba7bb70a98d9c9b39cd}{IsForwardTransformation} () const =0}
+\label{class_block_transformation_a50f2565057bc9ba7bb70a98d9c9b39cd}
+
+\begin{DoxyCompactList}\small\item\em returns true if this is an encryption object \item\end{DoxyCompactList}\item 
+\hypertarget{class_block_transformation_a7aceb4c214d901e9cc416b05d40eb282}{
+virtual unsigned int \hyperlink{class_block_transformation_a7aceb4c214d901e9cc416b05d40eb282}{OptimalNumberOfParallelBlocks} () const }
+\label{class_block_transformation_a7aceb4c214d901e9cc416b05d40eb282}
+
+\begin{DoxyCompactList}\small\item\em return number of blocks that can be processed in parallel, for bit-\/slicing implementations \item\end{DoxyCompactList}\item 
+virtual size\_\-t \hyperlink{class_block_transformation_a91a57e51748a6b91a18d8608b47ea896}{AdvancedProcessBlocks} (const byte $\ast$inBlocks, const byte $\ast$xorBlocks, byte $\ast$outBlocks, size\_\-t length, word32 flags) const 
+\begin{DoxyCompactList}\small\item\em encrypt and xor blocks according to flags (see FlagsForAdvancedProcessBlocks) \item\end{DoxyCompactList}\item 
+\hypertarget{class_block_transformation_abf4c2e7cf9a5c3bb1729e9d1126f0d7c}{
+\hyperlink{cryptlib_8h_a353ccabf5ddc119a6a33e92f7b9961c7}{CipherDir} {\bfseries GetCipherDirection} () const }
+\label{class_block_transformation_abf4c2e7cf9a5c3bb1729e9d1126f0d7c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_block_transformation_adbdffb84a7518cb2b44378111a6ee69b}{
+enum BlockTransformation:: \{ ... \}  {\bfseries FlagsForAdvancedProcessBlocks}}
+\label{class_block_transformation_adbdffb84a7518cb2b44378111a6ee69b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+interface for the data processing part of block ciphers Classes derived from \hyperlink{class_block_transformation}{BlockTransformation} are block ciphers in ECB mode (for example the \hyperlink{class_d_e_s_acf2cdef8c9a64ca67a44117658890aa5}{DES::Encryption} class), which are stateless. These classes should not be used directly, but only in combination with a mode class (see \hyperlink{struct_cipher_mode_documentation}{CipherModeDocumentation} in \hyperlink{modes_8h}{modes.h}). 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_block_transformation_a91a57e51748a6b91a18d8608b47ea896}{
+\index{BlockTransformation@{BlockTransformation}!AdvancedProcessBlocks@{AdvancedProcessBlocks}}
+\index{AdvancedProcessBlocks@{AdvancedProcessBlocks}!BlockTransformation@{BlockTransformation}}
+\subsubsection[{AdvancedProcessBlocks}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\_\-t BlockTransformation::AdvancedProcessBlocks (const byte $\ast$ {\em inBlocks}, \/  const byte $\ast$ {\em xorBlocks}, \/  byte $\ast$ {\em outBlocks}, \/  size\_\-t {\em length}, \/  word32 {\em flags}) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_block_transformation_a91a57e51748a6b91a18d8608b47ea896}
+
+
+encrypt and xor blocks according to flags (see FlagsForAdvancedProcessBlocks) /note If BT\_\-InBlockIsCounter is set, last byte of inBlocks may be modified. \hypertarget{class_block_transformation_a2fefb3f4c6c6297c0c91fcbba9e4f4f3}{
+\index{BlockTransformation@{BlockTransformation}!ProcessBlock@{ProcessBlock}}
+\index{ProcessBlock@{ProcessBlock}!BlockTransformation@{BlockTransformation}}
+\subsubsection[{ProcessBlock}]{\setlength{\rightskip}{0pt plus 5cm}void BlockTransformation::ProcessBlock (const byte $\ast$ {\em inBlock}, \/  byte $\ast$ {\em outBlock}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{class_block_transformation_a2fefb3f4c6c6297c0c91fcbba9e4f4f3}
+
+
+encrypt or decrypt one block \begin{DoxyPrecond}{Precondition}
+size of inBlock and outBlock == \hyperlink{class_block_transformation_adfdb78b033996020435c3dcffdca76ce}{BlockSize()} 
+\end{DoxyPrecond}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{cryptlib_8h}{cryptlib.h}\end{DoxyCompactItemize}

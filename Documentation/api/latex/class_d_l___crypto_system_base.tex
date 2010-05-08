@@ -1,0 +1,69 @@
+\hypertarget{class_d_l___crypto_system_base}{
+\section{DL\_\-CryptoSystemBase$<$ PK, KI $>$ Class Template Reference}
+\label{class_d_l___crypto_system_base}\index{DL\_\-CryptoSystemBase@{DL\_\-CryptoSystemBase}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$pubkey.h$>$}Inheritance diagram for DL\_\-CryptoSystemBase$<$ PK, KI $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_d_l___crypto_system_base}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___crypto_system_base_a5f876e43ea832090acbe7405f995932f}{
+typedef \hyperlink{class_d_l___base}{DL\_\-Base}$<$ KI $>$::Element {\bfseries Element}}
+\label{class_d_l___crypto_system_base_a5f876e43ea832090acbe7405f995932f}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___crypto_system_base_a3deffe3347f225eb0483c7bf3bedc495}{
+size\_\-t {\bfseries MaxPlaintextLength} (size\_\-t ciphertextLength) const }
+\label{class_d_l___crypto_system_base_a3deffe3347f225eb0483c7bf3bedc495}
+
+\item 
+\hypertarget{class_d_l___crypto_system_base_ac738aee0b0262899ad33379da8798c6a}{
+size\_\-t {\bfseries CiphertextLength} (size\_\-t plaintextLength) const }
+\label{class_d_l___crypto_system_base_ac738aee0b0262899ad33379da8798c6a}
+
+\item 
+\hypertarget{class_d_l___crypto_system_base_ac510f55af473e85547237fdb39e441e1}{
+bool {\bfseries ParameterSupported} (const char $\ast$name) const }
+\label{class_d_l___crypto_system_base_ac510f55af473e85547237fdb39e441e1}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___crypto_system_base_a4db18d674ab67a96bd2a20dea21fd2b5}{
+virtual const \hyperlink{class_d_l___key_agreement_algorithm}{DL\_\-KeyAgreementAlgorithm}$<$ Element $>$ \& {\bfseries GetKeyAgreementAlgorithm} () const =0}
+\label{class_d_l___crypto_system_base_a4db18d674ab67a96bd2a20dea21fd2b5}
+
+\item 
+\hypertarget{class_d_l___crypto_system_base_a608872d17306b6b27f26fee9e9ee213c}{
+virtual const \hyperlink{class_d_l___key_derivation_algorithm}{DL\_\-KeyDerivationAlgorithm}$<$ Element $>$ \& {\bfseries GetKeyDerivationAlgorithm} () const =0}
+\label{class_d_l___crypto_system_base_a608872d17306b6b27f26fee9e9ee213c}
+
+\item 
+\hypertarget{class_d_l___crypto_system_base_ac7a7898a616c61f475cbec8aaa7ead09}{
+virtual const \hyperlink{class_d_l___symmetric_encryption_algorithm}{DL\_\-SymmetricEncryptionAlgorithm} \& {\bfseries GetSymmetricEncryptionAlgorithm} () const =0}
+\label{class_d_l___crypto_system_base_ac7a7898a616c61f475cbec8aaa7ead09}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PK, class KI$>$ class DL\_\-CryptoSystemBase$<$ PK, KI $>$}
+
+\_\- 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{pubkey_8h}{pubkey.h}\end{DoxyCompactItemize}

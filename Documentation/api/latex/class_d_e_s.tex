@@ -1,0 +1,54 @@
+\hypertarget{class_d_e_s}{
+\section{DES Class Reference}
+\label{class_d_e_s}\index{DES@{DES}}
+}
+
+
+\href{http://www.weidai.com/scan-mirror/cs.html#DES}{\tt DES}  
+
+
+{\ttfamily \#include $<$des.h$>$}Inheritance diagram for DES::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_d_e_s}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Base}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_e_s_acf2cdef8c9a64ca67a44117658890aa5}{
+typedef \hyperlink{class_block_cipher_final}{BlockCipherFinal}$<$ ENCRYPTION, Base $>$ \hyperlink{class_d_e_s_acf2cdef8c9a64ca67a44117658890aa5}{Encryption}}
+\label{class_d_e_s_acf2cdef8c9a64ca67a44117658890aa5}
+
+\begin{DoxyCompactList}\small\item\em implements the \hyperlink{class_block_cipher}{BlockCipher} interface \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_e_s_a546cc867f9dfab26d5a41a198f738503}{
+typedef \hyperlink{class_block_cipher_final}{BlockCipherFinal}$<$ DECRYPTION, Base $>$ \hyperlink{class_d_e_s_a546cc867f9dfab26d5a41a198f738503}{Decryption}}
+\label{class_d_e_s_a546cc867f9dfab26d5a41a198f738503}
+
+\begin{DoxyCompactList}\small\item\em implements the \hyperlink{class_block_cipher}{BlockCipher} interface \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_e_s_a812f601fb2a3d6c0bc386cf678115f0c}{
+static bool \hyperlink{class_d_e_s_a812f601fb2a3d6c0bc386cf678115f0c}{CheckKeyParityBits} (const byte $\ast$key)}
+\label{class_d_e_s_a812f601fb2a3d6c0bc386cf678115f0c}
+
+\begin{DoxyCompactList}\small\item\em check \hyperlink{class_d_e_s}{DES} key parity bits \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_e_s_aef4d67cbb5dca3426c97319f647674a7}{
+static void \hyperlink{class_d_e_s_aef4d67cbb5dca3426c97319f647674a7}{CorrectKeyParityBits} (byte $\ast$key)}
+\label{class_d_e_s_aef4d67cbb5dca3426c97319f647674a7}
+
+\begin{DoxyCompactList}\small\item\em correct \hyperlink{class_d_e_s}{DES} key parity bits \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\href{http://www.weidai.com/scan-mirror/cs.html#DES}{\tt DES} The \hyperlink{class_d_e_s}{DES} implementation in Crypto++ ignores the parity bits (the least significant bits of each byte) in the key. However you can use \hyperlink{class_d_e_s_a812f601fb2a3d6c0bc386cf678115f0c}{CheckKeyParityBits()} and \hyperlink{class_d_e_s_aef4d67cbb5dca3426c97319f647674a7}{CorrectKeyParityBits()} to check or correct the parity bits if you wish. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{des_8h}{des.h}\end{DoxyCompactItemize}

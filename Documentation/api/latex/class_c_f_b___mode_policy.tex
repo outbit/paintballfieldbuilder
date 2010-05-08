@@ -1,0 +1,87 @@
+\hypertarget{class_c_f_b___mode_policy}{
+\section{CFB\_\-ModePolicy Class Reference}
+\label{class_c_f_b___mode_policy}\index{CFB\_\-ModePolicy@{CFB\_\-ModePolicy}}
+}
+Inheritance diagram for CFB\_\-ModePolicy::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.61958cm]{class_c_f_b___mode_policy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_f_b___mode_policy_a7f2ddc303436b365a6b5d3bcb6d8142e}{
+IV\_\-Requirement \hyperlink{class_c_f_b___mode_policy_a7f2ddc303436b365a6b5d3bcb6d8142e}{IVRequirement} () const }
+\label{class_c_f_b___mode_policy_a7f2ddc303436b365a6b5d3bcb6d8142e}
+
+\begin{DoxyCompactList}\small\item\em returns the minimal requirement for secure IVs \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_f_b___mode_policy_a3ac42361b53bf0e19ce28f4b08be7628}{
+static const char $\ast$CRYPTOPP\_\-API {\bfseries StaticAlgorithmName} ()}
+\label{class_c_f_b___mode_policy_a3ac42361b53bf0e19ce28f4b08be7628}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_f_b___mode_policy_a72453b9cc2666b3fede9b20dd2c63d47}{
+unsigned int {\bfseries GetBytesPerIteration} () const }
+\label{class_c_f_b___mode_policy_a72453b9cc2666b3fede9b20dd2c63d47}
+
+\item 
+\hypertarget{class_c_f_b___mode_policy_ad33d9b4fab007750dac748a0d25cb49f}{
+byte $\ast$ {\bfseries GetRegisterBegin} ()}
+\label{class_c_f_b___mode_policy_ad33d9b4fab007750dac748a0d25cb49f}
+
+\item 
+\hypertarget{class_c_f_b___mode_policy_abec98a28936c204ec48426f73c40b0bb}{
+bool {\bfseries CanIterate} () const }
+\label{class_c_f_b___mode_policy_abec98a28936c204ec48426f73c40b0bb}
+
+\item 
+\hypertarget{class_c_f_b___mode_policy_aa67057e782fcf24bd0e259f8228ab70d}{
+void {\bfseries Iterate} (byte $\ast$output, const byte $\ast$input, \hyperlink{cryptlib_8h_a353ccabf5ddc119a6a33e92f7b9961c7}{CipherDir} dir, size\_\-t iterationCount)}
+\label{class_c_f_b___mode_policy_aa67057e782fcf24bd0e259f8228ab70d}
+
+\item 
+\hypertarget{class_c_f_b___mode_policy_adbefecab5cb048bfce9cdea106ef3ac0}{
+void {\bfseries TransformRegister} ()}
+\label{class_c_f_b___mode_policy_adbefecab5cb048bfce9cdea106ef3ac0}
+
+\item 
+\hypertarget{class_c_f_b___mode_policy_a04f573ff24b1335e400f9c64aeeb27f5}{
+void {\bfseries CipherResynchronize} (const byte $\ast$iv, size\_\-t length)}
+\label{class_c_f_b___mode_policy_a04f573ff24b1335e400f9c64aeeb27f5}
+
+\item 
+\hypertarget{class_c_f_b___mode_policy_a94b4e3f06db50fd888ec24026323646d}{
+void {\bfseries SetFeedbackSize} (unsigned int feedbackSize)}
+\label{class_c_f_b___mode_policy_a94b4e3f06db50fd888ec24026323646d}
+
+\item 
+\hypertarget{class_c_f_b___mode_policy_a17ae07ee0ef40f778bd94a52202ed2be}{
+void {\bfseries ResizeBuffers} ()}
+\label{class_c_f_b___mode_policy_a17ae07ee0ef40f778bd94a52202ed2be}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_f_b___mode_policy_a3f54e6a630ed22a9fc40457a5926f18b}{
+\hyperlink{class_sec_block}{SecByteBlock} {\bfseries m\_\-temp}}
+\label{class_c_f_b___mode_policy_a3f54e6a630ed22a9fc40457a5926f18b}
+
+\item 
+\hypertarget{class_c_f_b___mode_policy_a39e0c7dda96bfbf8cfe7abe3709b0138}{
+unsigned int {\bfseries m\_\-feedbackSize}}
+\label{class_c_f_b___mode_policy_a39e0c7dda96bfbf8cfe7abe3709b0138}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{modes_8h}{modes.h}\end{DoxyCompactItemize}

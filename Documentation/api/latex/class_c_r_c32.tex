@@ -1,0 +1,64 @@
+\hypertarget{class_c_r_c32}{
+\section{CRC32 Class Reference}
+\label{class_c_r_c32}\index{CRC32@{CRC32}}
+}
+
+
+CRC Checksum Calculation.  
+
+
+{\ttfamily \#include $<$crc.h$>$}Inheritance diagram for CRC32::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{class_c_r_c32}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_r_c32_abd642abba82cf63edb025461bc1af8c0}{
+void \hyperlink{class_c_r_c32_abd642abba82cf63edb025461bc1af8c0}{Update} (const byte $\ast$input, size\_\-t length)}
+\label{class_c_r_c32_abd642abba82cf63edb025461bc1af8c0}
+
+\begin{DoxyCompactList}\small\item\em process more input \item\end{DoxyCompactList}\item 
+\hypertarget{class_c_r_c32_ab6f1523fe38d6f1b690888aab1675982}{
+void \hyperlink{class_c_r_c32_ab6f1523fe38d6f1b690888aab1675982}{TruncatedFinal} (byte $\ast$hash, size\_\-t size)}
+\label{class_c_r_c32_ab6f1523fe38d6f1b690888aab1675982}
+
+\begin{DoxyCompactList}\small\item\em truncated version of \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()} \item\end{DoxyCompactList}\item 
+\hypertarget{class_c_r_c32_ab95565f8b50d25d21cb71e57fad42d23}{
+unsigned int \hyperlink{class_c_r_c32_ab95565f8b50d25d21cb71e57fad42d23}{DigestSize} () const }
+\label{class_c_r_c32_ab95565f8b50d25d21cb71e57fad42d23}
+
+\begin{DoxyCompactList}\small\item\em size of the hash/digest/MAC returned by \hyperlink{class_hash_transformation_aa0b8c7a110d8968268fd02ec32b9a8e8}{Final()} \item\end{DoxyCompactList}\item 
+\hypertarget{class_c_r_c32_ab8f81785058afdb88b1d9567ea36860e}{
+std::string \hyperlink{class_c_r_c32_ab8f81785058afdb88b1d9567ea36860e}{AlgorithmName} () const }
+\label{class_c_r_c32_ab8f81785058afdb88b1d9567ea36860e}
+
+\begin{DoxyCompactList}\small\item\em returns name of this algorithm, not universally implemented yet \item\end{DoxyCompactList}\item 
+\hypertarget{class_c_r_c32_ad1e5051e34441f8cc0d73aac51935424}{
+void {\bfseries UpdateByte} (byte b)}
+\label{class_c_r_c32_ad1e5051e34441f8cc0d73aac51935424}
+
+\item 
+\hypertarget{class_c_r_c32_a2ecbd258f526f67d9a28c38d88c4ab0d}{
+byte {\bfseries GetCrcByte} (size\_\-t i) const }
+\label{class_c_r_c32_a2ecbd258f526f67d9a28c38d88c4ab0d}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_r_c32_a2de268b8b839918bd115c5ed784104a7}{
+static const char $\ast$ {\bfseries StaticAlgorithmName} ()}
+\label{class_c_r_c32_a2de268b8b839918bd115c5ed784104a7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+CRC Checksum Calculation. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/crc.h\end{DoxyCompactItemize}

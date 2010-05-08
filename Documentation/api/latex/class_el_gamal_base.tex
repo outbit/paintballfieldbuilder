@@ -1,0 +1,53 @@
+\hypertarget{class_el_gamal_base}{
+\section{ElGamalBase Class Reference}
+\label{class_el_gamal_base}\index{ElGamalBase@{ElGamalBase}}
+}
+Inheritance diagram for ElGamalBase::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.7992cm]{class_el_gamal_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_el_gamal_base_aaeac8cd47a26c15417fe6cb30af8ae0f}{
+void {\bfseries Derive} (const \hyperlink{class_d_l___group_parameters}{DL\_\-GroupParameters}$<$ \hyperlink{class_integer}{Integer} $>$ \&groupParams, byte $\ast$derivedKey, size\_\-t derivedLength, const \hyperlink{class_integer}{Integer} \&agreedElement, const \hyperlink{class_integer}{Integer} \&ephemeralPublicKey, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&derivationParams) const }
+\label{class_el_gamal_base_aaeac8cd47a26c15417fe6cb30af8ae0f}
+
+\item 
+\hypertarget{class_el_gamal_base_a14ac7ac4ccb1d1bf5221e679ab24c28d}{
+size\_\-t {\bfseries GetSymmetricKeyLength} (size\_\-t plainTextLength) const }
+\label{class_el_gamal_base_a14ac7ac4ccb1d1bf5221e679ab24c28d}
+
+\item 
+\hypertarget{class_el_gamal_base_a8598d1ce1f20423ae10dd8ff80e2cfd3}{
+size\_\-t {\bfseries GetSymmetricCiphertextLength} (size\_\-t plainTextLength) const }
+\label{class_el_gamal_base_a8598d1ce1f20423ae10dd8ff80e2cfd3}
+
+\item 
+\hypertarget{class_el_gamal_base_acab5ed17e036c9be22d3c7db612cd51e}{
+size\_\-t {\bfseries GetMaxSymmetricPlaintextLength} (size\_\-t cipherTextLength) const }
+\label{class_el_gamal_base_acab5ed17e036c9be22d3c7db612cd51e}
+
+\item 
+\hypertarget{class_el_gamal_base_aa8bfe7f4e11f39c014699c755d0d8be6}{
+void {\bfseries SymmetricEncrypt} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const byte $\ast$key, const byte $\ast$plainText, size\_\-t plainTextLength, byte $\ast$cipherText, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters) const }
+\label{class_el_gamal_base_aa8bfe7f4e11f39c014699c755d0d8be6}
+
+\item 
+\hypertarget{class_el_gamal_base_ab88d21d5c3d4e7400bf8083b271e2923}{
+\hyperlink{struct_decoding_result}{DecodingResult} {\bfseries SymmetricDecrypt} (const byte $\ast$key, const byte $\ast$cipherText, size\_\-t cipherTextLength, byte $\ast$plainText, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters) const }
+\label{class_el_gamal_base_ab88d21d5c3d4e7400bf8083b271e2923}
+
+\item 
+\hypertarget{class_el_gamal_base_a56116820aea0a94b992b214fcf65dfb2}{
+virtual const \hyperlink{class_d_l___group_parameters___g_f_p}{DL\_\-GroupParameters\_\-GFP} \& {\bfseries GetGroupParameters} () const =0}
+\label{class_el_gamal_base_a56116820aea0a94b992b214fcf65dfb2}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/elgamal.h\end{DoxyCompactItemize}

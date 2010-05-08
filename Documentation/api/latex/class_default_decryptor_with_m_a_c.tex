@@ -1,0 +1,64 @@
+\hypertarget{class_default_decryptor_with_m_a_c}{
+\section{DefaultDecryptorWithMAC Class Reference}
+\label{class_default_decryptor_with_m_a_c}\index{DefaultDecryptorWithMAC@{DefaultDecryptorWithMAC}}
+}
+
+
+Password-\/Based Decryptor using DES-\/EDE2 and HMAC/SHA-\/1.  
+
+
+{\ttfamily \#include $<$default.h$>$}Inheritance diagram for DefaultDecryptorWithMAC::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7cm]{class_default_decryptor_with_m_a_c}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_default_decryptor_with_m_a_c_1_1_m_a_c_bad_err}{MACBadErr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_default_decryptor_with_m_a_c_ab83261139931c1a86c404c30b1f343de}{
+{\bfseries DefaultDecryptorWithMAC} (const char $\ast$passphrase, \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL, bool throwException=true)}
+\label{class_default_decryptor_with_m_a_c_ab83261139931c1a86c404c30b1f343de}
+
+\item 
+\hypertarget{class_default_decryptor_with_m_a_c_a40ad312c0cd1c674051765581e28e997}{
+{\bfseries DefaultDecryptorWithMAC} (const byte $\ast$passphrase, size\_\-t passphraseLength, \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL, bool throwException=true)}
+\label{class_default_decryptor_with_m_a_c_a40ad312c0cd1c674051765581e28e997}
+
+\item 
+\hypertarget{class_default_decryptor_with_m_a_c_a6b0c8d4855de79b786b1158b171c257d}{
+DefaultDecryptor::State {\bfseries CurrentState} () const }
+\label{class_default_decryptor_with_m_a_c_a6b0c8d4855de79b786b1158b171c257d}
+
+\item 
+\hypertarget{class_default_decryptor_with_m_a_c_a67940a3de8dcd0c487fd049326a0b212}{
+bool {\bfseries CheckLastMAC} () const }
+\label{class_default_decryptor_with_m_a_c_a67940a3de8dcd0c487fd049326a0b212}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_default_decryptor_with_m_a_c_acd1d748eb806de4cc27c7d8dedfabcd9}{
+void {\bfseries FirstPut} (const byte $\ast$inString)}
+\label{class_default_decryptor_with_m_a_c_acd1d748eb806de4cc27c7d8dedfabcd9}
+
+\item 
+\hypertarget{class_default_decryptor_with_m_a_c_ad9adeb4d5449e65de3ae460758ebe76d}{
+void {\bfseries LastPut} (const byte $\ast$inString, size\_\-t length)}
+\label{class_default_decryptor_with_m_a_c_ad9adeb4d5449e65de3ae460758ebe76d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Password-\/Based Decryptor using DES-\/EDE2 and HMAC/SHA-\/1. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/default.h\end{DoxyCompactItemize}

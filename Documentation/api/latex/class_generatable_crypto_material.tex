@@ -1,0 +1,48 @@
+\hypertarget{class_generatable_crypto_material}{
+\section{GeneratableCryptoMaterial Class Reference}
+\label{class_generatable_crypto_material}\index{GeneratableCryptoMaterial@{GeneratableCryptoMaterial}}
+}
+
+
+interface for generatable crypto material, such as private keys and crypto parameters  
+
+
+{\ttfamily \#include $<$cryptlib.h$>$}Inheritance diagram for GeneratableCryptoMaterial::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.70968cm]{class_generatable_crypto_material}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_generatable_crypto_material_abe368b52db1ca7079b690f2d6e605f7a}{GenerateRandom} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&params=\hyperlink{cryptlib_8h_ab1b0f7d11a21c6163be8ca2662ce2ac6}{g\_\-nullNameValuePairs})
+\begin{DoxyCompactList}\small\item\em generate a random key or crypto parameters \item\end{DoxyCompactList}\item 
+\hypertarget{class_generatable_crypto_material_a38d492343c32e530a5c2781b5797f755}{
+void \hyperlink{class_generatable_crypto_material_a38d492343c32e530a5c2781b5797f755}{GenerateRandomWithKeySize} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int keySize)}
+\label{class_generatable_crypto_material_a38d492343c32e530a5c2781b5797f755}
+
+\begin{DoxyCompactList}\small\item\em calls the above function with a \hyperlink{class_name_value_pairs}{NameValuePairs} object that just specifies \char`\"{}KeySize\char`\"{} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+interface for generatable crypto material, such as private keys and crypto parameters 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_generatable_crypto_material_abe368b52db1ca7079b690f2d6e605f7a}{
+\index{GeneratableCryptoMaterial@{GeneratableCryptoMaterial}!GenerateRandom@{GenerateRandom}}
+\index{GenerateRandom@{GenerateRandom}!GeneratableCryptoMaterial@{GeneratableCryptoMaterial}}
+\subsubsection[{GenerateRandom}]{\setlength{\rightskip}{0pt plus 5cm}virtual void GeneratableCryptoMaterial::GenerateRandom ({\bf RandomNumberGenerator} \& {\em rng}, \/  const {\bf NameValuePairs} \& {\em params} = {\ttfamily {\bf g\_\-nullNameValuePairs}})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_generatable_crypto_material_abe368b52db1ca7079b690f2d6e605f7a}
+
+
+generate a random key or crypto parameters 
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em KeyingErr}]if algorithm parameters are invalid, or if a key can't be generated (e.g., if this is a public key object) \end{DoxyExceptions}
+
+
+Reimplemented in \hyperlink{class_d_l___group_parameters___e_c_a519a33d073fe5bf2f278a0de75a404ab}{DL\_\-GroupParameters\_\-EC$<$ EC $>$}, \hyperlink{class_invertible_e_s_i_g_n_function_a241b733193f9f420f188ca6f57d49c27}{InvertibleESIGNFunction}, \hyperlink{class_d_l___group_parameters___integer_based_a8c9a79c493a215ca37408bb7ddfb5533}{DL\_\-GroupParameters\_\-IntegerBased}, \hyperlink{class_d_l___group_parameters___d_s_a_ac83d3668c342b3a1fb367ed7785e27a3}{DL\_\-GroupParameters\_\-DSA}, \hyperlink{class_invertible_l_u_c_function_af846ecc0f5e8d17267544920bc39f233}{InvertibleLUCFunction}, \hyperlink{class_d_l___private_key_impl_ab80a3771a5ef623677775f7c5dddb1e0}{DL\_\-PrivateKeyImpl$<$ GP $>$}, \hyperlink{class_invertible_rabin_function_a571737380b956b4add10c855484af670}{InvertibleRabinFunction}, \hyperlink{class_invertible_r_s_a_function_a369c37b8f01c8b64f22baa28811ff72f}{InvertibleRSAFunction}, \hyperlink{class_invertible_r_w_function_a8953bb59727e0ae2d79071874a793c48}{InvertibleRWFunction}, and \hyperlink{class_d_l___private_key_impl_ab80a3771a5ef623677775f7c5dddb1e0}{DL\_\-PrivateKeyImpl$<$ DL\_\-GroupParameters\_\-EC$<$ EC $>$ $>$}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{cryptlib_8h}{cryptlib.h}\end{DoxyCompactItemize}

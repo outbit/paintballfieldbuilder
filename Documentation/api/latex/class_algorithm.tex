@@ -1,0 +1,41 @@
+\hypertarget{class_algorithm}{
+\section{Algorithm Class Reference}
+\label{class_algorithm}\index{Algorithm@{Algorithm}}
+}
+
+
+interface for all crypto algorithms  
+
+
+{\ttfamily \#include $<$cryptlib.h$>$}Inheritance diagram for Algorithm::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.1123cm]{class_algorithm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_algorithm_a1c77f5117ca2cd881baf26a364cfc606}{Algorithm} (bool checkSelfTestStatus=true)
+\item 
+\hypertarget{class_algorithm_acd21c6715add4884fa043eaf51655039}{
+virtual std::string \hyperlink{class_algorithm_acd21c6715add4884fa043eaf51655039}{AlgorithmName} () const }
+\label{class_algorithm_acd21c6715add4884fa043eaf51655039}
+
+\begin{DoxyCompactList}\small\item\em returns name of this algorithm, not universally implemented yet \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+interface for all crypto algorithms 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_algorithm_a1c77f5117ca2cd881baf26a364cfc606}{
+\index{Algorithm@{Algorithm}!Algorithm@{Algorithm}}
+\index{Algorithm@{Algorithm}!Algorithm@{Algorithm}}
+\subsubsection[{Algorithm}]{\setlength{\rightskip}{0pt plus 5cm}Algorithm::Algorithm (bool {\em checkSelfTestStatus} = {\ttfamily true})}}
+\label{class_algorithm_a1c77f5117ca2cd881baf26a364cfc606}
+When FIPS 140-\/2 compliance is enabled and checkSelfTestStatus == true, this constructor throws \hyperlink{class_self_test_failure}{SelfTestFailure} if the self test hasn't been run or fails. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{cryptlib_8h}{cryptlib.h}\end{DoxyCompactItemize}

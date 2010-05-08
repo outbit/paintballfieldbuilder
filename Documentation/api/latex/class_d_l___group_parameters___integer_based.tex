@@ -1,0 +1,187 @@
+\hypertarget{class_d_l___group_parameters___integer_based}{
+\section{DL\_\-GroupParameters\_\-IntegerBased Class Reference}
+\label{class_d_l___group_parameters___integer_based}\index{DL\_\-GroupParameters\_\-IntegerBased@{DL\_\-GroupParameters\_\-IntegerBased}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$gfpcrypt.h$>$}Inheritance diagram for DL\_\-GroupParameters\_\-IntegerBased::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.47228cm]{class_d_l___group_parameters___integer_based}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_ac0a0277c8d9d397cc30722aac33ad1b6}{
+void {\bfseries Initialize} (const \hyperlink{class_d_l___group_parameters___integer_based}{DL\_\-GroupParameters\_\-IntegerBased} \&params)}
+\label{class_d_l___group_parameters___integer_based_ac0a0277c8d9d397cc30722aac33ad1b6}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a2ea22939c10623a4b76167a538ca7c76}{
+void {\bfseries Initialize} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int pbits)}
+\label{class_d_l___group_parameters___integer_based_a2ea22939c10623a4b76167a538ca7c76}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a25973fc93a80e0f199818633d63d205a}{
+void {\bfseries Initialize} (const \hyperlink{class_integer}{Integer} \&p, const \hyperlink{class_integer}{Integer} \&g)}
+\label{class_d_l___group_parameters___integer_based_a25973fc93a80e0f199818633d63d205a}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_ac55789bf312e004b6d7d67ec3124ec7e}{
+void {\bfseries Initialize} (const \hyperlink{class_integer}{Integer} \&p, const \hyperlink{class_integer}{Integer} \&q, const \hyperlink{class_integer}{Integer} \&g)}
+\label{class_d_l___group_parameters___integer_based_ac55789bf312e004b6d7d67ec3124ec7e}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a9a13e3dd2da2b154d8296f306e2ee2a9}{
+void \hyperlink{class_d_l___group_parameters___integer_based_a9a13e3dd2da2b154d8296f306e2ee2a9}{BERDecode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_d_l___group_parameters___integer_based_a9a13e3dd2da2b154d8296f306e2ee2a9}
+
+\begin{DoxyCompactList}\small\item\em decode this object from a \hyperlink{class_buffered_transformation}{BufferedTransformation}, using BER (Basic Encoding Rules) \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___group_parameters___integer_based_ad1ae53e3f7253db8f7056a93e9d05e24}{
+void \hyperlink{class_d_l___group_parameters___integer_based_ad1ae53e3f7253db8f7056a93e9d05e24}{DEREncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_d_l___group_parameters___integer_based_ad1ae53e3f7253db8f7056a93e9d05e24}
+
+\begin{DoxyCompactList}\small\item\em encode this object into a \hyperlink{class_buffered_transformation}{BufferedTransformation}, using DER (Distinguished Encoding Rules) \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_l___group_parameters___integer_based_a8c9a79c493a215ca37408bb7ddfb5533}{GenerateRandom} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&alg)
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_ad8a0f30e8440212bb20d3155b1d88463}{
+bool \hyperlink{class_d_l___group_parameters___integer_based_ad8a0f30e8440212bb20d3155b1d88463}{GetVoidValue} (const char $\ast$name, const std::type\_\-info \&valueType, void $\ast$pValue) const }
+\label{class_d_l___group_parameters___integer_based_ad8a0f30e8440212bb20d3155b1d88463}
+
+\begin{DoxyCompactList}\small\item\em to be implemented by derived classes, users should use one of the above functions instead \item\end{DoxyCompactList}\item 
+void \hyperlink{class_d_l___group_parameters___integer_based_a151a76c88372bdf98c68be2ad19400e1}{AssignFrom} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&source)
+\begin{DoxyCompactList}\small\item\em assign values from source to this object \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a3448da48ade59bbf2ff4935cf1670afb}{
+const \hyperlink{class_integer}{Integer} \& {\bfseries GetSubgroupOrder} () const }
+\label{class_d_l___group_parameters___integer_based_a3448da48ade59bbf2ff4935cf1670afb}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a8bb45158b02cc53f55d8f9e442ff9956}{
+\hyperlink{class_integer}{Integer} {\bfseries GetGroupOrder} () const }
+\label{class_d_l___group_parameters___integer_based_a8bb45158b02cc53f55d8f9e442ff9956}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_aa329e6578616677a868dacfb605b0ae2}{
+bool {\bfseries ValidateGroup} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, unsigned int level) const }
+\label{class_d_l___group_parameters___integer_based_aa329e6578616677a868dacfb605b0ae2}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a2a2e97fbd1ddf713841ea9825e2b1c90}{
+bool {\bfseries ValidateElement} (unsigned int level, const \hyperlink{class_integer}{Integer} \&element, const \hyperlink{class_d_l___fixed_base_precomputation}{DL\_\-FixedBasePrecomputation}$<$ \hyperlink{class_integer}{Integer} $>$ $\ast$precomp) const }
+\label{class_d_l___group_parameters___integer_based_a2a2e97fbd1ddf713841ea9825e2b1c90}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_adf97194735312199267db1de95ab41fd}{
+bool {\bfseries FastSubgroupCheckAvailable} () const }
+\label{class_d_l___group_parameters___integer_based_adf97194735312199267db1de95ab41fd}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a9ceb27f7c51beae7116052ab6358d5e3}{
+void {\bfseries EncodeElement} (bool reversible, const Element \&element, byte $\ast$encoded) const }
+\label{class_d_l___group_parameters___integer_based_a9ceb27f7c51beae7116052ab6358d5e3}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a9786b983ff7cd1f2152ebf8f319b777d}{
+unsigned int {\bfseries GetEncodedElementSize} (bool reversible) const }
+\label{class_d_l___group_parameters___integer_based_a9786b983ff7cd1f2152ebf8f319b777d}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a97a70418722f760768328239f569cfef}{
+\hyperlink{class_integer}{Integer} {\bfseries DecodeElement} (const byte $\ast$encoded, bool checkForGroupMembership) const }
+\label{class_d_l___group_parameters___integer_based_a97a70418722f760768328239f569cfef}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a49f95d1c429bb4eda7b7ce59c9ac8289}{
+\hyperlink{class_integer}{Integer} {\bfseries ConvertElementToInteger} (const Element \&element) const }
+\label{class_d_l___group_parameters___integer_based_a49f95d1c429bb4eda7b7ce59c9ac8289}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_ace4fcdf4165ac0790d13ec4efefad60c}{
+\hyperlink{class_integer}{Integer} {\bfseries GetMaxExponent} () const }
+\label{class_d_l___group_parameters___integer_based_ace4fcdf4165ac0790d13ec4efefad60c}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_acad8430adfe4468e036cb23f2b09b0e0}{
+\hyperlink{class_o_i_d}{OID} {\bfseries GetAlgorithmID} () const }
+\label{class_d_l___group_parameters___integer_based_acad8430adfe4468e036cb23f2b09b0e0}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a52d7e7ae466b7471d19d02382bf612ec}{
+virtual const \hyperlink{class_integer}{Integer} \& {\bfseries GetModulus} () const =0}
+\label{class_d_l___group_parameters___integer_based_a52d7e7ae466b7471d19d02382bf612ec}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a2d0b7b0fc71ec3a656e4f1a3095b158b}{
+virtual void {\bfseries SetModulusAndSubgroupGenerator} (const \hyperlink{class_integer}{Integer} \&p, const \hyperlink{class_integer}{Integer} \&g)=0}
+\label{class_d_l___group_parameters___integer_based_a2d0b7b0fc71ec3a656e4f1a3095b158b}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a5a842eff8fb870a0c9a61831a9865342}{
+void {\bfseries SetSubgroupOrder} (const \hyperlink{class_integer}{Integer} \&q)}
+\label{class_d_l___group_parameters___integer_based_a5a842eff8fb870a0c9a61831a9865342}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a3a570760be1a6d58a803da8655c071a6}{
+static std::string CRYPTOPP\_\-API {\bfseries StaticAlgorithmNamePrefix} ()}
+\label{class_d_l___group_parameters___integer_based_a3a570760be1a6d58a803da8655c071a6}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a05c2b65749d0357845599a7d434e3903}{
+\hyperlink{class_integer}{Integer} {\bfseries ComputeGroupOrder} (const \hyperlink{class_integer}{Integer} \&modulus) const }
+\label{class_d_l___group_parameters___integer_based_a05c2b65749d0357845599a7d434e3903}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a33a9446de95ae6e78554efc981481bef}{
+virtual int {\bfseries GetFieldType} () const =0}
+\label{class_d_l___group_parameters___integer_based_a33a9446de95ae6e78554efc981481bef}
+
+\item 
+\hypertarget{class_d_l___group_parameters___integer_based_a0c98e0149ea0190b4f177c050b432d6d}{
+virtual unsigned int {\bfseries GetDefaultSubgroupOrderSize} (unsigned int modulusSize) const }
+\label{class_d_l___group_parameters___integer_based_a0c98e0149ea0190b4f177c050b432d6d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\_\- 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_l___group_parameters___integer_based_a151a76c88372bdf98c68be2ad19400e1}{
+\index{DL\_\-GroupParameters\_\-IntegerBased@{DL\_\-GroupParameters\_\-IntegerBased}!AssignFrom@{AssignFrom}}
+\index{AssignFrom@{AssignFrom}!DL_GroupParameters_IntegerBased@{DL\_\-GroupParameters\_\-IntegerBased}}
+\subsubsection[{AssignFrom}]{\setlength{\rightskip}{0pt plus 5cm}void DL\_\-GroupParameters\_\-IntegerBased::AssignFrom (const {\bf NameValuePairs} \& {\em source})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_l___group_parameters___integer_based_a151a76c88372bdf98c68be2ad19400e1}
+
+
+assign values from source to this object \begin{DoxyNote}{Note}
+This function can be used to create a public key from a private key. 
+\end{DoxyNote}
+
+
+Implements \hyperlink{class_crypto_material_a20181c1b39a74a9fe91385b025b773c6}{CryptoMaterial}.
+
+Reimplemented in \hyperlink{class_d_l___group_parameters___integer_based_impl_a0d668d2148cf57078a93f3a5a4b4ac2a}{DL\_\-GroupParameters\_\-IntegerBasedImpl$<$ GROUP\_\-PRECOMP, BASE\_\-PRECOMP $>$}, \hyperlink{class_d_l___group_parameters___integer_based_impl_a0d668d2148cf57078a93f3a5a4b4ac2a}{DL\_\-GroupParameters\_\-IntegerBasedImpl$<$ DL\_\-GroupPrecomputation\_\-LUC, DL\_\-BasePrecomputation\_\-LUC $>$}, and \hyperlink{class_d_l___group_parameters___integer_based_impl_a0d668d2148cf57078a93f3a5a4b4ac2a}{DL\_\-GroupParameters\_\-IntegerBasedImpl$<$ ModExpPrecomputation $>$}.\hypertarget{class_d_l___group_parameters___integer_based_a8c9a79c493a215ca37408bb7ddfb5533}{
+\index{DL\_\-GroupParameters\_\-IntegerBased@{DL\_\-GroupParameters\_\-IntegerBased}!GenerateRandom@{GenerateRandom}}
+\index{GenerateRandom@{GenerateRandom}!DL_GroupParameters_IntegerBased@{DL\_\-GroupParameters\_\-IntegerBased}}
+\subsubsection[{GenerateRandom}]{\setlength{\rightskip}{0pt plus 5cm}void DL\_\-GroupParameters\_\-IntegerBased::GenerateRandom ({\bf RandomNumberGenerator} \& {\em rng}, \/  const {\bf NameValuePairs} \& {\em alg})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_d_l___group_parameters___integer_based_a8c9a79c493a215ca37408bb7ddfb5533}
+parameters: (ModulusSize, SubgroupOrderSize (optional)) 
+
+Reimplemented from \hyperlink{class_generatable_crypto_material_abe368b52db1ca7079b690f2d6e605f7a}{GeneratableCryptoMaterial}.
+
+Reimplemented in \hyperlink{class_d_l___group_parameters___d_s_a_ac83d3668c342b3a1fb367ed7785e27a3}{DL\_\-GroupParameters\_\-DSA}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{gfpcrypt_8h}{gfpcrypt.h}\end{DoxyCompactItemize}

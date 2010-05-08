@@ -1,0 +1,114 @@
+\hypertarget{class_exception}{
+\section{Exception Class Reference}
+\label{class_exception}\index{Exception@{Exception}}
+}
+
+
+base class for all exceptions thrown by Crypto++  
+
+
+{\ttfamily \#include $<$cryptlib.h$>$}Inheritance diagram for Exception::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{class_exception}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_exception_a8e53909d979479380e0274807c074c0a}{ErrorType} \{ \par
+\hyperlink{class_exception_a8e53909d979479380e0274807c074c0aa1323c0f32eac2f9502b99c5c899ce629}{NOT\_\-IMPLEMENTED}, 
+\hyperlink{class_exception_a8e53909d979479380e0274807c074c0aab018a535e00d226178a71d2c5fa800d1}{INVALID\_\-ARGUMENT}, 
+\hyperlink{class_exception_a8e53909d979479380e0274807c074c0aa11a8912fe9ae87f7469705b6d5130a06}{CANNOT\_\-FLUSH}, 
+\hyperlink{class_exception_a8e53909d979479380e0274807c074c0aa77a639a803cf53052f9c76a0354247e6}{DATA\_\-INTEGRITY\_\-CHECK\_\-FAILED}, 
+\par
+\hyperlink{class_exception_a8e53909d979479380e0274807c074c0aa3a0352964781e7712b21dbb70ffbe646}{INVALID\_\-DATA\_\-FORMAT}, 
+\hyperlink{class_exception_a8e53909d979479380e0274807c074c0aad51c7d0e0156bc1794b3b7f99599aba8}{IO\_\-ERROR}, 
+\hyperlink{class_exception_a8e53909d979479380e0274807c074c0aa27d9ee7704100a88e4ae4adcc4072015}{OTHER\_\-ERROR}
+ \}
+\begin{DoxyCompactList}\small\item\em error types \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_exception_a30847048a4b7c9a7aae5e6178964dcfb}{
+{\bfseries Exception} (\hyperlink{class_exception_a8e53909d979479380e0274807c074c0a}{ErrorType} errorType, const std::string \&s)}
+\label{class_exception_a30847048a4b7c9a7aae5e6178964dcfb}
+
+\item 
+\hypertarget{class_exception_a45642915395d3b813fedc2593fbcb8bb}{
+const char $\ast$ {\bfseries what} () const   throw ()}
+\label{class_exception_a45642915395d3b813fedc2593fbcb8bb}
+
+\item 
+\hypertarget{class_exception_ad67873a3923892d08072bdd378b24b29}{
+const std::string \& {\bfseries GetWhat} () const }
+\label{class_exception_ad67873a3923892d08072bdd378b24b29}
+
+\item 
+\hypertarget{class_exception_a15f2ad1081dbac6d3cd676a4baa9515d}{
+void {\bfseries SetWhat} (const std::string \&s)}
+\label{class_exception_a15f2ad1081dbac6d3cd676a4baa9515d}
+
+\item 
+\hypertarget{class_exception_aeb3ea0f59ff8e38ef47fe0d9c5c22dc3}{
+\hyperlink{class_exception_a8e53909d979479380e0274807c074c0a}{ErrorType} {\bfseries GetErrorType} () const }
+\label{class_exception_aeb3ea0f59ff8e38ef47fe0d9c5c22dc3}
+
+\item 
+\hypertarget{class_exception_a0e1d8806d64e54e9584e9918462894bc}{
+void {\bfseries SetErrorType} (\hyperlink{class_exception_a8e53909d979479380e0274807c074c0a}{ErrorType} errorType)}
+\label{class_exception_a0e1d8806d64e54e9584e9918462894bc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+base class for all exceptions thrown by Crypto++ 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_exception_a8e53909d979479380e0274807c074c0a}{
+\index{Exception@{Exception}!ErrorType@{ErrorType}}
+\index{ErrorType@{ErrorType}!Exception@{Exception}}
+\subsubsection[{ErrorType}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Exception::ErrorType}}}
+\label{class_exception_a8e53909d979479380e0274807c074c0a}
+
+
+error types \begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NOT\_\-IMPLEMENTED@{NOT\_\-IMPLEMENTED}!Exception@{Exception}}\index{Exception@{Exception}!NOT\_\-IMPLEMENTED@{NOT\_\-IMPLEMENTED}}\item[{\em 
+\hypertarget{class_exception_a8e53909d979479380e0274807c074c0aa1323c0f32eac2f9502b99c5c899ce629}{
+NOT\_\-IMPLEMENTED}
+\label{class_exception_a8e53909d979479380e0274807c074c0aa1323c0f32eac2f9502b99c5c899ce629}
+}]a method is not implemented \index{INVALID\_\-ARGUMENT@{INVALID\_\-ARGUMENT}!Exception@{Exception}}\index{Exception@{Exception}!INVALID\_\-ARGUMENT@{INVALID\_\-ARGUMENT}}\item[{\em 
+\hypertarget{class_exception_a8e53909d979479380e0274807c074c0aab018a535e00d226178a71d2c5fa800d1}{
+INVALID\_\-ARGUMENT}
+\label{class_exception_a8e53909d979479380e0274807c074c0aab018a535e00d226178a71d2c5fa800d1}
+}]invalid function argument \index{CANNOT\_\-FLUSH@{CANNOT\_\-FLUSH}!Exception@{Exception}}\index{Exception@{Exception}!CANNOT\_\-FLUSH@{CANNOT\_\-FLUSH}}\item[{\em 
+\hypertarget{class_exception_a8e53909d979479380e0274807c074c0aa11a8912fe9ae87f7469705b6d5130a06}{
+CANNOT\_\-FLUSH}
+\label{class_exception_a8e53909d979479380e0274807c074c0aa11a8912fe9ae87f7469705b6d5130a06}
+}]\hyperlink{class_buffered_transformation}{BufferedTransformation} received a Flush(true) signal but can't flush buffers. \index{DATA\_\-INTEGRITY\_\-CHECK\_\-FAILED@{DATA\_\-INTEGRITY\_\-CHECK\_\-FAILED}!Exception@{Exception}}\index{Exception@{Exception}!DATA\_\-INTEGRITY\_\-CHECK\_\-FAILED@{DATA\_\-INTEGRITY\_\-CHECK\_\-FAILED}}\item[{\em 
+\hypertarget{class_exception_a8e53909d979479380e0274807c074c0aa77a639a803cf53052f9c76a0354247e6}{
+DATA\_\-INTEGRITY\_\-CHECK\_\-FAILED}
+\label{class_exception_a8e53909d979479380e0274807c074c0aa77a639a803cf53052f9c76a0354247e6}
+}]data integerity check (such as CRC or MAC) failed \index{INVALID\_\-DATA\_\-FORMAT@{INVALID\_\-DATA\_\-FORMAT}!Exception@{Exception}}\index{Exception@{Exception}!INVALID\_\-DATA\_\-FORMAT@{INVALID\_\-DATA\_\-FORMAT}}\item[{\em 
+\hypertarget{class_exception_a8e53909d979479380e0274807c074c0aa3a0352964781e7712b21dbb70ffbe646}{
+INVALID\_\-DATA\_\-FORMAT}
+\label{class_exception_a8e53909d979479380e0274807c074c0aa3a0352964781e7712b21dbb70ffbe646}
+}]received input data that doesn't conform to expected format \index{IO\_\-ERROR@{IO\_\-ERROR}!Exception@{Exception}}\index{Exception@{Exception}!IO\_\-ERROR@{IO\_\-ERROR}}\item[{\em 
+\hypertarget{class_exception_a8e53909d979479380e0274807c074c0aad51c7d0e0156bc1794b3b7f99599aba8}{
+IO\_\-ERROR}
+\label{class_exception_a8e53909d979479380e0274807c074c0aad51c7d0e0156bc1794b3b7f99599aba8}
+}]error reading from input device or writing to output device \index{OTHER\_\-ERROR@{OTHER\_\-ERROR}!Exception@{Exception}}\index{Exception@{Exception}!OTHER\_\-ERROR@{OTHER\_\-ERROR}}\item[{\em 
+\hypertarget{class_exception_a8e53909d979479380e0274807c074c0aa27d9ee7704100a88e4ae4adcc4072015}{
+OTHER\_\-ERROR}
+\label{class_exception_a8e53909d979479380e0274807c074c0aa27d9ee7704100a88e4ae4adcc4072015}
+}]some error not belong to any of the above categories \end{description}
+\end{Desc}
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{cryptlib_8h}{cryptlib.h}\end{DoxyCompactItemize}

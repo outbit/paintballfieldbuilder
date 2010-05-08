@@ -1,0 +1,80 @@
+\hypertarget{class_iterated_hash}{
+\section{IteratedHash$<$ T\_\-HashWordType, T\_\-Endianness, T\_\-BlockSize, T\_\-Base $>$ Class Template Reference}
+\label{class_iterated_hash}\index{IteratedHash@{IteratedHash}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$iterhash.h$>$}Inheritance diagram for IteratedHash$<$ T\_\-HashWordType, T\_\-Endianness, T\_\-BlockSize, T\_\-Base $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{class_iterated_hash}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_iterated_hash_a6ec15728121293aef70ca8b30b2e7e7a}{
+typedef T\_\-Endianness {\bfseries ByteOrderClass}}
+\label{class_iterated_hash_a6ec15728121293aef70ca8b30b2e7e7a}
+
+\item 
+\hypertarget{class_iterated_hash_ace0350088eea8679cbe23668d2498c07}{
+typedef T\_\-HashWordType {\bfseries HashWordType}}
+\label{class_iterated_hash_ace0350088eea8679cbe23668d2498c07}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_iterated_hash_a23443812c93867ca52675f6d76bc9def}{
+{\bfseries CRYPTOPP\_\-COMPILE\_\-ASSERT} ((T\_\-BlockSize \&(T\_\-BlockSize-\/1))==0)}
+\label{class_iterated_hash_a23443812c93867ca52675f6d76bc9def}
+
+\item 
+\hypertarget{class_iterated_hash_a272b3589e2f6648da8d4caa8603397dd}{
+unsigned int {\bfseries BlockSize} () const }
+\label{class_iterated_hash_a272b3589e2f6648da8d4caa8603397dd}
+
+\item 
+\hypertarget{class_iterated_hash_ab36955b4beefcf630a120f1b3b261dc7}{
+ByteOrder {\bfseries GetByteOrder} () const }
+\label{class_iterated_hash_ab36955b4beefcf630a120f1b3b261dc7}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_iterated_hash_a394a6ed0dd2a885652cd203ad4fa5fe0}{
+static void {\bfseries CorrectEndianess} (HashWordType $\ast$out, const HashWordType $\ast$in, size\_\-t byteCount)}
+\label{class_iterated_hash_a394a6ed0dd2a885652cd203ad4fa5fe0}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_iterated_hash_aa7561b749600677c9a28bcf4d943e272}{
+T\_\-HashWordType $\ast$ {\bfseries DataBuf} ()}
+\label{class_iterated_hash_aa7561b749600677c9a28bcf4d943e272}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_iterated_hash_ad1d059e2cba2115f403befa9e6c070da}{
+\hyperlink{class_fixed_size_sec_block}{FixedSizeSecBlock}$<$ T\_\-HashWordType, T\_\-BlockSize/sizeof(T\_\-HashWordType)$>$ {\bfseries m\_\-data}}
+\label{class_iterated_hash_ad1d059e2cba2115f403befa9e6c070da}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\_\-HashWordType, class T\_\-Endianness, unsigned int T\_\-BlockSize, class T\_\-Base = HashTransformation$>$ class IteratedHash$<$ T\_\-HashWordType, T\_\-Endianness, T\_\-BlockSize, T\_\-Base $>$}
+
+\_\- 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/iterhash.h\end{DoxyCompactItemize}

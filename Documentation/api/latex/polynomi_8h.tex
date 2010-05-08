@@ -1,0 +1,112 @@
+\hypertarget{polynomi_8h}{
+\section{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/polynomi.h File Reference}
+\label{polynomi_8h}\index{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/polynomi.h@{C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/polynomi.h}}
+}
+{\ttfamily \#include \char`\"{}cryptlib.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}misc.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}algebra.h\char`\"{}}\par
+{\ttfamily \#include $<$iosfwd$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_polynomial_over}{PolynomialOver$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em represents single-\/variable polynomials over arbitrary rings \item\end{DoxyCompactList}\item 
+class \hyperlink{class_polynomial_over_1_1_divide_by_zero}{PolynomialOver$<$ T $>$::DivideByZero}
+\begin{DoxyCompactList}\small\item\em division by zero exception \item\end{DoxyCompactList}\item 
+class \hyperlink{class_polynomial_over_1_1_randomization_parameter}{PolynomialOver$<$ T $>$::RandomizationParameter}
+\begin{DoxyCompactList}\small\item\em specify the distribution for randomization functions \item\end{DoxyCompactList}\item 
+class \hyperlink{class_polynomial_over_fixed_ring}{PolynomialOverFixedRing$<$ T, instance $>$}
+\begin{DoxyCompactList}\small\item\em Polynomials over a fixed ring. \item\end{DoxyCompactList}\item 
+struct {\bfseries PolynomialOverFixedRing$<$ T, instance $>$::NewOnePolynomial}
+\item 
+class \hyperlink{class_ring_of_polynomials_over}{RingOfPolynomialsOver$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Ring of polynomials over another ring. \item\end{DoxyCompactList}\item 
+class \hyperlink{class_ring_of_polynomials_over_1_1_interpolation_failed}{RingOfPolynomialsOver$<$ T $>$::InterpolationFailed}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{polynomi_8h_a7eea79e03a897e65e9b488ab6667ba32}{
+{\footnotesize template$<$class Ring , class Element $>$ }\\void {\bfseries PrepareBulkPolynomialInterpolation} (const Ring \&ring, Element $\ast$w, const Element x\mbox{[}$\,$\mbox{]}, unsigned int n)}
+\label{polynomi_8h_a7eea79e03a897e65e9b488ab6667ba32}
+
+\item 
+\hypertarget{polynomi_8h_af2825233f78e39db435891d165423709}{
+{\footnotesize template$<$class Ring , class Element $>$ }\\void {\bfseries PrepareBulkPolynomialInterpolationAt} (const Ring \&ring, Element $\ast$v, const Element \&position, const Element x\mbox{[}$\,$\mbox{]}, const Element w\mbox{[}$\,$\mbox{]}, unsigned int n)}
+\label{polynomi_8h_af2825233f78e39db435891d165423709}
+
+\item 
+\hypertarget{polynomi_8h_acbed82394a6d9d53c5fcddbf30ab2e54}{
+{\footnotesize template$<$class Ring , class Element $>$ }\\Element {\bfseries BulkPolynomialInterpolateAt} (const Ring \&ring, const Element y\mbox{[}$\,$\mbox{]}, const Element v\mbox{[}$\,$\mbox{]}, unsigned int n)}
+\label{polynomi_8h_acbed82394a6d9d53c5fcddbf30ab2e54}
+
+\item 
+\hypertarget{polynomi_8h_ac22aa54808a7c2c959bb2adb82e3fa34}{
+{\footnotesize template$<$class T , int instance$>$ }\\bool {\bfseries operator==} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_ac22aa54808a7c2c959bb2adb82e3fa34}
+
+\item 
+\hypertarget{polynomi_8h_aa7801aea63b9d92c6671a6e7285f6315}{
+{\footnotesize template$<$class T , int instance$>$ }\\bool {\bfseries operator!=} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_aa7801aea63b9d92c6671a6e7285f6315}
+
+\item 
+\hypertarget{polynomi_8h_a979dc4388d76dede1a06f92382beb974}{
+{\footnotesize template$<$class T , int instance$>$ }\\bool {\bfseries operator$>$} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_a979dc4388d76dede1a06f92382beb974}
+
+\item 
+\hypertarget{polynomi_8h_a3731474407709ac1fc6a493bf924da03}{
+{\footnotesize template$<$class T , int instance$>$ }\\bool {\bfseries operator$>$=} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_a3731474407709ac1fc6a493bf924da03}
+
+\item 
+\hypertarget{polynomi_8h_aa9e522c39f337dc425cd28beeed564aa}{
+{\footnotesize template$<$class T , int instance$>$ }\\bool {\bfseries operator$<$} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_aa9e522c39f337dc425cd28beeed564aa}
+
+\item 
+\hypertarget{polynomi_8h_a995d6daab33c9cda4bc9681b630c236c}{
+{\footnotesize template$<$class T , int instance$>$ }\\bool {\bfseries operator$<$=} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_a995d6daab33c9cda4bc9681b630c236c}
+
+\item 
+\hypertarget{polynomi_8h_a45127a92c4f5faf886f4f27419fce5ed}{
+{\footnotesize template$<$class T , int instance$>$ }\\CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ {\bfseries operator+} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_a45127a92c4f5faf886f4f27419fce5ed}
+
+\item 
+\hypertarget{polynomi_8h_a49bb8b605e910822c9f6f7ec14b5aa11}{
+{\footnotesize template$<$class T , int instance$>$ }\\CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ {\bfseries operator-\/} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_a49bb8b605e910822c9f6f7ec14b5aa11}
+
+\item 
+\hypertarget{polynomi_8h_a9210db75fd47faef4f354e77226a6fa6}{
+{\footnotesize template$<$class T , int instance$>$ }\\CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ {\bfseries operator$\ast$} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_a9210db75fd47faef4f354e77226a6fa6}
+
+\item 
+\hypertarget{polynomi_8h_afcb7b205d8c9ff41116696d5d65857eb}{
+{\footnotesize template$<$class T , int instance$>$ }\\CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ {\bfseries operator/} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_afcb7b205d8c9ff41116696d5d65857eb}
+
+\item 
+\hypertarget{polynomi_8h_aa59be01c0ea9606596f4c45e8f78df25}{
+{\footnotesize template$<$class T , int instance$>$ }\\CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ {\bfseries operator\%} (const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&a, const CryptoPP::PolynomialOverFixedRing$<$ T, instance $>$ \&b)}
+\label{polynomi_8h_aa59be01c0ea9606596f4c45e8f78df25}
+
+\item 
+\hypertarget{polynomi_8h_a5d339d559c778a18f70669fb40f02b94}{
+{\footnotesize template$<$class T $>$ }\\NAMESPACE\_\-END void {\bfseries swap} (CryptoPP::PolynomialOver$<$ T $>$ \&a, CryptoPP::PolynomialOver$<$ T $>$ \&b)}
+\label{polynomi_8h_a5d339d559c778a18f70669fb40f02b94}
+
+\item 
+\hypertarget{polynomi_8h_aa36f5d3ff2b84e1384f1fbaf512890c2}{
+{\footnotesize template$<$class T , int i$>$ }\\void {\bfseries swap} (CryptoPP::PolynomialOverFixedRing$<$ T, i $>$ \&a, CryptoPP::PolynomialOverFixedRing$<$ T, i $>$ \&b)}
+\label{polynomi_8h_aa36f5d3ff2b84e1384f1fbaf512890c2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

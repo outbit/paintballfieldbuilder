@@ -1,0 +1,113 @@
+\hypertarget{class_g_f2__32}{
+\section{GF2\_\-32 Class Reference}
+\label{class_g_f2__32}\index{GF2\_\-32@{GF2\_\-32}}
+}
+
+
+GF(2$^\wedge$32) with polynomial basis.  
+
+
+{\ttfamily \#include $<$gf2\_\-32.h$>$}\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_f2__32_a72d3258fb8c36f2bb8a544b96d453a03}{
+typedef word32 {\bfseries Element}}
+\label{class_g_f2__32_a72d3258fb8c36f2bb8a544b96d453a03}
+
+\item 
+\hypertarget{class_g_f2__32_a1467bd719b3edf9a5b577fec99687362}{
+typedef int {\bfseries RandomizationParameter}}
+\label{class_g_f2__32_a1467bd719b3edf9a5b577fec99687362}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_g_f2__32_a0e8888bb5c2653a1e420e2049ea58116}{
+{\bfseries GF2\_\-32} (word32 modulus=0x0000008D)}
+\label{class_g_f2__32_a0e8888bb5c2653a1e420e2049ea58116}
+
+\item 
+\hypertarget{class_g_f2__32_a84f0d206384fd60c469edf08d38e444b}{
+Element {\bfseries RandomElement} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, int ignored=0) const }
+\label{class_g_f2__32_a84f0d206384fd60c469edf08d38e444b}
+
+\item 
+\hypertarget{class_g_f2__32_ad16015273674388aca9e0d849ab1c8ec}{
+bool {\bfseries Equal} (Element a, Element b) const }
+\label{class_g_f2__32_ad16015273674388aca9e0d849ab1c8ec}
+
+\item 
+\hypertarget{class_g_f2__32_a5ad6fa38ae519827acbc6ba256696be5}{
+Element {\bfseries Identity} () const }
+\label{class_g_f2__32_a5ad6fa38ae519827acbc6ba256696be5}
+
+\item 
+\hypertarget{class_g_f2__32_a26c77a3e7123d5bc2cd4d3a1f641ed5c}{
+Element {\bfseries Add} (Element a, Element b) const }
+\label{class_g_f2__32_a26c77a3e7123d5bc2cd4d3a1f641ed5c}
+
+\item 
+\hypertarget{class_g_f2__32_a7db1cc0120c984a734470cc7aa5651f4}{
+Element \& {\bfseries Accumulate} (Element \&a, Element b) const }
+\label{class_g_f2__32_a7db1cc0120c984a734470cc7aa5651f4}
+
+\item 
+\hypertarget{class_g_f2__32_ab36550ca16b0d7f9022c9ea07cab05be}{
+Element {\bfseries Inverse} (Element a) const }
+\label{class_g_f2__32_ab36550ca16b0d7f9022c9ea07cab05be}
+
+\item 
+\hypertarget{class_g_f2__32_a1201d78bdaf3d65915d0304b06aea7af}{
+Element {\bfseries Subtract} (Element a, Element b) const }
+\label{class_g_f2__32_a1201d78bdaf3d65915d0304b06aea7af}
+
+\item 
+\hypertarget{class_g_f2__32_aaa4b1c8c86a24c02d9fa02c823afdfda}{
+Element \& {\bfseries Reduce} (Element \&a, Element b) const }
+\label{class_g_f2__32_aaa4b1c8c86a24c02d9fa02c823afdfda}
+
+\item 
+\hypertarget{class_g_f2__32_a54e7fe1c5d397e095b805501d46677de}{
+Element {\bfseries Double} (Element a) const }
+\label{class_g_f2__32_a54e7fe1c5d397e095b805501d46677de}
+
+\item 
+\hypertarget{class_g_f2__32_af5f563ec52278dc61f714e35ff25aa76}{
+Element {\bfseries MultiplicativeIdentity} () const }
+\label{class_g_f2__32_af5f563ec52278dc61f714e35ff25aa76}
+
+\item 
+\hypertarget{class_g_f2__32_a275c155f33a85309ecbf12c2eeb2430b}{
+Element {\bfseries Multiply} (Element a, Element b) const }
+\label{class_g_f2__32_a275c155f33a85309ecbf12c2eeb2430b}
+
+\item 
+\hypertarget{class_g_f2__32_a73dd7155eb04918149a288ace7b9a812}{
+Element {\bfseries Square} (Element a) const }
+\label{class_g_f2__32_a73dd7155eb04918149a288ace7b9a812}
+
+\item 
+\hypertarget{class_g_f2__32_a1868ab3fd6c57abb405edefa5320aabc}{
+bool {\bfseries IsUnit} (Element a) const }
+\label{class_g_f2__32_a1868ab3fd6c57abb405edefa5320aabc}
+
+\item 
+\hypertarget{class_g_f2__32_a8203503a437117e45f0ced345233dc38}{
+Element {\bfseries MultiplicativeInverse} (Element a) const }
+\label{class_g_f2__32_a8203503a437117e45f0ced345233dc38}
+
+\item 
+\hypertarget{class_g_f2__32_a475f08e7c0faa99e2c5b9c0dac05ff38}{
+Element {\bfseries Divide} (Element a, Element b) const }
+\label{class_g_f2__32_a475f08e7c0faa99e2c5b9c0dac05ff38}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+GF(2$^\wedge$32) with polynomial basis. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/gf2\_\-32.h\end{DoxyCompactItemize}

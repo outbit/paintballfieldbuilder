@@ -1,0 +1,75 @@
+\hypertarget{class_hash_filter}{
+\section{HashFilter Class Reference}
+\label{class_hash_filter}\index{HashFilter@{HashFilter}}
+}
+
+
+\hyperlink{class_filter}{Filter} Wrapper for \hyperlink{class_hash_transformation}{HashTransformation}.  
+
+
+{\ttfamily \#include $<$filters.h$>$}Inheritance diagram for HashFilter::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6cm]{class_hash_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_hash_filter_a58b9949a468e798cc97d7b4c59a9d8c2}{
+{\bfseries HashFilter} (\hyperlink{class_hash_transformation}{HashTransformation} \&hm, \hyperlink{class_buffered_transformation}{BufferedTransformation} $\ast$attachment=NULL, bool putMessage=false, int truncatedDigestSize=-\/1, const std::string \&messagePutChannel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL}, const std::string \&hashPutChannel=\hyperlink{cryptlib_8h_a6f1917f54ea8c2a45de6e08c5087c8de}{DEFAULT\_\-CHANNEL})}
+\label{class_hash_filter_a58b9949a468e798cc97d7b4c59a9d8c2}
+
+\item 
+\hypertarget{class_hash_filter_ac832515bc9e530470065c162d7bc7e9a}{
+std::string \hyperlink{class_hash_filter_ac832515bc9e530470065c162d7bc7e9a}{AlgorithmName} () const }
+\label{class_hash_filter_ac832515bc9e530470065c162d7bc7e9a}
+
+\begin{DoxyCompactList}\small\item\em returns name of this algorithm, not universally implemented yet \item\end{DoxyCompactList}\item 
+\hypertarget{class_hash_filter_a950c5cc22d2aa101e731401b10ff2be4}{
+void {\bfseries IsolatedInitialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters)}
+\label{class_hash_filter_a950c5cc22d2aa101e731401b10ff2be4}
+
+\item 
+size\_\-t \hyperlink{class_hash_filter_a297dcb6efcd23ad55d90136ccc18c73b}{Put2} (const byte $\ast$begin, size\_\-t length, int messageEnd, bool blocking)
+\begin{DoxyCompactList}\small\item\em input multiple bytes for blocking or non-\/blocking processing \item\end{DoxyCompactList}\item 
+byte $\ast$ \hyperlink{class_hash_filter_a5c2f3a90ced66c835969ce1aa235b63e}{CreatePutSpace} (size\_\-t \&size)
+\begin{DoxyCompactList}\small\item\em request space which can be written into by the caller, and then used as input to \hyperlink{class_buffered_transformation_ae70658b0d271f8e114ac6c3cc9774ede}{Put()} \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_filter}{Filter} Wrapper for \hyperlink{class_hash_transformation}{HashTransformation}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_hash_filter_a5c2f3a90ced66c835969ce1aa235b63e}{
+\index{HashFilter@{HashFilter}!CreatePutSpace@{CreatePutSpace}}
+\index{CreatePutSpace@{CreatePutSpace}!HashFilter@{HashFilter}}
+\subsubsection[{CreatePutSpace}]{\setlength{\rightskip}{0pt plus 5cm}byte$\ast$ HashFilter::CreatePutSpace (size\_\-t \& {\em size})\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_hash_filter_a5c2f3a90ced66c835969ce1aa235b63e}
+
+
+request space which can be written into by the caller, and then used as input to \hyperlink{class_buffered_transformation_ae70658b0d271f8e114ac6c3cc9774ede}{Put()} 
+\begin{DoxyParams}{Parameters}
+\item[{\em size}]is requested size (as a hint) for input, and size of the returned space for output\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The purpose of this method is to help avoid doing extra memory allocations. 
+\end{DoxyNote}
+
+
+Reimplemented from \hyperlink{class_buffered_transformation_af390325c959c3d6a2c03a447d6cd469d}{BufferedTransformation}.\hypertarget{class_hash_filter_a297dcb6efcd23ad55d90136ccc18c73b}{
+\index{HashFilter@{HashFilter}!Put2@{Put2}}
+\index{Put2@{Put2}!HashFilter@{HashFilter}}
+\subsubsection[{Put2}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t HashFilter::Put2 (const byte $\ast$ {\em inString}, \/  size\_\-t {\em length}, \/  int {\em messageEnd}, \/  bool {\em blocking})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{class_hash_filter_a297dcb6efcd23ad55d90136ccc18c73b}
+
+
+input multiple bytes for blocking or non-\/blocking processing 
+\begin{DoxyParams}{Parameters}
+\item[{\em messageEnd}]means how many filters to signal MessageEnd to, including this one \end{DoxyParams}
+
+
+Implements \hyperlink{class_buffered_transformation_ad396dcb42260f23125a35ec0e5d17d55}{BufferedTransformation}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/filters.h\end{DoxyCompactItemize}

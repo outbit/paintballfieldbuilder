@@ -1,0 +1,55 @@
+\hypertarget{class_d_l___verifier_base}{
+\section{DL\_\-VerifierBase$<$ T $>$ Class Template Reference}
+\label{class_d_l___verifier_base}\index{DL\_\-VerifierBase@{DL\_\-VerifierBase}}
+}
+
+
+\_\-  
+
+
+{\ttfamily \#include $<$pubkey.h$>$}Inheritance diagram for DL\_\-VerifierBase$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.4386cm]{class_d_l___verifier_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_d_l___verifier_base_a488eb7c192589ca5407e5099bda82166}{
+void \hyperlink{class_d_l___verifier_base_a488eb7c192589ca5407e5099bda82166}{InputSignature} (\hyperlink{class_p_k___message_accumulator}{PK\_\-MessageAccumulator} \&messageAccumulator, const byte $\ast$signature, size\_\-t signatureLength) const }
+\label{class_d_l___verifier_base_a488eb7c192589ca5407e5099bda82166}
+
+\begin{DoxyCompactList}\small\item\em input signature into a message accumulator \item\end{DoxyCompactList}\item 
+\hypertarget{class_d_l___verifier_base_ad0b34892f6f185987d6662a3b842df97}{
+bool \hyperlink{class_d_l___verifier_base_ad0b34892f6f185987d6662a3b842df97}{VerifyAndRestart} (\hyperlink{class_p_k___message_accumulator}{PK\_\-MessageAccumulator} \&messageAccumulator) const }
+\label{class_d_l___verifier_base_ad0b34892f6f185987d6662a3b842df97}
+
+\begin{DoxyCompactList}\small\item\em check whether messageAccumulator contains a valid signature and message, and restart messageAccumulator \item\end{DoxyCompactList}\item 
+\hyperlink{struct_decoding_result}{DecodingResult} \hyperlink{class_d_l___verifier_base_ab37d4d41fcc169d71b5b3a9d1e508270}{RecoverAndRestart} (byte $\ast$recoveredMessage, \hyperlink{class_p_k___message_accumulator}{PK\_\-MessageAccumulator} \&messageAccumulator) const 
+\begin{DoxyCompactList}\small\item\em recover a message from its signature \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class DL\_\-VerifierBase$<$ T $>$}
+
+\_\- 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_d_l___verifier_base_ab37d4d41fcc169d71b5b3a9d1e508270}{
+\index{DL\_\-VerifierBase@{DL\_\-VerifierBase}!RecoverAndRestart@{RecoverAndRestart}}
+\index{RecoverAndRestart@{RecoverAndRestart}!DL_VerifierBase@{DL\_\-VerifierBase}}
+\subsubsection[{RecoverAndRestart}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf DecodingResult} {\bf DL\_\-VerifierBase}$<$ T $>$::RecoverAndRestart (byte $\ast$ {\em recoveredMessage}, \/  {\bf PK\_\-MessageAccumulator} \& {\em messageAccumulator}) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{class_d_l___verifier_base_ab37d4d41fcc169d71b5b3a9d1e508270}
+
+
+recover a message from its signature \begin{DoxyPrecond}{Precondition}
+size of recoveredMessage == MaxRecoverableLengthFromSignatureLength(signatureLength) 
+\end{DoxyPrecond}
+
+
+Implements \hyperlink{class_p_k___verifier_a6612ff44a274594890419ae75d260cce}{PK\_\-Verifier}.
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{pubkey_8h}{pubkey.h}\end{DoxyCompactItemize}

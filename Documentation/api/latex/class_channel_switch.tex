@@ -1,0 +1,104 @@
+\hypertarget{class_channel_switch}{
+\section{ChannelSwitch Class Reference}
+\label{class_channel_switch}\index{ChannelSwitch@{ChannelSwitch}}
+}
+
+
+Route input to different and/or multiple channels based on channel ID.  
+
+
+{\ttfamily \#include $<$channels.h$>$}Inheritance diagram for ChannelSwitch::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.28205cm]{class_channel_switch}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_channel_switch_a7b640d47d31ee18503048080e864d49c}{
+{\bfseries ChannelSwitch} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&destination)}
+\label{class_channel_switch_a7b640d47d31ee18503048080e864d49c}
+
+\item 
+\hypertarget{class_channel_switch_acc476e98db7dd18a2ce74f407affeda0}{
+{\bfseries ChannelSwitch} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&destination, const std::string \&outChannel)}
+\label{class_channel_switch_acc476e98db7dd18a2ce74f407affeda0}
+
+\item 
+\hypertarget{class_channel_switch_af663620f334464f987001187102bbb49}{
+void {\bfseries IsolatedInitialize} (const \hyperlink{class_name_value_pairs}{NameValuePairs} \&parameters=\hyperlink{cryptlib_8h_ab1b0f7d11a21c6163be8ca2662ce2ac6}{g\_\-nullNameValuePairs})}
+\label{class_channel_switch_af663620f334464f987001187102bbb49}
+
+\item 
+\hypertarget{class_channel_switch_a19e244d0593c91190858739b3240489c}{
+size\_\-t {\bfseries ChannelPut2} (const std::string \&channel, const byte $\ast$begin, size\_\-t length, int messageEnd, bool blocking)}
+\label{class_channel_switch_a19e244d0593c91190858739b3240489c}
+
+\item 
+\hypertarget{class_channel_switch_a914398ac6126fb975393a033ba3bd2d9}{
+size\_\-t {\bfseries ChannelPutModifiable2} (const std::string \&channel, byte $\ast$begin, size\_\-t length, int messageEnd, bool blocking)}
+\label{class_channel_switch_a914398ac6126fb975393a033ba3bd2d9}
+
+\item 
+\hypertarget{class_channel_switch_a35f25c2c035162f840088df46d905584}{
+bool {\bfseries ChannelFlush} (const std::string \&channel, bool completeFlush, int propagation=-\/1, bool blocking=true)}
+\label{class_channel_switch_a35f25c2c035162f840088df46d905584}
+
+\item 
+\hypertarget{class_channel_switch_a1459e69e94c5cd4aef42191635c07c1c}{
+bool {\bfseries ChannelMessageSeriesEnd} (const std::string \&channel, int propagation=-\/1, bool blocking=true)}
+\label{class_channel_switch_a1459e69e94c5cd4aef42191635c07c1c}
+
+\item 
+\hypertarget{class_channel_switch_a9c85fb995b21617a9d10ac2909abd633}{
+byte $\ast$ {\bfseries ChannelCreatePutSpace} (const std::string \&channel, size\_\-t \&size)}
+\label{class_channel_switch_a9c85fb995b21617a9d10ac2909abd633}
+
+\item 
+\hypertarget{class_channel_switch_a3392fbeb13569f9861564ed31120088d}{
+void {\bfseries AddDefaultRoute} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&destination)}
+\label{class_channel_switch_a3392fbeb13569f9861564ed31120088d}
+
+\item 
+\hypertarget{class_channel_switch_a0405fc201e843057cbee150e30eadc4a}{
+void {\bfseries RemoveDefaultRoute} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&destination)}
+\label{class_channel_switch_a0405fc201e843057cbee150e30eadc4a}
+
+\item 
+\hypertarget{class_channel_switch_abd84e65942431ade1f2e579a009bd400}{
+void {\bfseries AddDefaultRoute} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&destination, const std::string \&outChannel)}
+\label{class_channel_switch_abd84e65942431ade1f2e579a009bd400}
+
+\item 
+\hypertarget{class_channel_switch_a5cff9d31ff039901331d85ecff0e325d}{
+void {\bfseries RemoveDefaultRoute} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&destination, const std::string \&outChannel)}
+\label{class_channel_switch_a5cff9d31ff039901331d85ecff0e325d}
+
+\item 
+\hypertarget{class_channel_switch_aadc822b937f15ad9a231ca8a4a66636e}{
+void {\bfseries AddRoute} (const std::string \&inChannel, \hyperlink{class_buffered_transformation}{BufferedTransformation} \&destination, const std::string \&outChannel)}
+\label{class_channel_switch_aadc822b937f15ad9a231ca8a4a66636e}
+
+\item 
+\hypertarget{class_channel_switch_aafbbeaa87847c1a527f1489c6afdcf18}{
+void {\bfseries RemoveRoute} (const std::string \&inChannel, \hyperlink{class_buffered_transformation}{BufferedTransformation} \&destination, const std::string \&outChannel)}
+\label{class_channel_switch_aafbbeaa87847c1a527f1489c6afdcf18}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_channel_switch_a682648bed9bc0f0f61b687ccfdebbdf7}{
+class \hyperlink{class_channel_switch_a682648bed9bc0f0f61b687ccfdebbdf7}{ChannelRouteIterator}}
+\label{class_channel_switch_a682648bed9bc0f0f61b687ccfdebbdf7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Route input to different and/or multiple channels based on channel ID. 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/channels.h\end{DoxyCompactItemize}

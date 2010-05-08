@@ -1,0 +1,663 @@
+\hypertarget{class_integer}{
+\section{Integer Class Reference}
+\label{class_integer}\index{Integer@{Integer}}
+}
+
+
+multiple precision integer and basic arithmetics  
+
+
+{\ttfamily \#include $<$integer.h$>$}Inheritance diagram for Integer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{class_integer}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_integer_1_1_divide_by_zero}{DivideByZero}
+\begin{DoxyCompactList}\small\item\em division by zero exception \item\end{DoxyCompactList}\item 
+class \hyperlink{class_integer_1_1_open_p_g_p_decode_err}{OpenPGPDecodeErr}
+\item 
+class \hyperlink{class_integer_1_1_random_number_not_found}{RandomNumberNotFound}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_integer_a0ef821fc78e4bfe3236b3a0157df189d}{
+class \hyperlink{class_integer_a0ef821fc78e4bfe3236b3a0157df189d}{ModularArithmetic}}
+\label{class_integer_a0ef821fc78e4bfe3236b3a0157df189d}
+
+\item 
+\hypertarget{class_integer_a14e60a19be28337cb24783301e091877}{
+class \hyperlink{class_integer_a14e60a19be28337cb24783301e091877}{MontgomeryRepresentation}}
+\label{class_integer_a14e60a19be28337cb24783301e091877}
+
+\item 
+\hypertarget{class_integer_aef0adde4261276d74ddf19366c427b62}{
+class {\bfseries HalfMontgomeryRepresentation}}
+\label{class_integer_aef0adde4261276d74ddf19366c427b62}
+
+\item 
+\hypertarget{class_integer_a6295e7fe9ae3d0c22e38168e8fd7c0f1}{
+void {\bfseries PositiveAdd} (\hyperlink{class_integer}{Integer} \&sum, const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b)}
+\label{class_integer_a6295e7fe9ae3d0c22e38168e8fd7c0f1}
+
+\item 
+\hypertarget{class_integer_acc5b1ed43bfa0c217e2c64535515e7bb}{
+void {\bfseries PositiveSubtract} (\hyperlink{class_integer}{Integer} \&diff, const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b)}
+\label{class_integer_acc5b1ed43bfa0c217e2c64535515e7bb}
+
+\item 
+\hypertarget{class_integer_a53b5444044b02d93e76fafac50c3bb29}{
+void {\bfseries PositiveMultiply} (\hyperlink{class_integer}{Integer} \&product, const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&b)}
+\label{class_integer_a53b5444044b02d93e76fafac50c3bb29}
+
+\item 
+\hypertarget{class_integer_a30542b29292dbe332eb60b6aabfaf937}{
+void {\bfseries PositiveDivide} (\hyperlink{class_integer}{Integer} \&remainder, \hyperlink{class_integer}{Integer} \&quotient, const \hyperlink{class_integer}{Integer} \&dividend, const \hyperlink{class_integer}{Integer} \&divisor)}
+\label{class_integer_a30542b29292dbe332eb60b6aabfaf937}
+
+\end{DoxyCompactItemize}
+\subsection*{ENUMS, EXCEPTIONS, and TYPEDEFS}
+\label{_amgrpa03118083bc7586a83a4ee7290b05995}
+ \begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Sign} \{ {\bfseries POSITIVE} = 0, 
+{\bfseries NEGATIVE} = 1
+ \}
+\item 
+enum {\bfseries Signedness} \{ {\bfseries UNSIGNED}, 
+{\bfseries SIGNED}
+ \}
+\item 
+enum {\bfseries RandomNumberType} \{ {\bfseries ANY}, 
+{\bfseries PRIME}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{OTHER ARITHMETIC FUNCTIONS}
+\label{_amgrp9b2e3a5f8113660d4333aeae3c0867b1}
+ \begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_integer_ade2ec2513a3d2cd2f2ca77204ecfc2cb}{
+CRYPTOPP\_\-DLL friend \hyperlink{class_integer}{Integer} CRYPTOPP\_\-API \hyperlink{class_integer_ade2ec2513a3d2cd2f2ca77204ecfc2cb}{a\_\-times\_\-b\_\-mod\_\-c} (const \hyperlink{class_integer}{Integer} \&x, const \hyperlink{class_integer}{Integer} \&y, const \hyperlink{class_integer}{Integer} \&m)}
+\label{class_integer_ade2ec2513a3d2cd2f2ca77204ecfc2cb}
+
+\begin{DoxyCompactList}\small\item\em modular multiplication \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a3b3f94c11fbf120d78837483093dfc8b}{
+CRYPTOPP\_\-DLL friend \hyperlink{class_integer}{Integer} CRYPTOPP\_\-API \hyperlink{class_integer_a3b3f94c11fbf120d78837483093dfc8b}{a\_\-exp\_\-b\_\-mod\_\-c} (const \hyperlink{class_integer}{Integer} \&x, const \hyperlink{class_integer}{Integer} \&e, const \hyperlink{class_integer}{Integer} \&m)}
+\label{class_integer_a3b3f94c11fbf120d78837483093dfc8b}
+
+\begin{DoxyCompactList}\small\item\em modular exponentiation \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a3561a8987c0150e20d2fe0f7ef44c70b}{
+\hyperlink{class_integer}{Integer} {\bfseries AbsoluteValue} () const }
+\label{class_integer_a3561a8987c0150e20d2fe0f7ef44c70b}
+
+\item 
+\hypertarget{class_integer_a5e1a3170987a46b3682e217057687c2b}{
+\hyperlink{class_integer}{Integer} {\bfseries Doubled} () const }
+\label{class_integer_a5e1a3170987a46b3682e217057687c2b}
+
+\item 
+\hypertarget{class_integer_ae0b94a015187c923d4e36683c8cb0668}{
+\hyperlink{class_integer}{Integer} {\bfseries Squared} () const }
+\label{class_integer_ae0b94a015187c923d4e36683c8cb0668}
+
+\item 
+\hypertarget{class_integer_a9cbc1009bb421942470163aed5e3fefb}{
+\hyperlink{class_integer}{Integer} \hyperlink{class_integer_a9cbc1009bb421942470163aed5e3fefb}{SquareRoot} () const }
+\label{class_integer_a9cbc1009bb421942470163aed5e3fefb}
+
+\begin{DoxyCompactList}\small\item\em extract square root, if negative return 0, else return floor of square root \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a49efda9b0c4767508a2b5541380132ed}{
+bool \hyperlink{class_integer_a49efda9b0c4767508a2b5541380132ed}{IsSquare} () const }
+\label{class_integer_a49efda9b0c4767508a2b5541380132ed}
+
+\begin{DoxyCompactList}\small\item\em return whether this integer is a perfect square \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_acbee0ebe94c7ef5b0da39beabe87c27b}{
+bool \hyperlink{class_integer_acbee0ebe94c7ef5b0da39beabe87c27b}{IsUnit} () const }
+\label{class_integer_acbee0ebe94c7ef5b0da39beabe87c27b}
+
+\begin{DoxyCompactList}\small\item\em is 1 or -\/1 \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a94954b3df8073387d225be1033b0fa5b}{
+\hyperlink{class_integer}{Integer} \hyperlink{class_integer_a94954b3df8073387d225be1033b0fa5b}{MultiplicativeInverse} () const }
+\label{class_integer_a94954b3df8073387d225be1033b0fa5b}
+
+\begin{DoxyCompactList}\small\item\em return inverse if 1 or -\/1, otherwise return 0 \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a881f9c714ee42f35718725a43d4d7db3}{
+\hyperlink{class_integer}{Integer} \hyperlink{class_integer_a881f9c714ee42f35718725a43d4d7db3}{InverseMod} (const \hyperlink{class_integer}{Integer} \&n) const }
+\label{class_integer_a881f9c714ee42f35718725a43d4d7db3}
+
+\begin{DoxyCompactList}\small\item\em calculate multiplicative inverse of $\ast$this mod n \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a3f73939559a765be0b1c9a9681ad9e2c}{
+word {\bfseries InverseMod} (word n) const }
+\label{class_integer_a3f73939559a765be0b1c9a9681ad9e2c}
+
+\item 
+\hypertarget{class_integer_a3109a2d9230072543d30f6837ab0f505}{
+static void CRYPTOPP\_\-API \hyperlink{class_integer_a3109a2d9230072543d30f6837ab0f505}{Divide} (\hyperlink{class_integer}{Integer} \&r, \hyperlink{class_integer}{Integer} \&q, const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&d)}
+\label{class_integer_a3109a2d9230072543d30f6837ab0f505}
+
+\begin{DoxyCompactList}\small\item\em calculate r and q such that (a == d$\ast$q + r) \&\& (0 $<$= r $<$ abs(d)) \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_aa70e4657fec789c7d3b0a414a764304a}{
+static void CRYPTOPP\_\-API \hyperlink{class_integer_aa70e4657fec789c7d3b0a414a764304a}{Divide} (word \&r, \hyperlink{class_integer}{Integer} \&q, const \hyperlink{class_integer}{Integer} \&a, word d)}
+\label{class_integer_aa70e4657fec789c7d3b0a414a764304a}
+
+\begin{DoxyCompactList}\small\item\em use a faster division algorithm when divisor is short \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a67bec0194f1e0e45c874397c4fc3d4c3}{
+static void CRYPTOPP\_\-API \hyperlink{class_integer_a67bec0194f1e0e45c874397c4fc3d4c3}{DivideByPowerOf2} (\hyperlink{class_integer}{Integer} \&r, \hyperlink{class_integer}{Integer} \&q, const \hyperlink{class_integer}{Integer} \&a, unsigned int n)}
+\label{class_integer_a67bec0194f1e0e45c874397c4fc3d4c3}
+
+\begin{DoxyCompactList}\small\item\em returns same result as Divide(r, q, a, Power2(n)), but faster \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a05561dff8425818e1ba0757d2bb50a18}{
+static \hyperlink{class_integer}{Integer} CRYPTOPP\_\-API \hyperlink{class_integer_a05561dff8425818e1ba0757d2bb50a18}{Gcd} (const \hyperlink{class_integer}{Integer} \&a, const \hyperlink{class_integer}{Integer} \&n)}
+\label{class_integer_a05561dff8425818e1ba0757d2bb50a18}
+
+\begin{DoxyCompactList}\small\item\em greatest common divisor \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{INPUT/OUTPUT}
+\label{_amgrp1b1587792b52046d87b6d77541dd2b4c}
+ \begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_integer_ad8150792213139b57d35119d2e0a0230}{
+CRYPTOPP\_\-DLL std::istream \&CRYPTOPP\_\-API {\bfseries operator$>$$>$} (std::istream \&in, \hyperlink{class_integer}{Integer} \&a)}
+\label{class_integer_ad8150792213139b57d35119d2e0a0230}
+
+\item 
+\hypertarget{class_integer_a2291fa412f3280385dd984bfb9311b91}{
+CRYPTOPP\_\-DLL std::ostream \&CRYPTOPP\_\-API {\bfseries operator$<$$<$} (std::ostream \&out, const \hyperlink{class_integer}{Integer} \&a)}
+\label{class_integer_a2291fa412f3280385dd984bfb9311b91}
+
+\end{DoxyCompactItemize}
+\subsection*{CREATORS}
+\label{_amgrp19ed50dd7d15a96072c9b6a53e8d6a1d}
+ \begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_integer_a7fcab0564d7270017ebcca55bae1a17a}{
+\hyperlink{class_integer_a7fcab0564d7270017ebcca55bae1a17a}{Integer} ()}
+\label{class_integer_a7fcab0564d7270017ebcca55bae1a17a}
+
+\begin{DoxyCompactList}\small\item\em creates the zero integer \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a9e86175b4b1fb79321736974846fce70}{
+\hyperlink{class_integer_a9e86175b4b1fb79321736974846fce70}{Integer} (const \hyperlink{class_integer}{Integer} \&t)}
+\label{class_integer_a9e86175b4b1fb79321736974846fce70}
+
+\begin{DoxyCompactList}\small\item\em copy constructor \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_ab0536c16f441f1b5abcb2019f7d52e17}{
+\hyperlink{class_integer_ab0536c16f441f1b5abcb2019f7d52e17}{Integer} (signed long value)}
+\label{class_integer_ab0536c16f441f1b5abcb2019f7d52e17}
+
+\begin{DoxyCompactList}\small\item\em convert from signed long \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a15a70886677caedd35492b495c5290e6}{
+\hyperlink{class_integer_a15a70886677caedd35492b495c5290e6}{Integer} (Sign s, lword value)}
+\label{class_integer_a15a70886677caedd35492b495c5290e6}
+
+\begin{DoxyCompactList}\small\item\em convert from lword \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a834c31dcb78213e008b342c97764fd5d}{
+\hyperlink{class_integer_a834c31dcb78213e008b342c97764fd5d}{Integer} (Sign s, word highWord, word lowWord)}
+\label{class_integer_a834c31dcb78213e008b342c97764fd5d}
+
+\begin{DoxyCompactList}\small\item\em convert from two words \item\end{DoxyCompactList}\item 
+\hyperlink{class_integer_a9e8bf8c72458dff4ceb5d6cdf9e5c97a}{Integer} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em convert from string \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a6931189bb0b2e68d04bef63bc6f172b3}{
+{\bfseries Integer} (const wchar\_\-t $\ast$str)}
+\label{class_integer_a6931189bb0b2e68d04bef63bc6f172b3}
+
+\item 
+\hypertarget{class_integer_a19c0d3273fcc216a5849527c7ba759d8}{
+\hyperlink{class_integer_a19c0d3273fcc216a5849527c7ba759d8}{Integer} (const byte $\ast$encodedInteger, size\_\-t byteCount, Signedness s=UNSIGNED)}
+\label{class_integer_a19c0d3273fcc216a5849527c7ba759d8}
+
+\begin{DoxyCompactList}\small\item\em convert from big-\/endian byte array \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a39fee8047d003a1d6044da4b5025f3ce}{
+\hyperlink{class_integer_a39fee8047d003a1d6044da4b5025f3ce}{Integer} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, size\_\-t byteCount, Signedness s=UNSIGNED)}
+\label{class_integer_a39fee8047d003a1d6044da4b5025f3ce}
+
+\begin{DoxyCompactList}\small\item\em convert from big-\/endian form stored in a \hyperlink{class_buffered_transformation}{BufferedTransformation} \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a81d3973655b9f9d358de31ca4d0215c1}{
+\hyperlink{class_integer_a81d3973655b9f9d358de31ca4d0215c1}{Integer} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_integer_a81d3973655b9f9d358de31ca4d0215c1}
+
+\begin{DoxyCompactList}\small\item\em convert from BER encoded byte array stored in a \hyperlink{class_buffered_transformation}{BufferedTransformation} object \item\end{DoxyCompactList}\item 
+\hyperlink{class_integer_aeb4abb834e9e897a28850d2081f3fa63}{Integer} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, size\_\-t bitcount)
+\begin{DoxyCompactList}\small\item\em create a random integer \item\end{DoxyCompactList}\item 
+\hyperlink{class_integer_a88a110cb9f89a8810c228ad00cea18c2}{Integer} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_integer}{Integer} \&min, const \hyperlink{class_integer}{Integer} \&max, RandomNumberType rnType=ANY, const \hyperlink{class_integer}{Integer} \&equiv=Zero(), const \hyperlink{class_integer}{Integer} \&mod=One())
+\begin{DoxyCompactList}\small\item\em create a random integer of special type \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a6431ff6bf298c38135564808eab41c83}{
+static const \hyperlink{class_integer}{Integer} \&CRYPTOPP\_\-API \hyperlink{class_integer_a6431ff6bf298c38135564808eab41c83}{Zero} ()}
+\label{class_integer_a6431ff6bf298c38135564808eab41c83}
+
+\begin{DoxyCompactList}\small\item\em avoid calling constructors for these frequently used integers \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_abb1f197b5176b3f6867043941bf5cf5f}{
+static const \hyperlink{class_integer}{Integer} \&CRYPTOPP\_\-API \hyperlink{class_integer_abb1f197b5176b3f6867043941bf5cf5f}{One} ()}
+\label{class_integer_abb1f197b5176b3f6867043941bf5cf5f}
+
+\begin{DoxyCompactList}\small\item\em avoid calling constructors for these frequently used integers \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a58ac2a81ae74f184a823c1e871f8a0ec}{
+static const \hyperlink{class_integer}{Integer} \&CRYPTOPP\_\-API \hyperlink{class_integer_a58ac2a81ae74f184a823c1e871f8a0ec}{Two} ()}
+\label{class_integer_a58ac2a81ae74f184a823c1e871f8a0ec}
+
+\begin{DoxyCompactList}\small\item\em avoid calling constructors for these frequently used integers \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_afdb02d7beb4d469bd4b0320f2ac83d9a}{
+static \hyperlink{class_integer}{Integer} CRYPTOPP\_\-API \hyperlink{class_integer_afdb02d7beb4d469bd4b0320f2ac83d9a}{Power2} (size\_\-t e)}
+\label{class_integer_afdb02d7beb4d469bd4b0320f2ac83d9a}
+
+\begin{DoxyCompactList}\small\item\em return the integer 2$\ast$$\ast$e \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{ENCODE/DECODE}
+\label{_amgrp504bf883702193e006878608276a59c5}
+ \begin{DoxyCompactItemize}
+\item 
+size\_\-t \hyperlink{class_integer_a3b269bbf8a91faf217c0dd76222182bb}{MinEncodedSize} (Signedness=UNSIGNED) const 
+\begin{DoxyCompactList}\small\item\em minimum number of bytes to encode this integer \item\end{DoxyCompactList}\item 
+void \hyperlink{class_integer_ac12ea467de9a609b86ec03d8cb8837e4}{Encode} (byte $\ast$output, size\_\-t outputLen, Signedness=UNSIGNED) const 
+\begin{DoxyCompactList}\small\item\em encode in big-\/endian format \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a18a664f00df5dcfb979b2e804e7418ce}{
+void {\bfseries Encode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, size\_\-t outputLen, Signedness=UNSIGNED) const }
+\label{class_integer_a18a664f00df5dcfb979b2e804e7418ce}
+
+\item 
+\hypertarget{class_integer_a6ab51a05bee88cfa690179611e8a084e}{
+void \hyperlink{class_integer_a6ab51a05bee88cfa690179611e8a084e}{DEREncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_integer_a6ab51a05bee88cfa690179611e8a084e}
+
+\begin{DoxyCompactList}\small\item\em encode using Distinguished Encoding Rules, put result into a \hyperlink{class_buffered_transformation}{BufferedTransformation} object \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a1dc54b479df856d614cb23e362126110}{
+void \hyperlink{class_integer_a1dc54b479df856d614cb23e362126110}{DEREncodeAsOctetString} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, size\_\-t length) const }
+\label{class_integer_a1dc54b479df856d614cb23e362126110}
+
+\begin{DoxyCompactList}\small\item\em encode absolute value as big-\/endian octet string \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a9d6226e12e1ac0b957ad84ac54a15ce9}{
+size\_\-t \hyperlink{class_integer_a9d6226e12e1ac0b957ad84ac54a15ce9}{OpenPGPEncode} (byte $\ast$output, size\_\-t bufferSize) const }
+\label{class_integer_a9d6226e12e1ac0b957ad84ac54a15ce9}
+
+\begin{DoxyCompactList}\small\item\em encode absolute value in OpenPGP format, return length of output \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a2325e09a01b29c3a70f3c2bcfcea0a1d}{
+size\_\-t \hyperlink{class_integer_a2325e09a01b29c3a70f3c2bcfcea0a1d}{OpenPGPEncode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt) const }
+\label{class_integer_a2325e09a01b29c3a70f3c2bcfcea0a1d}
+
+\begin{DoxyCompactList}\small\item\em encode absolute value in OpenPGP format, put result into a \hyperlink{class_buffered_transformation}{BufferedTransformation} object \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_ae91fee9e9873f3412f47e6d647545099}{
+void {\bfseries Decode} (const byte $\ast$input, size\_\-t inputLen, Signedness=UNSIGNED)}
+\label{class_integer_ae91fee9e9873f3412f47e6d647545099}
+
+\item 
+\hypertarget{class_integer_a92052699599bfd434418b782dbaf4f72}{
+void {\bfseries Decode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, size\_\-t inputLen, Signedness=UNSIGNED)}
+\label{class_integer_a92052699599bfd434418b782dbaf4f72}
+
+\item 
+\hypertarget{class_integer_a810fc0382f8928893fe192ab79b1972c}{
+void {\bfseries BERDecode} (const byte $\ast$input, size\_\-t inputLen)}
+\label{class_integer_a810fc0382f8928893fe192ab79b1972c}
+
+\item 
+\hypertarget{class_integer_a8736cc41b06596c9c04328d2f0238db7}{
+void \hyperlink{class_integer_a8736cc41b06596c9c04328d2f0238db7}{BERDecode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_integer_a8736cc41b06596c9c04328d2f0238db7}
+
+\begin{DoxyCompactList}\small\item\em decode this object from a \hyperlink{class_buffered_transformation}{BufferedTransformation}, using BER (Basic Encoding Rules) \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a59f2e3f759fb252da8ce4bd718fb6487}{
+void \hyperlink{class_integer_a59f2e3f759fb252da8ce4bd718fb6487}{BERDecodeAsOctetString} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt, size\_\-t length)}
+\label{class_integer_a59f2e3f759fb252da8ce4bd718fb6487}
+
+\begin{DoxyCompactList}\small\item\em decode nonnegative value as big-\/endian octet string \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a4b2415221b6eb9ffde8c9c495ae098f2}{
+void {\bfseries OpenPGPDecode} (const byte $\ast$input, size\_\-t inputLen)}
+\label{class_integer_a4b2415221b6eb9ffde8c9c495ae098f2}
+
+\item 
+\hypertarget{class_integer_a9ff99fc6723da5a45c98212de5cf4f3d}{
+void {\bfseries OpenPGPDecode} (\hyperlink{class_buffered_transformation}{BufferedTransformation} \&bt)}
+\label{class_integer_a9ff99fc6723da5a45c98212de5cf4f3d}
+
+\end{DoxyCompactItemize}
+\subsection*{ACCESSORS}
+\label{_amgrpc0453e8d6311263eccfc02576bf64333}
+ \begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_integer_abc8abb12371da5c520d15efd64532697}{
+bool \hyperlink{class_integer_abc8abb12371da5c520d15efd64532697}{IsConvertableToLong} () const }
+\label{class_integer_abc8abb12371da5c520d15efd64532697}
+
+\begin{DoxyCompactList}\small\item\em return true if $\ast$this can be represented as a signed long \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a9c689da5ded6e077a203b122deec519f}{
+signed long \hyperlink{class_integer_a9c689da5ded6e077a203b122deec519f}{ConvertToLong} () const }
+\label{class_integer_a9c689da5ded6e077a203b122deec519f}
+
+\begin{DoxyCompactList}\small\item\em return equivalent signed long if possible, otherwise undefined \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a178398002ab175e788a3bc224e5e5a8d}{
+unsigned int \hyperlink{class_integer_a178398002ab175e788a3bc224e5e5a8d}{BitCount} () const }
+\label{class_integer_a178398002ab175e788a3bc224e5e5a8d}
+
+\begin{DoxyCompactList}\small\item\em number of significant bits = floor(log2(abs($\ast$this))) + 1 \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_aea4f2d31725ab02c67d9ea0288767670}{
+unsigned int \hyperlink{class_integer_aea4f2d31725ab02c67d9ea0288767670}{ByteCount} () const }
+\label{class_integer_aea4f2d31725ab02c67d9ea0288767670}
+
+\begin{DoxyCompactList}\small\item\em number of significant bytes = ceiling(\hyperlink{class_integer_a178398002ab175e788a3bc224e5e5a8d}{BitCount()}/8) \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_aa8ecc9cc334b338ee805f91e6b289396}{
+unsigned int \hyperlink{class_integer_aa8ecc9cc334b338ee805f91e6b289396}{WordCount} () const }
+\label{class_integer_aa8ecc9cc334b338ee805f91e6b289396}
+
+\begin{DoxyCompactList}\small\item\em number of significant words = ceiling(\hyperlink{class_integer_aea4f2d31725ab02c67d9ea0288767670}{ByteCount()}/sizeof(word)) \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a2814c3b82849bd8f6f44cc36974f1717}{
+bool \hyperlink{class_integer_a2814c3b82849bd8f6f44cc36974f1717}{GetBit} (size\_\-t i) const }
+\label{class_integer_a2814c3b82849bd8f6f44cc36974f1717}
+
+\begin{DoxyCompactList}\small\item\em return the i-\/th bit, i=0 being the least significant bit \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a95fad23b0d8a06325ca2893300c9b45e}{
+byte \hyperlink{class_integer_a95fad23b0d8a06325ca2893300c9b45e}{GetByte} (size\_\-t i) const }
+\label{class_integer_a95fad23b0d8a06325ca2893300c9b45e}
+
+\begin{DoxyCompactList}\small\item\em return the i-\/th byte \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a66049970ba544ce8178f9c7d69776b23}{
+lword \hyperlink{class_integer_a66049970ba544ce8178f9c7d69776b23}{GetBits} (size\_\-t i, size\_\-t n) const }
+\label{class_integer_a66049970ba544ce8178f9c7d69776b23}
+
+\begin{DoxyCompactList}\small\item\em return n lowest bits of $\ast$this $>$$>$ i \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a6d70dd43a65cfec05f5563daa43fd104}{
+bool {\bfseries IsZero} () const }
+\label{class_integer_a6d70dd43a65cfec05f5563daa43fd104}
+
+\item 
+\hypertarget{class_integer_a00b920fd1854a8a1a5be234edebfd8e2}{
+bool {\bfseries NotZero} () const }
+\label{class_integer_a00b920fd1854a8a1a5be234edebfd8e2}
+
+\item 
+\hypertarget{class_integer_a7118a72cd6ac315a17ebe03316f25186}{
+bool {\bfseries IsNegative} () const }
+\label{class_integer_a7118a72cd6ac315a17ebe03316f25186}
+
+\item 
+\hypertarget{class_integer_a9c7691b0c0f9a26b7343c46be1665a35}{
+bool {\bfseries NotNegative} () const }
+\label{class_integer_a9c7691b0c0f9a26b7343c46be1665a35}
+
+\item 
+\hypertarget{class_integer_a74fcb4d6ac90900a049937113036f527}{
+bool {\bfseries IsPositive} () const }
+\label{class_integer_a74fcb4d6ac90900a049937113036f527}
+
+\item 
+\hypertarget{class_integer_af202b82ae0c4149ca05eccbe200d2e99}{
+bool {\bfseries NotPositive} () const }
+\label{class_integer_af202b82ae0c4149ca05eccbe200d2e99}
+
+\item 
+\hypertarget{class_integer_a135da78466ea269cdc803fca1cc78129}{
+bool {\bfseries IsEven} () const }
+\label{class_integer_a135da78466ea269cdc803fca1cc78129}
+
+\item 
+\hypertarget{class_integer_aee32e0b261b2558cf0fd5f3077e68a3b}{
+bool {\bfseries IsOdd} () const }
+\label{class_integer_aee32e0b261b2558cf0fd5f3077e68a3b}
+
+\end{DoxyCompactItemize}
+\subsection*{MANIPULATORS}
+\label{_amgrp96fa225bbaf7975cba24829e8ce78daf}
+ \begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_integer_a577f50230ab6e21336fe76da6c5a146c}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator=} (const \hyperlink{class_integer}{Integer} \&t)}
+\label{class_integer_a577f50230ab6e21336fe76da6c5a146c}
+
+\item 
+\hypertarget{class_integer_a778cc9e0aa69687a4db5db257accc924}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator+=} (const \hyperlink{class_integer}{Integer} \&t)}
+\label{class_integer_a778cc9e0aa69687a4db5db257accc924}
+
+\item 
+\hypertarget{class_integer_a9c284e16ddf05d05f8f20edeb1d3bc76}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator-\/=} (const \hyperlink{class_integer}{Integer} \&t)}
+\label{class_integer_a9c284e16ddf05d05f8f20edeb1d3bc76}
+
+\item 
+\hypertarget{class_integer_adb1320901d7bbf1ee52bf27bacdfb9df}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator$\ast$=} (const \hyperlink{class_integer}{Integer} \&t)}
+\label{class_integer_adb1320901d7bbf1ee52bf27bacdfb9df}
+
+\item 
+\hypertarget{class_integer_a80e968a9c7afc4979fe2148170ec7458}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator/=} (const \hyperlink{class_integer}{Integer} \&t)}
+\label{class_integer_a80e968a9c7afc4979fe2148170ec7458}
+
+\item 
+\hypertarget{class_integer_a468142f7860854f6e97910af4eb2b220}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator\%=} (const \hyperlink{class_integer}{Integer} \&t)}
+\label{class_integer_a468142f7860854f6e97910af4eb2b220}
+
+\item 
+\hypertarget{class_integer_a6fcad58a76f3cedc4134a18d56ebb808}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator/=} (word t)}
+\label{class_integer_a6fcad58a76f3cedc4134a18d56ebb808}
+
+\item 
+\hypertarget{class_integer_a3874b6ac8979328ce532eebc8b275eab}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator\%=} (word t)}
+\label{class_integer_a3874b6ac8979328ce532eebc8b275eab}
+
+\item 
+\hypertarget{class_integer_ab2cd5813a8ec1e1453601d2ab9997af4}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator$<$$<$=} (size\_\-t)}
+\label{class_integer_ab2cd5813a8ec1e1453601d2ab9997af4}
+
+\item 
+\hypertarget{class_integer_a37f1289c7ed8f8ff11982b5fa73db224}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator$>$$>$=} (size\_\-t)}
+\label{class_integer_a37f1289c7ed8f8ff11982b5fa73db224}
+
+\item 
+\hypertarget{class_integer_a0f0574b9cae3cddf62c155da93085f0d}{
+void {\bfseries Randomize} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, size\_\-t bitcount)}
+\label{class_integer_a0f0574b9cae3cddf62c155da93085f0d}
+
+\item 
+\hypertarget{class_integer_aae8e0904d1752629f59f0343507c7f8b}{
+void {\bfseries Randomize} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_integer}{Integer} \&min, const \hyperlink{class_integer}{Integer} \&max)}
+\label{class_integer_aae8e0904d1752629f59f0343507c7f8b}
+
+\item 
+bool \hyperlink{class_integer_a83dd6a11aa51d545ce2735777787b622}{Randomize} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_integer}{Integer} \&min, const \hyperlink{class_integer}{Integer} \&max, RandomNumberType rnType, const \hyperlink{class_integer}{Integer} \&equiv=Zero(), const \hyperlink{class_integer}{Integer} \&mod=One())
+\begin{DoxyCompactList}\small\item\em set this \hyperlink{class_integer}{Integer} to a random element of \{x $|$ min $<$= x $<$= max and x is of rnType and x \% mod == equiv\} \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_ad330521e84a900a80e8dd90e97796e17}{
+bool {\bfseries GenerateRandomNoThrow} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&params=\hyperlink{cryptlib_8h_ab1b0f7d11a21c6163be8ca2662ce2ac6}{g\_\-nullNameValuePairs})}
+\label{class_integer_ad330521e84a900a80e8dd90e97796e17}
+
+\item 
+\hypertarget{class_integer_a0d9a427fe64a454b11b24fe61c10dbeb}{
+void {\bfseries GenerateRandom} (\hyperlink{class_random_number_generator}{RandomNumberGenerator} \&rng, const \hyperlink{class_name_value_pairs}{NameValuePairs} \&params=\hyperlink{cryptlib_8h_ab1b0f7d11a21c6163be8ca2662ce2ac6}{g\_\-nullNameValuePairs})}
+\label{class_integer_a0d9a427fe64a454b11b24fe61c10dbeb}
+
+\item 
+\hypertarget{class_integer_a2f0d5fae94eba0c55da9bd1c5138d155}{
+void \hyperlink{class_integer_a2f0d5fae94eba0c55da9bd1c5138d155}{SetBit} (size\_\-t n, bool value=1)}
+\label{class_integer_a2f0d5fae94eba0c55da9bd1c5138d155}
+
+\begin{DoxyCompactList}\small\item\em set the n-\/th bit to value \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a0ff987d783a61f52c8c5d57b324a8d45}{
+void \hyperlink{class_integer_a0ff987d783a61f52c8c5d57b324a8d45}{SetByte} (size\_\-t n, byte value)}
+\label{class_integer_a0ff987d783a61f52c8c5d57b324a8d45}
+
+\begin{DoxyCompactList}\small\item\em set the n-\/th byte to value \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a87410093addf9a2253fe07b39b918b02}{
+void {\bfseries Negate} ()}
+\label{class_integer_a87410093addf9a2253fe07b39b918b02}
+
+\item 
+\hypertarget{class_integer_a8ba4496f4ae1392c3860d3bcbba586c1}{
+void {\bfseries SetPositive} ()}
+\label{class_integer_a8ba4496f4ae1392c3860d3bcbba586c1}
+
+\item 
+\hypertarget{class_integer_a860dd1318ef7089d774674f2100c8fb8}{
+void {\bfseries SetNegative} ()}
+\label{class_integer_a860dd1318ef7089d774674f2100c8fb8}
+
+\item 
+\hypertarget{class_integer_abf1e9c170e56841ce73d137c12675f9b}{
+void {\bfseries swap} (\hyperlink{class_integer}{Integer} \&a)}
+\label{class_integer_abf1e9c170e56841ce73d137c12675f9b}
+
+\end{DoxyCompactItemize}
+\subsection*{UNARY OPERATORS}
+\label{_amgrpf2e24c7f281b06b6998903e7b5569b30}
+ \begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_integer_af38f3bf1d96507458e5479b24174c08c}{
+bool {\bfseries operator!} () const }
+\label{class_integer_af38f3bf1d96507458e5479b24174c08c}
+
+\item 
+\hypertarget{class_integer_a0af6f7034ff425fd4e2e6863ab13f198}{
+\hyperlink{class_integer}{Integer} {\bfseries operator+} () const }
+\label{class_integer_a0af6f7034ff425fd4e2e6863ab13f198}
+
+\item 
+\hypertarget{class_integer_a56b6d34f3b1e76c59f1413d7d91465b1}{
+\hyperlink{class_integer}{Integer} {\bfseries operator-\/} () const }
+\label{class_integer_a56b6d34f3b1e76c59f1413d7d91465b1}
+
+\item 
+\hypertarget{class_integer_a8a87054359edf761820db65b6a7a7a20}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator++} ()}
+\label{class_integer_a8a87054359edf761820db65b6a7a7a20}
+
+\item 
+\hypertarget{class_integer_a94e6611a114be34ce3e78c3cb9fde879}{
+\hyperlink{class_integer}{Integer} \& {\bfseries operator-\/-\/} ()}
+\label{class_integer_a94e6611a114be34ce3e78c3cb9fde879}
+
+\item 
+\hypertarget{class_integer_a1666444f09484e482b2f94dd263c7dc9}{
+\hyperlink{class_integer}{Integer} {\bfseries operator++} (int)}
+\label{class_integer_a1666444f09484e482b2f94dd263c7dc9}
+
+\item 
+\hypertarget{class_integer_a000120734ad8ba84af5c5ac7f5f84925}{
+\hyperlink{class_integer}{Integer} {\bfseries operator-\/-\/} (int)}
+\label{class_integer_a000120734ad8ba84af5c5ac7f5f84925}
+
+\end{DoxyCompactItemize}
+\subsection*{BINARY OPERATORS}
+\label{_amgrp9e1d9554636126ae321e225d1d24c447}
+ \begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_integer_a550cf80410789dc459df82387792ed49}{Compare} (const \hyperlink{class_integer}{Integer} \&a) const 
+\begin{DoxyCompactList}\small\item\em signed comparison \item\end{DoxyCompactList}\item 
+\hypertarget{class_integer_a9e294ba5adf2c733e4185fc9c497ff2a}{
+\hyperlink{class_integer}{Integer} {\bfseries Plus} (const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_integer_a9e294ba5adf2c733e4185fc9c497ff2a}
+
+\item 
+\hypertarget{class_integer_aaf500b571832a4a29315837c94ccada3}{
+\hyperlink{class_integer}{Integer} {\bfseries Minus} (const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_integer_aaf500b571832a4a29315837c94ccada3}
+
+\item 
+\hypertarget{class_integer_aa7547efdb8c45c6b033bfb1a0d5141e6}{
+\hyperlink{class_integer}{Integer} {\bfseries Times} (const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_integer_aa7547efdb8c45c6b033bfb1a0d5141e6}
+
+\item 
+\hypertarget{class_integer_a9a6d4284d05d6377cbf6a07611a57545}{
+\hyperlink{class_integer}{Integer} {\bfseries DividedBy} (const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_integer_a9a6d4284d05d6377cbf6a07611a57545}
+
+\item 
+\hypertarget{class_integer_a850606c271d06678f98c98ecc0f0ac23}{
+\hyperlink{class_integer}{Integer} {\bfseries Modulo} (const \hyperlink{class_integer}{Integer} \&b) const }
+\label{class_integer_a850606c271d06678f98c98ecc0f0ac23}
+
+\item 
+\hypertarget{class_integer_a16dab535de7a1ce00f2cb84da79d88db}{
+\hyperlink{class_integer}{Integer} {\bfseries DividedBy} (word b) const }
+\label{class_integer_a16dab535de7a1ce00f2cb84da79d88db}
+
+\item 
+\hypertarget{class_integer_a50e1b59012582912ff015cc083d50a50}{
+word {\bfseries Modulo} (word b) const }
+\label{class_integer_a50e1b59012582912ff015cc083d50a50}
+
+\item 
+\hypertarget{class_integer_a5d73ebaa15061b4d251c8cdee218ea26}{
+\hyperlink{class_integer}{Integer} {\bfseries operator$>$$>$} (size\_\-t n) const }
+\label{class_integer_a5d73ebaa15061b4d251c8cdee218ea26}
+
+\item 
+\hypertarget{class_integer_ad3ad44e1538d8d1a0eb55a502588026f}{
+\hyperlink{class_integer}{Integer} {\bfseries operator$<$$<$} (size\_\-t n) const }
+\label{class_integer_ad3ad44e1538d8d1a0eb55a502588026f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+multiple precision integer and basic arithmetics This class can represent positive and negative integers with absolute value less than (256$\ast$$\ast$sizeof(word)) $\ast$$\ast$ (256$\ast$$\ast$sizeof(int)). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_integer_a9e8bf8c72458dff4ceb5d6cdf9e5c97a}{
+\index{Integer@{Integer}!Integer@{Integer}}
+\index{Integer@{Integer}!Integer@{Integer}}
+\subsubsection[{Integer}]{\setlength{\rightskip}{0pt plus 5cm}Integer::Integer (const char $\ast$ {\em str})\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{class_integer_a9e8bf8c72458dff4ceb5d6cdf9e5c97a}
+
+
+convert from string str can be in base 2, 8, 10, or 16. Base is determined by a case insensitive suffix of 'h', 'o', or 'b'. No suffix means base 10. \hypertarget{class_integer_aeb4abb834e9e897a28850d2081f3fa63}{
+\index{Integer@{Integer}!Integer@{Integer}}
+\index{Integer@{Integer}!Integer@{Integer}}
+\subsubsection[{Integer}]{\setlength{\rightskip}{0pt plus 5cm}Integer::Integer ({\bf RandomNumberGenerator} \& {\em rng}, \/  size\_\-t {\em bitcount})}}
+\label{class_integer_aeb4abb834e9e897a28850d2081f3fa63}
+
+
+create a random integer The random integer created is uniformly distributed over \mbox{[}0, 2$\ast$$\ast$bitcount). \hypertarget{class_integer_a88a110cb9f89a8810c228ad00cea18c2}{
+\index{Integer@{Integer}!Integer@{Integer}}
+\index{Integer@{Integer}!Integer@{Integer}}
+\subsubsection[{Integer}]{\setlength{\rightskip}{0pt plus 5cm}Integer::Integer ({\bf RandomNumberGenerator} \& {\em rng}, \/  const {\bf Integer} \& {\em min}, \/  const {\bf Integer} \& {\em max}, \/  RandomNumberType {\em rnType} = {\ttfamily ANY}, \/  const {\bf Integer} \& {\em equiv} = {\ttfamily Zero()}, \/  const {\bf Integer} \& {\em mod} = {\ttfamily One()})}}
+\label{class_integer_a88a110cb9f89a8810c228ad00cea18c2}
+
+
+create a random integer of special type Ideally, the random integer created should be uniformly distributed over \{x $|$ min $<$= x $<$= max and x is of rnType and x \% mod == equiv\}. However the actual distribution may not be uniform because sequential search is used to find an appropriate number from a random starting point. May return (with very small probability) a pseudoprime when a prime is requested and max $>$ lastSmallPrime$\ast$lastSmallPrime (lastSmallPrime is declared in \hyperlink{nbtheory_8h_source}{nbtheory.h}). 
+\begin{DoxyExceptions}{Exceptions}
+\item[{\em \hyperlink{class_integer_1_1_random_number_not_found}{RandomNumberNotFound}}]if the set is empty. \end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_integer_a550cf80410789dc459df82387792ed49}{
+\index{Integer@{Integer}!Compare@{Compare}}
+\index{Compare@{Compare}!Integer@{Integer}}
+\subsubsection[{Compare}]{\setlength{\rightskip}{0pt plus 5cm}int Integer::Compare (const {\bf Integer} \& {\em a}) const}}
+\label{class_integer_a550cf80410789dc459df82387792ed49}
+
+
+signed comparison 
+\begin{DoxyRetVals}{Return values}
+\item[{\em -\/1}]if $\ast$this $<$ a \item[{\em 0}]if $\ast$this = a \item[{\em 1}]if $\ast$this $>$ a \end{DoxyRetVals}
+\hypertarget{class_integer_ac12ea467de9a609b86ec03d8cb8837e4}{
+\index{Integer@{Integer}!Encode@{Encode}}
+\index{Encode@{Encode}!Integer@{Integer}}
+\subsubsection[{Encode}]{\setlength{\rightskip}{0pt plus 5cm}void Integer::Encode (byte $\ast$ {\em output}, \/  size\_\-t {\em outputLen}, \/  Signedness = {\ttfamily UNSIGNED}) const}}
+\label{class_integer_ac12ea467de9a609b86ec03d8cb8837e4}
+
+
+encode in big-\/endian format unsigned means encode absolute value, signed means encode two's complement if negative. if outputLen $<$ MinEncodedSize, the most significant bytes will be dropped if outputLen $>$ MinEncodedSize, the most significant bytes will be padded \hypertarget{class_integer_a3b269bbf8a91faf217c0dd76222182bb}{
+\index{Integer@{Integer}!MinEncodedSize@{MinEncodedSize}}
+\index{MinEncodedSize@{MinEncodedSize}!Integer@{Integer}}
+\subsubsection[{MinEncodedSize}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t Integer::MinEncodedSize (Signedness = {\ttfamily UNSIGNED}) const}}
+\label{class_integer_a3b269bbf8a91faf217c0dd76222182bb}
+
+
+minimum number of bytes to encode this integer MinEncodedSize of 0 is 1 \hypertarget{class_integer_a83dd6a11aa51d545ce2735777787b622}{
+\index{Integer@{Integer}!Randomize@{Randomize}}
+\index{Randomize@{Randomize}!Integer@{Integer}}
+\subsubsection[{Randomize}]{\setlength{\rightskip}{0pt plus 5cm}bool Integer::Randomize ({\bf RandomNumberGenerator} \& {\em rng}, \/  const {\bf Integer} \& {\em min}, \/  const {\bf Integer} \& {\em max}, \/  RandomNumberType {\em rnType}, \/  const {\bf Integer} \& {\em equiv} = {\ttfamily Zero()}, \/  const {\bf Integer} \& {\em mod} = {\ttfamily One()})}}
+\label{class_integer_a83dd6a11aa51d545ce2735777787b622}
+
+
+set this \hyperlink{class_integer}{Integer} to a random element of \{x $|$ min $<$= x $<$= max and x is of rnType and x \% mod == equiv\} returns false if the set is empty 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+C:/Business/C++/Commercial/Paintball Field Builder/Paintball Field Builder v2.0.0/Software Development/Paintball Field Builder/WSKey/cryptopp/inc/\hyperlink{integer_8h}{integer.h}\end{DoxyCompactItemize}
