@@ -4,8 +4,6 @@
 *.obj
 *.res
 *.pdb
-*.exe
+*.idb
 Debug/
-Release/
 Debug\
-Release\

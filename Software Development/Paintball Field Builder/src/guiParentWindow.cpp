@@ -92,7 +92,7 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	mToolbar->AddTool(ID_SELECTOBJ, selectobj, wxT("Select Object"));
 	mToolbar->AddTool(ID_CREATEOBJ, createobj, wxT("Create Object"));
 	mToolbar->AddTool(ID_CLONEOBJ, cloneobj, wxT("Clone Object"));
-	
+	mToolbar->SetToolBitmapSize(wxSize(20, 20));
 	// Set ToolBar
 	mToolbar->Realize();
 
