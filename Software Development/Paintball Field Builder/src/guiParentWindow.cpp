@@ -82,7 +82,6 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	wxIcon cloneobj(wxIconLocation(wxT("../media/gui/cloneobj.bmp")));
 
 	wxToolBar *mToolbar = this->CreateToolBar();
-	mToolbar->SetToolBitmapSize(wxSize(32,32));
 
 	mToolbar->AddTool(ID_ROTATEVIEW, rotateview, wxT("Rotate View"));
 	mToolbar->AddTool(ID_MOVEVIEW, moveview, wxT("Move View"));

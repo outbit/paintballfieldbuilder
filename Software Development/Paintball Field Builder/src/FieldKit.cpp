@@ -136,8 +136,8 @@ bool CFieldKit::Load(String file)
 			// Save The bitmap(s) to Temp Directory and Load the bitmap(s) from file
 			String tmp = String(TMPDIR) + tbunker.image_name;
 			WriteFileD(tmp, zip.open(tbunker.image_name));
-			tbunker.bmp = (HBITMAP)LoadImage (0, tmp.c_str(), IMAGE_BITMAP, 0, 0, LR_SHARED|LR_VGACOLOR|LR_DEFAULTCOLOR|LR_LOADFROMFILE);
-			//DeleteFile(tmp.c_str());
+			//tbunker.bmp = (HBITMAP)LoadImage (0, tmp.c_str(), IMAGE_BITMAP, 0, 0, LR_SHARED|LR_VGACOLOR|LR_DEFAULTCOLOR|LR_LOADFROMFILE);
+			tbunker.bmp = new wxBitmap( wxImage(tmp.c_str()) );
 
 			// Save Script And Parse
 			if (this->AlreadyLoaded(file) == false)
@@ -289,7 +289,7 @@ bool CFieldKit::CleanUp(void)
 	{
 		if (this->GetBunker(x)->bmp)
 		{
-			DeleteObject(this->GetBunker(x)->bmp);
+			delete this->GetBunker(x)->bmp;
 			this->GetBunker(x)->bmp = NULL;
 		}
 
@@ -307,6 +307,7 @@ bool CFieldKit::CleanUp(void)
 		this->GetBunker(x)->model_name.clear();
 		this->GetBunker(x)->name.clear();
 	}
+	m_BunkerCount = 0;
 
 	m_Version.clear();
 	m_GeneratedBy.clear();
@@ -317,8 +318,6 @@ bool CFieldKit::CleanUp(void)
 	m_GeneratedBy.empty();
 	m_Credit.empty();
 	m_Copyright.empty();
-
-	m_BunkerCount = 0;
 
 	this->m_isLoaded = false;
 

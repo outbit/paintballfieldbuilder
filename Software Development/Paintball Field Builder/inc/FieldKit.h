@@ -21,7 +21,7 @@ struct Bunker
 	String image_name;
 	String model_name;
 	String material_name;
-	HBITMAP bmp;
+	wxBitmap *bmp;
 };
 
 // Typedefs
@@ -39,9 +39,9 @@ String m_Version;
 String m_GeneratedBy;
 String m_Credit;
 String m_Copyright;
+bool m_isLoaded;
 std::vector<Bunker> m_Bunkers;
 unsigned int m_BunkerCount;
-bool m_isLoaded;
 std::vector<String> m_LoadedFieldKits;
 unsigned int m_LoadedFieldKitsCount;
 

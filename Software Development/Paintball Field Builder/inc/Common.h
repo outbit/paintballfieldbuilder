@@ -18,7 +18,7 @@
 // Standard Logging/Key
 #define PFB_LOG(a) MyApp::s_Log.Log(a);
 #define PFB_ERROR(a) MyApp::s_Log.LogERROR(a);
-#define PFB_ERRORMESSAGE(a) MessageBox(0,"error",a,0);
+#define PFB_ERRORMESSAGE(a) wxMessageBox(wxT(a));
 #define PFB_ISREGISTERED() (true == MyApp::s_IsRegistered)
 // Timing
 inline void PFB_Wait(const unsigned int &ms)

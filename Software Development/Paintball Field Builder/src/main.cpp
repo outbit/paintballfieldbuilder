@@ -45,13 +45,13 @@ bool MyApp::OnInit()
 
 	// Object Window
 	m_ObjectWindow = new guiObjectWindow(wxT("Paintball Field Builder"), m_ParentWindow);
-	m_ObjectWindow->Show(true);
 	m_ObjectWindow->SetBackgroundColour(wxColour(0, 255, 0));
-	m_ObjectWindow->SetAutoLayout(true);
+	m_ObjectWindow->Show(true);
 
    // Initialize OGRE
     try {
         s_App.go();
+		s_App.mFieldKit.Load("../fieldkits/default.pfk");
 		PFB_LOG("OGRE WAS INITIALIZED");
 		s_App.LookView();
 		s_App.mDoRender = true;

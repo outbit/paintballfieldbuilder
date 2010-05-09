@@ -259,7 +259,7 @@ bool CWSKey::ValidateKey()
 		} else if (days > WSK_TRIALDAYS) // Don't Roll Back Your Clocks
 		{
 			WSK_LOG("Im glad you like the software, but do not roll back the clock");
-			MessageBox(0, "ERROR", "do Not Roll back the clock", 0);
+			wxMessageBox(wxT("do Not Roll back the clock"));
 			return false;
 		} else
 		{

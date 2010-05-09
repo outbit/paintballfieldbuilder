@@ -13,7 +13,7 @@
 #include <wx/wx.h>
 #include <wx/menu.h>
 
-class guiObjectWindow : public wxPanel
+class guiObjectWindow : public wxScrolledWindow
 {
 protected:
 	wxMenuBar *mMenubar;
@@ -29,6 +29,7 @@ public:
 	void OnSize();
 	void Layout(wxSizeEvent& WXUNUSED(event));
 	void OnQuit(wxCommandEvent& event);
+	void OnDraw(wxDC& dc);
 };
 
 #endif // guiObjectWindow_H

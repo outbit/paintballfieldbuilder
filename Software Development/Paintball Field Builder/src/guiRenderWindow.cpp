@@ -3,7 +3,7 @@
 
 
 guiRenderWindow::guiRenderWindow(const wxString& title, wxWindow *parent)
-       : wxPanel(parent, wxID_ANY, wxPoint(180, 0), wxSize(parent->GetClientSize().x-180,parent->GetClientSize().y))
+       : wxPanel(parent, wxID_ANY, wxPoint(128+25, 0), wxSize(parent->GetClientSize().x-(128+25),parent->GetClientSize().y))
 {
         Connect(wxEVT_SIZE, wxSizeEventHandler(guiRenderWindow::Layout));
 		Connect(wxEVT_IDLE, wxIdleEventHandler(guiRenderWindow::OnIdle));
@@ -19,7 +19,7 @@ void guiRenderWindow::Layout(wxSizeEvent& WXUNUSED(event))
 {
         // This is getting called...but resize fails
 	wxWindow *parent = this->GetParent();
-        this->SetClientSize(parent->GetSize().x-180, parent->GetSize().y);
+        this->SetClientSize(parent->GetSize().x-(128+25), parent->GetSize().y);
 }
 
 
