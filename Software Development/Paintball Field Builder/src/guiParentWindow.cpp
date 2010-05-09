@@ -82,7 +82,8 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	wxIcon cloneobj(wxIconLocation(wxT("../media/gui/cloneobj.bmp")));
 
 	wxToolBar *mToolbar = this->CreateToolBar();
-	
+	mToolbar->SetToolBitmapSize(wxSize(32,32));
+
 	mToolbar->AddTool(ID_ROTATEVIEW, rotateview, wxT("Rotate View"));
 	mToolbar->AddTool(ID_MOVEVIEW, moveview, wxT("Move View"));
 	mToolbar->AddSeparator();
@@ -92,7 +93,7 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	mToolbar->AddTool(ID_SELECTOBJ, selectobj, wxT("Select Object"));
 	mToolbar->AddTool(ID_CREATEOBJ, createobj, wxT("Create Object"));
 	mToolbar->AddTool(ID_CLONEOBJ, cloneobj, wxT("Clone Object"));
-	mToolbar->SetToolBitmapSize(wxSize(20, 20));
+
 	// Set ToolBar
 	mToolbar->Realize();
 
