@@ -31,6 +31,16 @@ public:
 	void Layout(wxSizeEvent& WXUNUSED(event));
 	void OnQuit(wxCommandEvent& event);
 	void OnIdle(wxIdleEvent& event);
+	void OnLeftUp(wxMouseEvent& event);
+	void OnLeftDown(wxMouseEvent& event);
+	void OnLeftDClick(wxMouseEvent& event);
+	void OnRightUp(wxMouseEvent& event);
+	void OnRightDown(wxMouseEvent& event);
+	void OnRightDClick(wxMouseEvent& event);
+	void OnMouseMotion(wxMouseEvent& event);
+	void OnMouseWheel(wxMouseEvent& event);
+	void OnEnterWindow(wxMouseEvent& event);
+	void OnLeaveWindow(wxMouseEvent& event);
 };
 
 

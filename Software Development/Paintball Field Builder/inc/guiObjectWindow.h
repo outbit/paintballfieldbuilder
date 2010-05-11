@@ -28,6 +28,7 @@ public:
 	~guiObjectWindow();
 	void OnSize();
 	void Layout(wxSizeEvent& WXUNUSED(event));
+	void OnButtonClick(wxCommandEvent& event);
 	void OnQuit(wxCommandEvent& event);
 	void OnDraw(wxDC& dc);
 };

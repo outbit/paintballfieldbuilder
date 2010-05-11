@@ -22,6 +22,7 @@ struct Bunker
 	String model_name;
 	String material_name;
 	wxBitmap *bmp;
+	wxBitmapButton *button;
 };
 
 // Typedefs

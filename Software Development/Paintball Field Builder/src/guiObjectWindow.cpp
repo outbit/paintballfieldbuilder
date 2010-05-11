@@ -12,6 +12,7 @@
 #include "../inc/Application.h"
 
 #define OBJECT_SPACING 15
+#define ID_BUTTON_HIGHEST 1000
 
 guiObjectWindow::guiObjectWindow(const wxString& title, wxWindow *parent)
        : wxScrolledWindow(parent, wxID_ANY, wxPoint(0, 0), wxSize(128+25,parent->GetClientSize().y))
@@ -43,22 +44,27 @@ void guiObjectWindow::OnDraw(wxDC& dc)
 		count++;
 	}
 	*/
-// WORKS BUT MAKE BETTER MAN
-static onetime = 0;
+	// WORKS BUT MAKE BETTER MAN
+	static onetime = 0;
 
-if (onetime == 0) {
-	wxBoxSizer *sizer = new wxBoxSizer(wxVERTICAL);
+	if (onetime == 0) {
+		wxBoxSizer *sizer = new wxBoxSizer(wxVERTICAL);
 
-	for (unsigned int x = 0; x < MyApp::s_App.mFieldKit.GetBunkerCount(); x++)
-	{
-		wxBitmapButton *b = new wxBitmapButton(this, wxID_ANY, *(MyApp::s_App.mFieldKit.GetBunker(x)->bmp));
-		sizer->Add(b);
+		for (unsigned int x = 0; x < MyApp::s_App.mFieldKit.GetBunkerCount(); x++)
+		{
+			wxBitmapButton *b = new wxBitmapButton(this, ID_BUTTON_HIGHEST+x, *(MyApp::s_App.mFieldKit.GetBunker(x)->bmp));
+			if( b ) {
+				MyApp::s_App.mFieldKit.GetBunker(x)->button = b; // Store Bunker for use later
+				sizer->Add(b);
+				Connect(ID_BUTTON_HIGHEST+x, wxEVT_COMMAND_BUTTON_CLICKED, 
+					wxCommandEventHandler(guiObjectWindow::OnButtonClick));
+			}
+		}
+		this->SetSizer(sizer);
+		this->FitInside();
+		this->SetScrollRate(5,5);
+		onetime=1;
 	}
-	this->SetSizer(sizer);
-	this->FitInside();
-	this->SetScrollRate(5,5);
-	onetime=1;
-}
 }
 
 void guiObjectWindow::Layout(wxSizeEvent& WXUNUSED(event))
@@ -67,6 +73,24 @@ void guiObjectWindow::Layout(wxSizeEvent& WXUNUSED(event))
 /*
 	this->SetClientSize(180, this->GetParent()->GetSize().y);
 */
+}
+
+
+void guiObjectWindow::OnButtonClick(wxCommandEvent& event)
+{
+	// Button Clicked
+	wxBitmapButton *button = (wxBitmapButton*)event.GetEventObject();
+	for (unsigned int x = 0; x < MyApp::s_App.mFieldKit.GetBunkerCount(); x++)
+	{
+		if ( button == MyApp::s_App.mFieldKit.GetBunker(x)->button ) {
+			Bunker *bunker = MyApp::s_App.mFieldKit.GetBunker(x);
+			if (bunker) {
+				MyApp::s_App.mBunker = x;	// Set Selected Bunker
+				PFB_LOG(bunker->model_name);
+			}
+		}
+	}
+	PFB_LOG("test click");
 }
 
 

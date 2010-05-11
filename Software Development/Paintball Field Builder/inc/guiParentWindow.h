@@ -24,6 +24,8 @@ private:
 			ID_FILE_SAVE,
 			ID_FILE_SAVEAS,
 			ID_FILE_LOADFIELDKIT,
+			ID_EDIT_UNDO,
+			ID_EDIT_REDO,
 			ID_EDIT_DELETE,
 			ID_EDIT_SELECTNONE,
 			ID_EDIT_MIRRORFIELD,
@@ -66,6 +68,8 @@ public:
 	void OnLoadFieldKit(wxCommandEvent& event);
 	void OnQuit(wxCommandEvent& event);
 
+	void OnUndo(wxCommandEvent& event);
+	void OnRedo(wxCommandEvent& event);
 	void OnDelete(wxCommandEvent& event);
 	void OnSelectNone(wxCommandEvent& event);
 	void OnMirrorField(wxCommandEvent& event);

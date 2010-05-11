@@ -37,6 +37,9 @@ guiParentWindow::guiParentWindow(const wxString& title)
 
 	// Create Edit Drop Down
 	mEdit = new wxMenu;
+	mEdit->Append(ID_EDIT_UNDO, wxT("&Undo"));
+	mEdit->Append(ID_EDIT_REDO, wxT("&Redo"));
+	mEdit->AppendSeparator();
 	mEdit->Append(ID_EDIT_DELETE, wxT("&Delete"));
 	mEdit->Append(ID_EDIT_SELECTNONE, wxT("&Select None"));
 	mEdit->AppendSeparator();
@@ -116,6 +119,12 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	Connect(wxID_EXIT, wxEVT_COMMAND_MENU_SELECTED, 
 		wxCommandEventHandler(guiParentWindow::OnQuit));
 
+	// Undo
+	Connect(ID_EDIT_UNDO, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnUndo));
+	// Redo
+	Connect(ID_EDIT_REDO, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnRedo));
 	// Delete
 	Connect(ID_EDIT_DELETE, wxEVT_COMMAND_MENU_SELECTED, 
 		wxCommandEventHandler(guiParentWindow::OnDelete));
@@ -206,6 +215,8 @@ void guiParentWindow::OnFileSaveAs(wxCommandEvent& event) {}
 void guiParentWindow::OnLoadFieldKit(wxCommandEvent& event) {}
 void guiParentWindow::OnQuit(wxCommandEvent& WXUNUSED(event)) { Close(true); }
 
+void guiParentWindow::OnUndo(wxCommandEvent& event) {}
+void guiParentWindow::OnRedo(wxCommandEvent& event) {}
 void guiParentWindow::OnDelete(wxCommandEvent& event) {}
 void guiParentWindow::OnSelectNone(wxCommandEvent& event) {}
 void guiParentWindow::OnMirrorField(wxCommandEvent& event) {}
