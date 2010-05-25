@@ -13,6 +13,9 @@
 #include "../inc/guiInfoDialog.h"
 #include "../inc/guiRegisterDialog.h"
 #include "../inc/guiViewOptionsDialog.h"
+#include "../inc/Application.h"
+#include <wx/filename.h>
+#include <wx/stdpaths.h>
 
 guiParentWindow::guiParentWindow(const wxString& title)
        : wxFrame(NULL, wxID_ANY, title, wxDefaultPosition, wxSize(800,600))
@@ -209,36 +212,115 @@ void guiParentWindow::OnFileNew(wxCommandEvent& event)
 	window->SetAutoLayout(true);
 }
 
-void guiParentWindow::OnFileOpen(wxCommandEvent& event) {}
-void guiParentWindow::OnFileSave(wxCommandEvent& event) {}
-void guiParentWindow::OnFileSaveAs(wxCommandEvent& event) {}
-void guiParentWindow::OnLoadFieldKit(wxCommandEvent& event) {}
-void guiParentWindow::OnQuit(wxCommandEvent& WXUNUSED(event)) { Close(true); }
+void guiParentWindow::OnFileOpen(wxCommandEvent& event)
+{
+wxFileDialog *openFileDialog =
+		new wxFileDialog( this, _("Open file"), wxStandardPaths::Get().GetExecutablePath(), "", "*.field",
+		                  wxOPEN, wxDefaultPosition);
+ 
+	if ( openFileDialog->ShowModal() == wxID_OK )
+	{
+		wxString path;
+		path.append( openFileDialog->GetDirectory() );
+		path.append( wxFileName::GetPathSeparator() );
+		path.append( openFileDialog->GetFilename() );
+		MyApp::s_App.LoadField(path.c_str());
+	}
+}
 
-void guiParentWindow::OnUndo(wxCommandEvent& event) {}
-void guiParentWindow::OnRedo(wxCommandEvent& event) {}
-void guiParentWindow::OnDelete(wxCommandEvent& event) {}
-void guiParentWindow::OnSelectNone(wxCommandEvent& event) {}
-void guiParentWindow::OnMirrorField(wxCommandEvent& event) {}
-void guiParentWindow::OnResizeField(wxCommandEvent& event) {}
+void guiParentWindow::OnFileSave(wxCommandEvent& event)
+{
+	MyApp::s_App.SaveField();
+}
+
+void guiParentWindow::OnFileSaveAs(wxCommandEvent& event)
+{
+wxFileDialog *openFileDialog =
+		new wxFileDialog( this, _("Save file"), wxStandardPaths::Get().GetExecutablePath(),
+							"", "*.field", wxSAVE, wxDefaultPosition);
+ 
+	if ( openFileDialog->ShowModal() == wxID_OK )
+	{
+		wxString path;
+		path.append( openFileDialog->GetDirectory() );
+		path.append( wxFileName::GetPathSeparator() );
+		path.append( openFileDialog->GetFilename() );
+		MyApp::s_App.SaveField(path.c_str());
+	}
+}
+
+void guiParentWindow::OnLoadFieldKit(wxCommandEvent& event)
+{
+wxFileDialog *openFileDialog =
+		new wxFileDialog( this, _("Open file"), wxStandardPaths::Get().GetExecutablePath(),
+						"", "*.pfk", wxOPEN, wxDefaultPosition);
+ 
+	if ( openFileDialog->ShowModal() == wxID_OK )
+	{
+		wxString path;
+		path.append( openFileDialog->GetDirectory() );
+		path.append( wxFileName::GetPathSeparator() );
+		path.append( openFileDialog->GetFilename() );
+		// DONT FORGET TO REDRAW THE MENU
+		MyApp::s_App.mFieldKit.Load(path.c_str());
+	}
+}
+
+void guiParentWindow::OnQuit(wxCommandEvent& WXUNUSED(event))
+{
+	Close(true);
+}
+
+void guiParentWindow::OnUndo(wxCommandEvent& event)
+{
+	// UNDO
+}
+
+void guiParentWindow::OnRedo(wxCommandEvent& event)
+{
+	// REDO
+}
+
+void guiParentWindow::OnDelete(wxCommandEvent& event)
+{
+	MyApp::s_App.DeleteSelectedObj();
+}
+
+void guiParentWindow::OnSelectNone(wxCommandEvent& event)
+{
+	MyApp::s_App.SelectNone();
+}
+void guiParentWindow::OnMirrorField(wxCommandEvent& event)
+{
+	MyApp::s_App.MirrorBunkers();
+}
+
+void guiParentWindow::OnResizeField(wxCommandEvent& event)
+{
+	// Grap stuff and resize
+}
 
 void guiParentWindow::OnViewTop(wxCommandEvent& event)
 {
 	MyApp::s_ViewMode = TOP;
+	MyApp::s_App.LookTop();
 }
 
 void guiParentWindow::OnViewFirstPerson(wxCommandEvent& event)
 {
 	MyApp::s_ViewMode = FIRSTPERSON;
+	MyApp::s_App.LookFirstPerson();
 }
 
 void guiParentWindow::OnViewPerspective(wxCommandEvent& event)
 {
 	MyApp::s_ViewMode = PERSPECTIVE;
+	MyApp::s_App.LookPerspective();
 }
 
 void guiParentWindow::OnViewReset(wxCommandEvent& event)
 {
+	MyApp::s_App.ResetView();
 }
 
 void guiParentWindow::OnViewOptions(wxCommandEvent& event)

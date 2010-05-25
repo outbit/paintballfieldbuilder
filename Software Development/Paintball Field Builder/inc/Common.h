@@ -28,5 +28,13 @@ inline void PFB_Wait(const unsigned int &ms)
 	while( (GetTickCount() - start) < ms) ;
 }
 
+inline float PFB_max(float val, float max)
+{
+	if (val > max) {
+		val = max;
+	}
+	return val;
+}
+
 
 #endif // PFB_COMMON

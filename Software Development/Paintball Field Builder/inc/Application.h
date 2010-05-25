@@ -91,6 +91,7 @@ size_t mLightCount;
 // Saved
 char mRenderer;
 char mLastFieldKit[MAXSTR];
+String mLastField;
 
 public:
 SceneNode *mSelectedObj;
@@ -158,6 +159,7 @@ void SelectNone(void);
 void DeleteAllBunkers(void);
 void DeleteAllFieldObjects(void);
 bool MirrorBunkers(void);
+void SaveField() { if (this->mLastField.size() > 0) { this->SaveField(this->mLastField); } }
 void SaveField(String name);
 void LoadField(String name);
 void LookTop(void);

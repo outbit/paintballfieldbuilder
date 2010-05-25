@@ -80,18 +80,22 @@ void guiRenderWindow::OnRightDClick(wxMouseEvent& event) {
 void guiRenderWindow::OnMouseMotion(wxMouseEvent& event) {
 static wxPoint last_mouse_pos(event.GetPosition());
 
-	// Right mouse button is held down
+	// Left mouse button is held down
 	if ( event.LeftIsDown() ) {
 		switch ( MyApp::s_CursorTool ) {
 			case MOVEVIEW: {
 				wxPoint p = event.GetPosition();
-				MyApp::s_App.MoveView(p.x-last_mouse_pos.x, p.y-last_mouse_pos.y);
+				float x_force = PFB_max(p.x-last_mouse_pos.x, MAX_MOUSEFORCE);
+				float y_force = PFB_max(p.y-last_mouse_pos.y, MAX_MOUSEFORCE);
+				MyApp::s_App.MoveView(x_force, y_force);
 				last_mouse_pos = p;
 			}break;
 
 			case ROTATEVIEW: {
 				wxPoint p = event.GetPosition();
-				MyApp::s_App.RotateView(p.x-last_mouse_pos.x, p.y-last_mouse_pos.y);
+				float x_force = PFB_max(p.x-last_mouse_pos.x, MAX_MOUSEFORCE);
+				float y_force = PFB_max(p.y-last_mouse_pos.y, MAX_MOUSEFORCE);
+				MyApp::s_App.RotateView(x_force, y_force);
 				last_mouse_pos = p;
 			}break;
 
@@ -110,6 +114,9 @@ static wxPoint last_mouse_pos(event.GetPosition());
 			case CLONEOBJ:
 			break;
 		}
+	} else { // Mouse Released and moved
+		last_mouse_pos.x = 0;
+		last_mouse_pos.y = 0;
 	}
 }
 

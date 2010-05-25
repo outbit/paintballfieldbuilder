@@ -1360,6 +1360,8 @@ void PFBApplication::SaveField(String name)
 	}
 
 	file.close();
+
+	this->mLastField = name;
 }
 
 void PFBApplication::LoadField(String name)

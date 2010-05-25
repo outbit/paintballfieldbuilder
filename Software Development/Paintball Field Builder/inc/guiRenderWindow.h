@@ -15,6 +15,9 @@
 #include <wx/menu.h>
 
 
+#define MAX_MOUSEFORCE 20
+
+
 class guiRenderWindow : public wxPanel
 {
 protected:
