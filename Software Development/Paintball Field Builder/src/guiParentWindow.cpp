@@ -179,6 +179,9 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	// Rotate Object
 	Connect(ID_ROTATEOBJ, wxEVT_COMMAND_MENU_SELECTED, 
 		wxCommandEventHandler(guiParentWindow::OnRotateObj));
+	// Select Object
+	Connect(ID_SELECTOBJ, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnSelectObj));
 	// Create Object
 	Connect(ID_CREATEOBJ, wxEVT_COMMAND_MENU_SELECTED, 
 		wxCommandEventHandler(guiParentWindow::OnCreateObj));
@@ -365,12 +368,17 @@ void guiParentWindow::OnRotateView(wxCommandEvent& event)
 
 void guiParentWindow::OnMoveObj(wxCommandEvent& event)
 {
-	MyApp::s_CursorTool = MOVEOBJ; 
+	MyApp::s_CursorTool = MOVEOBJ;
 }
 
 void guiParentWindow::OnRotateObj(wxCommandEvent& event)
 {
 	MyApp::s_CursorTool = ROTATEOBJ; 
+}
+
+void guiParentWindow::OnSelectObj(wxCommandEvent& event)
+{
+	MyApp::s_CursorTool = SELECTOBJ; 
 }
 
 void guiParentWindow::OnCreateObj(wxCommandEvent& event)

@@ -56,16 +56,34 @@ void guiRenderWindow::OnLeftUp(wxMouseEvent& event) {
 
 void guiRenderWindow::OnLeftDown(wxMouseEvent& event) {
 	// Button JUST changed to down
-	if ( event.RightDown() ) {
-		switch ( MyApp::s_CursorTool ) {
-			case CREATEOBJ:
-				MyApp::s_App.CreateObject(event.GetX(), event.GetY());
-			break;
-		}
+	wxPoint p = event.GetPosition();
+
+	switch ( MyApp::s_CursorTool ) {
+
+		case MOVEOBJ:
+			MyApp::s_App.SelectObject(p.x, p.y);
+		break;
+
+		case ROTATEOBJ:
+			MyApp::s_App.SelectObject(p.x, p.y);
+		break;
+
+		case SELECTOBJ:
+			PFB_LOG("test: selecting object");
+			MyApp::s_App.SelectObject(p.x, p.y);
+		break;
+
+		case CREATEOBJ:
+			MyApp::s_App.CreateObject(p.x, p.y);
+		break;
+
+		case CLONEOBJ:
+			MyApp::s_App.CloneSelectedObj();
+		break;
 	}
 }
 
-void guiRenderWindow::OnLeftDClick(wxMouseEvent& event) {
+void guiRenderWindow::OnLeftDClick(wxMouseEvent& event){
 }
 
 void guiRenderWindow::OnRightUp(wxMouseEvent& event) {
@@ -82,36 +100,40 @@ static wxPoint last_mouse_pos(event.GetPosition());
 
 	// Left mouse button is held down
 	if ( event.LeftIsDown() ) {
+		wxPoint p = event.GetPosition();
+		float x_force = PFB_max(p.x-last_mouse_pos.x, MAX_MOUSEFORCE);
+		float y_force = PFB_max(p.y-last_mouse_pos.y, MAX_MOUSEFORCE);
+
 		switch ( MyApp::s_CursorTool ) {
+
 			case MOVEVIEW: {
-				wxPoint p = event.GetPosition();
-				float x_force = PFB_max(p.x-last_mouse_pos.x, MAX_MOUSEFORCE);
-				float y_force = PFB_max(p.y-last_mouse_pos.y, MAX_MOUSEFORCE);
 				MyApp::s_App.MoveView(x_force, y_force);
 				last_mouse_pos = p;
 			}break;
 
 			case ROTATEVIEW: {
-				wxPoint p = event.GetPosition();
-				float x_force = PFB_max(p.x-last_mouse_pos.x, MAX_MOUSEFORCE);
-				float y_force = PFB_max(p.y-last_mouse_pos.y, MAX_MOUSEFORCE);
 				MyApp::s_App.RotateView(x_force, y_force);
 				last_mouse_pos = p;
 			}break;
 
 			case MOVEOBJ:
+				MyApp::s_App.MoveSelectedObj(x_force, y_force);
 			break;
 
 			case ROTATEOBJ:
+				MyApp::s_App.RotateSelectedObj(x_force, y_force);
 			break;
 
 			case SELECTOBJ:
+				// No dragging, just selecting
 			break;
 
 			case CREATEOBJ:
+				// no dragging, just creating
 			break;
 
 			case CLONEOBJ:
+				MyApp::s_App.MoveSelectedObj(x_force, y_force);
 			break;
 		}
 	} else { // Mouse Released and moved

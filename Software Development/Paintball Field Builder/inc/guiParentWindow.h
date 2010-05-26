@@ -89,6 +89,7 @@ public:
 	void OnRotateView(wxCommandEvent& event);
 	void OnMoveObj(wxCommandEvent& event);
 	void OnRotateObj(wxCommandEvent& event);
+	void OnSelectObj(wxCommandEvent& event);
 	void OnCreateObj(wxCommandEvent& event);
 	void OnCloneObj(wxCommandEvent& event);
 };

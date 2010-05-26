@@ -7,5 +7,6 @@
 *.idb
 *.log
 *.exe
+BuildLog.htm
 Debug/
 Debug\
