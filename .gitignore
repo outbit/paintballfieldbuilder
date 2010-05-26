@@ -6,5 +6,6 @@
 *.pdb
 *.idb
 *.log
+*.exe
 Debug/
 Debug\
