@@ -198,6 +198,93 @@ guiParentWindow::guiParentWindow(const wxString& title)
 
 guiParentWindow::~guiParentWindow()
 {
+	// File Open
+	Disconnect(ID_FILE_OPEN, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnFileOpen));
+
+	// File New
+	Disconnect(ID_FILE_NEW, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnFileNew));
+	// File Save
+	Disconnect(ID_FILE_SAVE, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnFileSave));
+	// File Save As
+	Disconnect(ID_FILE_SAVEAS, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnFileSaveAs));
+	// Load Field Kit
+	Disconnect(ID_FILE_LOADFIELDKIT, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnLoadFieldKit));
+	// Quit
+	Disconnect(wxID_EXIT, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnQuit));
+
+	// Undo
+	Disconnect(ID_EDIT_UNDO, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnUndo));
+	// Redo
+	Disconnect(ID_EDIT_REDO, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnRedo));
+	// Delete
+	Disconnect(ID_EDIT_DELETE, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnDelete));
+	// Select None
+	Disconnect(ID_EDIT_SELECTNONE, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnSelectNone));
+	// Mirror Field
+	Disconnect(ID_EDIT_MIRRORFIELD, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnMirrorField));
+	// Resize Field
+	Disconnect(ID_EDIT_RESIZEFIELD, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnResizeField));
+
+	// Top View
+	Disconnect(ID_VIEW_TOP, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnViewTop));
+	// First Person
+	Disconnect(ID_VIEW_FIRSTPERSON, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnViewFirstPerson));
+	// Perspective
+	Disconnect(ID_VIEW_PERSPECTIVE, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnViewPerspective));
+	// Reset View
+	Disconnect(ID_VIEW_RESET, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnViewReset));
+	// View Options
+	Disconnect(ID_VIEW_OPTIONS, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnViewOptions));
+
+	// Help
+	Disconnect(ID_ABOUT_HELP, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnHelp));
+	// Info
+	Disconnect(ID_ABOUT_INFO, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnInfo));
+	// Register
+	Disconnect(ID_ABOUT_REGISTER, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnRegister));
+
+	// Move View
+	Disconnect(ID_MOVEVIEW, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnMoveView));
+	// Rotate View
+	Disconnect(ID_ROTATEVIEW, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnRotateView));
+	// Move Object
+	Disconnect(ID_MOVEOBJ, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnMoveObj));
+	// Rotate Object
+	Disconnect(ID_ROTATEOBJ, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnRotateObj));
+	// Select Object
+	Disconnect(ID_SELECTOBJ, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnSelectObj));
+	// Create Object
+	Disconnect(ID_CREATEOBJ, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnCreateObj));
+	// Clone Object
+	Disconnect(ID_CLONEOBJ, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnCloneObj));
+
 	 // Resize
 	Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiParentWindow::Layout));
 }
@@ -205,6 +292,7 @@ guiParentWindow::~guiParentWindow()
 void guiParentWindow::Layout(wxSizeEvent& WXUNUSED(event))
 {
 	// Handle Resize
+	PFB_LOG("parent - window resize");
 }
 
 void guiParentWindow::OnFileNew(wxCommandEvent& event)

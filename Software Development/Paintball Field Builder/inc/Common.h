@@ -20,6 +20,7 @@
 #define PFB_ERROR(a) MyApp::s_Log.LogERROR(a);
 #define PFB_ERRORMESSAGE(a) wxMessageBox(wxT(a));
 #define PFB_ISREGISTERED() (true == MyApp::s_IsRegistered)
+
 // Timing
 inline void PFB_Wait(const unsigned int &ms)
 {
@@ -28,10 +29,13 @@ inline void PFB_Wait(const unsigned int &ms)
 	while( (GetTickCount() - start) < ms) ;
 }
 
+// Limit MAX value
 inline float PFB_max(float val, float max)
 {
 	if (val > max) {
 		val = max;
+	} else if (val < max*-1) {
+		val = max*-1;
 	}
 	return val;
 }
