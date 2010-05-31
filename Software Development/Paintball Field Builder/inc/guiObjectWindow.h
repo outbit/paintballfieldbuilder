@@ -26,8 +26,7 @@ protected:
 public:
 	guiObjectWindow(const wxString& title, wxWindow *parent);
 	~guiObjectWindow();
-	void OnSize();
-	void Layout(wxSizeEvent& WXUNUSED(event));
+	void OnSize(wxSizeEvent& WXUNUSED(event));
 	void OnButtonClick(wxCommandEvent& event);
 	void OnQuit(wxCommandEvent& event);
 	void OnDraw(wxDC& dc);

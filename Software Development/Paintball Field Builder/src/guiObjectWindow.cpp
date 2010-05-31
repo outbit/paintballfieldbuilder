@@ -18,21 +18,21 @@ guiObjectWindow::guiObjectWindow(const wxString& title, wxWindow *parent)
        : wxScrolledWindow(parent, wxID_ANY, wxPoint(0, 0), wxSize(128+25,parent->GetClientSize().y))
 {
 	// Resize Event
-	Connect(wxEVT_SIZE, wxSizeEventHandler(guiObjectWindow::Layout));
+	Connect(wxEVT_SIZE, wxSizeEventHandler(guiObjectWindow::OnSize));
 }
 
 guiObjectWindow::~guiObjectWindow()
 {
 	// Resize Event
-	Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiObjectWindow::Layout));
+	Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiObjectWindow::OnSize));
 }
 
 
-void guiObjectWindow::OnSize()
+void guiObjectWindow::OnSize(wxSizeEvent& WXUNUSED(event))
 {
-		// Resize Window
+	// Resize Window
 	wxWindow *parent = this->GetParent();
-    this->SetClientSize(128+25, parent->GetClientSize().y);
+    this->SetSize(128+25, parent->GetClientSize().y);
 }
 
 void guiObjectWindow::OnDraw(wxDC& dc)
@@ -68,14 +68,6 @@ void guiObjectWindow::OnDraw(wxDC& dc)
 		this->SetScrollRate(5,5);
 		onetime=1;
 	}
-}
-
-void guiObjectWindow::Layout(wxSizeEvent& WXUNUSED(event))
-{
-	// Resize
-/*
-	this->SetClientSize(180, this->GetParent()->GetSize().y);
-*/
 }
 
 

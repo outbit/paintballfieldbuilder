@@ -2,41 +2,251 @@
 ----------------------------------------------------------
 LOG FILE CREATED BY: Default
 ----------------------------------------------------------
-Mon May 31 19:22:39 2010
+Mon May 31 19:36:26 2010
 
 ----------------------------------------------------------
 ##########################################################
  
  
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Creating Terrain
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Turn Off Terrain
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Create Basic
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Set Viewport Color
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Set Fog Color
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Create Light
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Setup Shadows
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Create Field Node
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Create 50 Yard Line
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Create Center Yard Line
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Scale Field Objects
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Create Width Yard Lines
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Create Length Yard Lines
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Done Creating Basic Scene
-Mon May 31 19:22:40 2010
+Mon May 31 19:36:27 2010
  : Rendered Scene
-Mon May 31 19:22:41 2010
+Mon May 31 19:36:27 2010
  : OGRE WAS INITIALIZED
+Mon May 31 19:36:36 2010
+ : default_mesh_rocket.mesh
+Mon May 31 19:36:36 2010
+ : test click
+Mon May 31 19:36:37 2010
+ : default_mesh_can.mesh
+Mon May 31 19:36:37 2010
+ : test click
+Mon May 31 19:36:40 2010
+ : default_mesh_can.mesh
+Mon May 31 19:36:40 2010
+ : test click
+Mon May 31 19:36:40 2010
+ : default_mesh_rocket.mesh
+Mon May 31 19:36:40 2010
+ : test click
+Mon May 31 19:36:43 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:43 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:43 2010
+ : Creating Bunker name: bunker_0, model_name: default_mesh_rocket.mesh
+Mon May 31 19:36:43 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:43 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:44 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:44 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:44 2010
+ : Creating Bunker name: bunker_1, model_name: default_mesh_rocket.mesh
+Mon May 31 19:36:44 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:44 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:46 2010
+ : default_mesh_can.mesh
+Mon May 31 19:36:46 2010
+ : test click
+Mon May 31 19:36:47 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:47 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:47 2010
+ : Creating Bunker name: bunker_2, model_name: default_mesh_can.mesh
+Mon May 31 19:36:47 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:47 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:47 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:47 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:47 2010
+ : Creating Bunker name: bunker_3, model_name: default_mesh_can.mesh
+Mon May 31 19:36:47 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:47 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:48 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:48 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:48 2010
+ : Creating Bunker name: bunker_4, model_name: default_mesh_can.mesh
+Mon May 31 19:36:48 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:48 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:48 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:48 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:48 2010
+ : Creating Bunker name: bunker_5, model_name: default_mesh_can.mesh
+Mon May 31 19:36:48 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:48 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:49 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:49 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:49 2010
+ : Creating Bunker name: bunker_6, model_name: default_mesh_can.mesh
+Mon May 31 19:36:49 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:49 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:49 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:49 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:49 2010
+ : Creating Bunker name: bunker_7, model_name: default_mesh_can.mesh
+Mon May 31 19:36:49 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:49 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:49 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:49 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:49 2010
+ : Creating Bunker name: bunker_8, model_name: default_mesh_can.mesh
+Mon May 31 19:36:49 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:49 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:49 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:49 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:49 2010
+ : Creating Bunker name: bunker_9, model_name: default_mesh_can.mesh
+Mon May 31 19:36:49 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:50 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:50 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:50 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:50 2010
+ : Creating Bunker name: bunker_10, model_name: default_mesh_can.mesh
+Mon May 31 19:36:50 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:50 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:50 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:50 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:50 2010
+ : Creating Bunker name: bunker_11, model_name: default_mesh_can.mesh
+Mon May 31 19:36:50 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:50 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:50 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:50 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:50 2010
+ : Creating Bunker name: bunker_12, model_name: default_mesh_can.mesh
+Mon May 31 19:36:50 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:50 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:50 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:50 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:50 2010
+ : Creating Bunker name: bunker_13, model_name: default_mesh_can.mesh
+Mon May 31 19:36:50 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:51 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:51 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:51 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:51 2010
+ : Creating Bunker name: bunker_14, model_name: default_mesh_can.mesh
+Mon May 31 19:36:51 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:51 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:51 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:51 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:51 2010
+ : Creating Bunker name: bunker_15, model_name: default_mesh_can.mesh
+Mon May 31 19:36:51 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:51 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:51 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:51 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:51 2010
+ : Creating Bunker name: bunker_16, model_name: default_mesh_can.mesh
+Mon May 31 19:36:51 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:51 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:51 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:51 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:51 2010
+ : Creating Bunker name: bunker_17, model_name: default_mesh_can.mesh
+Mon May 31 19:36:51 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:52 2010
+ : Info - Entity Object Created
+Mon May 31 19:36:52 2010
+ : warning - Manually Setting Bunker Name
+Mon May 31 19:36:52 2010
+ : Info - Creating Current Entity
+Mon May 31 19:36:52 2010
+ : Creating Bunker name: bunker_18, model_name: default_mesh_can.mesh
+Mon May 31 19:36:52 2010
+ : Info - Creating Node, Vec was NULL
+Mon May 31 19:36:52 2010
+ : Info - Entity Object Created
