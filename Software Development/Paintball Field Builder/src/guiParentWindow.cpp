@@ -79,15 +79,16 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	SetMenuBar(mMenubar);
 
 	// Toolbar
-	wxIcon rotateview(wxIconLocation(wxT("../media/gui/rotateview.bmp")));
-	wxIcon moveview(wxIconLocation(wxT("../media/gui/moveview.bmp")));
-	wxIcon moveobj(wxIconLocation(wxT("../media/gui/moveobj.bmp")));
-	wxIcon rotateobj(wxIconLocation(wxT("../media/gui/rotateobj.bmp")));
-	wxIcon selectobj(wxIconLocation(wxT("../media/gui/selectobj.bmp")));
-	wxIcon createobj(wxIconLocation(wxT("../media/gui/createobj.bmp")));
-	wxIcon cloneobj(wxIconLocation(wxT("../media/gui/cloneobj.bmp")));
+	wxBitmap rotateview(wxT("../media/gui/rotateview.bmp"), wxBITMAP_TYPE_BMP);
+	wxBitmap moveview(wxT("../media/gui/moveview.bmp"), wxBITMAP_TYPE_BMP);
+	wxBitmap moveobj(wxT("../media/gui/moveobj.bmp"), wxBITMAP_TYPE_BMP);
+	wxBitmap rotateobj(wxT("../media/gui/rotateobj.bmp"), wxBITMAP_TYPE_BMP);
+	wxBitmap selectobj(wxT("../media/gui/selectobj.bmp"), wxBITMAP_TYPE_BMP);
+	wxBitmap createobj(wxT("../media/gui/createobj.bmp"), wxBITMAP_TYPE_BMP);
+	wxBitmap cloneobj(wxT("../media/gui/cloneobj.bmp"), wxBITMAP_TYPE_BMP);
 
 	wxToolBar *mToolbar = this->CreateToolBar();
+	mToolbar->SetToolBitmapSize(wxSize(20,20));
 
 	mToolbar->AddTool(ID_ROTATEVIEW, rotateview, wxT("Rotate View"));
 	mToolbar->AddTool(ID_MOVEVIEW, moveview, wxT("Move View"));
@@ -190,7 +191,7 @@ guiParentWindow::guiParentWindow(const wxString& title)
 		wxCommandEventHandler(guiParentWindow::OnCloneObj));
 
 	 // Resize
-	Connect(wxEVT_SIZE, wxSizeEventHandler(guiParentWindow::Layout));
+	Connect(wxEVT_SIZE, wxSizeEventHandler(guiParentWindow::OnSize));
 	
 	// Center - Speak English!! ;)
 	Centre();
@@ -286,13 +287,24 @@ guiParentWindow::~guiParentWindow()
 		wxCommandEventHandler(guiParentWindow::OnCloneObj));
 
 	 // Resize
-	Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiParentWindow::Layout));
+	Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiParentWindow::OnSize));
 }
 
-void guiParentWindow::Layout(wxSizeEvent& WXUNUSED(event))
+void guiParentWindow::OnSize(wxSizeEvent& WXUNUSED(event))
 {
-	// Handle Resize
-	PFB_LOG("parent - window resize");
+	// Update Children Windows during a resize
+	wxList child_list = this->GetChildren();
+	wxNode *node = child_list.GetFirst();
+	while (node)
+	{
+		wxWindow *win = (wxWindow*)node->GetData();
+		wxSizeEvent event;
+		event.SetEventObject(win);
+		win->GetEventHandler()->ProcessEvent(event);
+
+		// Go to next node
+		node = node->GetNext();
+	}
 }
 
 void guiParentWindow::OnFileNew(wxCommandEvent& event)

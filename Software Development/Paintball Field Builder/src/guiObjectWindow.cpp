@@ -30,6 +30,9 @@ guiObjectWindow::~guiObjectWindow()
 
 void guiObjectWindow::OnSize()
 {
+		// Resize Window
+	wxWindow *parent = this->GetParent();
+    this->SetClientSize(128+25, parent->GetClientSize().y);
 }
 
 void guiObjectWindow::OnDraw(wxDC& dc)

@@ -59,7 +59,7 @@ public:
 	guiParentWindow(const wxString& title);
 	~guiParentWindow();
 
-	void Layout(wxSizeEvent& event);
+	void OnSize(wxSizeEvent& event);
 
 	void OnFileNew(wxCommandEvent& event);
 	void OnFileOpen(wxCommandEvent& event);

@@ -31,7 +31,7 @@ protected:
 public:
 	guiRenderWindow(const wxString& title, wxWindow *parent);
 	~guiRenderWindow();
-	void Layout(wxSizeEvent& WXUNUSED(event));
+	void OnSize(wxSizeEvent& WXUNUSED(event));
 	void OnQuit(wxCommandEvent& event);
 	void OnIdle(wxIdleEvent& event);
 	void OnLeftUp(wxMouseEvent& event);

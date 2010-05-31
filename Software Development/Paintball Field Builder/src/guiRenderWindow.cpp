@@ -5,7 +5,7 @@
 guiRenderWindow::guiRenderWindow(const wxString& title, wxWindow *parent)
        : wxPanel(parent, wxID_ANY, wxPoint(128+25, 0), wxSize(parent->GetClientSize().x-(128+25),parent->GetClientSize().y))
 {
-        Connect(wxEVT_SIZE, wxSizeEventHandler(guiRenderWindow::Layout));
+        Connect(wxEVT_SIZE, wxSizeEventHandler(guiRenderWindow::OnSize));
 		Connect(wxEVT_IDLE, wxIdleEventHandler(guiRenderWindow::OnIdle));
 
 		Connect(wxEVT_LEFT_UP, wxMouseEventHandler(guiRenderWindow::OnLeftUp));
@@ -25,7 +25,7 @@ guiRenderWindow::guiRenderWindow(const wxString& title, wxWindow *parent)
 
 guiRenderWindow::~guiRenderWindow()
 {
-        Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiRenderWindow::Layout));
+        Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiRenderWindow::OnSize));
 		Disconnect(wxEVT_IDLE, wxIdleEventHandler(guiRenderWindow::OnIdle));
 
 		Disconnect(wxEVT_LEFT_UP, wxMouseEventHandler(guiRenderWindow::OnLeftUp));
@@ -43,13 +43,11 @@ guiRenderWindow::~guiRenderWindow()
 		Disconnect(wxEVT_LEAVE_WINDOW, wxMouseEventHandler(guiRenderWindow::OnLeaveWindow));
 }
 
-void guiRenderWindow::Layout(wxSizeEvent& WXUNUSED(event))
+void guiRenderWindow::OnSize(wxSizeEvent& WXUNUSED(event))
 {
-        // This is getting called...but resize failst
+	// Resize Window
 	wxWindow *parent = this->GetParent();
-        //this->SetClientSize(parent->GetClientSize().x-(128+25), parent->GetClientSize().y);
-	this->SetClientSize(50, 50);
-	PFB_LOG("resizing render view");
+    this->SetClientSize(parent->GetClientSize().x-(128+25), parent->GetClientSize().y);
 }
 
 
