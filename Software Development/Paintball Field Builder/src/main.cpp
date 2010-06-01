@@ -20,8 +20,9 @@ IMPLEMENT_APP(MyApp)
 // Static Class Variables
 PFBApplication MyApp::s_App;
 CWSLogFile MyApp::s_Log;
-CURSORTOOL MyApp::s_CursorTool;
-VIEWMODE MyApp::s_ViewMode;
+CURSORTOOL MyApp::s_CursorTool = MOVEVIEW;
+VIEWMODE MyApp::s_ViewMode = PERSPECTIVE;
+bool MyApp::s_IsDragging = false;
 
 bool MyApp::OnInit()
 {
@@ -45,7 +46,7 @@ bool MyApp::OnInit()
 
 	// Object Window
 	m_ObjectWindow = new guiObjectWindow(wxT("Paintball Field Builder"), m_ParentWindow);
-	m_ObjectWindow->SetBackgroundColour(wxColour(0, 255, 0));
+	m_ObjectWindow->SetBackgroundColour(wxColour(0x4d, 0x4d, 0x4d));
 	m_ObjectWindow->Show(true);
 
    // Initialize OGRE

@@ -66,6 +66,11 @@ void guiRenderWindow::OnIdle(wxIdleEvent& event)
 }
 
 void guiRenderWindow::OnLeftUp(wxMouseEvent& event) {
+
+	// If Dragging then Release (Drag n Drop)
+	if (MyApp::s_IsDragging == true) {
+		MyApp::s_IsDragging = false;
+	}
 }
 
 void guiRenderWindow::OnLeftDown(wxMouseEvent& event) {
@@ -85,7 +90,6 @@ void guiRenderWindow::OnLeftDown(wxMouseEvent& event) {
 		break;
 
 		case SELECTOBJ:
-			PFB_LOG("test: selecting object");
 			MyApp::s_App.SelectObject(x_pos, y_pos);
 		break;
 
@@ -122,38 +126,47 @@ static wxPoint last_mouse_pos(event.GetPosition());
 		Real x_pos = (Real)p.x/(Real)this->GetSize().x;
 		Real y_pos = (Real)p.y/(Real)this->GetSize().y;
 
-		switch ( MyApp::s_CursorTool ) {
+		if ( MyApp::s_IsDragging == true ) {
+			// Drag N Drop
+			MyApp::s_App.MoveSelectedObj(x_pos, y_pos); PFB_LOG("render - move drag object");
+		} else {
+			switch ( MyApp::s_CursorTool ) {
 
-			case MOVEVIEW: {
-				MyApp::s_App.MoveView(x_force, y_force);
-				last_mouse_pos = p;
-			}break;
+				case MOVEVIEW: {
+					MyApp::s_App.MoveView(x_force, y_force);
+				
+				}break;
 
-			case ROTATEVIEW: {
-				MyApp::s_App.RotateView(x_force, y_force);
-				last_mouse_pos = p;
-			}break;
+				case ROTATEVIEW: {
+					MyApp::s_App.RotateView(x_force, y_force);
+					last_mouse_pos = p;
+				}break;
 
-			case MOVEOBJ:
-				MyApp::s_App.MoveSelectedObj(x_pos, y_pos);
-			break;
+				case MOVEOBJ:
+					MyApp::s_App.MoveSelectedObj(x_pos, y_pos);
+				break;
 
-			case ROTATEOBJ:
-				MyApp::s_App.RotateSelectedObj(x_force, y_force);
-			break;
+				case ROTATEOBJ:
+					MyApp::s_App.RotateSelectedObj(x_force, y_force);
+				break;
 
-			case SELECTOBJ:
-				// No dragging, just selecting
-			break;
+				case SELECTOBJ:
+					// No dragging, just selecting
+				break;
 
-			case CREATEOBJ:
-				// no dragging, just creating
-			break;
+				case CREATEOBJ:
+					// no dragging, just creating
+				break;
 
-			case CLONEOBJ:
-				MyApp::s_App.MoveSelectedObj(x_pos, y_pos);
-			break;
+				case CLONEOBJ:
+					MyApp::s_App.MoveSelectedObj(x_pos, y_pos);
+				break;
+			}
 		}
+
+		// Store last mouse position for FORCE value
+		last_mouse_pos = p;
+
 	} else { // Mouse Released and moved
 		last_mouse_pos.x = 0;
 		last_mouse_pos.y = 0;
@@ -164,6 +177,16 @@ void guiRenderWindow::OnMouseWheel(wxMouseEvent& event) {
 }
 
 void guiRenderWindow::OnEnterWindow(wxMouseEvent& event) {
+	wxPoint p = event.GetPosition();
+	Real x_pos = (Real)p.x/(Real)this->GetSize().x;
+	Real y_pos = (Real)p.y/(Real)this->GetSize().y;
+
+	if ( event.LeftIsDown() ) {
+	if ( MyApp::s_IsDragging == true ) {
+		// Drag N Drop
+		MyApp::s_App.CreateObject(x_pos, y_pos); PFB_LOG("render - creating drag object");
+	}
+	}
 }
 
 void guiRenderWindow::OnLeaveWindow(wxMouseEvent& event) {

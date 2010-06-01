@@ -60,6 +60,8 @@ class MyApp : public wxApp
 	static CURSORTOOL s_CursorTool;
 	// The Current View Mode
 	static VIEWMODE s_ViewMode;
+	// Is dragging
+	static bool s_IsDragging;
 
 	// Handle Initialization
 	virtual bool OnInit();

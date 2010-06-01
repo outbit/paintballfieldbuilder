@@ -1392,6 +1392,9 @@ void PFBApplication::LoadField(String name)
 		return;
 	}
 
+	// Cleanup Bunkers that are left on field
+	this->DeleteAllBunkers();
+
 	file.read((char*)&end, sizeof(end));
 /*
                 if (!end)

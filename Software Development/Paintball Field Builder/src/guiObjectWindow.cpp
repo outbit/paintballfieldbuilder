@@ -37,16 +37,6 @@ void guiObjectWindow::OnSize(wxSizeEvent& WXUNUSED(event))
 
 void guiObjectWindow::OnDraw(wxDC& dc)
 {
-	/*
-	wxBitmap *tmp = 0;
-	int count =0;
-	for (unsigned int x = 0; x < MyApp::s_App.mFieldKit.GetBunkerCount(); x++)
-	{
-		tmp = MyApp::s_App.mFieldKit.GetBunker(x)->bmp;
-		dc.DrawBitmap(*tmp, 0, (128+OBJECT_SPACING)*count, false);
-		count++;
-	}
-	*/
 	// WORKS BUT MAKE BETTER MAN
 	static onetime = 0;
 
@@ -59,8 +49,9 @@ void guiObjectWindow::OnDraw(wxDC& dc)
 			if( b ) {
 				MyApp::s_App.mFieldKit.GetBunker(x)->button = b; // Store Bunker for use later
 				sizer->Add(b);
-				Connect(ID_BUTTON_HIGHEST+x, wxEVT_COMMAND_BUTTON_CLICKED, 
-					wxCommandEventHandler(guiObjectWindow::OnButtonClick));
+				// REMEMBER TO DISCONNECT LATER (THIS CLEANUP IS NOT BEING DONE AT THE TIME)
+				b->Connect(ID_BUTTON_HIGHEST+x, wxEVT_LEFT_DOWN, 
+					wxMouseEventHandler(guiObjectWindow::OnButtonClick));
 			}
 		}
 		this->SetSizer(sizer);
@@ -71,21 +62,28 @@ void guiObjectWindow::OnDraw(wxDC& dc)
 }
 
 
-void guiObjectWindow::OnButtonClick(wxCommandEvent& event)
+void guiObjectWindow::OnButtonClick(wxMouseEvent& event)
 {
 	// Button Clicked
 	wxBitmapButton *button = (wxBitmapButton*)event.GetEventObject();
+	Bunker *bunker = NULL;
 	for (unsigned int x = 0; x < MyApp::s_App.mFieldKit.GetBunkerCount(); x++)
 	{
 		if ( button == MyApp::s_App.mFieldKit.GetBunker(x)->button ) {
-			Bunker *bunker = MyApp::s_App.mFieldKit.GetBunker(x);
+			bunker = MyApp::s_App.mFieldKit.GetBunker(x);
 			if (bunker) {
 				MyApp::s_App.mBunker = x;	// Set Selected Bunker
 				PFB_LOG(bunker->model_name);
+				break;
 			}
 		}
 	}
-	PFB_LOG("test click");
+
+	// Drag n Drop (Source)
+	if (bunker)
+	{
+		MyApp::s_IsDragging = true;
+	}
 }
 
 
