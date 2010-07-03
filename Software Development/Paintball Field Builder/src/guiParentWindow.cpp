@@ -405,19 +405,19 @@ void guiParentWindow::OnResizeField(wxCommandEvent& event)
 
 void guiParentWindow::OnViewTop(wxCommandEvent& event)
 {
-	MyApp::s_ViewMode = TOP;
+	MyApp::s_App.mViewMode = MyApp::s_ViewMode = TOP;
 	MyApp::s_App.LookTop();
 }
 
 void guiParentWindow::OnViewFirstPerson(wxCommandEvent& event)
 {
-	MyApp::s_ViewMode = FIRSTPERSON;
+	MyApp::s_App.mViewMode = MyApp::s_ViewMode = FIRSTPERSON;
 	MyApp::s_App.LookFirstPerson();
 }
 
 void guiParentWindow::OnViewPerspective(wxCommandEvent& event)
 {
-	MyApp::s_ViewMode = PERSPECTIVE;
+	MyApp::s_App.mViewMode = MyApp::s_ViewMode = PERSPECTIVE;
 	MyApp::s_App.LookPerspective();
 }
 
@@ -463,7 +463,7 @@ void guiParentWindow::OnMoveView(wxCommandEvent& event)
 
 void guiParentWindow::OnRotateView(wxCommandEvent& event)
 {
-	MyApp::s_CursorTool = ROTATEVIEW; 
+	MyApp::s_CursorTool = ROTATEVIEW;
 }
 
 void guiParentWindow::OnMoveObj(wxCommandEvent& event)

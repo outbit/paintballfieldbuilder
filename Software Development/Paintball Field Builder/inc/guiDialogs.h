@@ -79,25 +79,25 @@ class guiViewOptions : public wxDialog
 	private:
 	
 	protected:
-		wxCheckBox* m_checkBox1;
-		wxCheckBox* m_checkBox2;
-		wxCheckBox* m_checkBox3;
-		wxCheckBox* m_checkBox4;
-		wxCheckBox* m_checkBox5;
-		wxCheckBox* m_checkBox6;
-		wxCheckBox* m_checkBox7;
-		wxCheckBox* m_checkBox8;
-		wxCheckBox* m_checkBox9;
+		wxCheckBox* m_checkTerrain;
+		wxCheckBox* m_checkYardlines;
+		wxCheckBox* m_checkSkybox;
+		wxCheckBox* m_check50yardline;
+		wxCheckBox* m_checkCenteryardline;
+		wxCheckBox* m_checkShadows;
+		wxCheckBox* m_checkGouraud;
+		wxCheckBox* m_checkTexture;
+		wxCheckBox* m_checkSolid;
 		wxStaticText* m_staticText23;
-		wxChoice* m_choice1;
+		wxChoice* m_choiceRenderer;
 		wxStaticText* m_staticText22;
 		
 		
 		
 		
-		wxTextCtrl* m_textCtrl20;
-		wxTextCtrl* m_textCtrl21;
-		wxTextCtrl* m_textCtrl22;
+		wxTextCtrl* m_textRed;
+		wxTextCtrl* m_textGreen;
+		wxTextCtrl* m_textBlue;
 		
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnTerrainCheck( wxCommandEvent& event ){ event.Skip(); }
@@ -130,26 +130,26 @@ class guiNewField : public wxDialog
 	
 	protected:
 		wxStaticText* m_staticText4;
-		wxTextCtrl* m_textCtrl2;
+		wxTextCtrl* m_textFieldwidth;
 		wxStaticText* m_staticText5;
-		wxTextCtrl* m_textCtrl3;
+		wxTextCtrl* m_textFieldheight;
 		wxStaticText* m_staticText41;
-		wxTextCtrl* m_textCtrl21;
+		wxTextCtrl* m_textGridwidth;
 		wxStaticText* m_staticText51;
-		wxTextCtrl* m_textCtrl31;
+		wxTextCtrl* m_textGridheight;
 		wxStaticText* m_staticText42;
-		wxTextCtrl* m_textCtrl22;
+		wxChoice* m_choiceUnit;
 		
-		wxButton* m_button3;
-		wxButton* m_button4;
+		wxButton* m_buttonCreate;
+		wxButton* m_buttonCancel;
 		
 		// Virtual event handlers, overide them in your derived class
-		virtual void OnOk( wxCommandEvent& event ){ event.Skip(); }
-		virtual void OnCancel( wxCommandEvent& event ){ event.Skip(); }
+		virtual void OnCreateButton( wxCommandEvent& event ){ event.Skip(); }
+		virtual void OnCancelButton( wxCommandEvent& event ){ event.Skip(); }
 		
 	
 	public:
-		guiNewField( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("New Field"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 435,220 ), long style = wxDEFAULT_DIALOG_STYLE );
+		guiNewField( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("New Field"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 428,237 ), long style = wxDEFAULT_DIALOG_STYLE );
 		~guiNewField();
 	
 };

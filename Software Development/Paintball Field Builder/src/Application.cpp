@@ -300,12 +300,12 @@ void PFBApplication::LoadSettings(void)
 	{
 		mRenderer = PFB_DEFAULT_RENDER;
 		strcpy(mLastFieldKit, "../fieldkits/default.pfk");
-		this->mBackground = ColourValue(1.0f, 1.0f, 1.0f);     // Set Default Background Color
-		mViewOptions._terrain = false;
+		this->mBackground = ColourValue(0.0f, 0.0f, 1.0f);     // Set Default Background Color
+		mViewOptions._terrain = true;
 		mViewOptions._yardlines = true;
-		mViewOptions._skybox = false;
+		mViewOptions._skybox = true;
 		mViewOptions._fiftyyardline = true;
-		mViewOptions._shadows = false;
+		mViewOptions._shadows = true;
 		mViewOptions._gouraud = true;
 		mViewOptions._texture = true;
 		mViewOptions._solid = true;
@@ -415,6 +415,7 @@ void PFBApplication::MoveView(Real x, Real z, Real y)
 		}
 	} break;
 	}
+
 	CheckRange();
 	RENDER();
 }
@@ -457,8 +458,10 @@ void PFBApplication::RotateView(Real x, Real z)
 			mCamera->setPosition(oldpos);
 			mCamera->setOrientation(oldo);
 		}
-	} break;
+		PFB_LOG("app - rotating");
+	}break;
 	}
+
 	CheckRange();
 	RENDER();
 }
@@ -1646,7 +1649,7 @@ void PFBApplication::createBasic(void)
 {
 	// Terrain
 	PFB_LOG("Set Viewport Color");
-	this->mWindow->getViewport(0)->setBackgroundColour(mBackground);
+	this->mWindow->getViewport(0)->setBackgroundColour(this->mBackground);
 
 	// Fog
 	PFB_LOG("Set Fog Color");
@@ -1753,8 +1756,22 @@ void PFBApplication::createBasic(void)
 			llentity->setCastShadows(false);
 		}
 	}
-
 	PFB_LOG("Done Creating Basic Scene");
+
+	// Default Values
+	PFB_LOG("...Setting Default Settings");
+	this->ToggleCenterYardLine(this->mViewOptions._centeryardline);
+	this->ToggleFiftyYardLine(this->mViewOptions._fiftyyardline);
+	this->ToggleGouraud(this->mViewOptions._gouraud);
+	this->ToggleShadows(this->mViewOptions._shadows);
+	this->ToggleSkyBox(this->mViewOptions._skybox);
+	this->ToggleSolid(this->mViewOptions._solid);
+	this->ToggleTerrain(this->mViewOptions._terrain);
+	this->ToggleTexture(this->mViewOptions._texture);
+	this->ToggleYardLines(this->mViewOptions._yardlines);
+	PFB_LOG("Done Setting Default Settings");
+
+	// Render
 	RENDER();
 	PFB_LOG("Rendered Scene");
 }

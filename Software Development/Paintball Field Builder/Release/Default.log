@@ -2,41 +2,1323 @@
 ----------------------------------------------------------
 LOG FILE CREATED BY: Default
 ----------------------------------------------------------
-Tue Jun 01 03:22:45 2010
+Sat Jul 03 02:48:16 2010
 
 ----------------------------------------------------------
 ##########################################################
  
  
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
+ : Failed To Read Renderer
+Sat Jul 03 02:48:17 2010
  : Creating Terrain
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Turn Off Terrain
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Create Basic
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Set Viewport Color
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Set Fog Color
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Create Light
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Setup Shadows
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Create Field Node
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Create 50 Yard Line
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Create Center Yard Line
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Scale Field Objects
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Create Width Yard Lines
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Create Length Yard Lines
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : Done Creating Basic Scene
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
+ : ...Setting Default Settings
+Sat Jul 03 02:48:17 2010
+ : Done Setting Default Settings
+Sat Jul 03 02:48:17 2010
  : Rendered Scene
-Tue Jun 01 03:22:46 2010
+Sat Jul 03 02:48:17 2010
  : OGRE WAS INITIALIZED
+Sat Jul 03 02:48:22 2010
+ : render - rotating
+Sat Jul 03 02:48:22 2010
+ : app - rotating
+Sat Jul 03 02:48:22 2010
+ : render - rotating
+Sat Jul 03 02:48:22 2010
+ : app - rotating
+Sat Jul 03 02:48:22 2010
+ : render - rotating
+Sat Jul 03 02:48:22 2010
+ : app - rotating
+Sat Jul 03 02:48:22 2010
+ : render - rotating
+Sat Jul 03 02:48:22 2010
+ : app - rotating
+Sat Jul 03 02:48:22 2010
+ : render - rotating
+Sat Jul 03 02:48:22 2010
+ : app - rotating
+Sat Jul 03 02:48:22 2010
+ : render - rotating
+Sat Jul 03 02:48:22 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:23 2010
+ : render - rotating
+Sat Jul 03 02:48:23 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:24 2010
+ : render - rotating
+Sat Jul 03 02:48:24 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:25 2010
+ : render - rotating
+Sat Jul 03 02:48:25 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:26 2010
+ : render - rotating
+Sat Jul 03 02:48:26 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:35 2010
+ : render - rotating
+Sat Jul 03 02:48:35 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:36 2010
+ : render - rotating
+Sat Jul 03 02:48:36 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:37 2010
+ : render - rotating
+Sat Jul 03 02:48:37 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:38 2010
+ : render - rotating
+Sat Jul 03 02:48:38 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:50 2010
+ : render - rotating
+Sat Jul 03 02:48:50 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:51 2010
+ : render - rotating
+Sat Jul 03 02:48:51 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:52 2010
+ : render - rotating
+Sat Jul 03 02:48:52 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:53 2010
+ : render - rotating
+Sat Jul 03 02:48:53 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:54 2010
+ : render - rotating
+Sat Jul 03 02:48:54 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:55 2010
+ : render - rotating
+Sat Jul 03 02:48:55 2010
+ : app - rotating
+Sat Jul 03 02:48:56 2010
+ : render - rotating
+Sat Jul 03 02:48:56 2010
+ : app - rotating
+Sat Jul 03 02:48:56 2010
+ : render - rotating
+Sat Jul 03 02:48:56 2010
+ : app - rotating
+Sat Jul 03 02:48:56 2010
+ : render - rotating
+Sat Jul 03 02:48:56 2010
+ : app - rotating
+Sat Jul 03 02:48:56 2010
+ : render - rotating
+Sat Jul 03 02:48:56 2010
+ : app - rotating
+Sat Jul 03 02:48:56 2010
+ : render - rotating
+Sat Jul 03 02:48:56 2010
+ : app - rotating
+Sat Jul 03 02:48:57 2010
+ : default_mesh_dorito.mesh
+Sat Jul 03 02:48:57 2010
+ : warning - Manually Setting Bunker Name
+Sat Jul 03 02:48:57 2010
+ : Info - Creating Current Entity
+Sat Jul 03 02:48:57 2010
+ : Creating Bunker name: bunker_0, model_name: default_mesh_dorito.mesh
+Sat Jul 03 02:48:57 2010
+ : Info - Creating Node, Vec was NULL
+Sat Jul 03 02:48:57 2010
+ : Info - Entity Object Created
+Sat Jul 03 02:48:57 2010
+ : render - creating drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:57 2010
+ : render - move drag object
+Sat Jul 03 02:48:58 2010
+ : render - move drag object
+Sat Jul 03 02:48:58 2010
+ : default_mesh_dorito.mesh
+Sat Jul 03 02:48:58 2010
+ : warning - Manually Setting Bunker Name
+Sat Jul 03 02:48:58 2010
+ : Info - Creating Current Entity
+Sat Jul 03 02:48:58 2010
+ : Creating Bunker name: bunker_1, model_name: default_mesh_dorito.mesh
+Sat Jul 03 02:48:58 2010
+ : Info - Creating Node, Vec was NULL
+Sat Jul 03 02:48:58 2010
+ : Info - Entity Object Created
+Sat Jul 03 02:48:58 2010
+ : render - creating drag object
+Sat Jul 03 02:48:58 2010
+ : render - move drag object
+Sat Jul 03 02:48:58 2010
+ : render - move drag object
+Sat Jul 03 02:48:58 2010
+ : render - move drag object
+Sat Jul 03 02:48:58 2010
+ : render - move drag object
+Sat Jul 03 02:48:58 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:48:59 2010
+ : render - move drag object
+Sat Jul 03 02:49:04 2010
+ : default_mesh_dorito.mesh
+Sat Jul 03 02:49:07 2010
+ : default_mesh_ldcone.mesh
+Sat Jul 03 02:49:07 2010
+ : warning - Manually Setting Bunker Name
+Sat Jul 03 02:49:07 2010
+ : Info - Creating Current Entity
+Sat Jul 03 02:49:07 2010
+ : Creating Bunker name: bunker_2, model_name: default_mesh_ldcone.mesh
+Sat Jul 03 02:49:07 2010
+ : Info - Creating Node, Vec was NULL
+Sat Jul 03 02:49:07 2010
+ : Info - Entity Object Created
+Sat Jul 03 02:49:07 2010
+ : render - creating drag object
+Sat Jul 03 02:49:07 2010
+ : render - move drag object
+Sat Jul 03 02:49:07 2010
+ : render - move drag object
+Sat Jul 03 02:49:07 2010
+ : render - move drag object
+Sat Jul 03 02:49:07 2010
+ : render - move drag object
+Sat Jul 03 02:49:07 2010
+ : render - move drag object
+Sat Jul 03 02:49:07 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:08 2010
+ : render - move drag object
+Sat Jul 03 02:49:09 2010
+ : render - move drag object
+Sat Jul 03 02:49:09 2010
+ : render - move drag object
+Sat Jul 03 02:49:09 2010
+ : default_mesh_ldcan.mesh
+Sat Jul 03 02:49:10 2010
+ : warning - Manually Setting Bunker Name
+Sat Jul 03 02:49:10 2010
+ : Info - Creating Current Entity
+Sat Jul 03 02:49:10 2010
+ : Creating Bunker name: bunker_3, model_name: default_mesh_ldcan.mesh
+Sat Jul 03 02:49:10 2010
+ : Info - Creating Node, Vec was NULL
+Sat Jul 03 02:49:10 2010
+ : Info - Entity Object Created
+Sat Jul 03 02:49:10 2010
+ : render - creating drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:10 2010
+ : render - move drag object
+Sat Jul 03 02:49:18 2010
+ : default_mesh_rocket.mesh
+Sat Jul 03 02:49:19 2010
+ : warning - Manually Setting Bunker Name
+Sat Jul 03 02:49:19 2010
+ : Info - Creating Current Entity
+Sat Jul 03 02:49:19 2010
+ : Creating Bunker name: bunker_4, model_name: default_mesh_rocket.mesh
+Sat Jul 03 02:49:19 2010
+ : Info - Creating Node, Vec was NULL
+Sat Jul 03 02:49:19 2010
+ : Info - Entity Object Created
+Sat Jul 03 02:49:19 2010
+ : render - creating drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:19 2010
+ : render - move drag object
+Sat Jul 03 02:49:20 2010
+ : render - move drag object
+Sat Jul 03 02:49:20 2010
+ : render - move drag object
+Sat Jul 03 02:49:20 2010
+ : render - move drag object
+Sat Jul 03 02:49:20 2010
+ : render - move drag object
+Sat Jul 03 02:49:20 2010
+ : render - move drag object
+Sat Jul 03 02:49:20 2010
+ : render - move drag object
+Sat Jul 03 02:49:20 2010
+ : render - move drag object

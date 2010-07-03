@@ -20,6 +20,8 @@ class guiNewFieldDialog : public guiNewField
 public:
 	guiNewFieldDialog(wxWindow *parent);
 	~guiNewFieldDialog();
+	void OnCreateButton( wxCommandEvent& event );
+	void OnCancelButton( wxCommandEvent& event );
 };
 
 

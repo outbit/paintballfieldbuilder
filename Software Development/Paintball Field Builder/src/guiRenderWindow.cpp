@@ -134,12 +134,11 @@ static wxPoint last_mouse_pos(event.GetPosition());
 
 				case MOVEVIEW: {
 					MyApp::s_App.MoveView(x_force, y_force);
-				
 				}break;
 
 				case ROTATEVIEW: {
+					PFB_LOG("render - rotating");
 					MyApp::s_App.RotateView(x_force, y_force);
-					last_mouse_pos = p;
 				}break;
 
 				case MOVEOBJ:

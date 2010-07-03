@@ -20,6 +20,20 @@ class guiViewOptionsDialog : public guiViewOptions
 public:
 	guiViewOptionsDialog(wxWindow *parent);
 	~guiViewOptionsDialog();
+
+	void OnTerrainCheck(wxCommandEvent &event);
+	void OnYardLinesCheck(wxCommandEvent &event);
+	void OnSkyBoxCheck(wxCommandEvent &event);
+	void On50YardLineCheck(wxCommandEvent &event);
+	void OnCenterYardLineCheck(wxCommandEvent &event);
+	void OnShadowsCheck(wxCommandEvent &event);
+	void OnGouraudShadingCheck(wxCommandEvent &event);
+	void OnTextureMappingCheck(wxCommandEvent &event);
+	void OnSolidViewCheck(wxCommandEvent &event);
+	void OnRendererChoice(wxCommandEvent &event);
+	void OnBackgroundRedText(wxCommandEvent &event);
+	void OnBackgroundGreenText(wxCommandEvent &event);
+	void OnBackgroundBlueText(wxCommandEvent &event);
 };
 
 
