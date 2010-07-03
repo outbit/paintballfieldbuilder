@@ -12,17 +12,17 @@ guiNewFieldDialog::~guiNewFieldDialog()
 
 void guiNewFieldDialog::OnCreateButton(wxCommandEvent &event)
 {
-	if (this->m_choiceUnit->GetCurrentSelection() == 1)
+	if (this->m_choiceUnit->GetCurrentSelection() == 2)
 	{
 		// Convert To Yards
 		MyApp::s_App.mUnitM = WORLDUNITSPERYARD;
 	}
-	else if (this->m_choiceUnit->GetCurrentSelection() == 2)
+	else if (this->m_choiceUnit->GetCurrentSelection() == 0)
 	{
 		// Convert Meters To Yards
 		MyApp::s_App.mUnitM = WORLDUNITSPERMETER;
 	}
-	else if (this->m_choiceUnit->GetCurrentSelection() == 0)
+	else if (this->m_choiceUnit->GetCurrentSelection() == 1)
 	{
 		// Convert Meters To Feet
 		MyApp::s_App.mUnitM = WORLDUNITSPERFOOT;
