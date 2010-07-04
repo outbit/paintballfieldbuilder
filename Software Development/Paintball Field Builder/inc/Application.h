@@ -31,7 +31,7 @@ struct VIEWOPTIONS
 #define RENDER() if (mDoRender) this->Render();
 #define NOTFIELDOBJ(a) ( (String::npos != a.find("bunker_")) || (String::npos != a.find("node_bunker_")) )
 
-#define TERRAIN_S 2500
+#define TERRAIN_S 5000
 #define LINE_EXTRA 12
 #define LINE_EXTRA_ 10
 #define WORLDUNITSPERYARD 20

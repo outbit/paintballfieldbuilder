@@ -33,7 +33,7 @@ bool MyApp::OnInit()
 	if (bitmap.LoadFile("../license/loadscreen.bmp", wxBITMAP_TYPE_BMP)) {
 		m_LoadScreen = new wxSplashScreen(bitmap,
 		wxSPLASH_CENTRE_ON_SCREEN|wxSPLASH_TIMEOUT,
-		-1/*wait time*/, NULL, -1, wxDefaultPosition, wxDefaultSize,
+		3000, NULL, -1, wxDefaultPosition, wxDefaultSize,
 		wxSIMPLE_BORDER|wxSTAY_ON_TOP);
 	}
 	wxYield();
