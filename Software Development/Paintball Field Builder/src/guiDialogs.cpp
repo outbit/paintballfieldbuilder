@@ -329,3 +329,93 @@ guiNewField::~guiNewField()
 	m_buttonCreate->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( guiNewField::OnCreateButton ), NULL, this );
 	m_buttonCancel->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( guiNewField::OnCancelButton ), NULL, this );
 }
+
+guiResizeField::guiResizeField( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
+{
+	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
+	
+	wxGridSizer* gSizer3;
+	gSizer3 = new wxGridSizer( 2, 2, 0, 0 );
+	
+	wxStaticBoxSizer* sbSizer2;
+	sbSizer2 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, wxT("Field Dimensions") ), wxVERTICAL );
+	
+	wxGridSizer* gSizer4;
+	gSizer4 = new wxGridSizer( 2, 2, 0, 0 );
+	
+	m_staticText4 = new wxStaticText( this, wxID_ANY, wxT("Width"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText4->Wrap( -1 );
+	gSizer4->Add( m_staticText4, 0, wxALL, 5 );
+	
+	m_textFieldwidth = new wxTextCtrl( this, wxID_ANY, wxT("16"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_textFieldwidth->SetMaxLength( 30 ); 
+	gSizer4->Add( m_textFieldwidth, 0, wxALL, 5 );
+	
+	m_staticText5 = new wxStaticText( this, wxID_ANY, wxT("Height"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText5->Wrap( -1 );
+	gSizer4->Add( m_staticText5, 0, wxALL, 5 );
+	
+	m_textFieldheight = new wxTextCtrl( this, wxID_ANY, wxT("30"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_textFieldheight->SetMaxLength( 30 ); 
+	gSizer4->Add( m_textFieldheight, 0, wxALL, 5 );
+	
+	sbSizer2->Add( gSizer4, 1, wxEXPAND, 5 );
+	
+	gSizer3->Add( sbSizer2, 1, wxEXPAND, 5 );
+	
+	wxStaticBoxSizer* sbSizer5;
+	sbSizer5 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, wxT("Grid Dimensions") ), wxVERTICAL );
+	
+	wxGridSizer* gSizer41;
+	gSizer41 = new wxGridSizer( 2, 2, 0, 0 );
+	
+	m_staticText41 = new wxStaticText( this, wxID_ANY, wxT("Width"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText41->Wrap( -1 );
+	gSizer41->Add( m_staticText41, 0, wxALL, 5 );
+	
+	m_textGridwidth = new wxTextCtrl( this, wxID_ANY, wxT("16"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_textGridwidth->SetMaxLength( 30 ); 
+	gSizer41->Add( m_textGridwidth, 0, wxALL, 5 );
+	
+	m_staticText51 = new wxStaticText( this, wxID_ANY, wxT("Height"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText51->Wrap( -1 );
+	gSizer41->Add( m_staticText51, 0, wxALL, 5 );
+	
+	m_textGridheight = new wxTextCtrl( this, wxID_ANY, wxT("30"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_textGridheight->SetMaxLength( 30 ); 
+	gSizer41->Add( m_textGridheight, 0, wxALL, 5 );
+	
+	sbSizer5->Add( gSizer41, 1, wxEXPAND, 5 );
+	
+	gSizer3->Add( sbSizer5, 1, wxEXPAND, 5 );
+	
+	wxStaticBoxSizer* sbSizer6;
+	sbSizer6 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, wxT("Options") ), wxVERTICAL );
+	
+	wxGridSizer* gSizer42;
+	gSizer42 = new wxGridSizer( 2, 2, 0, 0 );
+	
+	m_staticText42 = new wxStaticText( this, wxID_ANY, wxT("Unit"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText42->Wrap( -1 );
+	gSizer42->Add( m_staticText42, 0, wxALL, 5 );
+	
+	wxString m_choiceUnitChoices[] = { wxT("Meters"), wxT("Feet"), wxT("Yards") };
+	int m_choiceUnitNChoices = sizeof( m_choiceUnitChoices ) / sizeof( wxString );
+	m_choiceUnit = new wxChoice( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, m_choiceUnitNChoices, m_choiceUnitChoices, 0 );
+	m_choiceUnit->SetSelection( 2 );
+	gSizer42->Add( m_choiceUnit, 0, wxALL, 5 );
+	
+	sbSizer6->Add( gSizer42, 1, wxEXPAND, 5 );
+	
+	gSizer3->Add( sbSizer6, 1, wxEXPAND, 5 );
+	
+	
+	gSizer3->Add( 0, 0, 1, wxEXPAND, 5 );
+	
+	this->SetSizer( gSizer3 );
+	this->Layout();
+}
+
+guiResizeField::~guiResizeField()
+{
+}

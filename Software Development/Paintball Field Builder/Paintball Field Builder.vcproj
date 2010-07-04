@@ -34,7 +34,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="COMCTL32.lib"
-				AdditionalDependencies="OgreMain_d.lib ws2_32.lib wbemuuid.lib"
+				AdditionalDependencies="OgreMain_d.lib ws2_32.lib wxmsw26d_adv.lib wbemuuid.lib"
 				OutputFile="$(OutDir)/Paintball Field Builder.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="&quot;$(OGRE_HOME)\lib&quot;"
@@ -84,7 +84,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="COMCTL32.lib"
-				AdditionalDependencies="OgreMain.lib ws2_32.lib wbemuuid.lib OIS.lib wxmsw28_core.lib wxbase28.lib wxtiff.lib wxjpeg.lib wxpng.lib wxzlib.lib wxregex.lib wxexpat.lib winmm.lib comctl32.lib rpcrt4.lib wsock32.lib oleacc.lib"
+				AdditionalDependencies="OgreMain.lib ws2_32.lib wbemuuid.lib OIS.lib wxmsw28_core.lib wxbase28.lib wxtiff.lib wxjpeg.lib wxpng.lib wxzlib.lib wxmsw28_adv.lib wxregex.lib wxexpat.lib winmm.lib comctl32.lib rpcrt4.lib wsock32.lib oleacc.lib"
 				OutputFile="$(OutDir)/Paintball Field Builder.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="&quot;$(OGRE_HOME)\lib&quot;;&quot;C:\Business\C++\Commercial\Paintball Field Builder\Paintball Field Builder v2.0.0\Software Development\Paintball Field Builder\WSKey\cryptopp&quot;;C:\wxWidgets\lib\vc_lib"

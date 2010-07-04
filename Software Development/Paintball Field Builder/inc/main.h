@@ -11,6 +11,8 @@
 
 
 #include <wx/wx.h>
+#include <wx/image.h>
+#include <wx/splash.h>
 class guiParentWindow;
 class guiRenderWindow;
 class guiObjectWindow;
@@ -48,6 +50,7 @@ class MyApp : public wxApp
 	guiRenderWindow *m_RenderWindow;
 	// Child Object View Window
 	guiObjectWindow *m_ObjectWindow;
+	wxSplashScreen *m_LoadScreen;
 	// Enable to Activate Full Features of Product
 	bool m_IsRegistered;
 

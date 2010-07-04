@@ -24,14 +24,26 @@ CURSORTOOL MyApp::s_CursorTool = MOVEVIEW;
 VIEWMODE MyApp::s_ViewMode = PERSPECTIVE;
 bool MyApp::s_IsDragging = false;
 
+
 bool MyApp::OnInit()
 {
+	// Splash Screen
+	::wxInitAllImageHandlers();
+	wxBitmap bitmap;
+	if (bitmap.LoadFile("../license/loadscreen.bmp", wxBITMAP_TYPE_BMP)) {
+		m_LoadScreen = new wxSplashScreen(bitmap,
+		wxSPLASH_CENTRE_ON_SCREEN|wxSPLASH_TIMEOUT,
+		-1/*wait time*/, NULL, -1, wxDefaultPosition, wxDefaultSize,
+		wxSIMPLE_BORDER|wxSTAY_ON_TOP);
+	}
+	wxYield();
+
 	// Parent/Main Window
 	m_ParentWindow = new guiParentWindow(wxT("Paintball Field Builder"));
 	m_ParentWindow->Show(true);
 	m_ParentWindow->SetBackgroundColour(wxColour(0x70, 0x70, 0x70));
 	m_ParentWindow->Maximize();
-    
+
 	// Render/OGRE Window
 	m_RenderWindow = new guiRenderWindow(wxT("Paintball Field Builder"), m_ParentWindow);
 	m_RenderWindow->Show(true);
@@ -65,6 +77,11 @@ bool MyApp::OnInit()
 
 	// Rendering Loop
 	Connect(wxEVT_IDLE, wxIdleEventHandler(MyApp::OnIdle));
+
+	// END LOAD SCREEN
+	if (m_LoadScreen) {
+		m_LoadScreen->Destroy(); // Close and Free memory
+	}
 
 	return true;
 }

@@ -154,4 +154,30 @@ class guiNewField : public wxDialog
 	
 };
 
+///////////////////////////////////////////////////////////////////////////////
+/// Class guiResizeField
+///////////////////////////////////////////////////////////////////////////////
+class guiResizeField : public wxDialog 
+{
+	private:
+	
+	protected:
+		wxStaticText* m_staticText4;
+		wxTextCtrl* m_textFieldwidth;
+		wxStaticText* m_staticText5;
+		wxTextCtrl* m_textFieldheight;
+		wxStaticText* m_staticText41;
+		wxTextCtrl* m_textGridwidth;
+		wxStaticText* m_staticText51;
+		wxTextCtrl* m_textGridheight;
+		wxStaticText* m_staticText42;
+		wxChoice* m_choiceUnit;
+		
+	
+	public:
+		guiResizeField( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Resize Field"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 450,171 ), long style = wxDEFAULT_DIALOG_STYLE );
+		~guiResizeField();
+	
+};
+
 #endif //__guiDialogs__
