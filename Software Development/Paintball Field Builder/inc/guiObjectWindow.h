@@ -18,6 +18,7 @@ class guiObjectWindow : public wxScrolledWindow
 public:
 	guiObjectWindow(const wxString& title, wxWindow *parent);
 	~guiObjectWindow();
+	void DisconnectAllBunkers();
 	void OnSize(wxSizeEvent& WXUNUSED(event));
 	void OnButtonClick(wxMouseEvent& event);
 	void OnQuit(wxCommandEvent& event);

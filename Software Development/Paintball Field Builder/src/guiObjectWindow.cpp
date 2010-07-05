@@ -25,6 +25,19 @@ guiObjectWindow::~guiObjectWindow()
 {
 	// Resize Event
 	Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiObjectWindow::OnSize));
+
+	// Disconnect Bunkers
+	this->DisconnectAllBunkers();
+}
+
+void guiObjectWindow::DisconnectAllBunkers()
+{
+		for (unsigned int x = 0; x < MyApp::s_App.mFieldKit.GetBunkerCount(); x++)
+		{
+			wxBitmapButton *b = MyApp::s_App.mFieldKit.GetBunker(x)->button; // Store Bunker for use later
+				b->Disconnect(ID_BUTTON_HIGHEST+x, wxEVT_LEFT_DOWN, 
+					wxMouseEventHandler(guiObjectWindow::OnButtonClick));
+		}
 }
 
 
@@ -49,7 +62,7 @@ void guiObjectWindow::OnDraw(wxDC& dc)
 			if( b ) {
 				MyApp::s_App.mFieldKit.GetBunker(x)->button = b; // Store Bunker for use later
 				sizer->Add(b);
-				// REMEMBER TO DISCONNECT LATER (THIS CLEANUP IS NOT BEING DONE AT THE TIME)
+				// REMEMBER TO DISCONNECT LATER
 				b->Connect(ID_BUTTON_HIGHEST+x, wxEVT_LEFT_DOWN, 
 					wxMouseEventHandler(guiObjectWindow::OnButtonClick));
 			}
