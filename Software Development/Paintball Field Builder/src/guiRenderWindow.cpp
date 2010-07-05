@@ -98,6 +98,7 @@ void guiRenderWindow::OnLeftDown(wxMouseEvent& event) {
 		break;
 
 		case CLONEOBJ:
+			MyApp::s_App.SelectObject(x_pos, y_pos);
 			MyApp::s_App.CloneSelectedObj();
 		break;
 	}
