@@ -23,6 +23,7 @@ CWSLogFile MyApp::s_Log;
 CURSORTOOL MyApp::s_CursorTool = MOVEVIEW;
 VIEWMODE MyApp::s_ViewMode = PERSPECTIVE;
 bool MyApp::s_IsDragging = false;
+bool MyApp::s_IsDraggingFailed = false;
 
 
 bool MyApp::OnInit()

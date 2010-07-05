@@ -848,24 +848,24 @@ void PFBApplication::ToggleSolid(bool visible)
 	RENDER();
 }
 
-void PFBApplication::CreateObject(Real x, Real y, Ogre::String meshname, Ogre::Vector3 *vec, Ogre::String entityname)
+int PFBApplication::CreateObject(Real x, Real y, Ogre::String meshname, Ogre::Vector3 *vec, Ogre::String entityname)
 {
 	if (this->IsTerrainCreated() == false)
 	{
 		PFB_LOG("warning - terrain not created");
-		return;
+		return -1;
 	}
 
 	if (((Bunker*)mFieldKit.GetBunker(mBunker)) == NULL)
 	{
 		PFB_LOG("warning - No Bunker Is Selected");
-		return;
+		return -1;
 	}
 
 	if (this->BunkerClicked(x, y) == true)
 	{
 		PFB_LOG("warning - Cannot create a bunker on top of a bunker");
-		return;
+		return 0;
 	}
 
 	// Setup the ray scene query
@@ -905,7 +905,7 @@ void PFBApplication::CreateObject(Real x, Real y, Ogre::String meshname, Ogre::V
 				Bunker *bunker = mFieldKit.GetBunker(mBunker);
 				if (!bunker) {
 					PFB_LOG("Warning - Failed To Find Bunker");
-					return;
+					return -1;
 				}
 
 				// Debug
@@ -928,8 +928,8 @@ void PFBApplication::CreateObject(Real x, Real y, Ogre::String meshname, Ogre::V
 			}
 			if (!ent)
 			{
-				PFB_LOG("warning - No Entity Could be Created");
-				return;
+				PFB_LOG("warning - No Entity Could be Created, must be on terrain");
+				return 0;
 			}
 			if (vec == NULL)
 			{
@@ -941,8 +941,8 @@ void PFBApplication::CreateObject(Real x, Real y, Ogre::String meshname, Ogre::V
 			}
 			if(!node)
 			{
-				PFB_LOG("warning - A Node Could Not Be Created");
-				return;
+				PFB_LOG("warning - A Node Could Not Be Created, must be on terrain");
+				return 0;
 			}
 			node->attachObject(ent);
 			SCALEM(node);
@@ -951,9 +951,17 @@ void PFBApplication::CreateObject(Real x, Real y, Ogre::String meshname, Ogre::V
 			this->mSelectedObj = node;
 			this->mSelectedObj->showBoundingBox(true);
 			PFB_LOG("Info - Entity Object Created");
+		} else {
+			// ground whre creating the Bunker is too tall...
+			return 0;
 		}
+	} else {
+		// Can not create a bunker in the AIR
+		return 0;
 	}
+
 	RENDER();
+	return 1;
 }
 
 bool PFBApplication::IsTerrainCreated(void)

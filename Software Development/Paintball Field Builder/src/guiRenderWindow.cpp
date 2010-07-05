@@ -129,7 +129,18 @@ static wxPoint last_mouse_pos(event.GetPosition());
 
 		if ( MyApp::s_IsDragging == true ) {
 			// Drag N Drop
-			MyApp::s_App.MoveSelectedObj(x_pos, y_pos); PFB_LOG("render - move drag object");
+			if ( false == MyApp::s_IsDraggingFailed ) {
+				// If it did not fail, then move the bunker that was created
+				MyApp::s_App.MoveSelectedObj(x_pos, y_pos);
+				PFB_LOG("render - move drag object");
+			} else {
+					PFB_LOG("render - TRYING creating drag object again...");
+				//If the first drag and create bunker failed, try again
+				if ( 1 == MyApp::s_App.CreateObject(x_pos, y_pos) ) {
+					MyApp::s_IsDraggingFailed = false;
+					PFB_LOG("render - creating drag object again...");
+				}
+			}
 		} else {
 			switch ( MyApp::s_CursorTool ) {
 
@@ -184,7 +195,11 @@ void guiRenderWindow::OnEnterWindow(wxMouseEvent& event) {
 	if ( event.LeftIsDown() ) {
 	if ( MyApp::s_IsDragging == true ) {
 		// Drag N Drop
-		MyApp::s_App.CreateObject(x_pos, y_pos); PFB_LOG("render - creating drag object");
+		// 0 == did not click on terrain, 
+		if (0 == MyApp::s_App.CreateObject(x_pos, y_pos) ) {
+			MyApp::s_IsDraggingFailed = true;
+			PFB_LOG("render - failed creating drag object");
+		}
 	}
 	}
 }

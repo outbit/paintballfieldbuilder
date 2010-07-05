@@ -149,7 +149,8 @@ void ToggleShadows(bool visible);
 void ToggleGouraud(bool visible);
 void ToggleTexture(bool visible);
 void ToggleSolid(bool visible);
-void CreateObject(Real x, Real y, Ogre::String meshname = "", Ogre::Vector3 *vec = 0, Ogre::String entityname = "");
+// Return 1 if sucessful, 0 for failed because no terrain, -1 for failed with errors
+int CreateObject(Real x, Real y, Ogre::String meshname = "", Ogre::Vector3 *vec = 0, Ogre::String entityname = "");
 void SelectObject(Real x, Real y);
 void MoveSelectedObj(Real x, Real y);
 void CloneSelectedObj(void);
@@ -159,7 +160,15 @@ void SelectNone(void);
 void DeleteAllBunkers(void);
 void DeleteAllFieldObjects(void);
 bool MirrorBunkers(void);
-void SaveField() { if (this->mLastField.size() > 0) { this->SaveField(this->mLastField); } }
+// If the field has been saved before then return true
+bool SaveField()
+{
+	if (this->mLastField.size() > 0) {
+		this->SaveField(this->mLastField);
+		return true;
+	}
+	return false;
+}
 void SaveField(String name);
 void LoadField(String name);
 void LookTop(void);

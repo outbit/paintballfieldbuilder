@@ -65,6 +65,8 @@ class MyApp : public wxApp
 	static VIEWMODE s_ViewMode;
 	// Is dragging
 	static bool s_IsDragging;
+	// When the mouse enters the screen, but does NOT create a object
+	static bool s_IsDraggingFailed;
 
 	// Handle Initialization
 	virtual bool OnInit();

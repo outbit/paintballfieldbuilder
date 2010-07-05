@@ -348,7 +348,9 @@ wxFileDialog *openFileDialog =
 
 void guiParentWindow::OnFileSave(wxCommandEvent& event)
 {
-	MyApp::s_App.SaveField();
+	if ( false == MyApp::s_App.SaveField() ) {
+		this->OnFileSaveAs(event);
+	}
 }
 
 void guiParentWindow::OnFileSaveAs(wxCommandEvent& event)
