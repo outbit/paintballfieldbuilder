@@ -14,11 +14,19 @@
 #define OBJECT_SPACING 15
 #define ID_BUTTON_HIGHEST 1000
 
+
 guiObjectWindow::guiObjectWindow(const wxString& title, wxWindow *parent)
        : wxScrolledWindow(parent, wxID_ANY, wxPoint(0, 0), wxSize(128+25,parent->GetClientSize().y))
 {
 	// Resize Event
 	Connect(wxEVT_SIZE, wxSizeEventHandler(guiObjectWindow::OnSize));
+
+	// Create Sizer
+	if (!this->m_Sizer) {
+		this->m_Sizer = new wxBoxSizer(wxVERTICAL);
+		this->SetSizer(m_Sizer);
+		this->SetScrollRate(5,5);
+	}
 }
 
 guiObjectWindow::~guiObjectWindow()
@@ -54,22 +62,18 @@ void guiObjectWindow::OnDraw(wxDC& dc)
 	static onetime = 0;
 
 	if (onetime == 0) {
-		wxBoxSizer *sizer = new wxBoxSizer(wxVERTICAL);
-
 		for (unsigned int x = 0; x < MyApp::s_App.mFieldKit.GetBunkerCount(); x++)
 		{
 			wxBitmapButton *b = new wxBitmapButton(this, ID_BUTTON_HIGHEST+x, *(MyApp::s_App.mFieldKit.GetBunker(x)->bmp));
 			if( b ) {
 				MyApp::s_App.mFieldKit.GetBunker(x)->button = b; // Store Bunker for use later
-				sizer->Add(b);
+				m_Sizer->Add(b);
 				// REMEMBER TO DISCONNECT LATER
 				b->Connect(ID_BUTTON_HIGHEST+x, wxEVT_LEFT_DOWN, 
 					wxMouseEventHandler(guiObjectWindow::OnButtonClick));
 			}
 		}
-		this->SetSizer(sizer);
 		this->FitInside();
-		this->SetScrollRate(5,5);
 		onetime=1;
 	}
 }

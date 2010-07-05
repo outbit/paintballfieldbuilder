@@ -15,6 +15,9 @@
 
 class guiObjectWindow : public wxScrolledWindow
 {
+private:
+	wxBoxSizer *m_Sizer;
+
 public:
 	guiObjectWindow(const wxString& title, wxWindow *parent);
 	~guiObjectWindow();
