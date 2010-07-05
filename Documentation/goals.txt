@@ -1,9 +1,14 @@
-091909
-Get Undo/Redo Working with NO BUGs
-Get WSKey to work with locking software to computer name, etc.
-Get Bunker Select View rendered with OGRE instead of win32
-Port from win32 to wxWidgets so the software will be portable to other platforms
+07042010
 
-090909
-DONE - Port to OGRE 1.64
-DONE - Get Undo/Redo from paintball field builder 1.3.0 backup
+Fixes:
+resize field
+Save screenshot
+Register - trial vs registered features
+Quick keys - alt+F4, Delete, Rotate
+Fix load fieldkit bugs
+fix, when just the save button is pressed on a new field, use save as.
+
+Add Features:
+Undo, redo
+snap to grid
+select multiple objects
