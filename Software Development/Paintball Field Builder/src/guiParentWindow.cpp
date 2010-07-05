@@ -528,7 +528,8 @@ void guiParentWindow::OnCloneObj(wxCommandEvent& event)
 void guiParentWindow::OnKeyDown(wxKeyEvent& event)
 {
 PFB_LOG("pressing dude");
-	switch (event.GetKeyCode())
+	int val = event.GetKeyCode();
+	switch (val)
 	{
 		case WXK_F4:
 				// alt+f4
@@ -547,6 +548,12 @@ PFB_LOG("pressing dude");
 			MyApp::s_App.DeleteSelectedObj();
 		break;
 
+		// DELETE KEY - BUG in wxWidgets for WIN32
+		case 8:
+			PFB_LOG("hot stuff");
+			MyApp::s_App.DeleteSelectedObj();
+		break;
+
 		case WXK_LEFT:
 		break;
 
@@ -560,7 +567,10 @@ PFB_LOG("pressing dude");
 		break;
 
 		default:
-			PFB_LOG("here ya goooo");
+			/*
+			wxString str = wxString::Format(wxT("key code: %i"), val); 
+			std::string stlstring = std::string(str.mb_str());
+			PFB_LOG(stlstring.c_str());*/
 		break;
 	}
 }
