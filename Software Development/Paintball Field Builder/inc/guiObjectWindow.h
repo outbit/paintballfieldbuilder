@@ -15,14 +15,6 @@
 
 class guiObjectWindow : public wxScrolledWindow
 {
-protected:
-	wxMenuBar *mMenubar;
-	wxMenu *mFile;
-	wxMenu *mEdit;
-	wxMenu *mView;
-	wxMenu *mRender;
-	wxMenu *mAbout;
-
 public:
 	guiObjectWindow(const wxString& title, wxWindow *parent);
 	~guiObjectWindow();
