@@ -306,14 +306,16 @@ guiNewField::guiNewField( wxWindow* parent, wxWindowID id, const wxString& title
 	
 	gSizer3->Add( sbSizer6, 1, wxEXPAND, 5 );
 	
-	
-	gSizer3->Add( 0, 0, 1, wxEXPAND, 5 );
+	wxStaticBoxSizer* sbSizer12;
+	sbSizer12 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, wxEmptyString ), wxVERTICAL );
 	
 	m_buttonCreate = new wxButton( this, wxID_ANY, wxT("Create Field"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer3->Add( m_buttonCreate, 0, wxALL, 5 );
+	sbSizer12->Add( m_buttonCreate, 0, wxALL, 5 );
 	
 	m_buttonCancel = new wxButton( this, wxID_ANY, wxT("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
-	gSizer3->Add( m_buttonCancel, 0, wxALL, 5 );
+	sbSizer12->Add( m_buttonCancel, 0, wxALL, 5 );
+	
+	gSizer3->Add( sbSizer12, 1, wxEXPAND, 5 );
 	
 	this->SetSizer( gSizer3 );
 	this->Layout();
@@ -409,13 +411,23 @@ guiResizeField::guiResizeField( wxWindow* parent, wxWindowID id, const wxString&
 	
 	gSizer3->Add( sbSizer6, 1, wxEXPAND, 5 );
 	
+	wxStaticBoxSizer* sbSizer11;
+	sbSizer11 = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, wxEmptyString ), wxVERTICAL );
 	
-	gSizer3->Add( 0, 0, 1, wxEXPAND, 5 );
+	m_OkButton = new wxButton( this, wxID_ANY, wxT("Resize"), wxDefaultPosition, wxDefaultSize, 0 );
+	sbSizer11->Add( m_OkButton, 0, wxALL, 5 );
+	
+	gSizer3->Add( sbSizer11, 1, wxEXPAND, 5 );
 	
 	this->SetSizer( gSizer3 );
 	this->Layout();
+	
+	// Connect Events
+	m_OkButton->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( guiResizeField::OnOkButton ), NULL, this );
 }
 
 guiResizeField::~guiResizeField()
 {
+	// Disconnect Events
+	m_OkButton->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( guiResizeField::OnOkButton ), NULL, this );
 }

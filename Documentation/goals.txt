@@ -1,8 +1,6 @@
 07042010
 
 Fixes:
-resize field
-Save screenshot
 Register - trial vs registered features
 Quick keys - alt+F4, Delete, Rotate
 Fix load fieldkit bugs

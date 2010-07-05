@@ -4,6 +4,14 @@
 
 guiNewFieldDialog::guiNewFieldDialog(wxWindow *parent) : guiNewField(parent)
 {
+	// Choose the current UNIT of measurement
+	/*if (MyApp::s_App.mUnitM == WORLDUNITSPERYARD) {
+		this->m_choiceUnit->SetColumns(2);
+	} else if (MyApp::s_App.mUnitM == WORLDUNITSPERMETER) {
+		this->m_choiceUnit->SetColumns(0);
+	} else if (MyApp::s_App.mUnitM == WORLDUNITSPERFOOT) {
+		this->m_choiceUnit->SetColumns(1);
+	}*/
 }
 
 guiNewFieldDialog::~guiNewFieldDialog()

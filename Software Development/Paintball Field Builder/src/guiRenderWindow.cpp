@@ -188,5 +188,6 @@ void guiRenderWindow::OnEnterWindow(wxMouseEvent& event) {
 	}
 }
 
-void guiRenderWindow::OnLeaveWindow(wxMouseEvent& event) {
+void guiRenderWindow::OnLeaveWindow(wxMouseEvent& event)
+{
 }

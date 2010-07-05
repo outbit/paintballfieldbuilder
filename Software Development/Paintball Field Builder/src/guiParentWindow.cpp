@@ -13,6 +13,7 @@
 #include "../inc/guiInfoDialog.h"
 #include "../inc/guiRegisterDialog.h"
 #include "../inc/guiViewOptionsDialog.h"
+#include "../inc/guiResizeFieldDialog.h"
 #include "../inc/Application.h"
 #include <wx/filename.h>
 #include <wx/stdpaths.h>
@@ -79,13 +80,13 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	SetMenuBar(mMenubar);
 
 	// Toolbar
-	wxBitmap rotateview(wxT("../media/gui/rotateview.bmp"), wxBITMAP_TYPE_BMP);
-	wxBitmap moveview(wxT("../media/gui/moveview.bmp"), wxBITMAP_TYPE_BMP);
-	wxBitmap moveobj(wxT("../media/gui/moveobj.bmp"), wxBITMAP_TYPE_BMP);
-	wxBitmap rotateobj(wxT("../media/gui/rotateobj.bmp"), wxBITMAP_TYPE_BMP);
-	wxBitmap selectobj(wxT("../media/gui/selectobj.bmp"), wxBITMAP_TYPE_BMP);
-	wxBitmap createobj(wxT("../media/gui/createobj.bmp"), wxBITMAP_TYPE_BMP);
-	wxBitmap cloneobj(wxT("../media/gui/cloneobj.bmp"), wxBITMAP_TYPE_BMP);
+	wxBitmap rotateview(wxT("../media/gui/rotateview.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap moveview(wxT("../media/gui/moveview.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap moveobj(wxT("../media/gui/moveobj.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap rotateobj(wxT("../media/gui/rotateobj.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap selectobj(wxT("../media/gui/selectobj.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap createobj(wxT("../media/gui/createobj.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap cloneobj(wxT("../media/gui/cloneobj.png"), wxBITMAP_TYPE_PNG);
 
 	wxToolBar *mToolbar = this->CreateToolBar();
 	mToolbar->SetToolBitmapSize(wxSize(20,20));
@@ -158,6 +159,10 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	Connect(ID_VIEW_OPTIONS, wxEVT_COMMAND_MENU_SELECTED, 
 		wxCommandEventHandler(guiParentWindow::OnViewOptions));
 
+	// Save Screenshot
+	Connect(ID_RENDER_SAVESCREENSHOT, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnSaveScreenshot));
+
 	// Help
 	Connect(ID_ABOUT_HELP, wxEVT_COMMAND_MENU_SELECTED, 
 		wxCommandEventHandler(guiParentWindow::OnHelp));
@@ -193,6 +198,9 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	 // Resize
 	Connect(wxEVT_SIZE, wxSizeEventHandler(guiParentWindow::OnSize));
 	
+	// Key Down
+	Connect(wxEVT_KEY_DOWN, wxKeyEventHandler(guiParentWindow::OnKeyDown));
+
 	// Center - Speak English!! ;)
 	Centre();
 }
@@ -254,6 +262,10 @@ guiParentWindow::~guiParentWindow()
 	Disconnect(ID_VIEW_OPTIONS, wxEVT_COMMAND_MENU_SELECTED, 
 		wxCommandEventHandler(guiParentWindow::OnViewOptions));
 
+	// Save Screenshot
+	Disconnect(ID_RENDER_SAVESCREENSHOT, wxEVT_COMMAND_MENU_SELECTED, 
+		wxCommandEventHandler(guiParentWindow::OnSaveScreenshot));
+
 	// Help
 	Disconnect(ID_ABOUT_HELP, wxEVT_COMMAND_MENU_SELECTED, 
 		wxCommandEventHandler(guiParentWindow::OnHelp));
@@ -288,6 +300,9 @@ guiParentWindow::~guiParentWindow()
 
 	 // Resize
 	Disconnect(wxEVT_SIZE, wxSizeEventHandler(guiParentWindow::OnSize));
+
+	// Key Down
+	Disconnect(wxEVT_KEY_DOWN, wxKeyEventHandler(guiParentWindow::OnKeyDown));
 }
 
 void guiParentWindow::OnSize(wxSizeEvent& WXUNUSED(event))
@@ -400,7 +415,9 @@ void guiParentWindow::OnMirrorField(wxCommandEvent& event)
 
 void guiParentWindow::OnResizeField(wxCommandEvent& event)
 {
-	// Grap stuff and resize
+	wxDialog *window = new guiResizeFieldDialog(this);
+	window->Show(true);
+	window->SetAutoLayout(true);
 }
 
 void guiParentWindow::OnViewTop(wxCommandEvent& event)
@@ -432,6 +449,23 @@ void guiParentWindow::OnViewOptions(wxCommandEvent& event)
 	wxDialog *window = new guiViewOptionsDialog(this);
 	window->Show(true);
 	window->SetAutoLayout(true);
+}
+
+void guiParentWindow::OnSaveScreenshot(wxCommandEvent& event)
+{
+wxFileDialog *openFileDialog =
+		new wxFileDialog( this, _("Save Screenshot"), wxStandardPaths::Get().GetExecutablePath(),
+							"", "*.bmp", wxSAVE, wxDefaultPosition);
+ 
+	if ( openFileDialog->ShowModal() == wxID_OK )
+	{
+		wxString path;
+		path.append( openFileDialog->GetDirectory() );
+		path.append( wxFileName::GetPathSeparator() );
+		path.append( openFileDialog->GetFilename() );
+		if (!path.CmpNoCase(".bmp")) { path.append(".bmp"); }
+		MyApp::s_App.TakeScreenShot(path.c_str());
+	}
 }
 
 void guiParentWindow::OnHelp(wxCommandEvent& WXUNUSED(event))
@@ -489,4 +523,44 @@ void guiParentWindow::OnCreateObj(wxCommandEvent& event)
 void guiParentWindow::OnCloneObj(wxCommandEvent& event)
 {
 	MyApp::s_CursorTool = CLONEOBJ; 
+}
+
+void guiParentWindow::OnKeyDown(wxKeyEvent& event)
+{
+PFB_LOG("pressing dude");
+	switch (event.GetKeyCode())
+	{
+		case WXK_F4:
+				// alt+f4
+				if (event.AltDown()) {
+					this->Close(true);
+				}
+		break;
+
+		case WXK_DELETE:
+			PFB_LOG("hot stuff");
+			MyApp::s_App.DeleteSelectedObj();
+		break;
+
+		case WXK_NUMPAD_DELETE:
+			PFB_LOG("hot stuff");
+			MyApp::s_App.DeleteSelectedObj();
+		break;
+
+		case WXK_LEFT:
+		break;
+
+		case WXK_RIGHT:
+		break;
+
+		case WXK_UP:
+		break;
+
+		case WXK_DOWN:
+		break;
+
+		default:
+			PFB_LOG("here ya goooo");
+		break;
+	}
 }

@@ -81,6 +81,8 @@ public:
 	void OnViewReset(wxCommandEvent& event);
 	void OnViewOptions(wxCommandEvent& event);
 
+	void OnSaveScreenshot(wxCommandEvent& event);
+
 	void OnHelp(wxCommandEvent& event);
 	void OnInfo(wxCommandEvent& event);
 	void OnRegister(wxCommandEvent& event);
@@ -92,6 +94,8 @@ public:
 	void OnSelectObj(wxCommandEvent& event);
 	void OnCreateObj(wxCommandEvent& event);
 	void OnCloneObj(wxCommandEvent& event);
+
+	void OnKeyDown(wxKeyEvent& event);
 };
 
 #endif // guiParentWindow_H

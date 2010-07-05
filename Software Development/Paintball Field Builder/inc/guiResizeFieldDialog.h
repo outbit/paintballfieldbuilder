@@ -20,8 +20,7 @@ class guiResizeFieldDialog : public guiResizeField
 public:
 	guiResizeFieldDialog(wxWindow *parent);
 	~guiResizeFieldDialog();
-	void OnCreateButton( wxCommandEvent& event );
-	void OnCancelButton( wxCommandEvent& event );
+	void OnOkButton( wxCommandEvent& event );
 };
 
 

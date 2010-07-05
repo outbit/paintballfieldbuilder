@@ -139,7 +139,6 @@ class guiNewField : public wxDialog
 		wxTextCtrl* m_textGridheight;
 		wxStaticText* m_staticText42;
 		wxChoice* m_choiceUnit;
-		
 		wxButton* m_buttonCreate;
 		wxButton* m_buttonCancel;
 		
@@ -149,7 +148,7 @@ class guiNewField : public wxDialog
 		
 	
 	public:
-		guiNewField( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("New Field"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 428,237 ), long style = wxDEFAULT_DIALOG_STYLE );
+		guiNewField( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("New Field"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 428,191 ), long style = wxDEFAULT_DIALOG_STYLE );
 		~guiNewField();
 	
 };
@@ -172,10 +171,14 @@ class guiResizeField : public wxDialog
 		wxTextCtrl* m_textGridheight;
 		wxStaticText* m_staticText42;
 		wxChoice* m_choiceUnit;
+		wxButton* m_OkButton;
+		
+		// Virtual event handlers, overide them in your derived class
+		virtual void OnOkButton( wxCommandEvent& event ){ event.Skip(); }
 		
 	
 	public:
-		guiResizeField( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Resize Field"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 450,171 ), long style = wxDEFAULT_DIALOG_STYLE );
+		guiResizeField( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Resize Field"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 450,169 ), long style = wxDEFAULT_DIALOG_STYLE );
 		~guiResizeField();
 	
 };

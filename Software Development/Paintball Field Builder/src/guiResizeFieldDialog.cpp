@@ -4,13 +4,22 @@
 
 guiResizeFieldDialog::guiResizeFieldDialog(wxWindow *parent) : guiResizeField(parent)
 {
+	// Choose the current UNIT of measurement
+	/*
+	if (MyApp::s_App.mUnitM == WORLDUNITSPERYARD) {
+		this->m_choiceUnit->SetColumns(2);
+	} else if (MyApp::s_App.mUnitM == WORLDUNITSPERMETER) {
+		this->m_choiceUnit->SetColumns(0);
+	} else if (MyApp::s_App.mUnitM == WORLDUNITSPERFOOT) {
+		this->m_choiceUnit->SetColumns(1);
+	}*/
 }
 
 guiResizeFieldDialog::~guiResizeFieldDialog()
 {
 }
 
-void guiResizeFieldDialog::OnCreateButton(wxCommandEvent &event)
+void guiResizeFieldDialog::OnOkButton(wxCommandEvent &event)
 {
 	if (this->m_choiceUnit->GetCurrentSelection() == 2)
 	{
@@ -80,12 +89,6 @@ void guiResizeFieldDialog::OnCreateButton(wxCommandEvent &event)
 		MyApp::s_App.mGRIDLENGTH = MIN_GRIDLENGTH;
 	}
 
-	// Re-Create Scene
-	MyApp::s_App.DeleteAllBunkers();
+	// Resize the field (scene)
 	MyApp::s_App.ReCreateScene();
-}
-
-
-void guiResizeFieldDialog::OnCancelButton(wxCommandEvent &event) {
-	this->Close();
 }
