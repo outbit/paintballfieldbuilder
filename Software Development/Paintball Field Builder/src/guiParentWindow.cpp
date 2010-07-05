@@ -89,7 +89,7 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	wxBitmap createobj(wxT("../media/gui/createobj.png"), wxBITMAP_TYPE_PNG);
 	wxBitmap cloneobj(wxT("../media/gui/cloneobj.png"), wxBITMAP_TYPE_PNG);
 
-	wxToolBar *mToolbar = this->CreateToolBar();
+	mToolbar = this->CreateToolBar();
 	mToolbar->SetToolBitmapSize(wxSize(20,20));
 
 	mToolbar->AddTool(ID_ROTATEVIEW, rotateview, wxT("Rotate View"));
@@ -498,37 +498,51 @@ void guiParentWindow::OnRegister(wxCommandEvent& WXUNUSED(event))
 
 void guiParentWindow::OnMoveView(wxCommandEvent& event)
 {
-	MyApp::s_CursorTool = MOVEVIEW; 
+	this->EnableLastToolbar();
+	MyApp::s_CursorTool = MOVEVIEW;
+	mToolbar->EnableTool(ID_MOVEVIEW, false);
 }
 
 void guiParentWindow::OnRotateView(wxCommandEvent& event)
 {
+	this->EnableLastToolbar();
 	MyApp::s_CursorTool = ROTATEVIEW;
+	mToolbar->EnableTool(ID_ROTATEVIEW, false);
 }
 
 void guiParentWindow::OnMoveObj(wxCommandEvent& event)
 {
+	this->EnableLastToolbar();
 	MyApp::s_CursorTool = MOVEOBJ;
+	mToolbar->EnableTool(ID_MOVEOBJ, false);
 }
 
 void guiParentWindow::OnRotateObj(wxCommandEvent& event)
 {
+	this->EnableLastToolbar();
 	MyApp::s_CursorTool = ROTATEOBJ; 
+	mToolbar->EnableTool(ID_ROTATEOBJ, false);
 }
 
 void guiParentWindow::OnSelectObj(wxCommandEvent& event)
 {
+	this->EnableLastToolbar();
 	MyApp::s_CursorTool = SELECTOBJ; 
+	mToolbar->EnableTool(ID_SELECTOBJ, false);
 }
 
 void guiParentWindow::OnCreateObj(wxCommandEvent& event)
 {
+	this->EnableLastToolbar();
 	MyApp::s_CursorTool = CREATEOBJ; 
+	mToolbar->EnableTool(ID_CREATEOBJ, false);
 }
 
 void guiParentWindow::OnCloneObj(wxCommandEvent& event)
 {
+	this->EnableLastToolbar();
 	MyApp::s_CursorTool = CLONEOBJ; 
+	mToolbar->EnableTool(ID_CLONEOBJ, false);
 }
 
 void guiParentWindow::OnKeyDown(wxKeyEvent& event)

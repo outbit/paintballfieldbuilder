@@ -1,8 +1,7 @@
-07042010
+07052010
 
 Fixes:
 Register - trial vs registered features
-Fix load fieldkit bugs
 
 Add Features:
 Undo, redo

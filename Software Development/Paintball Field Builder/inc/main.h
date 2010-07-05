@@ -21,7 +21,7 @@ class CWSLogFile;
 
 enum CURSORTOOL
 {
-	MOVEVIEW,
+	MOVEVIEW = 0,
 	ROTATEVIEW,
 	MOVEOBJ,
 	ROTATEOBJ,
@@ -32,7 +32,7 @@ enum CURSORTOOL
 
 enum VIEWMODE
 {
-	TOP,
+	TOP = 0,
 	FIRSTPERSON,
 	PERSPECTIVE
 };
@@ -61,7 +61,7 @@ class MyApp : public wxApp
 	// Log File
 	static CWSLogFile s_Log;
 	// The Current Cursor Tool Mode
-	static CURSORTOOL s_CursorTool;
+	static enum CURSORTOOL s_CursorTool;
 	// The Current View Mode
 	static VIEWMODE s_ViewMode;
 	// Is dragging

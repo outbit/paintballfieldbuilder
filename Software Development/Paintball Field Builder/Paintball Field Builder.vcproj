@@ -236,10 +236,10 @@
 				RelativePath=".\Paintball Field Builder.rc">
 			</File>
 			<File
-				RelativePath=".\pfbicon1.ico">
+				RelativePath=".\license\pfbicon1.ico">
 			</File>
 			<File
-				RelativePath=".\pfbicon2.ico">
+				RelativePath=".\license\pfbicon2.ico">
 			</File>
 		</Filter>
 	</Files>

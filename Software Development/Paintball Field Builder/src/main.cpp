@@ -20,7 +20,7 @@ IMPLEMENT_APP(MyApp)
 // Static Class Variables
 PFBApplication MyApp::s_App;
 CWSLogFile MyApp::s_Log;
-CURSORTOOL MyApp::s_CursorTool = MOVEVIEW;
+enum CURSORTOOL MyApp::s_CursorTool = MOVEVIEW;
 VIEWMODE MyApp::s_ViewMode = PERSPECTIVE;
 bool MyApp::s_IsDragging = false;
 bool MyApp::s_IsDraggingFailed = false;
