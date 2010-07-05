@@ -14,6 +14,7 @@
 #include "../inc/guiRegisterDialog.h"
 #include "../inc/guiViewOptionsDialog.h"
 #include "../inc/guiResizeFieldDialog.h"
+#include "../inc/guiObjectWindow.h"
 #include "../inc/Application.h"
 #include <wx/filename.h>
 #include <wx/stdpaths.h>
@@ -381,8 +382,9 @@ wxFileDialog *openFileDialog =
 		path.append( openFileDialog->GetDirectory() );
 		path.append( wxFileName::GetPathSeparator() );
 		path.append( openFileDialog->GetFilename() );
-		// DONT FORGET TO REDRAW THE MENU
 		MyApp::s_App.mFieldKit.Load(path.c_str());
+		// Redraw the Object Window
+		guiObjectWindow::s_Redraw = true;
 	}
 }
 

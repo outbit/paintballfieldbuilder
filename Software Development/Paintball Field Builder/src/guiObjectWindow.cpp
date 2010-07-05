@@ -14,19 +14,19 @@
 #define OBJECT_SPACING 15
 #define ID_BUTTON_HIGHEST 1000
 
+bool guiObjectWindow::s_Redraw = true;
+
 
 guiObjectWindow::guiObjectWindow(const wxString& title, wxWindow *parent)
        : wxScrolledWindow(parent, wxID_ANY, wxPoint(0, 0), wxSize(128+25,parent->GetClientSize().y))
 {
+	// Create Sizer
+	this->m_Sizer = new wxBoxSizer(wxVERTICAL);
+	this->SetSizer(m_Sizer);
+	this->SetScrollRate(5,5);
+
 	// Resize Event
 	Connect(wxEVT_SIZE, wxSizeEventHandler(guiObjectWindow::OnSize));
-
-	// Create Sizer
-	if (!this->m_Sizer) {
-		this->m_Sizer = new wxBoxSizer(wxVERTICAL);
-		this->SetSizer(m_Sizer);
-		this->SetScrollRate(5,5);
-	}
 }
 
 guiObjectWindow::~guiObjectWindow()
@@ -58,23 +58,37 @@ void guiObjectWindow::OnSize(wxSizeEvent& WXUNUSED(event))
 
 void guiObjectWindow::OnDraw(wxDC& dc)
 {
-	// WORKS BUT MAKE BETTER MAN
-	static onetime = 0;
-
-	if (onetime == 0) {
+	if ( true == guiObjectWindow::s_Redraw ) {
+		m_Sizer->Clear(true); // Delete all items from sizer
 		for (unsigned int x = 0; x < MyApp::s_App.mFieldKit.GetBunkerCount(); x++)
 		{
-			wxBitmapButton *b = new wxBitmapButton(this, ID_BUTTON_HIGHEST+x, *(MyApp::s_App.mFieldKit.GetBunker(x)->bmp));
-			if( b ) {
-				MyApp::s_App.mFieldKit.GetBunker(x)->button = b; // Store Bunker for use later
+			wxBitmapButton *b = NULL;
+
+			// Check if button image is already allocated
+			// FOR THIS to work memset() the structur on init
+			//if ( MyApp::s_App.mFieldKit.GetBunker(x)->button == NULL) { 
+				b = new wxBitmapButton(this, ID_BUTTON_HIGHEST+x, *(MyApp::s_App.mFieldKit.GetBunker(x)->bmp));
+				if( b ) {
+					MyApp::s_App.mFieldKit.GetBunker(x)->button = b; // Store Bunker for use later
+				}
+			/*} else {
+				// This should be a rare occurance, infact it should NEVER happen
+				b = MyApp::s_App.mFieldKit.GetBunker(x)->button;
+				PFB_LOG("warning: the bunker image was already there, HOW DID THAT HAPPEN");
+			}*/
+
+			// Add Button to sizer
+			if ( b ) {
 				m_Sizer->Add(b);
 				// REMEMBER TO DISCONNECT LATER
 				b->Connect(ID_BUTTON_HIGHEST+x, wxEVT_LEFT_DOWN, 
 					wxMouseEventHandler(guiObjectWindow::OnButtonClick));
 			}
 		}
+
+		// This makes the sizer fit in the window
 		this->FitInside();
-		onetime=1;
+		guiObjectWindow::s_Redraw = false;
 	}
 }
 

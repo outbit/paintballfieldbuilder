@@ -19,6 +19,8 @@ private:
 	wxBoxSizer *m_Sizer;
 
 public:
+	static bool s_Redraw;
+
 	guiObjectWindow(const wxString& title, wxWindow *parent);
 	~guiObjectWindow();
 	void DisconnectAllBunkers();

@@ -50,6 +50,7 @@ class MyApp : public wxApp
 	guiRenderWindow *m_RenderWindow;
 	// Child Object View Window
 	guiObjectWindow *m_ObjectWindow;
+	// Load Screen
 	wxSplashScreen *m_LoadScreen;
 	// Enable to Activate Full Features of Product
 	bool m_IsRegistered;
