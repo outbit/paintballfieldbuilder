@@ -3,8 +3,6 @@
 Fixes:
 Register - trial vs registered features
 Fix load fieldkit bugs
-fix, when just the save button is pressed on a new field, use save as.
-Give warning when mirror field fails.
 
 Add Features:
 Undo, redo

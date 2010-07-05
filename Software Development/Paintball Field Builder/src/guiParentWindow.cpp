@@ -412,7 +412,9 @@ void guiParentWindow::OnSelectNone(wxCommandEvent& event)
 }
 void guiParentWindow::OnMirrorField(wxCommandEvent& event)
 {
-	MyApp::s_App.MirrorBunkers();
+	if ( false == MyApp::s_App.MirrorBunkers() ) {
+		wxMessageBox("Mirror Failed, All the bunkers must only be on one side of the 50 yard line.");
+	}
 }
 
 void guiParentWindow::OnResizeField(wxCommandEvent& event)
