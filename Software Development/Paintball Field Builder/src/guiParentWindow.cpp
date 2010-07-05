@@ -1,9 +1,9 @@
 /**
  * ---------------------------------------------------------
  * @author: David Whiteside
- * @date: 09/20/09
+ * @date: 07/05/10
  * @description: The Main Parent Window of EVERY other Window
- * Copyright 2004-2009 Whiteside Solutions LLC (www.whitesidesolutions.com)
+ * Copyright 2004-2010 Whiteside Solutions LLC (www.whitesidesolutions.com)
  * ---------------------------------------------------------
  */
 
@@ -89,18 +89,29 @@ guiParentWindow::guiParentWindow(const wxString& title)
 	wxBitmap createobj(wxT("../media/gui/createobj.png"), wxBITMAP_TYPE_PNG);
 	wxBitmap cloneobj(wxT("../media/gui/cloneobj.png"), wxBITMAP_TYPE_PNG);
 
+	wxBitmap rotateview_s(wxT("../media/gui/rotateview_s.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap moveview_s(wxT("../media/gui/moveview_s.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap moveobj_s(wxT("../media/gui/moveobj_s.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap rotateobj_s(wxT("../media/gui/rotateobj_s.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap selectobj_s(wxT("../media/gui/selectobj_s.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap createobj_s(wxT("../media/gui/createobj_s.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap cloneobj_s(wxT("../media/gui/cloneobj_s.png"), wxBITMAP_TYPE_PNG);
+
 	mToolbar = this->CreateToolBar();
 	mToolbar->SetToolBitmapSize(wxSize(20,20));
 
-	mToolbar->AddTool(ID_ROTATEVIEW, rotateview, wxT("Rotate View"));
-	mToolbar->AddTool(ID_MOVEVIEW, moveview, wxT("Move View"));
+	mToolbar->AddTool(ID_ROTATEVIEW, wxT(""), rotateview, rotateview_s, wxITEM_NORMAL, wxT("Rotate View"));
+	mToolbar->AddTool(ID_MOVEVIEW, wxT(""), moveview, moveview_s, wxITEM_NORMAL, wxT("Move View"));
 	mToolbar->AddSeparator();
 	
-	mToolbar->AddTool(ID_MOVEOBJ, moveobj, wxT("Move Object"));
-	mToolbar->AddTool(ID_ROTATEOBJ, rotateobj, wxT("Rotate Object"));
-	mToolbar->AddTool(ID_SELECTOBJ, selectobj, wxT("Select Object"));
-	mToolbar->AddTool(ID_CREATEOBJ, createobj, wxT("Create Object"));
-	mToolbar->AddTool(ID_CLONEOBJ, cloneobj, wxT("Clone Object"));
+	mToolbar->AddTool(ID_MOVEOBJ, wxT(""), moveobj, moveobj_s, wxITEM_NORMAL, wxT("Move Object"));
+	mToolbar->AddTool(ID_ROTATEOBJ, wxT(""), rotateobj, rotateobj_s, wxITEM_NORMAL, wxT("Rotate Object"));
+	mToolbar->AddTool(ID_SELECTOBJ, wxT(""), selectobj, selectobj_s, wxITEM_NORMAL, wxT("Select Object"));
+	mToolbar->AddTool(ID_CREATEOBJ, wxT(""), createobj, createobj_s, wxITEM_NORMAL, wxT("Create Object"));
+	mToolbar->AddTool(ID_CLONEOBJ, wxT(""), cloneobj, cloneobj_s, wxITEM_NORMAL, wxT("Clone Object"));
+
+	// Set defaults
+	mToolbar->EnableTool(ID_MOVEVIEW, false);
 
 	// Set ToolBar
 	mToolbar->Realize();
@@ -304,6 +315,22 @@ guiParentWindow::~guiParentWindow()
 
 	// Key Down
 	Disconnect(wxEVT_KEY_DOWN, wxKeyEventHandler(guiParentWindow::OnKeyDown));
+}
+
+void guiParentWindow::EnableLastToolbar() {
+	int old_tool_id = 0;
+	int val = (int)(MyApp::s_CursorTool);
+	if (val == ROTATEVIEW) old_tool_id = ID_ROTATEVIEW;
+	if (val == MOVEVIEW) old_tool_id = ID_MOVEVIEW;
+	if (val == MOVEOBJ) old_tool_id = ID_MOVEOBJ;
+	if (val == ROTATEOBJ) old_tool_id = ID_ROTATEOBJ;
+	if (val == SELECTOBJ) old_tool_id = ID_SELECTOBJ;
+	if (val == CREATEOBJ) old_tool_id = ID_CREATEOBJ;
+	if (val == CLONEOBJ) old_tool_id = ID_CLONEOBJ;
+
+	if (old_tool_id != 0) {
+		mToolbar->EnableTool(old_tool_id, true);
+	}
 }
 
 void guiParentWindow::OnSize(wxSizeEvent& WXUNUSED(event))

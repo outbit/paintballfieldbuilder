@@ -72,7 +72,7 @@
 			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;C:\Business\C++\Commercial\Paintball Field Builder\Paintball Field Builder v2.0.0\Software Development\Paintball Field Builder\WSKey\cryptopp\inc&quot;;&quot;$(OGRE_HOME)\include&quot;;C:\wxWidgets\include;C:\wxWidgets\lib\vc_lib\msw"
+				AdditionalIncludeDirectories="&quot;C:\Business\C++\Commercial\Paintball Field Builder\Paintball Field Builder v2.0.0\Software Development\Paintball Field Builder\WSKey\cryptopp\inc&quot;;&quot;$(OGRE_HOME)\include&quot;;C:\wxWidgets\include;C:\wxWidgets\lib\vc_lib\msw;&quot;C:\Business\C++\Commercial\Paintball Field Builder\Paintball Field Builder v2.0.0\Software Development\Paintball Field Builder\WSKey&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"

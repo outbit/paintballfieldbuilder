@@ -27,8 +27,8 @@ namespace WSKey
 {
 
 // User Custom Defines
-//#define WSK_FULL                                        // for full key administration and generation
-#define WSK_LOG(a) WSKEY_LOGM(a)        // Custom Logging Function
+//#define WSK_FULL                              // for full key administration and generation
+#define WSK_LOG(a) WSKEY_LOGM(a)				// Custom Logging Function
 #define WSK_UNIQUE1 'p'                         // ID
 #define WSK_UNIQUE2 'f'                         // ID
 #define WSK_UNIQUE3 'b'                         // ID
@@ -37,7 +37,7 @@ namespace WSKey
 // Defines
 #ifndef WSK_LOG
 #define WSK_LOG(a)
-#error "Please Define WSK_LOG to allow logging
+#error "Please Define WSK_LOG to allow logging"
 #endif //WSK_LOG
 
 #define WSK_VERSION             1
@@ -108,14 +108,6 @@ inline bool IsTrial() {
 inline WSK_BYTE *GetKey() {
 	return this->m_key.k;
 }
-inline LogKey()
-{
-	char asciikey[WSK_KEYLEN+1] = {0};
-	memset(asciikey, 0, sizeof(asciikey));
-	for (int x = 0; x < WSK_KEYLEN; x++)
-		asciikey[x] = g_valid_to_ascii[this->m_key.k[x]];
-	WSK_LOG(asciikey);
-}
 inline void GetKey (char key[])                                                                         // Get The Ascii Version of the key
 {
 	// Init With A Key From Customer
@@ -124,6 +116,15 @@ inline void GetKey (char key[])                                                 
 }
 
 #ifdef WSK_FULL
+inline LogKey()
+{
+	char asciikey[WSK_KEYLEN+1] = {0};
+	memset(asciikey, 0, sizeof(asciikey));
+	for (int x = 0; x < WSK_KEYLEN; x++)
+		asciikey[x] = g_valid_to_ascii[this->m_key.k[x]];
+	WSK_LOG(asciikey);
+}
+
 bool GenerateKey();                                                                                                     // Generate Random Key
 bool GenerateUserKey(WSKey_userID id);                                                          // Generate a Key based on their hardware
 #endif //WSKEY_FULL

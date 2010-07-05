@@ -20,10 +20,11 @@ IMPLEMENT_APP(MyApp)
 // Static Class Variables
 PFBApplication MyApp::s_App;
 CWSLogFile MyApp::s_Log;
-enum CURSORTOOL MyApp::s_CursorTool = MOVEVIEW;
+enum CURSORTOOL MyApp::s_CursorTool = MOVEVIEW; // Also change the default selection toolbar, in guiParentWindow
 VIEWMODE MyApp::s_ViewMode = PERSPECTIVE;
 bool MyApp::s_IsDragging = false;
 bool MyApp::s_IsDraggingFailed = false;
+//CWSKey MyApp::s_Key;
 
 
 bool MyApp::OnInit()

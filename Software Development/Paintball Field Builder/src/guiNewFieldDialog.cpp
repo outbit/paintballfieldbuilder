@@ -91,6 +91,8 @@ void guiNewFieldDialog::OnCreateButton(wxCommandEvent &event)
 	// Re-Create Scene
 	MyApp::s_App.DeleteAllBunkers();
 	MyApp::s_App.ReCreateScene();
+
+	this->Close();
 }
 
 

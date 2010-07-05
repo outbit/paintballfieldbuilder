@@ -1,7 +1,7 @@
 /**
  * ---------------------------------------------------------
  * @author: David Whiteside
- * @date: 09/20/09
+ * @date: 07/05/10
  * @description: The Main Parent Window of Every Other Window
  * Copyright 2004-2009 Whiteside Solutions LLC (www.whitesidesolutions.com)
  * ---------------------------------------------------------
@@ -13,7 +13,7 @@
 #define wxUSE_DEBUG_NEW_ALWAYS 0
 #include <wx/wx.h>
 #include <wx/menu.h>
-#include "../inc/main.h"
+
 
 class guiParentWindow : public wxFrame
 {
@@ -56,21 +56,8 @@ protected:
 	wxMenu *mAbout;
 	wxToolBar *mToolbar;
 
-	inline void EnableLastToolbar() {
-		int old_tool_id = 0;
-		int val = (int)(MyApp::s_CursorTool);
-		if (val == ROTATEVIEW) old_tool_id = ID_ROTATEVIEW;
-		if (val == MOVEVIEW) old_tool_id = ID_MOVEVIEW;
-		if (val == MOVEOBJ) old_tool_id = ID_MOVEOBJ;
-		if (val == ROTATEOBJ) old_tool_id = ID_ROTATEOBJ;
-		if (val == SELECTOBJ) old_tool_id = ID_SELECTOBJ;
-		if (val == CREATEOBJ) old_tool_id = ID_CREATEOBJ;
-		if (val == CLONEOBJ) old_tool_id = ID_CLONEOBJ;
-
-		if (old_tool_id != 0) {
-			mToolbar->EnableTool(old_tool_id, true);
-		}
-	}
+	// If a toolbar is selected, deselect it
+	void EnableLastToolbar();
 
 public:
 	guiParentWindow(const wxString& title);

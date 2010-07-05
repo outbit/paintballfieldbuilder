@@ -13,6 +13,9 @@
 #include <wx/wx.h>
 #include <wx/image.h>
 #include <wx/splash.h>
+//#include <wskey.h>
+//using namespace WSKey;
+
 class guiParentWindow;
 class guiRenderWindow;
 class guiObjectWindow;
@@ -68,6 +71,8 @@ class MyApp : public wxApp
 	static bool s_IsDragging;
 	// When the mouse enters the screen, but does NOT create a object
 	static bool s_IsDraggingFailed;
+	// License Key
+	//static CWSKey s_Key;
 
 	// Handle Initialization
 	virtual bool OnInit();
