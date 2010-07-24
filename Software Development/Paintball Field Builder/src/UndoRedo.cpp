@@ -13,35 +13,31 @@
 
 void CUndoRedo::Redo()
 {
-	if (mUndoRedo_Pos < 0) {
-		mUndoRedo_Pos = 0; // start at zero because redo always adds 1
-	}
-
-	if (mUndoRedo_Pos < mUndoRedo.size()-1)
-		if (mUndoRedo_Pos < UNDO_BUFFERSIZE)
-		{
-			mUndoRedo_Pos++;
-
+	if ( false == this->mRedoStack.empty() ) {
 			MakeURChange(false);
-		}
-		else
-			return;
+
+			this->mUndoStack.push(this->mRedoStack.top());
+			this->mRedoStack.pop();
+	} else {
+		PFB_LOG("redo stack is empty");
+		return;
+	}
+	PFB_LOG("redo - finished");
 }
 
 
 void CUndoRedo::Undo()
 {
-	if (mUndoRedo_Pos >= UNDO_BUFFERSIZE) {
-		mUndoRedo_Pos = mUndoRedo.size()-1;
-	}
-
 	// mUndoRedo Starts At 1, 0 is a none action
-	if (mUndoRedo_Pos >= 1)
-	{
+	if (false == this->mUndoStack.empty()) {
 		MakeURChange(true);
-
-		mUndoRedo_Pos--;
+		
+		// Add the action to the REDO stack, remove from undo
+		this->mRedoStack.push(this->mUndoStack.top());
+		this->mUndoStack.pop();
 	} else {
+		PFB_LOG("undo stack is empty");
 		return;
 	}
+	PFB_LOG("undo - finished");
 }

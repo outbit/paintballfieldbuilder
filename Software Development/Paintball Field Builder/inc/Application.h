@@ -175,7 +175,11 @@ void LookTop(void);
 void LookPerspective(void);
 void LookFirstPerson(void);
 bool BunkerClicked(Real x, Real y);
+void MakeURChange(bool undo);
 
+/*
+Used by GUI to place undo/redo points for actions
+*/
 inline void AddURSpotSelectedObj(UNDOREDO_ACT action) {
 	if (mSelectedObj) {
 		this->AddURSpot(action, mSelectedObj);
@@ -184,7 +188,6 @@ inline void AddURSpotSelectedObj(UNDOREDO_ACT action) {
 
 protected:
 void AddURSpot(UNDOREDO_ACT action, SceneNode *node);
-void MakeURChange(bool undo);
 bool CloneObj(SceneNode *&node);
 bool RotateObj(SceneNode *&node, Real x, Real y);
 bool DeleteObj(SceneNode *&node);

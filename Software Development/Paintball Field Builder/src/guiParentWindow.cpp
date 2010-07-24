@@ -423,16 +423,20 @@ void guiParentWindow::OnQuit(wxCommandEvent& WXUNUSED(event))
 void guiParentWindow::OnUndo(wxCommandEvent& event)
 {
 	// UNDO
+	MyApp::s_App.Undo();
 }
 
 void guiParentWindow::OnRedo(wxCommandEvent& event)
 {
 	// REDO
+	MyApp::s_App.Redo();
 }
 
 void guiParentWindow::OnDelete(wxCommandEvent& event)
 {
 	MyApp::s_App.DeleteSelectedObj();
+	// Undo/Redo Delete
+	MyApp::s_App.AddURSpotSelectedObj(UR_DELETE);
 }
 
 void guiParentWindow::OnSelectNone(wxCommandEvent& event)
@@ -587,17 +591,23 @@ void guiParentWindow::OnKeyDown(wxKeyEvent& event)
 		case WXK_DELETE:
 			PFB_LOG("wxk_delete");
 			MyApp::s_App.DeleteSelectedObj();
+			// Undo/Redo Delete
+			MyApp::s_App.AddURSpotSelectedObj(UR_DELETE);
 		break;
 
 		case WXK_NUMPAD_DELETE:
 			PFB_LOG("wxk_numpad_delete");
 			MyApp::s_App.DeleteSelectedObj();
+			// Undo/Redo Delete
+			MyApp::s_App.AddURSpotSelectedObj(UR_DELETE);
 		break;
 
 		// DELETE KEY - BUG in wxWidgets for WIN32
 		case 8:
 			PFB_LOG("wxk_8bug_delete");
 			MyApp::s_App.DeleteSelectedObj();
+			// Undo/Redo Delete
+			MyApp::s_App.AddURSpotSelectedObj(UR_DELETE);
 		break;
 
 		case WXK_LEFT:

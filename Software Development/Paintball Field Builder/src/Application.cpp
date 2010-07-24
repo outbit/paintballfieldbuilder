@@ -65,48 +65,8 @@ void PFBApplication::AddURSpot(UNDOREDO_ACT action, SceneNode *node)
 {
 	UNDOREDO tmpUndoRedo;
 
-	if (mUndoRedo_Pos < 0) {
-		PFB_LOG("Error - Add Spot - pos out of range, low");
-		mUndoRedo_Pos = 0;
-		return;
-	}
-	if ( (mUndoRedo_Pos != 0) && (mUndoRedo_Pos >= mUndoRedo.size()) ) {
-		PFB_LOG("Error - Add Spot - pos out of range, high");
-		mUndoRedo_Pos = mUndoRedo.size()-1;
-		return;
-	}
-
-	// Make change after doing an UNDO, Clear ALL future redos
-	if (mUndoRedo_Pos < mUndoRedo.size()-1)
-		if (mUndoRedo.size() > 1)
-		{
-			PFB_LOG("AddUR - Deleting Leading Elements");
-			// Then Erase all elements in front the current position
-			std::vector<UNDOREDO>::iterator it;
-			for(it = mUndoRedo.end(); it != mUndoRedo.begin(); it--)
-			{
-				if (it->node == mUndoRedo[mUndoRedo_Pos].node)
-				{
-					PFB_LOG("Info - Found Starting Element");
-					break;
-				}
-				if (it->action == UR_NONE)
-				{
-					PFB_LOG("Info - Found No Action, Starting Element");
-					break;
-				}
-			}
-
-			// Safety Bounds Check
-			if (it != mUndoRedo.end()) {
-				it++;
-				mUndoRedo.erase(it, mUndoRedo.end());
-			} else {
-				PFB_LOG("Info - Tryed To Delete Past End");
-				mUndoRedo.pop_back(); // Erase Last Element
-			}
-			PFB_LOG("AddUR - Done Deleting Leading Elements");
-		}
+	// Clear Redo Stack
+	while (!mRedoStack.empty()) { mRedoStack.pop(); }
 
 	// Add Info To The New Undo/Redo Spot
 	tmpUndoRedo.action = action;
@@ -115,152 +75,116 @@ void PFBApplication::AddURSpot(UNDOREDO_ACT action, SceneNode *node)
 	if (e) {
 		tmpUndoRedo.entityname = e->getName();
 		tmpUndoRedo.object.meshname = e->getMesh()->getName();
+	} else {
+		PFB_LOG("add spot - no entity");
+		return;
 	}
 	tmpUndoRedo.object.or = node->getOrientation();
 	tmpUndoRedo.object.pos = node->getPosition();
 	tmpUndoRedo.node = node->getName();
 
-	// Keep old position for undo function
-	if (mUndoRedo.size() > 0)
-	{
-		for (size_t x = mUndoRedo.size()-1; x >= 0; x--)
-		{
-			if ( !strcmp(mUndoRedo[(mUndoRedo.size()-1)].node.c_str(), mUndoRedo[x].node.c_str()) )
-			{
-				tmpUndoRedo.old_object = mUndoRedo[x].object; // Keep the old position
-				PFB_LOG("Found old Object");
-				break;
-			}
-		}
-	}
-
-	// Add To end of List
-	mUndoRedo.push_back(tmpUndoRedo);
-
-	// Log Random Stuff for troubleshooting
-	PFB_LOG("-----");
-	for (unsigned char x = 0; x < mUndoRedo.size(); x++)
-	{
-		if (mUndoRedo[x].action == UR_CREATE)
-			PFB_LOG("Action Is Create");
-		if (mUndoRedo[x].action == UR_DELETE)
-			PFB_LOG("Action Is Delete");
-		if (mUndoRedo[x].action == UR_CHANGE)
-			PFB_LOG("Action Is Change");
-		if (mUndoRedo[x].action == UR_NONE)
-		{
-			PFB_LOG("Action Is None");
-		} else {
-			PFB_LOG(mUndoRedo[x].node.c_str());
-		}
-	}
-	PFB_LOG("-----");
-
-	// Erase last element if undo/redo buffer is larger than UNDO_BUFFERSIZE
-	if (mUndoRedo.size() >= UNDO_BUFFERSIZE) {
-		PFB_LOG("Info - Deleting Last Element");
-		mUndoRedo.erase(mUndoRedo.begin());
-	}
-
-	// Always Put Position at end of list
-	mUndoRedo_Pos = mUndoRedo.size()-1;
+	// Add To STACK
+	mUndoStack.push(tmpUndoRedo);
 }
 
 
 void PFBApplication::MakeURChange(bool undo)
 {
-	if (mUndoRedo.size() == NULL) {
-		PFB_LOG("Add Spot - Empty Undo/Redo");
-	}
-	if (mUndoRedo_Pos < 0) {
-		PFB_LOG("Add Spot - Error, pos out of range, low");
-		mUndoRedo_Pos = 0;
-	}
-	if (mUndoRedo_Pos >= mUndoRedo.size()) {
-		PFB_LOG("Add Spot - Error, pos out of range, high");
-		mUndoRedo_Pos = mUndoRedo.size()-1;
+	UNDOREDO_ACT theaction = UR_NONE;
+	std::stack<UNDOREDO> *thestack = 0;
+
+	if ( true == undo ) {
+		// undo
+		if ( mUndoStack.empty() ) {
+			PFB_LOG("redo stack is empty");
+			return;
+		}
+
+		// set stack
+		thestack = &mUndoStack;
+		theaction = thestack->top().action;
+
+		// Reverse Option for create/delete
+		if (thestack->top().action == UR_CREATE) { theaction = UR_DELETE; }
+		if (thestack->top().action == UR_DELETE) { theaction = UR_CREATE; }
+	} else {
+		// redo
+		if ( mRedoStack.empty() ) {
+			PFB_LOG("redo stack is empty");
+			return;
+		}
+
+		// set stack
+		thestack = &mRedoStack;
+		theaction = thestack->top().action;
 	}
 
-	switch (mUndoRedo[mUndoRedo_Pos].action)
+	// Check for empty pointer
+	if (!thestack) { PFB_LOG("BAD - no stack pointer"); return; }
+
+	switch (theaction)
 	{
 	case UR_CREATE:
 	{
 		PFB_LOG("undo/redo - Create Object");
-		PFB_LOG(mUndoRedo[mUndoRedo_Pos].node.c_str());
-		PFB_LOG(mUndoRedo[mUndoRedo_Pos].entityname.c_str());
-		if (undo == true)
-		{
-			// Delete Object
-			SceneNode *n = this->mSceneMgr->getSceneNode(mUndoRedo[mUndoRedo_Pos].node);
-			if (!n)
-			{
-				PFB_LOG("undo - failed to Find Scene Node");
-				return;
-			}
-			PFB_LOG("undo - Check Selected Object");
-			if (this->mSelectedObj) {
-				this->mSelectedObj->showBoundingBox(false);                         // de-select first
-			}
-			PFB_LOG("undo - Set Selected Obj");
-			this->mSelectedObj = n;
+		PFB_LOG(thestack->top().object.meshname.c_str());
+		PFB_LOG(thestack->top().entityname.c_str());
+		if ( 1 == this->CreateObject(NULL, NULL, thestack->top().object.meshname, &thestack->top().object.pos/*, thestack->top().entityname*/) ) {
+			if ( this->mSelectedObj ) {
+				thestack->top().node = this->mSelectedObj->getName();
 
-			PFB_LOG("undo - Deleting Bunker");
-			this->DeleteSelectedObj();
-			PFB_LOG("undo - Deleted Bunker");
-		}
-		else
-		{
-			PFB_LOG("redo - Creating Bunker");
-			PFB_LOG(mUndoRedo[mUndoRedo_Pos].object.meshname.c_str());
-			PFB_LOG(mUndoRedo[mUndoRedo_Pos].entityname.c_str());
-			this->CreateObject(NULL, NULL, mUndoRedo[mUndoRedo_Pos].object.meshname, &mUndoRedo[mUndoRedo_Pos].object.pos, mUndoRedo[mUndoRedo_Pos].entityname);
-			if (this->mSelectedObj) {
-				this->mSelectedObj->setOrientation(mUndoRedo[mUndoRedo_Pos].object.or);
+				// Update Information
+				Entity *e = NULL;
+				e = (Entity*)this->mSelectedObj->getAttachedObject(0);
+				if (e) {
+					thestack->top().entityname = e->getName();
+				} else {
+					PFB_LOG("undo/redo - add spot - no entity");
+					return;
+				}
+
+			// Set position
+			this->mSelectedObj->setOrientation(thestack->top().object.or);
+			} else {
+				PFB_LOG("undo/redo - failed to select object after creation, did it fail?");
 			}
+		} else {
+			PFB_LOG("undo/redo - failed to create object");
 		}
+	PFB_LOG("finished creating object");
 	} break;
 
 	case UR_DELETE:
 	{
-		if (undo == false)
-		{
-			PFB_LOG("undo - Delete Object");
-			PFB_LOG(mUndoRedo[mUndoRedo_Pos].node.c_str());
-			PFB_LOG(mUndoRedo[mUndoRedo_Pos].entityname.c_str());
-			// Delete Object
-			SceneNode *n = this->mSceneMgr->getSceneNode(mUndoRedo[mUndoRedo_Pos].node);
-			if (!n)
-			{
-				PFB_LOG("undo -failed to Find Scene Node");
-				return;
-			}
-			if (this->mSelectedObj) {
-				this->mSelectedObj->showBoundingBox(false);                         // de-select first
-			}
-			this->mSelectedObj = n;
+		PFB_LOG("undo - Delete Object");
+		PFB_LOG(thestack->top().object.meshname.c_str());
+		PFB_LOG(thestack->top().entityname.c_str());
 
-			PFB_LOG("undo - Deleting Bunker");
-			this->DeleteSelectedObj();
-		}
-		else
+		// Delete Object
+		SceneNode *n = this->mSceneMgr->getSceneNode(thestack->top().node);
+		if (!n)
 		{
-			PFB_LOG("redo - Creating Bunker");
-			PFB_LOG(mUndoRedo[mUndoRedo_Pos].object.meshname.c_str());
-			PFB_LOG(mUndoRedo[mUndoRedo_Pos].entityname.c_str());
-			this->CreateObject(NULL, NULL, mUndoRedo[mUndoRedo_Pos].object.meshname, &mUndoRedo[mUndoRedo_Pos].object.pos, mUndoRedo[mUndoRedo_Pos].entityname);
-			PFB_LOG("redo - Setting Rotation of Object");
-			if (this->mSelectedObj) {
-				this->mSelectedObj->setOrientation(mUndoRedo[mUndoRedo_Pos].object.or);
-			}
+			PFB_LOG("undo -failed to Find Scene Node");
+			return;
 		}
+		if (this->mSelectedObj) {
+			this->mSelectedObj->showBoundingBox(false);                         // de-select first
+		}
+		this->mSelectedObj = n;
+
+		PFB_LOG("undo - Deleting Bunker");
+		this->DeleteSelectedObj();
+		PFB_LOG("finished deleting object");
 	} break;
 
 	case UR_CHANGE:
 	{
 		PFB_LOG("undo/redo - Changing Object");
-		PFB_LOG(mUndoRedo[mUndoRedo_Pos].node.c_str());
+		PFB_LOG(thestack->top().object.meshname.c_str());
+		PFB_LOG(thestack->top().entityname.c_str());
+
 		SceneNode *n = NULL;
-		n = this->mSceneMgr->getSceneNode(mUndoRedo[mUndoRedo_Pos].node);
+		n = this->mSceneMgr->getSceneNode(thestack->top().node);
 		if (!n)
 		{
 			PFB_LOG("undo - failed to Find Scene Node");
@@ -273,15 +197,16 @@ void PFBApplication::MakeURChange(bool undo)
 		PFB_LOG("undo - Setting Position");
 		if (undo == false)
 		{
-			this->mSelectedObj->setPosition(mUndoRedo[mUndoRedo_Pos].object.pos);
-			this->mSelectedObj->setOrientation(mUndoRedo[mUndoRedo_Pos].object.or);
+			this->mSelectedObj->setPosition(thestack->top().object.pos);
+			this->mSelectedObj->setOrientation(thestack->top().object.or);
 		}
 		else
 		{
-			this->mSelectedObj->setPosition(mUndoRedo[mUndoRedo_Pos].old_object.pos);
-			this->mSelectedObj->setOrientation(mUndoRedo[mUndoRedo_Pos].old_object.or);
+			this->mSelectedObj->setPosition(thestack->top().old_object.pos);
+			this->mSelectedObj->setOrientation(thestack->top().old_object.or);
 		}
 		this->mSelectedObj->showBoundingBox(true);
+		PFB_LOG("finished changing object");
 	} break;
 
 	case UR_NONE:

@@ -2,8 +2,9 @@
 
 Fixes:
 Register - trial vs registered features
+undo/redo - when undo, creates a bunker in the middle of screen, if terrain is not there then it fails....and crashes
+undo/redo - only creating/deleting is implemented
 
 Add Features:
-Undo, redo
 snap to grid
 select multiple objects

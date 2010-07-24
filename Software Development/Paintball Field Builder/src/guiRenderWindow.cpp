@@ -95,11 +95,15 @@ void guiRenderWindow::OnLeftDown(wxMouseEvent& event) {
 
 		case CREATEOBJ:
 			MyApp::s_App.CreateObject(x_pos, y_pos);
+			// Undo/Redo Create
+			MyApp::s_App.AddURSpotSelectedObj(UR_CREATE);
 		break;
 
 		case CLONEOBJ:
 			MyApp::s_App.SelectObject(x_pos, y_pos);
 			MyApp::s_App.CloneSelectedObj();
+			// Undo/Redo Create
+			MyApp::s_App.AddURSpotSelectedObj(UR_CREATE);
 		break;
 	}
 }
@@ -137,6 +141,8 @@ static wxPoint last_mouse_pos(event.GetPosition());
 				//If the first drag and create bunker failed, try again
 				if ( 1 == MyApp::s_App.CreateObject(x_pos, y_pos) ) {
 					MyApp::s_IsDraggingFailed = false;
+					// Undo/Redo Create
+					MyApp::s_App.AddURSpotSelectedObj(UR_CREATE);
 				}
 			}
 		} else {
@@ -196,6 +202,9 @@ void guiRenderWindow::OnEnterWindow(wxMouseEvent& event) {
 		// 0 == did not click on terrain, 
 		if (0 == MyApp::s_App.CreateObject(x_pos, y_pos) ) {
 			MyApp::s_IsDraggingFailed = true;
+		} else /* did create bunker on terrain*/ {
+			// Undo/Redo Create
+			MyApp::s_App.AddURSpotSelectedObj(UR_CREATE);
 		}
 	}
 	}

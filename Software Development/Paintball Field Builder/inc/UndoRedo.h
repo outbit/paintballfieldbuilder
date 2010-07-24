@@ -10,7 +10,7 @@
 
 // Includes
 #include "FieldKit.h"
-#include <vector>
+#include <stack>
 
 // Definitions
 enum UNDOREDO_ACT {UR_CREATE, UR_DELETE, UR_CHANGE, UR_NONE};
@@ -38,17 +38,12 @@ struct UNDOREDO
 class CUndoRedo
 {
 protected:
-std::vector<UNDOREDO> mUndoRedo;
-size_t mUndoRedo_Pos;
+std::stack<UNDOREDO> mUndoStack;
+std::stack<UNDOREDO> mRedoStack;
 
 public:
 CUndoRedo::CUndoRedo()
 {
-	UNDOREDO tmpUndoRedo;
-	memset(&tmpUndoRedo, NULL, sizeof(tmpUndoRedo));
-	tmpUndoRedo.action = UR_NONE;
-	mUndoRedo.push_back(tmpUndoRedo);
-	mUndoRedo_Pos = 1;
 }
 
 void Redo();
