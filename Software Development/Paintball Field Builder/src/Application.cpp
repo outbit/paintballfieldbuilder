@@ -93,6 +93,40 @@ void PFBApplication::MakeURChange(bool undo)
 	UNDOREDO_ACT theaction = UR_NONE;
 	std::stack<UNDOREDO> *thestack = 0;
 
+	/*
+	DEBUG OUTPUT
+	*/
+	std::stack<UNDOREDO> debug_undo = this->mUndoStack;
+	std::stack<UNDOREDO> debug_redo = this->mRedoStack;
+	PFB_LOG("---Undo Stack-----------------------------");
+	while (!debug_undo.empty()) {
+		if (debug_undo.top().action == UR_CREATE) { PFB_LOG("action: create"); }
+		if (debug_undo.top().action == UR_DELETE) { PFB_LOG("action: delete"); }
+		if (debug_undo.top().action == UR_CHANGE) { PFB_LOG("action: change"); }
+		if (debug_undo.top().action == UR_NONE) { PFB_LOG("action: none"); }
+		PFB_LOG(debug_undo.top().entityname);
+		PFB_LOG(debug_undo.top().node);
+		PFB_LOG(debug_undo.top().object.meshname);
+		PFB_LOG("----");
+		debug_undo.pop();
+	}
+	PFB_LOG("---Redo Stack----------");
+	while (!debug_redo.empty()) {
+		if (debug_redo.top().action == UR_CREATE) { PFB_LOG("action: create"); }
+		if (debug_redo.top().action == UR_DELETE) { PFB_LOG("action: delete"); }
+		if (debug_redo.top().action == UR_CHANGE) { PFB_LOG("action: change"); }
+		if (debug_redo.top().action == UR_NONE) { PFB_LOG("action: none"); }
+		PFB_LOG(debug_redo.top().entityname);
+		PFB_LOG(debug_redo.top().node);
+		PFB_LOG(debug_redo.top().object.meshname);
+		PFB_LOG("----");
+		debug_redo.pop();
+	}
+	PFB_LOG("----------------------------------------");
+	/*
+	DONE WITH DEBUG CODE
+	*/
+
 	if ( true == undo ) {
 		// undo
 		if ( mUndoStack.empty() ) {
@@ -131,17 +165,47 @@ void PFBApplication::MakeURChange(bool undo)
 		PFB_LOG(thestack->top().entityname.c_str());
 		if ( 1 == this->CreateObject(NULL, NULL, thestack->top().object.meshname, &thestack->top().object.pos/*, thestack->top().entityname*/) ) {
 			if ( this->mSelectedObj ) {
-				thestack->top().node = this->mSelectedObj->getName();
 
-				// Update Information
+				// Get Updated Information
 				Entity *e = NULL;
 				e = (Entity*)this->mSelectedObj->getAttachedObject(0);
 				if (e) {
-					thestack->top().entityname = e->getName();
+					// Everythings good.....
 				} else {
 					PFB_LOG("undo/redo - add spot - no entity");
 					return;
 				}
+
+				// Update ALL of REDOs information
+				String orig_nodename = thestack->top().node;
+				String orig_entityname = thestack->top().entityname;
+				for (int x = 0; x < 2; x++) {
+				std::stack<UNDOREDO> *bothstacks = NULL;
+				if (x == 0) {
+					bothstacks = &this->mUndoStack;
+				} else if (x == 1) {
+					bothstacks = &this->mRedoStack;
+				}
+				if (!bothstacks) { PFB_LOG("both stacks....failed"); return; }
+				std::stack<UNDOREDO> tmpstack[2];
+				tmpstack[0] = *bothstacks;
+				while (!tmpstack[0].empty()) {
+					if ( (tmpstack[0].top().entityname == orig_entityname) &&
+						(tmpstack[0].top().node == orig_nodename) ) {
+						tmpstack[0].top().node = this->mSelectedObj->getName();
+						tmpstack[0].top().entityname = e->getName();
+					}
+					tmpstack[1].push(tmpstack[0].top());
+					tmpstack[0].pop();
+				}
+				// Flip the stack to the original order
+				while (!tmpstack[1].empty()) {
+						tmpstack[0].push(tmpstack[1].top());
+						tmpstack[1].pop();
+				}
+				*bothstacks = tmpstack[0];
+				}
+				// END of updating REDO/Undo Information
 
 			// Set position
 			this->mSelectedObj->setOrientation(thestack->top().object.or);
@@ -195,16 +259,36 @@ void PFBApplication::MakeURChange(bool undo)
 		this->mSelectedObj = n;
 
 		PFB_LOG("undo - Setting Position");
-		if (undo == false)
-		{
-			this->mSelectedObj->setPosition(thestack->top().object.pos);
-			this->mSelectedObj->setOrientation(thestack->top().object.or);
+		/*
+			This step is required because the top value of the stack only has the position of
+			the current object.
+		*/
+		UNDOREDO current_top = thestack->top();
+		UNDOREDO last_top = thestack->top();
+		/*
+		if (undo == true) {
+		thestack->pop();
+		if (thestack->empty()) { PFB_LOG("FAILED - the stack is empty for next current spot,never should happen"); return; }
+		last_top = thestack->top();
+		thestack->push(current_top);
+		} else { last_top = thestack->top(); } // Whats NEEDED FOR REDOO????
+		*/
+		// Grab the last position of the thingy
+		if (undo == true) {
+		std::stack<UNDOREDO> tmpstack = *thestack;
+		tmpstack.pop(); // pop first entry, obviously
+		while (	!tmpstack.empty() ) {
+			if ( (tmpstack.top().entityname == thestack->top().entityname) &&
+				 (tmpstack.top().node == thestack->top().node) ) {
+					last_top = tmpstack.top();
+					break; // found the last position
+				}
+		 tmpstack.pop();
 		}
-		else
-		{
-			this->mSelectedObj->setPosition(thestack->top().old_object.pos);
-			this->mSelectedObj->setOrientation(thestack->top().old_object.or);
 		}
+
+		this->mSelectedObj->setPosition(last_top.object.pos);
+		this->mSelectedObj->setOrientation(last_top.object.or);
 		this->mSelectedObj->showBoundingBox(true);
 		PFB_LOG("finished changing object");
 	} break;

@@ -30,7 +30,6 @@ struct UNDOREDO
 	Ogre::String node;
 	Ogre::String entityname;
 	BunkerInfo object;
-	BunkerInfo old_object;
 	UNDOREDO_ACT action;
 };
 

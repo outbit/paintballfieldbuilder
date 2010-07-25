@@ -315,6 +315,7 @@ guiParentWindow::~guiParentWindow()
 
 	// Key Down
 	Disconnect(wxEVT_KEY_DOWN, wxKeyEventHandler(guiParentWindow::OnKeyDown));
+	Disconnect(wxEVT_KEY_UP, wxKeyEventHandler(guiParentWindow::OnKeyUp));
 }
 
 void guiParentWindow::EnableLastToolbar() {
@@ -434,9 +435,9 @@ void guiParentWindow::OnRedo(wxCommandEvent& event)
 
 void guiParentWindow::OnDelete(wxCommandEvent& event)
 {
-	MyApp::s_App.DeleteSelectedObj();
 	// Undo/Redo Delete
 	MyApp::s_App.AddURSpotSelectedObj(UR_DELETE);
+	MyApp::s_App.DeleteSelectedObj();
 }
 
 void guiParentWindow::OnSelectNone(wxCommandEvent& event)
@@ -590,24 +591,24 @@ void guiParentWindow::OnKeyDown(wxKeyEvent& event)
 
 		case WXK_DELETE:
 			PFB_LOG("wxk_delete");
-			MyApp::s_App.DeleteSelectedObj();
 			// Undo/Redo Delete
 			MyApp::s_App.AddURSpotSelectedObj(UR_DELETE);
+			MyApp::s_App.DeleteSelectedObj();
 		break;
 
 		case WXK_NUMPAD_DELETE:
 			PFB_LOG("wxk_numpad_delete");
-			MyApp::s_App.DeleteSelectedObj();
 			// Undo/Redo Delete
 			MyApp::s_App.AddURSpotSelectedObj(UR_DELETE);
+			MyApp::s_App.DeleteSelectedObj();
 		break;
 
 		// DELETE KEY - BUG in wxWidgets for WIN32
 		case 8:
 			PFB_LOG("wxk_8bug_delete");
-			MyApp::s_App.DeleteSelectedObj();
 			// Undo/Redo Delete
 			MyApp::s_App.AddURSpotSelectedObj(UR_DELETE);
+			MyApp::s_App.DeleteSelectedObj();
 		break;
 
 		case WXK_LEFT:
@@ -624,6 +625,47 @@ void guiParentWindow::OnKeyDown(wxKeyEvent& event)
 
 		case WXK_DOWN:
 			// Toggle bunker position
+		break;
+
+		default:
+			// Debug Key Codes
+			/*
+			wxString str = wxString::Format(wxT("key code: %i"), val); 
+			std::string stlstring = std::string(str.mb_str());
+			PFB_LOG(stlstring.c_str());*/
+		break;
+	}
+}
+
+void guiParentWindow::OnKeyUp(wxKeyEvent& event)
+{
+	int val = event.GetKeyCode();
+	switch (val)
+	{
+		case WXK_DELETE:
+		break;
+		case WXK_NUMPAD_DELETE:
+		break;
+		// DELETE KEY - BUG in wxWidgets for WIN32
+		case 8:
+		break;
+
+		case WXK_LEFT:
+			// How do i check this was down before??
+			// Undo/Redo
+			//MyApp::s_App.AddURSpotSelectedObj(UR_CHANGE);
+		break;
+
+		case WXK_RIGHT:
+			// how do i check this was down before??
+			// Undo/Redo
+			//MyApp::s_App.AddURSpotSelectedObj(UR_CHANGE);
+		break;
+
+		case WXK_UP:
+		break;
+
+		case WXK_DOWN:
 		break;
 
 		default:

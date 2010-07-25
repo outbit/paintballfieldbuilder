@@ -100,6 +100,7 @@ public:
 	void OnCloneObj(wxCommandEvent& event);
 
 	void OnKeyDown(wxKeyEvent& event);
+	void OnKeyUp(wxKeyEvent& event);
 };
 
 #endif // guiParentWindow_H

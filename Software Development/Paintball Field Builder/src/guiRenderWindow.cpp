@@ -122,9 +122,11 @@ void guiRenderWindow::OnRightDClick(wxMouseEvent& event) {
 
 void guiRenderWindow::OnMouseMotion(wxMouseEvent& event) {
 static wxPoint last_mouse_pos(event.GetPosition());
+static bool last_leftdown = false;
 
 	// Left mouse button is held down
 	if ( event.LeftIsDown() ) {
+		last_leftdown = true;
 		wxPoint p = event.GetPosition();
 		float x_force = PFB_max((float)p.x-(float)last_mouse_pos.x, MAX_MOUSEFORCE);
 		float y_force = PFB_max((float)p.y-(float)last_mouse_pos.y, MAX_MOUSEFORCE);
@@ -183,6 +185,40 @@ static wxPoint last_mouse_pos(event.GetPosition());
 		last_mouse_pos = p;
 
 	} else { // Mouse Released and moved
+		// Mouse First Released
+		if (last_leftdown == true) {
+			last_leftdown = false;
+
+			switch ( MyApp::s_CursorTool ) {
+				case MOVEVIEW: {
+				}break;
+				case ROTATEVIEW: {
+				}break;
+
+				case MOVEOBJ:
+					// Undo/Redo
+					MyApp::s_App.AddURSpotSelectedObj(UR_CHANGE);
+				break;
+
+				case ROTATEOBJ:
+					// Undo/Redo
+					MyApp::s_App.AddURSpotSelectedObj(UR_CHANGE);
+				break;
+
+				case SELECTOBJ:
+					// No dragging, just selecting
+				break;
+
+				case CREATEOBJ:
+					// no dragging, just creating
+				break;
+
+				case CLONEOBJ:
+					// Undo/Redo
+					MyApp::s_App.AddURSpotSelectedObj(UR_CHANGE);
+				break;
+			}
+		}
 		last_mouse_pos.x = 0;
 		last_mouse_pos.y = 0;
 	}
