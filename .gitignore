@@ -11,3 +11,6 @@
 BuildLog.htm
 Debug/
 Debug\
+
+#c9.io
+.c9/
