@@ -14,3 +14,5 @@ Debug\
 
 #c9.io
 .c9/
+
+*.tmp
