@@ -15,49 +15,47 @@
 
 CWSLogFile::CWSLogFile(String logfilename, bool logging, bool logtime, bool displayerrors, String creator, bool init, bool clearlog, char *rootdir)
 {
-	this->mLogFileName += logfilename;
-	this->mLogging = logging;
-	this->mLogTime = false;
-	this->mDisplayErrors = displayerrors;
-	this->mLogFileCreator = creator;
-	this->mRootdir = rootdir;
+    this->mLogFileName += logfilename;
+    this->mLogging = logging;
+    this->mLogTime = false;
+    this->mDisplayErrors = displayerrors;
+    this->mLogFileCreator = creator;
+    this->mRootdir = rootdir;
 
-	if (init)
-	{
-		this->Init(clearlog);
-	}
-	// OK SHOW LOG TIME NOW
-	this->mLogTime = logtime;
+    if (init) {
+        this->Init(clearlog);
+    }
+    // OK SHOW LOG TIME NOW
+    this->mLogTime = logtime;
 }
 
 
 void CWSLogFile::Init(bool clearlog)
 {
-	bool logtime = this->mLogTime;
+    bool logtime = this->mLogTime;
 
-	this->mLogTime = false;
+    this->mLogTime = false;
 
-	String tmp;
-	tmp += "LOG FILE CREATED BY: ";
-	tmp += this->mLogFileCreator;
-	// Create A Brand New Log File Header!!
-	time_t t = time(0);
-	if (clearlog)
-	{
-		this->Clear();
-	}
-	this->Log(WSLOG_LINE3);
-	this->Log(WSLOG_LINE);
-	this->Log(tmp);
-	this->Log(WSLOG_LINE);
-	this->Log(asctime(gmtime(&t)));
-	this->Log(WSLOG_LINE);
-	this->Log(WSLOG_LINE3);
-	this->Log(" ");
-	this->Log(" ");
+    String tmp;
+    tmp += "LOG FILE CREATED BY: ";
+    tmp += this->mLogFileCreator;
+    // Create A Brand New Log File Header!!
+    time_t t = time(0);
+    if (clearlog) {
+        this->Clear();
+    }
+    this->Log(WSLOG_LINE3);
+    this->Log(WSLOG_LINE);
+    this->Log(tmp);
+    this->Log(WSLOG_LINE);
+    this->Log(asctime(gmtime(&t)));
+    this->Log(WSLOG_LINE);
+    this->Log(WSLOG_LINE3);
+    this->Log(" ");
+    this->Log(" ");
 
 // OK SHOW LOG TIME NOW
-	this->mLogTime = logtime;
+    this->mLogTime = logtime;
 }
 
 
@@ -73,50 +71,46 @@ CWSLogFile::~CWSLogFile(void)
  */
 bool CWSLogFile::Log(String message, bool logtime)
 {
-	if (this->mRootdir != NULL)
-		SetCurrentDirectory(this->mRootdir);
+    if (this->mRootdir != NULL)
+        SetCurrentDirectory(this->mRootdir);
 
-	String tmp;
-	tmp.clear();
-	if (logtime && this->mLogTime)
-	{
-		time_t t = time(0);
-		tmp += (asctime(gmtime(&t)));
-		tmp += " : ";
-	}
-	tmp += message;
+    String tmp;
+    tmp.clear();
+    if (logtime && this->mLogTime) {
+        time_t t = time(0);
+        tmp += (asctime(gmtime(&t)));
+        tmp += " : ";
+    }
+    tmp += message;
 
 // If Logging Is Enabled
-	if (this->mLogging)
-	{
-		FILE *filePtr = 0;
+    if (this->mLogging) {
+        FILE *filePtr = 0;
 
-		// Check For Null Message
-		if (!tmp.size())
-		{
-			Log("Logging Error: Null Value");
-			return false;
-		}
+        // Check For Null Message
+        if (!tmp.size()) {
+            Log("Logging Error: Null Value");
+            return false;
+        }
 
-		filePtr = fopen(this->mLogFileName.c_str(), "ab");
+        filePtr = fopen(this->mLogFileName.c_str(), "ab");
 
-		// Check For Null File Pointer
-		if (!filePtr)
-		{
-			Log("Logging Error: Failed To Open File");
-			return false;
-		}
+        // Check For Null File Pointer
+        if (!filePtr) {
+            Log("Logging Error: Failed To Open File");
+            return false;
+        }
 
-		fwrite(tmp.c_str(), sizeof(char), tmp.size(), filePtr);
+        fwrite(tmp.c_str(), sizeof(char), tmp.size(), filePtr);
 
-		// EndLine
-		char endlinestr[] = {13, 10}; // Carrage Return, Line Feed
-		fwrite(endlinestr, sizeof(char), sizeof(endlinestr), filePtr);
+        // EndLine
+        char endlinestr[] = {13, 10}; // Carrage Return, Line Feed
+        fwrite(endlinestr, sizeof(char), sizeof(endlinestr), filePtr);
 
-		fclose(filePtr);
-	}
+        fclose(filePtr);
+    }
 
-	return true;
+    return true;
 }
 
 
@@ -127,25 +121,22 @@ bool CWSLogFile::Log(String message, bool logtime)
  */
 bool CWSLogFile::LogERROR(String error)
 {
-	if (error.size() == NULL)
-	{
-		Log("Failed To Log Error");
-		return false;
-	}
+    if (error.size() == NULL) {
+        Log("Failed To Log Error");
+        return false;
+    }
 
 // If Logging Is Enabled
-	if (this->mLogging)
-	{
-		Log(error);
-	}
+    if (this->mLogging) {
+        Log(error);
+    }
 
 // If Display Errors Is Enabled
-	if (this->mDisplayErrors)
-	{
-		WSLOG_MSGBOX(error.c_str(), "ERROR");
-	}
+    if (this->mDisplayErrors) {
+        WSLOG_MSGBOX(error.c_str(), "ERROR");
+    }
 
-	return true;
+    return true;
 }
 
 
@@ -154,18 +145,18 @@ bool CWSLogFile::LogERROR(String error)
  */
 bool CWSLogFile::Clear(void)
 {
-	FILE *fileptr = 0;
+    FILE *fileptr = 0;
 
-	if (this->mRootdir != NULL)
-		SetCurrentDirectory(this->mRootdir);
+    if (this->mRootdir != NULL)
+        SetCurrentDirectory(this->mRootdir);
 
-	fileptr = fopen(this->mLogFileName.c_str(), "wb");
+    fileptr = fopen(this->mLogFileName.c_str(), "wb");
 
-	// Failed To Open
-	if (!fileptr)
-		return false;
+    // Failed To Open
+    if (!fileptr)
+        return false;
 
-	fclose(fileptr);
+    fclose(fileptr);
 
-	return true;
+    return true;
 }

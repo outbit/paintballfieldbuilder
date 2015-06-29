@@ -11,5 +11,5 @@ guiRegisterDialog::~guiRegisterDialog()
 
 void guiRegisterDialog::OnRegister( wxCommandEvent& event )
 {
-	PFB_ERRORMESSAGE("This is a tesT Register");
+    PFB_ERRORMESSAGE("This is a tesT Register");
 }

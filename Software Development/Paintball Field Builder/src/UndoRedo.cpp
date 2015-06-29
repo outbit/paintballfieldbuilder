@@ -13,31 +13,31 @@
 
 void CUndoRedo::Redo()
 {
-	if ( false == this->mRedoStack.empty() ) {
-			MakeURChange(false);
+    if ( false == this->mRedoStack.empty() ) {
+        MakeURChange(false);
 
-			this->mUndoStack.push(this->mRedoStack.top());
-			this->mRedoStack.pop();
-	} else {
-		PFB_LOG("redo stack is empty");
-		return;
-	}
-	PFB_LOG("redo - finished");
+        this->mUndoStack.push(this->mRedoStack.top());
+        this->mRedoStack.pop();
+    } else {
+        PFB_LOG("redo stack is empty");
+        return;
+    }
+    PFB_LOG("redo - finished");
 }
 
 
 void CUndoRedo::Undo()
 {
-	// mUndoRedo Starts At 1, 0 is a none action
-	if (false == this->mUndoStack.empty()) {
-		MakeURChange(true);
-		
-		// Add the action to the REDO stack, remove from undo
-		this->mRedoStack.push(this->mUndoStack.top());
-		this->mUndoStack.pop();
-	} else {
-		PFB_LOG("undo stack is empty");
-		return;
-	}
-	PFB_LOG("undo - finished");
+    // mUndoRedo Starts At 1, 0 is a none action
+    if (false == this->mUndoStack.empty()) {
+        MakeURChange(true);
+
+        // Add the action to the REDO stack, remove from undo
+        this->mRedoStack.push(this->mUndoStack.top());
+        this->mUndoStack.pop();
+    } else {
+        PFB_LOG("undo stack is empty");
+        return;
+    }
+    PFB_LOG("undo - finished");
 }

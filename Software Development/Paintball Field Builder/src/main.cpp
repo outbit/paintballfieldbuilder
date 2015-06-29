@@ -29,73 +29,73 @@ bool MyApp::s_IsDraggingFailed = false;
 
 bool MyApp::OnInit()
 {
-	// Splash Screen
-	::wxInitAllImageHandlers();
-	wxBitmap bitmap;
-	if (bitmap.LoadFile("../license/loadscreen.bmp", wxBITMAP_TYPE_BMP)) {
-		m_LoadScreen = new wxSplashScreen(bitmap,
-		wxSPLASH_CENTRE_ON_SCREEN|wxSPLASH_TIMEOUT,
-		3000, NULL, -1, wxDefaultPosition, wxDefaultSize,
-		wxSIMPLE_BORDER|wxSTAY_ON_TOP);
-	}
-	wxYield();
+    // Splash Screen
+    ::wxInitAllImageHandlers();
+    wxBitmap bitmap;
+    if (bitmap.LoadFile("../license/loadscreen.bmp", wxBITMAP_TYPE_BMP)) {
+        m_LoadScreen = new wxSplashScreen(bitmap,
+                                          wxSPLASH_CENTRE_ON_SCREEN|wxSPLASH_TIMEOUT,
+                                          3000, NULL, -1, wxDefaultPosition, wxDefaultSize,
+                                          wxSIMPLE_BORDER|wxSTAY_ON_TOP);
+    }
+    wxYield();
 
-	// Parent/Main Window
-	m_ParentWindow = new guiParentWindow(wxT("Paintball Field Builder"));
-	m_ParentWindow->Show(true);
-	m_ParentWindow->SetBackgroundColour(wxColour(0x70, 0x70, 0x70));
-	m_ParentWindow->Maximize();
+    // Parent/Main Window
+    m_ParentWindow = new guiParentWindow(wxT("Paintball Field Builder"));
+    m_ParentWindow->Show(true);
+    m_ParentWindow->SetBackgroundColour(wxColour(0x70, 0x70, 0x70));
+    m_ParentWindow->Maximize();
 
-	// Render/OGRE Window
-	m_RenderWindow = new guiRenderWindow(wxT("Paintball Field Builder"), m_ParentWindow);
-	m_RenderWindow->Show(true);
-	m_RenderWindow->SetBackgroundColour(wxColour(0x4d, 0x4d, 0x4d));	
-	m_RenderWindow->SetAutoLayout(true);
-	void *phandle = m_RenderWindow->GetHandle();
-	if (phandle) {
-		s_App.SetRenderWindow(phandle);
-	} else {
-		PFB_ERRORMESSAGE("Failed To Get HWND from window");
-	}
-
-	// Object Window
-	m_ObjectWindow = new guiObjectWindow(wxT("Paintball Field Builder"), m_ParentWindow);
-	m_ObjectWindow->SetBackgroundColour(wxColour(0x4d, 0x4d, 0x4d));
-	m_ObjectWindow->Show(true);
-
-   // Initialize OGRE
-    try {
-        s_App.go();
-		s_App.mFieldKit.Load("../fieldkits/default.pfk");
-		PFB_LOG("OGRE WAS INITIALIZED");
-		s_App.LookView();
-		s_App.mDoRender = true;
-		s_App.Render();
-    } catch( Ogre::Exception& e ) {
-		PFB_ERRORMESSAGE(e.getFullDescription().c_str());
-		PFB_LOG("OGRE FAILED TO INITILISE");
-		return 1;
+    // Render/OGRE Window
+    m_RenderWindow = new guiRenderWindow(wxT("Paintball Field Builder"), m_ParentWindow);
+    m_RenderWindow->Show(true);
+    m_RenderWindow->SetBackgroundColour(wxColour(0x4d, 0x4d, 0x4d));
+    m_RenderWindow->SetAutoLayout(true);
+    void *phandle = m_RenderWindow->GetHandle();
+    if (phandle) {
+        s_App.SetRenderWindow(phandle);
+    } else {
+        PFB_ERRORMESSAGE("Failed To Get HWND from window");
     }
 
-	// Rendering Loop
-	Connect(wxEVT_IDLE, wxIdleEventHandler(MyApp::OnIdle));
+    // Object Window
+    m_ObjectWindow = new guiObjectWindow(wxT("Paintball Field Builder"), m_ParentWindow);
+    m_ObjectWindow->SetBackgroundColour(wxColour(0x4d, 0x4d, 0x4d));
+    m_ObjectWindow->Show(true);
 
-	// END LOAD SCREEN
-	if (m_LoadScreen) {
-		m_LoadScreen->Destroy(); // Close and Free memory
-	}
+    // Initialize OGRE
+    try {
+        s_App.go();
+        s_App.mFieldKit.Load("../fieldkits/default.pfk");
+        PFB_LOG("OGRE WAS INITIALIZED");
+        s_App.LookView();
+        s_App.mDoRender = true;
+        s_App.Render();
+    } catch( Ogre::Exception& e ) {
+        PFB_ERRORMESSAGE(e.getFullDescription().c_str());
+        PFB_LOG("OGRE FAILED TO INITILISE");
+        return 1;
+    }
 
-	return true;
+    // Rendering Loop
+    Connect(wxEVT_IDLE, wxIdleEventHandler(MyApp::OnIdle));
+
+    // END LOAD SCREEN
+    if (m_LoadScreen) {
+        m_LoadScreen->Destroy(); // Close and Free memory
+    }
+
+    return true;
 }
 
 int MyApp::OnExit()
 {
-	// Cleanup
-	return true;
+    // Cleanup
+    return true;
 }
 
 void MyApp::OnIdle(wxIdleEvent& event)
 {
-   s_App.Render();
-   event.RequestMore(true);
+    s_App.Render();
+    event.RequestMore(true);
 }
