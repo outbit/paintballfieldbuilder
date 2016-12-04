@@ -6,3 +6,8 @@ License
 =====
 
 paintballfield builder is released under the [GPLv3 License](LICENSE.md)
+
+Author
+=====
+
+David Whiteside (<david@davidwhiteside.com>)
